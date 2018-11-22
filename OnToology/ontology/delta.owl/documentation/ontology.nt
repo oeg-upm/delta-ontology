@@ -1,0 +1,321 @@
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> <http://purl.org/dc/elements/1.1/title> "DELTA ontology" .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the  terms to allow interoperability in DELTA project" .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#preferredNamespaceUri
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty> <http://www.w3.org/2000/01/rdf-schema#label> "calculates property" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability> <http://www.w3.org/2000/01/rdf-schema#label> "estimates voltage inestability" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates> <http://www.w3.org/2000/01/rdf-schema#label> "estimates" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability> <http://www.w3.org/2000/01/rdf-schema#label> "estimates frequency inestability" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "has currency" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has duration" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket> <http://www.w3.org/2000/01/rdf-schema#label> "has energy market" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive> <http://www.w3.org/2000/01/rdf-schema#label> "has incentive" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty> <http://www.w3.org/2000/01/rdf-schema#label> "measures property" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold> <http://www.w3.org/2000/01/rdf-schema#label> "capacity sold" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#label> "has beginning" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has end" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has timestamp" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage> <http://www.w3.org/2000/01/rdf-schema#label> "high voltage" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage> <http://www.w3.org/2000/01/rdf-schema#label> "low voltage" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "over frequency" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "under frequency" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid> <http://www.w3.org/2000/01/rdf-schema#label> "Bid" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Price> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Buy price" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy> <http://www.w3.org/2000/01/rdf-schema#label> "Corrected energy" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#Price> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket> <http://www.w3.org/2000/01/rdf-schema#label> "Energy market" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility> <http://www.w3.org/2000/01/rdf-schema#label> "Flexibility" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid> <http://www.w3.org/2000/01/rdf-schema#label> "Flexibility bid" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency inestability" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation> <http://www.w3.org/2000/01/rdf-schema#label> "Generation" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation> <http://www.w3.org/2000/01/rdf-schema#label> "Grid inestability estimation" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load> <http://www.w3.org/2000/01/rdf-schema#label> "Load" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum  capacity bid" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion> <http://www.w3.org/2000/01/rdf-schema#label> "Power consumption" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Price> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid> <http://www.w3.org/2000/01/rdf-schema#label> "Price bid" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS> <http://www.w3.org/2000/01/rdf-schema#label> "Price bid AS" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead> <http://www.w3.org/2000/01/rdf-schema#label> "Price bid day ahead" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay> <http://www.w3.org/2000/01/rdf-schema#label> "Price bid intra-day" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage> <http://www.w3.org/2000/01/rdf-schema#label> "Storage" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Time interval" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode> <http://www.w3.org/2000/01/rdf-schema#label> "Virtual node" .
+# 
+# http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability> <http://www.w3.org/2000/01/rdf-schema#label> "Voltage inestability" .
+# 
+# https://w3id.org/saref#Price
+<https://w3id.org/saref#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/saref#Property
+<https://w3id.org/saref#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
