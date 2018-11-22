@@ -1,0 +1,165 @@
+{
+  "@context" : {
+    "belongsTo" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo",
+      "@type" : "@id"
+    },
+    "hasEnergyMarket" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket",
+      "@type" : "@id"
+    },
+    "hasPrice" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice",
+      "@type" : "@id"
+    },
+    "EnergyMarket" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket"
+    },
+    "estimates" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates",
+      "@type" : "@id"
+    },
+    "Storage" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "estimateVoltageInestability" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability",
+      "@type" : "@id"
+    },
+    "measuresProperty" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty",
+      "@type" : "@id"
+    },
+    "hasCurrency" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "estimatesFrequencyInestability" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability",
+      "@type" : "@id"
+    },
+    "highVoltage" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage"
+    },
+    "lowVoltage" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage"
+    },
+    "VirtualNode" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode"
+    },
+    "hasDuration" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration",
+      "@type" : "@id"
+    },
+    "Price" : {
+      "@id" : "https://w3id.org/saref#Price"
+    },
+    "Incentive" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive"
+    },
+    "Generation" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation"
+    },
+    "Agent" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "underFrequency" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency"
+    },
+    "PriceBidAS" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS"
+    },
+    "TimeInterval" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval"
+    },
+    "PriceBid" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid"
+    },
+    "hasEnd" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd"
+    },
+    "VoltageInestability" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability"
+    },
+    "hasBeginning" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning"
+    },
+    "overFrequency" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency"
+    },
+    "PriceBidIntraDay" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay"
+    },
+    "FlexibilityBid" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid"
+    },
+    "CorrectedEnergy" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy"
+    },
+    "Property" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "hasIncentive" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive",
+      "@type" : "@id"
+    },
+    "Bid" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid"
+    },
+    "PriceBidDayAhead" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead"
+    },
+    "MinimumCapacityBid" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid"
+    },
+    "capacitySold" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold"
+    },
+    "Load" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load"
+    },
+    "calculatesProperty" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty",
+      "@type" : "@id"
+    },
+    "BuyPrice" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice"
+    },
+    "Flexibility" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "GridInestabilityEstimation" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation"
+    },
+    "hasTimestamp" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp"
+    },
+    "FrequencyInestability" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#preferredNamespaceUri"
+    },
+    "PowerConsumtpion" : {
+      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion"
+    }
+  }
+}

@@ -1,0 +1,551 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/saref#Price"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "DELTA ontology"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "http://www.garcia-castro.com/foaf.rdf#me"
+  }, {
+    "@value" : "Alba Fernández Izquierdo"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "This ontology represents the  terms to allow interoperability in DELTA project"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.0.1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Agent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Bid"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Buy price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Price"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Corrected energy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  }, {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy market"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flexibility"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flexibility bid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Frequency inestability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Generation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Grid inestability estimation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Minimum  capacity bid"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power consumption"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price bid"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid"
+  }, {
+    "@id" : "https://w3id.org/saref#Price"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price bid AS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price bid day ahead"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price bid intra-day"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Storage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Time interval"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Virtual node"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Voltage inestability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid18"
+  }, {
+    "@id" : "_:genid19"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "belongs to"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "calculates property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "capacity sold"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "estimates voltage inestability"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "estimates"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "estimates frequency inestability"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has beginning"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has currency"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has duration"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has end"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has energy market"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has incentive"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has price"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has timestamp"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "high voltage"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "low voltage"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "measures property"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "over frequency"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "under frequency"
+  } ]
+}, {
+  "@id" : "https://w3id.org/saref#Price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/saref#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]
