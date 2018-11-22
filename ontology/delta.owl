@@ -1,0 +1,362 @@
+@prefix : <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> .
+
+<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> rdf:type owl:Ontology ;
+                                                                                     dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                                                                     owl:versionInfo "0.0.1" ;
+                                                                                     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                                                                     dcterms:creator "Alba Fernández Izquierdo" ;
+                                                                                     dc:title "DELTA ontology" ;
+                                                                                     rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#vann:preferredNamespaceUri
+:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:label "belongs to" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty
+:calculatesProperty rdf:type owl:ObjectProperty ;
+                    rdfs:label "calculates property" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability
+:estimateVoltageInestability rdf:type owl:ObjectProperty ;
+                             rdfs:label "estimates voltage inestability" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates
+:estimates rdf:type owl:ObjectProperty ;
+           rdfs:label "estimates" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability
+:estimatesFrequencyInestability rdf:type owl:ObjectProperty ;
+                                rdfs:label "estimates frequency inestability" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency
+:hasCurrency rdf:type owl:ObjectProperty ;
+             rdfs:label "has currency" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration
+:hasDuration rdf:type owl:ObjectProperty ;
+             rdfs:label "has duration" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket
+:hasEnergyMarket rdf:type owl:ObjectProperty ;
+                 rdfs:label "has energy market" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive
+:hasIncentive rdf:type owl:ObjectProperty ;
+              rdfs:label "has incentive" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice
+:hasPrice rdf:type owl:ObjectProperty ;
+          rdfs:label "has price" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty
+:measuresProperty rdf:type owl:ObjectProperty ;
+                  rdfs:label "measures property" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold
+:capacitySold rdf:type owl:DatatypeProperty ;
+              rdfs:label "capacity sold" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning
+:hasBeginning rdf:type owl:DatatypeProperty ;
+              rdfs:label "has beginning" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd
+:hasEnd rdf:type owl:DatatypeProperty ;
+        rdfs:label "has end" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp
+:hasTimestamp rdf:type owl:DatatypeProperty ;
+              rdfs:label "has timestamp" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage
+:highVoltage rdf:type owl:DatatypeProperty ;
+             rdfs:label "high voltage" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage
+:lowVoltage rdf:type owl:DatatypeProperty ;
+            rdfs:label "low voltage" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency
+:overFrequency rdf:type owl:DatatypeProperty ;
+               rdfs:label "over frequency" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency
+:underFrequency rdf:type owl:DatatypeProperty ;
+                rdfs:label "under frequency" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :belongsTo ;
+                         owl:someValuesFrom :VirtualNode
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :estimates ;
+                         owl:someValuesFrom :GridInestabilityEstimation
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasEnergyMarket ;
+                         owl:allValuesFrom :EnergyMarket
+                       ] ;
+       owl:disjointWith :VirtualNode ;
+       rdfs:label "Agent" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid
+:Bid rdf:type owl:Class ;
+     owl:disjointWith :GridInestabilityEstimation ;
+     rdfs:label "Bid" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice
+:BuyPrice rdf:type owl:Class ;
+          rdfs:subClassOf saref:Price ;
+          rdfs:label "Buy price" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy
+:CorrectedEnergy rdf:type owl:Class ;
+                 rdfs:subClassOf :Property ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasIncentive ;
+                                   owl:allValuesFrom :Incentive
+                                 ] ;
+                 rdfs:label "Corrected energy" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket
+:EnergyMarket rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasPrice ;
+                                owl:allValuesFrom saref:Price
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTimestamp ;
+                                owl:allValuesFrom xsd:dateTimeStamp
+                              ] ;
+              rdfs:label "Energy market" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility
+:Flexibility rdf:type owl:Class ;
+             rdfs:subClassOf :Property ;
+             rdfs:label "Flexibility" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid
+:FlexibilityBid rdf:type owl:Class ;
+                rdfs:subClassOf :Bid ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasDuration ;
+                                  owl:someValuesFrom :TimeInterval
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :capacitySold ;
+                                  owl:someValuesFrom xsd:float
+                                ] ;
+                rdfs:label "Flexibility bid" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability
+:FrequencyInestability rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :overFrequency ;
+                                         owl:someValuesFrom xsd:float
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :underFrequency ;
+                                         owl:someValuesFrom xsd:float
+                                       ] ;
+                       rdfs:label "Frequency inestability" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation
+:Generation rdf:type owl:Class ;
+            rdfs:subClassOf :Property ;
+            rdfs:label "Generation" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation
+:GridInestabilityEstimation rdf:type owl:Class ;
+                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                              owl:onProperty :estimateVoltageInestability ;
+                                              owl:allValuesFrom :VoltageInestability
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :estimatesFrequencyInestability ;
+                                              owl:allValuesFrom :FrequencyInestability
+                                            ] ;
+                            rdfs:label "Grid inestability estimation" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive
+:Incentive rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load
+:Load rdf:type owl:Class ;
+      rdfs:subClassOf :Property ;
+      rdfs:label "Load" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid
+:MinimumCapacityBid rdf:type owl:Class ;
+                    rdfs:label "Minimum  capacity bid" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion
+:PowerConsumtpion rdf:type owl:Class ;
+                  rdfs:subClassOf :Property ;
+                  rdfs:label "Power consumption" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid
+:PriceBid rdf:type owl:Class ;
+          rdfs:subClassOf :Bid ,
+                          saref:Price ;
+          rdfs:label "Price bid" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS
+:PriceBidAS rdf:type owl:Class ;
+            rdfs:subClassOf :PriceBid ;
+            rdfs:label "Price bid AS" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead
+:PriceBidDayAhead rdf:type owl:Class ;
+                  rdfs:subClassOf :PriceBid ;
+                  rdfs:label "Price bid day ahead" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay
+:PriceBidIntraDay rdf:type owl:Class ;
+                  rdfs:subClassOf :PriceBid ;
+                  rdfs:label "Price bid intra-day" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property
+:Property rdf:type owl:Class ;
+          rdfs:subClassOf saref:Property ;
+          rdfs:label "Property" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf :Property ;
+         rdfs:label "Storage" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval
+:TimeInterval rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasBeginning ;
+                                owl:allValuesFrom xsd:dateTimeStamp
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasEnd ;
+                                owl:allValuesFrom xsd:dateTimeStamp
+                              ] ;
+              rdfs:label "Time interval" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode
+:VirtualNode rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :estimates ;
+                               owl:someValuesFrom :Bid
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :calculatesProperty ;
+                               owl:allValuesFrom :Property
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :measuresProperty ;
+                               owl:allValuesFrom :Property
+                             ] ;
+             rdfs:label "Virtual node" .
+
+
+###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability
+:VoltageInestability rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :highVoltage ;
+                                       owl:someValuesFrom xsd:float
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :lowVoltage ;
+                                       owl:someValuesFrom xsd:float
+                                     ] ;
+                     rdfs:label "Voltage inestability" .
+
+
+###  https://w3id.org/saref#Price
+saref:Price rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Property
+saref:Property rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
