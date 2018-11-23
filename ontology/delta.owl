@@ -1,4 +1,4 @@
-@prefix : <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#> .
+@prefix : <http://delta.linkeddata.es/def/core#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -8,19 +8,23 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix saref: <https://w3id.org/saref#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> .
+@base <http://delta.linkeddata.es/def/core> .
 
-<http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120> rdf:type owl:Ontology ;
-                                                                                     dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                                                                     owl:versionInfo "0.0.1" ;
-                                                                                     dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                                                                     dcterms:creator "Alba Fernández Izquierdo" ;
-                                                                                     dc:title "DELTA ontology" ;
-                                                                                     rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project" .
+<http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
+                                       dcterms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                       owl:versionInfo "0.0.1" ;
+                                       dcterms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                       dcterms:creator "Alba Fernández Izquierdo" ;
+                                       dc:title "DELTA ontology" ;
+                                       rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://delta.linkeddata.es/def/core#preferredNamespaceUri
+:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/elements/1.1/title
 dc:title rdf:type owl:AnnotationProperty .
@@ -34,65 +38,61 @@ dcterms:creator rdf:type owl:AnnotationProperty .
 dcterms:license rdf:type owl:AnnotationProperty .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#vann:preferredNamespaceUri
-:preferredNamespaceUri rdf:type owl:AnnotationProperty .
-
-
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo
+###  http://delta.linkeddata.es/def/core#belongsTo
 :belongsTo rdf:type owl:ObjectProperty ;
            rdfs:label "belongs to" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty
+###  http://delta.linkeddata.es/def/core#calculatesProperty
 :calculatesProperty rdf:type owl:ObjectProperty ;
                     rdfs:label "calculates property" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability
+###  http://delta.linkeddata.es/def/core#estimateVoltageInestability
 :estimateVoltageInestability rdf:type owl:ObjectProperty ;
                              rdfs:label "estimates voltage inestability" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates
+###  http://delta.linkeddata.es/def/core#estimates
 :estimates rdf:type owl:ObjectProperty ;
            rdfs:label "estimates" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability
+###  http://delta.linkeddata.es/def/core#estimatesFrequencyInestability
 :estimatesFrequencyInestability rdf:type owl:ObjectProperty ;
                                 rdfs:label "estimates frequency inestability" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency
+###  http://delta.linkeddata.es/def/core#hasCurrency
 :hasCurrency rdf:type owl:ObjectProperty ;
              rdfs:label "has currency" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration
+###  http://delta.linkeddata.es/def/core#hasDuration
 :hasDuration rdf:type owl:ObjectProperty ;
              rdfs:label "has duration" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket
+###  http://delta.linkeddata.es/def/core#hasEnergyMarket
 :hasEnergyMarket rdf:type owl:ObjectProperty ;
                  rdfs:label "has energy market" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive
+###  http://delta.linkeddata.es/def/core#hasIncentive
 :hasIncentive rdf:type owl:ObjectProperty ;
               rdfs:label "has incentive" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice
+###  http://delta.linkeddata.es/def/core#hasPrice
 :hasPrice rdf:type owl:ObjectProperty ;
           rdfs:label "has price" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty
+###  http://delta.linkeddata.es/def/core#measuresProperty
 :measuresProperty rdf:type owl:ObjectProperty ;
                   rdfs:label "measures property" .
 
@@ -101,42 +101,42 @@ dcterms:license rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold
+###  http://delta.linkeddata.es/def/core#capacitySold
 :capacitySold rdf:type owl:DatatypeProperty ;
               rdfs:label "capacity sold" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning
+###  http://delta.linkeddata.es/def/core#hasBeginning
 :hasBeginning rdf:type owl:DatatypeProperty ;
               rdfs:label "has beginning" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd
+###  http://delta.linkeddata.es/def/core#hasEnd
 :hasEnd rdf:type owl:DatatypeProperty ;
         rdfs:label "has end" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp
+###  http://delta.linkeddata.es/def/core#hasTimestamp
 :hasTimestamp rdf:type owl:DatatypeProperty ;
               rdfs:label "has timestamp" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage
+###  http://delta.linkeddata.es/def/core#highVoltage
 :highVoltage rdf:type owl:DatatypeProperty ;
              rdfs:label "high voltage" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage
+###  http://delta.linkeddata.es/def/core#lowVoltage
 :lowVoltage rdf:type owl:DatatypeProperty ;
             rdfs:label "low voltage" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency
+###  http://delta.linkeddata.es/def/core#overFrequency
 :overFrequency rdf:type owl:DatatypeProperty ;
                rdfs:label "over frequency" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency
+###  http://delta.linkeddata.es/def/core#underFrequency
 :underFrequency rdf:type owl:DatatypeProperty ;
                 rdfs:label "under frequency" .
 
@@ -145,11 +145,11 @@ dcterms:license rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent
+###  http://delta.linkeddata.es/def/core#Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :belongsTo ;
-                         owl:someValuesFrom :VirtualNode
+                         owl:onProperty :estimates ;
+                         owl:someValuesFrom :Bid
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :estimates ;
@@ -158,24 +158,28 @@ dcterms:license rdf:type owl:AnnotationProperty .
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasEnergyMarket ;
                          owl:allValuesFrom :EnergyMarket
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :measuresProperty ;
+                         owl:allValuesFrom :Property
                        ] ;
        owl:disjointWith :VirtualNode ;
        rdfs:label "Agent" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid
+###  http://delta.linkeddata.es/def/core#Bid
 :Bid rdf:type owl:Class ;
      owl:disjointWith :GridInestabilityEstimation ;
      rdfs:label "Bid" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice
+###  http://delta.linkeddata.es/def/core#BuyPrice
 :BuyPrice rdf:type owl:Class ;
           rdfs:subClassOf saref:Price ;
           rdfs:label "Buy price" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy
+###  http://delta.linkeddata.es/def/core#CorrectedEnergy
 :CorrectedEnergy rdf:type owl:Class ;
                  rdfs:subClassOf :Property ,
                                  [ rdf:type owl:Restriction ;
@@ -185,7 +189,7 @@ dcterms:license rdf:type owl:AnnotationProperty .
                  rdfs:label "Corrected energy" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket
+###  http://delta.linkeddata.es/def/core#EnergyMarket
 :EnergyMarket rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasPrice ;
@@ -198,13 +202,13 @@ dcterms:license rdf:type owl:AnnotationProperty .
               rdfs:label "Energy market" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility
+###  http://delta.linkeddata.es/def/core#Flexibility
 :Flexibility rdf:type owl:Class ;
              rdfs:subClassOf :Property ;
              rdfs:label "Flexibility" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid
+###  http://delta.linkeddata.es/def/core#FlexibilityBid
 :FlexibilityBid rdf:type owl:Class ;
                 rdfs:subClassOf :Bid ,
                                 [ rdf:type owl:Restriction ;
@@ -218,7 +222,7 @@ dcterms:license rdf:type owl:AnnotationProperty .
                 rdfs:label "Flexibility bid" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability
+###  http://delta.linkeddata.es/def/core#FrequencyInestability
 :FrequencyInestability rdf:type owl:Class ;
                        rdfs:subClassOf [ rdf:type owl:Restriction ;
                                          owl:onProperty :overFrequency ;
@@ -231,13 +235,13 @@ dcterms:license rdf:type owl:AnnotationProperty .
                        rdfs:label "Frequency inestability" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation
+###  http://delta.linkeddata.es/def/core#Generation
 :Generation rdf:type owl:Class ;
             rdfs:subClassOf :Property ;
             rdfs:label "Generation" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation
+###  http://delta.linkeddata.es/def/core#GridInestabilityEstimation
 :GridInestabilityEstimation rdf:type owl:Class ;
                             rdfs:subClassOf [ rdf:type owl:Restriction ;
                                               owl:onProperty :estimateVoltageInestability ;
@@ -250,65 +254,65 @@ dcterms:license rdf:type owl:AnnotationProperty .
                             rdfs:label "Grid inestability estimation" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive
+###  http://delta.linkeddata.es/def/core#Incentive
 :Incentive rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load
+###  http://delta.linkeddata.es/def/core#Load
 :Load rdf:type owl:Class ;
       rdfs:subClassOf :Property ;
       rdfs:label "Load" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid
+###  http://delta.linkeddata.es/def/core#MinimumCapacityBid
 :MinimumCapacityBid rdf:type owl:Class ;
                     rdfs:label "Minimum  capacity bid" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion
+###  http://delta.linkeddata.es/def/core#PowerConsumtpion
 :PowerConsumtpion rdf:type owl:Class ;
                   rdfs:subClassOf :Property ;
                   rdfs:label "Power consumption" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid
+###  http://delta.linkeddata.es/def/core#PriceBid
 :PriceBid rdf:type owl:Class ;
           rdfs:subClassOf :Bid ,
                           saref:Price ;
           rdfs:label "Price bid" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS
+###  http://delta.linkeddata.es/def/core#PriceBidAS
 :PriceBidAS rdf:type owl:Class ;
             rdfs:subClassOf :PriceBid ;
             rdfs:label "Price bid AS" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead
+###  http://delta.linkeddata.es/def/core#PriceBidDayAhead
 :PriceBidDayAhead rdf:type owl:Class ;
                   rdfs:subClassOf :PriceBid ;
                   rdfs:label "Price bid day ahead" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay
+###  http://delta.linkeddata.es/def/core#PriceBidIntraDay
 :PriceBidIntraDay rdf:type owl:Class ;
                   rdfs:subClassOf :PriceBid ;
                   rdfs:label "Price bid intra-day" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property
+###  http://delta.linkeddata.es/def/core#Property
 :Property rdf:type owl:Class ;
           rdfs:subClassOf saref:Property ;
           rdfs:label "Property" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage
+###  http://delta.linkeddata.es/def/core#Storage
 :Storage rdf:type owl:Class ;
          rdfs:subClassOf :Property ;
          rdfs:label "Storage" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval
+###  http://delta.linkeddata.es/def/core#TimeInterval
 :TimeInterval rdf:type owl:Class ;
               rdfs:subClassOf [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasBeginning ;
@@ -321,13 +325,9 @@ dcterms:license rdf:type owl:AnnotationProperty .
               rdfs:label "Time interval" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode
+###  http://delta.linkeddata.es/def/core#VirtualNode
 :VirtualNode rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty :estimates ;
-                               owl:someValuesFrom :Bid
-                             ] ,
-                             [ rdf:type owl:Restriction ;
                                owl:onProperty :calculatesProperty ;
                                owl:allValuesFrom :Property
                              ] ,
@@ -338,7 +338,7 @@ dcterms:license rdf:type owl:AnnotationProperty .
              rdfs:label "Virtual node" .
 
 
-###  http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability
+###  http://delta.linkeddata.es/def/core#VoltageInestability
 :VoltageInestability rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty :highVoltage ;
