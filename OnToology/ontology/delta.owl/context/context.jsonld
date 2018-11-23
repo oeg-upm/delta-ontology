@@ -1,26 +1,26 @@
 {
   "@context" : {
     "belongsTo" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#belongsTo",
+      "@id" : "http://delta.linkeddata.es/def/core#belongsTo",
       "@type" : "@id"
     },
     "hasEnergyMarket" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnergyMarket",
+      "@id" : "http://delta.linkeddata.es/def/core#hasEnergyMarket",
       "@type" : "@id"
     },
     "hasPrice" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasPrice",
+      "@id" : "http://delta.linkeddata.es/def/core#hasPrice",
       "@type" : "@id"
     },
     "EnergyMarket" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#EnergyMarket"
+      "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket"
     },
     "estimates" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimates",
+      "@id" : "http://delta.linkeddata.es/def/core#estimates",
       "@type" : "@id"
     },
     "Storage" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Storage"
+      "@id" : "http://delta.linkeddata.es/def/core#Storage"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -29,137 +29,137 @@
       "@id" : "http://purl.org/dc/terms/license"
     },
     "estimateVoltageInestability" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimateVoltageInestability",
+      "@id" : "http://delta.linkeddata.es/def/core#estimateVoltageInestability",
       "@type" : "@id"
     },
     "measuresProperty" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#measuresProperty",
+      "@id" : "http://delta.linkeddata.es/def/core#measuresProperty",
       "@type" : "@id"
     },
     "hasCurrency" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasCurrency",
+      "@id" : "http://delta.linkeddata.es/def/core#hasCurrency",
       "@type" : "@id"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "estimatesFrequencyInestability" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#estimatesFrequencyInestability",
+      "@id" : "http://delta.linkeddata.es/def/core#estimatesFrequencyInestability",
       "@type" : "@id"
     },
     "highVoltage" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#highVoltage"
+      "@id" : "http://delta.linkeddata.es/def/core#highVoltage"
     },
     "lowVoltage" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#lowVoltage"
+      "@id" : "http://delta.linkeddata.es/def/core#lowVoltage"
     },
     "VirtualNode" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VirtualNode"
+      "@id" : "http://delta.linkeddata.es/def/core#VirtualNode"
     },
     "hasDuration" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasDuration",
+      "@id" : "http://delta.linkeddata.es/def/core#hasDuration",
       "@type" : "@id"
     },
     "Price" : {
       "@id" : "https://w3id.org/saref#Price"
     },
     "Incentive" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Incentive"
+      "@id" : "http://delta.linkeddata.es/def/core#Incentive"
     },
     "Generation" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Generation"
+      "@id" : "http://delta.linkeddata.es/def/core#Generation"
     },
     "Agent" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Agent"
+      "@id" : "http://delta.linkeddata.es/def/core#Agent"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
     "underFrequency" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#underFrequency"
+      "@id" : "http://delta.linkeddata.es/def/core#underFrequency"
     },
     "PriceBidAS" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidAS"
+      "@id" : "http://delta.linkeddata.es/def/core#PriceBidAS"
     },
     "TimeInterval" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#TimeInterval"
+      "@id" : "http://delta.linkeddata.es/def/core#TimeInterval"
     },
     "PriceBid" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBid"
+      "@id" : "http://delta.linkeddata.es/def/core#PriceBid"
     },
     "hasEnd" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasEnd"
+      "@id" : "http://delta.linkeddata.es/def/core#hasEnd"
     },
     "VoltageInestability" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#VoltageInestability"
+      "@id" : "http://delta.linkeddata.es/def/core#VoltageInestability"
     },
     "hasBeginning" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasBeginning"
+      "@id" : "http://delta.linkeddata.es/def/core#hasBeginning"
     },
     "overFrequency" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#overFrequency"
+      "@id" : "http://delta.linkeddata.es/def/core#overFrequency"
     },
     "PriceBidIntraDay" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidIntraDay"
+      "@id" : "http://delta.linkeddata.es/def/core#PriceBidIntraDay"
     },
     "FlexibilityBid" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FlexibilityBid"
+      "@id" : "http://delta.linkeddata.es/def/core#FlexibilityBid"
     },
     "CorrectedEnergy" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#CorrectedEnergy"
+      "@id" : "http://delta.linkeddata.es/def/core#CorrectedEnergy"
     },
     "Property" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Property"
+      "@id" : "http://delta.linkeddata.es/def/core#Property"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "hasIncentive" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasIncentive",
+      "@id" : "http://delta.linkeddata.es/def/core#hasIncentive",
       "@type" : "@id"
     },
     "Bid" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Bid"
+      "@id" : "http://delta.linkeddata.es/def/core#Bid"
     },
     "PriceBidDayAhead" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PriceBidDayAhead"
+      "@id" : "http://delta.linkeddata.es/def/core#PriceBidDayAhead"
     },
     "MinimumCapacityBid" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#MinimumCapacityBid"
+      "@id" : "http://delta.linkeddata.es/def/core#MinimumCapacityBid"
     },
     "capacitySold" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#capacitySold"
+      "@id" : "http://delta.linkeddata.es/def/core#capacitySold"
     },
     "Load" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Load"
+      "@id" : "http://delta.linkeddata.es/def/core#Load"
     },
     "calculatesProperty" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#calculatesProperty",
+      "@id" : "http://delta.linkeddata.es/def/core#calculatesProperty",
       "@type" : "@id"
     },
     "BuyPrice" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#BuyPrice"
+      "@id" : "http://delta.linkeddata.es/def/core#BuyPrice"
     },
     "Flexibility" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#Flexibility"
+      "@id" : "http://delta.linkeddata.es/def/core#Flexibility"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "GridInestabilityEstimation" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#GridInestabilityEstimation"
+      "@id" : "http://delta.linkeddata.es/def/core#GridInestabilityEstimation"
     },
     "hasTimestamp" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#hasTimestamp"
+      "@id" : "http://delta.linkeddata.es/def/core#hasTimestamp"
     },
     "FrequencyInestability" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#FrequencyInestability"
+      "@id" : "http://delta.linkeddata.es/def/core#FrequencyInestability"
     },
     "preferredNamespaceUri" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#preferredNamespaceUri"
+      "@id" : "http://delta.linkeddata.es/def/core#preferredNamespaceUri"
     },
     "PowerConsumtpion" : {
-      "@id" : "http://www.semanticweb.org/albafernandez/ontologies/2018/10/untitled-ontology-120#PowerConsumtpion"
+      "@id" : "http://delta.linkeddata.es/def/core#PowerConsumtpion"
     }
   }
 }
