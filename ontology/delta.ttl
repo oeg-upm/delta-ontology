@@ -92,6 +92,20 @@ dcterms:license rdf:type owl:AnnotationProperty .
           rdfs:label "has price" .
 
 
+###  http://delta.linkeddata.es/def/core#hasReward
+:hasReward rdf:type owl:ObjectProperty ;
+           rdfs:label "has reward" .
+
+
+###  http://delta.linkeddata.es/def/core#isRelatedToProperty
+:isRelatedToProperty rdf:type owl:ObjectProperty .
+
+
+###  http://delta.linkeddata.es/def/core#manage
+:manage rdf:type owl:ObjectProperty ;
+        rdfs:label "manage" .
+
+
 ###  http://delta.linkeddata.es/def/core#measuresProperty
 :measuresProperty rdf:type owl:ObjectProperty ;
                   rdfs:label "measures property" .
@@ -136,6 +150,18 @@ dcterms:license rdf:type owl:AnnotationProperty .
                rdfs:label "over frequency" .
 
 
+###  http://delta.linkeddata.es/def/core#stateOfCharge
+:stateOfCharge rdf:type owl:DatatypeProperty ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "state of charge" .
+
+
+###  http://delta.linkeddata.es/def/core#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:range rdfs:Literal ;
+      rdfs:label "type" .
+
+
 ###  http://delta.linkeddata.es/def/core#underFrequency
 :underFrequency rdf:type owl:DatatypeProperty ;
                 rdfs:label "under frequency" .
@@ -144,28 +170,6 @@ dcterms:license rdf:type owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
-
-###  http://delta.linkeddata.es/def/core#Agent
-:Agent rdf:type owl:Class ;
-       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :estimates ;
-                         owl:someValuesFrom :Bid
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :estimates ;
-                         owl:someValuesFrom :GridInestabilityEstimation
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasEnergyMarket ;
-                         owl:allValuesFrom :EnergyMarket
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :measuresProperty ;
-                         owl:allValuesFrom :Property
-                       ] ;
-       owl:disjointWith :VirtualNode ;
-       rdfs:label "Agent" .
-
 
 ###  http://delta.linkeddata.es/def/core#Bid
 :Bid rdf:type owl:Class ;
@@ -177,6 +181,16 @@ dcterms:license rdf:type owl:AnnotationProperty .
 :BuyPrice rdf:type owl:Class ;
           rdfs:subClassOf saref:Price ;
           rdfs:label "Buy price" .
+
+
+###  http://delta.linkeddata.es/def/core#Consumer
+:Consumer rdf:type owl:Class ;
+          rdfs:subClassOf saref:Device ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasReward ;
+                            owl:allValuesFrom :Reward
+                          ] ;
+          rdfs:label "Consumer" .
 
 
 ###  http://delta.linkeddata.es/def/core#CorrectedEnergy
@@ -255,7 +269,8 @@ dcterms:license rdf:type owl:AnnotationProperty .
 
 
 ###  http://delta.linkeddata.es/def/core#Incentive
-:Incentive rdf:type owl:Class .
+:Incentive rdf:type owl:Class ;
+           rdfs:label "Incentive" .
 
 
 ###  http://delta.linkeddata.es/def/core#Load
@@ -306,10 +321,24 @@ dcterms:license rdf:type owl:AnnotationProperty .
           rdfs:label "Property" .
 
 
-###  http://delta.linkeddata.es/def/core#Storage
-:Storage rdf:type owl:Class ;
-         rdfs:subClassOf :Property ;
-         rdfs:label "Storage" .
+###  http://delta.linkeddata.es/def/core#Prosumer
+:Prosumer rdf:type owl:Class ;
+          rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                          saref:Device ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :estimates ;
+                            owl:someValuesFrom :FlexibilityBid
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :measuresProperty ;
+                            owl:allValuesFrom :Property
+                          ] ;
+          rdfs:label "Prosumer" .
+
+
+###  http://delta.linkeddata.es/def/core#Reward
+:Reward rdf:type owl:Class ;
+        rdfs:label "Reward" .
 
 
 ###  http://delta.linkeddata.es/def/core#TimeInterval
@@ -328,8 +357,24 @@ dcterms:license rdf:type owl:AnnotationProperty .
 ###  http://delta.linkeddata.es/def/core#VirtualNode
 :VirtualNode rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :estimates ;
+                               owl:someValuesFrom :Bid
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :estimates ;
+                               owl:someValuesFrom :GridInestabilityEstimation
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :calculatesProperty ;
                                owl:allValuesFrom :Property
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasEnergyMarket ;
+                               owl:allValuesFrom :EnergyMarket
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :manage ;
+                               owl:allValuesFrom saref:Device
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :measuresProperty ;
@@ -349,6 +394,18 @@ dcterms:license rdf:type owl:AnnotationProperty .
                                        owl:someValuesFrom xsd:float
                                      ] ;
                      rdfs:label "Voltage inestability" .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Device
+saref:Device rdf:type owl:Class .
+
+
+###  https://w3id.org/saref#Measurement
+saref:Measurement rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Price
