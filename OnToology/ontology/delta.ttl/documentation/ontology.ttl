@@ -311,6 +311,11 @@
                   rdfs:label "Price bid intra-day" .
 
 
+###  http://delta.linkeddata.es/def/core#Profit
+:Profit rdf:type owl:Class ;
+        rdfs:label "Profit" .
+
+
 ###  http://delta.linkeddata.es/def/core#Property
 :Property rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/saref#Property> ;

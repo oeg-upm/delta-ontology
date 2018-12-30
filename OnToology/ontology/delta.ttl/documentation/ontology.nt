@@ -276,6 +276,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata
 <http://delta.linkeddata.es/def/core#PriceBidIntraDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#PriceBid> .
 <http://delta.linkeddata.es/def/core#PriceBidIntraDay> <http://www.w3.org/2000/01/rdf-schema#label> "Price bid intra-day" .
 # 
+# http://delta.linkeddata.es/def/core#Profit
+<http://delta.linkeddata.es/def/core#Profit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://delta.linkeddata.es/def/core#Profit> <http://www.w3.org/2000/01/rdf-schema#label> "Profit" .
+# 
 # http://delta.linkeddata.es/def/core#Property
 <http://delta.linkeddata.es/def/core#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Property> .

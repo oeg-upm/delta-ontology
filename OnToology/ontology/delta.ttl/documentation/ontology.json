@@ -389,6 +389,12 @@
     "@id" : "http://delta.linkeddata.es/def/core#PriceBid"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#Profit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Profit"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#Property",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
