@@ -39,6 +39,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#measuresProperty",
       "@type" : "@id"
     },
+    "Profit" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Profit"
+    },
     "hasCurrency" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasCurrency",
       "@type" : "@id"

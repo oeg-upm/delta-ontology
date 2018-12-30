@@ -548,6 +548,15 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#Profit -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Profit">
+        <rdfs:label>Profit</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Property -->
 
 
