@@ -1,12 +1,12 @@
-@prefix : <http://www.semanticweb.org/untitled-ontology-53#> .
+@prefix : <> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/untitled-ontology-53#> .
+@base <> .
 
-<http://www.semanticweb.org/untitled-ontology-53#> rdf:type owl:Ontology .
+<> rdf:type owl:Ontology .
 
 
 #################################################################
@@ -46,7 +46,7 @@
 #################################################################
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign1
+###  testDesign1
 
 :testDesign1 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -55,7 +55,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign10
+###  testDesign10
 
 :testDesign10 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -64,7 +64,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign11
+###  testDesign11
 
 :testDesign11 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -73,7 +73,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign12
+###  testDesign12
 
 :testDesign12 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -82,7 +82,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign13
+###  testDesign13
 
 :testDesign13 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -91,7 +91,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign14
+###  testDesign14
 
 :testDesign14 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -100,7 +100,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign15
+###  testDesign15
 
 :testDesign15 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -109,7 +109,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign16
+###  testDesign16
 
 :testDesign16 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -118,7 +118,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign17
+###  testDesign17
 
 :testDesign17 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -127,7 +127,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign18
+###  testDesign18
 
 :testDesign18 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -136,7 +136,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign19
+###  testDesign19
 
 :testDesign19 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -145,7 +145,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign2
+###  testDesign2
 
 :testDesign2 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -154,7 +154,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign20
+###  testDesign20
 
 :testDesign20 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -163,7 +163,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign21
+###  testDesign21
 
 :testDesign21 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -172,7 +172,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign22
+###  testDesign22
 
 :testDesign22 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -181,7 +181,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign23
+###  testDesign23
 
 :testDesign23 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -190,7 +190,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign24
+###  testDesign24
 
 :testDesign24 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                        owl:NamedIndividual ;
@@ -199,7 +199,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign3
+###  testDesign3
 
 :testDesign3 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -208,7 +208,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign4
+###  testDesign4
 
 :testDesign4 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -217,7 +217,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign5
+###  testDesign5
 
 :testDesign5 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -226,7 +226,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign6
+###  testDesign6
 
 :testDesign6 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -235,7 +235,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign7
+###  testDesign7
 
 :testDesign7 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -244,7 +244,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign8
+###  testDesign8
 
 :testDesign8 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -253,7 +253,7 @@
 
 
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign9
+###  testDesign9
 
 :testDesign9 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
@@ -261,28 +261,28 @@
            
              <http://w3id.org/def/vtc#desiredBehaviour> "Energy subclassOf hasIncentive only Incentive"^^xsd:string .
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign24
+###  testDesign24
 
 :testDesign24 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
               <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-46>                                                    
              <http://w3id.org/def/vtc#desiredBehaviour> "Prosumer subclassOf hasReward some Reward"^^xsd:string .
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign25
+###  testDesign25
 
 :testDesign25 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
               <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-47>                                                    
              <http://w3id.org/def/vtc#desiredBehaviour> "VirtualNode subclassOf cluster some string"^^xsd:string .
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign26
+###  testDesign26
 
 :testDesign26 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
               <http://w3id.org/def/vtc#isRelatedToRequirement> <http://delta.iot.linkeddata.es/requirements/report.html#delta-48>                                                    
              <http://w3id.org/def/vtc#desiredBehaviour> "VirtualNode subclassOf manage some Consumer"^^xsd:string .
 
-###  http://www.semanticweb.org/untitled-ontology-53#testDesign26
+###  testDesign26
 
 :testDesign27 rdf:type <http://w3id.org/def/vtc#TestCaseDesign> ,
                       owl:NamedIndividual ;
