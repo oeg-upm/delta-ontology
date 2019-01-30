@@ -52,3 +52,5 @@ MinimumCapacityBid,http://delta.linkeddata.es/def/core#MinimumCapacityBid
 Reward,http://delta.linkeddata.es/def/core#Reward
 estimateVoltageInestability,http://delta.linkeddata.es/def/core#estimateVoltageInestability
 belongsTo,http://delta.linkeddata.es/def/core#belongsTo
+Profile,http://delta.linkeddata.es/def/core#Profile
+hasProfile,http://delta.linkeddata.es/def/core#hasProfile
