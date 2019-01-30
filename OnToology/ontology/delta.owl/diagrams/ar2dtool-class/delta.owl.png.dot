@@ -1,0 +1,38 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "core:Aggregator" "core:TimeInterval" "saref:Device" "core:Reward" "core:Profile" "core:EnergyMarket" "core:Incentive" "core:Bid" ; /*classes style*/
+	"core:stateOfCharge" -> "core:type" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "core:TimeInterval" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:hasBeginning" [ label = "owl:onProperty" ];
+	"NULL" -> "core:EnergyMarket" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:hasEnd" [ label = "owl:onProperty" ];
+	"NULL" -> "core:activates" [ label = "owl:onProperty" ];
+	"NULL" -> "core:stateOfCharge" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasProfile" [ label = "owl:onProperty" ];
+	"NULL" -> "owl:rational" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:cluster" [ label = "owl:onProperty" ];
+	"NULL" -> "core:type" [ label = "owl:onProperty" ];
+	"NULL" -> "core:Reward" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:manage" [ label = "owl:onProperty" ];
+	"NULL" -> "core:sendBids" [ label = "owl:onProperty" ];
+	"NULL" -> "core:Incentive" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "xsd:float" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:uses" [ label = "owl:onProperty" ];
+	"NULL" -> "core:Aggregator" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:capacitySold" [ label = "owl:onProperty" ];
+	"NULL" -> "core:belongsTo" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasReward" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasDuration" [ label = "owl:onProperty" ];
+	"NULL" -> "core:Profile" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:Bid" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:hasIncentive" [ label = "owl:onProperty" ];
+	"NULL" -> "xsd:dateTimeStamp" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:estimates" [ label = "owl:onProperty" ];
+	"NULL" -> "saref:Device" [ label = "owl:allValuesFrom" ];
+	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "terms:license" ];
+	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "terms:creator" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "core:stateOfCharge" ];
+	"owl:Thing" -> "rdfs:Literal" [ label = "core:type" ];
+
+}

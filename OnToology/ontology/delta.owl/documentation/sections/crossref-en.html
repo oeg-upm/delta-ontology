@@ -1,0 +1,810 @@
+<html><h2 id="crossreference" class="list">Cross reference for DELTA ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by DELTA ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#Aggregator" title="http://delta.linkeddata.es/def/core#Aggregator">Aggregator</a>
+      </li>
+      <li>
+         <a href="#Bid" title="http://delta.linkeddata.es/def/core#Bid">Bid</a>
+      </li>
+      <li>
+         <a href="#Consumer" title="http://delta.linkeddata.es/def/core#Consumer">Consumer</a>
+      </li>
+      <li>
+         <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+      </li>
+      <li>
+         <a href="#EnergyMarket" title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy market</a>
+      </li>
+      <li>
+         <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
+      </li>
+      <li>
+         <a href="#FlexibilityBid"
+            title="http://delta.linkeddata.es/def/core#FlexibilityBid">Flexibility bid</a>
+      </li>
+      <li>
+         <a href="#Generation" title="http://delta.linkeddata.es/def/core#Generation">Generation</a>
+      </li>
+      <li>
+         <a href="#Incentive" title="http://delta.linkeddata.es/def/core#Incentive">Incentive</a>
+      </li>
+      <li>
+         <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
+      </li>
+      <li>
+         <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+      </li>
+      <li>
+         <a href="#PriceBid" title="http://delta.linkeddata.es/def/core#PriceBid">Price bid</a>
+      </li>
+      <li>
+         <a href="#PriceBidAS" title="http://delta.linkeddata.es/def/core#PriceBidAS">Price bid AS</a>
+      </li>
+      <li>
+         <a href="#PriceBidDayAhead"
+            title="http://delta.linkeddata.es/def/core#PriceBidDayAhead">Price bid day ahead</a>
+      </li>
+      <li>
+         <a href="#PriceBidIntraDay"
+            title="http://delta.linkeddata.es/def/core#PriceBidIntraDay">Price bid intra-day</a>
+      </li>
+      <li>
+         <a href="#Profile" title="http://delta.linkeddata.es/def/core#Profile">Profile</a>
+      </li>
+      <li>
+         <a href="#Profit" title="http://delta.linkeddata.es/def/core#Profit">Profit</a>
+      </li>
+      <li>
+         <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+      </li>
+      <li>
+         <a href="#Prosumer" title="http://delta.linkeddata.es/def/core#Prosumer">Prosumer</a>
+      </li>
+      <li>
+         <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
+      </li>
+      <li>
+         <a href="#TimeInterval" title="http://delta.linkeddata.es/def/core#TimeInterval">Time interval</a>
+      </li>
+      <li>
+         <a href="#VirtualNode" title="http://delta.linkeddata.es/def/core#VirtualNode">Virtual node</a>
+      </li>
+   </ul>
+   <div class="entity" id="Aggregator">
+      <h3>Aggregator<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Aggregator</p>
+      <div class="comment">
+         <span class="markdown">Legal entities that aggregate the load or generation of various demand and/or generation/production units and aim at optimizing energy supply and consumption.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#estimates" title="http://delta.linkeddata.es/def/core#estimates">estimates</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Bid" title="http://delta.linkeddata.es/def/core#Bid">Bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="http://delta.linkeddata.es/def/core#sendBids">send bids</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#EnergyMarket" title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy market</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Bid">
+      <h3>Bid<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Bid</p>
+      <div class="comment">
+         <span class="markdown">Bid that is estimated by the aggregator</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasDuration" title="http://delta.linkeddata.es/def/core#hasDuration">has duration</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#TimeInterval" title="http://delta.linkeddata.es/def/core#TimeInterval">Time interval</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#FlexibilityBid"
+               title="http://delta.linkeddata.es/def/core#FlexibilityBid">Flexibility bid</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PriceBid" title="http://delta.linkeddata.es/def/core#PriceBid">Price bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Consumer">
+      <h3>Consumer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Consumer</p>
+      <div class="comment">
+         <span class="markdown">Device that consumes energy</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Prosumer" title="http://delta.linkeddata.es/def/core#Prosumer">Prosumer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Energy">
+      <h3>Energy<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Energy</p>
+      <div class="comment">
+         <span class="markdown">A property related to measurements that are characterized  by a value measured in energy units</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Incentive" title="http://delta.linkeddata.es/def/core#Incentive">Incentive</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EnergyMarket">
+      <h3>Energy market<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#EnergyMarket</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://delta.linkeddata.es/def/core#activates">activates</span>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Aggregator" title="http://delta.linkeddata.es/def/core#Aggregator">Aggregator</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Flexibility">
+      <h3>Flexibility<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Flexibility</p>
+      <div class="comment">
+         <span class="markdown">Flexibility is a property that indicates the ability to increase or reduce the production of power plants or the consumption of demand processes</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FlexibilityBid">
+      <h3>Flexibility bid<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#FlexibilityBid</p>
+      <div class="comment">
+         <span class="markdown">Bid related to energy  flexibility</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Bid" title="http://delta.linkeddata.es/def/core#Bid">Bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#capacitySold" title="http://delta.linkeddata.es/def/core#capacitySold">capacity sold</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Generation">
+      <h3>Generation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Generation</p>
+      <div class="comment">
+         <span class="markdown">A property related to measurements that are characterized  by a value measured in generation units. It represents the energy produced.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Incentive">
+      <h3>Incentive<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Incentive</p>
+      <div class="comment">
+         <span class="markdown">Incentive (usually monetary) associated to energy values</span>
+      </div>
+   </div>
+   <div class="entity" id="Load">
+      <h3>Load<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Load</p>
+      <div class="comment">
+         <span class="markdown">A property related to measurements that are characterized  by a value measured in energy units. It represents the load needed for a device to init</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Power">
+      <h3>Power<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Power</p>
+      <div class="comment">
+         <span class="markdown">A property related to measurements that are characterized  by a value measured in power units</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceBid">
+      <h3>Price bid<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PriceBid</p>
+      <div class="comment">
+         <span class="markdown">Bid related to price</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Bid" title="http://delta.linkeddata.es/def/core#Bid">Bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/saref#Price">price</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#PriceBidAS" title="http://delta.linkeddata.es/def/core#PriceBidAS">Price bid AS</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PriceBidDayAhead"
+               title="http://delta.linkeddata.es/def/core#PriceBidDayAhead">Price bid day ahead</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PriceBidIntraDay"
+               title="http://delta.linkeddata.es/def/core#PriceBidIntraDay">Price bid intra-day</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceBidAS">
+      <h3>Price bid AS<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PriceBidAS</p>
+      <div class="comment">
+         <span class="markdown">Price bid for ancillary services</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PriceBid" title="http://delta.linkeddata.es/def/core#PriceBid">Price bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceBidDayAhead">
+      <h3>Price bid day ahead<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PriceBidDayAhead</p>
+      <div class="comment">
+         <span class="markdown">Bid price for the next day</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PriceBid" title="http://delta.linkeddata.es/def/core#PriceBid">Price bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceBidIntraDay">
+      <h3>Price bid intra-day<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PriceBidIntraDay</p>
+      <div class="comment">
+         <span class="markdown">Price bid for the day</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#PriceBid" title="http://delta.linkeddata.es/def/core#PriceBid">Price bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profile">
+      <h3>Profile<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Profile</p>
+      <div class="comment">
+         <span class="markdown">A specification associated to a DVN or a device to collect information about properties</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasDuration" title="http://delta.linkeddata.es/def/core#hasDuration">has duration</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#TimeInterval" title="http://delta.linkeddata.es/def/core#TimeInterval">Time interval</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Profit">
+      <h3>Profit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Profit</p>
+   </div>
+   <div class="entity" id="Property">
+      <h3>Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Property</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="https://w3id.org/saref#Property">property</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Generation" title="http://delta.linkeddata.es/def/core#Generation">Generation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Prosumer">
+      <h3>Prosumer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Prosumer</p>
+      <div class="comment">
+         <span class="markdown">Device that consumes and produces energy</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">spatial thing</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <span class="dotted" title="https://w3id.org/saref#Device">device</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasReward" title="http://delta.linkeddata.es/def/core#hasReward">has reward</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasProfile" title="http://delta.linkeddata.es/def/core#hasProfile">has profile</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Profile" title="http://delta.linkeddata.es/def/core#Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#stateOfCharge"
+               title="http://delta.linkeddata.es/def/core#stateOfCharge">state of charge</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#rational">rational</span>
+         </dd>
+         <dd>
+            <a href="#type" title="http://delta.linkeddata.es/def/core#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#rational">rational</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Consumer" title="http://delta.linkeddata.es/def/core#Consumer">Consumer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Reward">
+      <h3>Reward<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Reward</p>
+      <div class="comment">
+         <span class="markdown">Reward associated to the devices</span>
+      </div>
+   </div>
+   <div class="entity" id="TimeInterval">
+      <h3>Time interval<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#TimeInterval</p>
+      <div class="comment">
+         <span class="markdown">Interval of time that indicates the active time of a bid or profile</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#hasBeginning" title="http://delta.linkeddata.es/def/core#hasBeginning">has beginning</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+         </dd>
+         <dd>
+            <a href="#hasEnd" title="http://delta.linkeddata.es/def/core#hasEnd">has end</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="VirtualNode">
+      <h3>Virtual node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#VirtualNode</p>
+      <div class="comment">
+         <span class="markdown">An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#belongsTo" title="http://delta.linkeddata.es/def/core#belongsTo">belongs to</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Aggregator" title="http://delta.linkeddata.es/def/core#Aggregator">Aggregator</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#uses" title="http://delta.linkeddata.es/def/core#uses">uses</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">some</span> 
+            <a href="#Bid" title="http://delta.linkeddata.es/def/core#Bid">Bid</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#hasProfile" title="http://delta.linkeddata.es/def/core#hasProfile">has profile</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <a href="#Profile" title="http://delta.linkeddata.es/def/core#Profile">Profile</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#manage" title="http://delta.linkeddata.es/def/core#manage">manage</a>
+            <sup class="type-op" title="object property">op</sup> 
+            <span class="logic">only</span> 
+            <span class="dotted" title="https://w3id.org/saref#Device">device</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#cluster" title="http://delta.linkeddata.es/def/core#cluster">cluster</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="logic">some</span> 
+            <span class="dotted" title="http://www.w3.org/2002/07/owl#rational">rational</span>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#belongsTo" title="http://delta.linkeddata.es/def/core#belongsTo">belongs to</a>
+      </li>
+      <li>
+         <a href="#estimates" title="http://delta.linkeddata.es/def/core#estimates">estimates</a>
+      </li>
+      <li>
+         <a href="#hasCurrency" title="http://delta.linkeddata.es/def/core#hasCurrency">has currency</a>
+      </li>
+      <li>
+         <a href="#hasDuration" title="http://delta.linkeddata.es/def/core#hasDuration">has duration</a>
+      </li>
+      <li>
+         <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
+      </li>
+      <li>
+         <a href="#hasPrice" title="http://delta.linkeddata.es/def/core#hasPrice">has price</a>
+      </li>
+      <li>
+         <a href="#hasProfile" title="http://delta.linkeddata.es/def/core#hasProfile">has profile</a>
+      </li>
+      <li>
+         <a href="#hasReward" title="http://delta.linkeddata.es/def/core#hasReward">has reward</a>
+      </li>
+      <li>
+         <a href="#manage" title="http://delta.linkeddata.es/def/core#manage">manage</a>
+      </li>
+      <li>
+         <a href="#uses" title="http://delta.linkeddata.es/def/core#uses">uses</a>
+      </li>
+   </ul>
+   <div class="entity" id="belongsTo">
+      <h3>belongs to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#belongsTo</p>
+   </div>
+   <div class="entity" id="estimates">
+      <h3>estimates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#estimates</p>
+   </div>
+   <div class="entity" id="hasCurrency">
+      <h3>has currency<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasCurrency</p>
+   </div>
+   <div class="entity" id="hasDuration">
+      <h3>has duration<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasDuration</p>
+   </div>
+   <div class="entity" id="hasIncentive">
+      <h3>has incentive<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasIncentive</p>
+   </div>
+   <div class="entity" id="hasPrice">
+      <h3>has price<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPrice</p>
+   </div>
+   <div class="entity" id="hasProfile">
+      <h3>has profile<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasProfile</p>
+   </div>
+   <div class="entity" id="hasReward">
+      <h3>has reward<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasReward</p>
+   </div>
+   <div class="entity" id="manage">
+      <h3>manage<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#manage</p>
+   </div>
+   <div class="entity" id="uses">
+      <h3>uses<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#uses</p>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#capacitySold" title="http://delta.linkeddata.es/def/core#capacitySold">capacity sold</a>
+      </li>
+      <li>
+         <a href="#cluster" title="http://delta.linkeddata.es/def/core#cluster">cluster</a>
+      </li>
+      <li>
+         <a href="#hasBeginning" title="http://delta.linkeddata.es/def/core#hasBeginning">has beginning</a>
+      </li>
+      <li>
+         <a href="#hasEnd" title="http://delta.linkeddata.es/def/core#hasEnd">has end</a>
+      </li>
+      <li>
+         <a href="#hasTimestamp" title="http://delta.linkeddata.es/def/core#hasTimestamp">has timestamp</a>
+      </li>
+      <li>
+         <a href="#stateOfCharge"
+            title="http://delta.linkeddata.es/def/core#stateOfCharge">state of charge</a>
+      </li>
+      <li>
+         <a href="#type" title="http://delta.linkeddata.es/def/core#type">type</a>
+      </li>
+   </ul>
+   <div class="entity" id="capacitySold">
+      <h3>capacity sold<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#capacitySold</p>
+   </div>
+   <div class="entity" id="cluster">
+      <h3>cluster<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#cluster</p>
+   </div>
+   <div class="entity" id="hasBeginning">
+      <h3>has beginning<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasBeginning</p>
+   </div>
+   <div class="entity" id="hasEnd">
+      <h3>has end<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasEnd</p>
+   </div>
+   <div class="entity" id="hasTimestamp">
+      <h3>has timestamp<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasTimestamp</p>
+   </div>
+   <div class="entity" id="stateOfCharge">
+      <h3>state of charge<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#stateOfCharge</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#type" title="http://delta.linkeddata.es/def/core#type">type</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="type">
+      <h3>type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#type</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#stateOfCharge"
+                  title="http://delta.linkeddata.es/def/core#stateOfCharge">state of charge</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</html>
