@@ -27,11 +27,18 @@
     "Prosumer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
     },
-    "cluster" : {
-      "@id" : "http://delta.linkeddata.es/def/core#cluster"
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "measuresProperty" : {
       "@id" : "https://w3id.org/saref#measuresProperty",
+      "@type" : "@id"
+    },
+    "Customer" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Customer"
+    },
+    "isAllocatedIn" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn",
       "@type" : "@id"
     },
     "Profit" : {
@@ -43,6 +50,10 @@
     },
     "Consumer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Consumer"
+    },
+    "hasAggregatedProperty" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty",
+      "@type" : "@id"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
@@ -74,6 +85,10 @@
     "Generation" : {
       "@id" : "http://delta.linkeddata.es/def/core#Generation"
     },
+    "hasCluster" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasCluster",
+      "@type" : "@id"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
@@ -88,6 +103,9 @@
     },
     "PriceBid" : {
       "@id" : "http://delta.linkeddata.es/def/core#PriceBid"
+    },
+    "Cluster" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Cluster"
     },
     "hasEnd" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasEnd"
@@ -107,6 +125,10 @@
     },
     "FlexibilityBid" : {
       "@id" : "http://delta.linkeddata.es/def/core#FlexibilityBid"
+    },
+    "makesMeasurement" : {
+      "@id" : "https://w3id.org/saref#makesMeasurement",
+      "@type" : "@id"
     },
     "sendBids" : {
       "@id" : "http://delta.linkeddata.es/def/core#sendBids",
@@ -162,12 +184,16 @@
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
+    "owns" : {
+      "@id" : "http://delta.linkeddata.es/def/core#owns",
+      "@type" : "@id"
+    },
     "isRelatedToMeasurement" : {
       "@id" : "https://w3id.org/saref#isRelatedToMeasurement",
       "@type" : "@id"
     },
     "Device" : {
-      "@id" : "https://w3id.org/saref#Device"
+      "@id" : "http://delta.linkeddata.es/def/core#Device"
     },
     "hasTimestamp" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasTimestamp"
