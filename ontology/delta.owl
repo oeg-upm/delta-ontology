@@ -11,7 +11,7 @@
 @base <http://delta.linkeddata.es/def/core> .
 
 <http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
-                                       owl:versionInfo "0.0.3" ;
+                                       owl:versionInfo "0.0.4" ;
                                        terms:creator <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        terms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        terms:creator "Alba Fernández Izquierdo" ;
@@ -43,17 +43,29 @@ terms:license rdf:type owl:AnnotationProperty .
 #################################################################
 
 ###  http://delta.linkeddata.es/def/core#activates
-core:activates rdf:type owl:ObjectProperty .
+core:activates rdf:type owl:ObjectProperty ;
+               rdfs:label "activates" .
 
 
 ###  http://delta.linkeddata.es/def/core#belongsTo
 core:belongsTo rdf:type owl:ObjectProperty ;
+               owl:inverseOf core:owns ;
                rdfs:label "belongs to" .
 
 
 ###  http://delta.linkeddata.es/def/core#estimates
 core:estimates rdf:type owl:ObjectProperty ;
                rdfs:label "estimates" .
+
+
+###  http://delta.linkeddata.es/def/core#hasAggregatedProperty
+core:hasAggregatedProperty rdf:type owl:ObjectProperty ;
+                           rdfs:label "has aggregated property" .
+
+
+###  http://delta.linkeddata.es/def/core#hasCluster
+core:hasCluster rdf:type owl:ObjectProperty ;
+                rdfs:label "has cluster" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasCurrency
@@ -86,13 +98,24 @@ core:hasReward rdf:type owl:ObjectProperty ;
                rdfs:label "has reward" .
 
 
+###  http://delta.linkeddata.es/def/core#isAllocatedIn
+core:isAllocatedIn rdf:type owl:ObjectProperty ;
+                   rdfs:label "is allocated in" .
+
+
 ###  http://delta.linkeddata.es/def/core#manage
 core:manage rdf:type owl:ObjectProperty ;
             rdfs:label "manage" .
 
 
+###  http://delta.linkeddata.es/def/core#owns
+core:owns rdf:type owl:ObjectProperty ;
+          rdfs:label "owns" .
+
+
 ###  http://delta.linkeddata.es/def/core#sendBids
-core:sendBids rdf:type owl:ObjectProperty .
+core:sendBids rdf:type owl:ObjectProperty ;
+              rdfs:label "send bids" .
 
 
 ###  http://delta.linkeddata.es/def/core#uses
@@ -102,6 +125,10 @@ core:uses rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/saref#isRelatedToMeasurement
 saref:isRelatedToMeasurement rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/saref#makesMeasurement
+saref:makesMeasurement rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/saref#measuresProperty
@@ -115,11 +142,6 @@ saref:measuresProperty rdf:type owl:ObjectProperty .
 ###  http://delta.linkeddata.es/def/core#capacitySold
 core:capacitySold rdf:type owl:DatatypeProperty ;
                   rdfs:label "capacity sold" .
-
-
-###  http://delta.linkeddata.es/def/core#cluster
-core:cluster rdf:type owl:DatatypeProperty ;
-             rdfs:label "cluster" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasBeginning
@@ -139,7 +161,7 @@ core:hasTimestamp rdf:type owl:DatatypeProperty ;
 
 ###  http://delta.linkeddata.es/def/core#stateOfCharge
 core:stateOfCharge rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf core:type ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:range rdfs:Literal ;
                    rdfs:label "state of charge" .
 
@@ -178,11 +200,57 @@ core:Bid rdf:type owl:Class ;
          rdfs:label "Bid" .
 
 
+###  http://delta.linkeddata.es/def/core#Cluster
+core:Cluster rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty core:hasAggregatedProperty ;
+                               owl:someValuesFrom saref:Property
+                             ] .
+
+
 ###  http://delta.linkeddata.es/def/core#Consumer
 core:Consumer rdf:type owl:Class ;
               rdfs:subClassOf core:Prosumer ;
-              rdfs:comment "Device that consumes energy" ;
+              rdfs:comment "Entity that consumes energy" ;
               rdfs:label "Consumer" .
+
+
+###  http://delta.linkeddata.es/def/core#Customer
+core:Customer rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty core:owns ;
+                                owl:someValuesFrom core:Device
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty core:hasProfile ;
+                                owl:allValuesFrom core:Profile
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty core:hasReward ;
+                                owl:allValuesFrom core:Reward
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty core:type ;
+                                owl:someValuesFrom owl:rational
+                              ] ;
+              rdfs:label "Customer" ,
+                         "Entity that interacts in the platform" .
+
+
+###  http://delta.linkeddata.es/def/core#Device
+core:Device rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
+                            saref:Device ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty core:belongsTo ;
+                              owl:someValuesFrom core:Customer
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty core:stateOfCharge ;
+                              owl:someValuesFrom owl:rational
+                            ] ;
+            rdfs:comment "Device that is located in a specific place" ;
+            rdfs:label "Device" .
 
 
 ###  http://delta.linkeddata.es/def/core#Energy
@@ -302,31 +370,14 @@ core:Property rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Prosumer
 core:Prosumer rdf:type owl:Class ;
-              rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ,
-                              saref:Device ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty core:hasReward ;
-                                owl:someValuesFrom core:Reward
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty core:hasProfile ;
-                                owl:allValuesFrom core:Profile
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty core:stateOfCharge ;
-                                owl:someValuesFrom owl:rational
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty core:type ;
-                                owl:someValuesFrom owl:rational
-                              ] ;
-              rdfs:comment "Device that consumes and produces energy" ;
+              rdfs:subClassOf core:Customer ;
+              rdfs:comment "Entity that consumes or produces energy" ;
               rdfs:label "Prosumer" .
 
 
 ###  http://delta.linkeddata.es/def/core#Reward
 core:Reward rdf:type owl:Class ;
-            rdfs:comment "Reward associated to the devices" ;
+            rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ;
             rdfs:label "Reward" .
 
 
@@ -347,12 +398,16 @@ core:TimeInterval rdf:type owl:Class ;
 ###  http://delta.linkeddata.es/def/core#VirtualNode
 core:VirtualNode rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty core:belongsTo ;
+                                   owl:onProperty core:isAllocatedIn ;
                                    owl:someValuesFrom core:Aggregator
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty core:uses ;
                                    owl:someValuesFrom core:Bid
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:hasCluster ;
+                                   owl:allValuesFrom core:Cluster
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty core:hasProfile ;
@@ -361,10 +416,6 @@ core:VirtualNode rdf:type owl:Class ;
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty core:manage ;
                                    owl:allValuesFrom saref:Device
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty core:cluster ;
-                                   owl:someValuesFrom owl:rational
                                  ] ;
                  rdfs:comment "An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator." ;
                  rdfs:label "Virtual node" .
@@ -375,7 +426,13 @@ core:VirtualNode rdf:type owl:Class ;
 
 
 ###  https://w3id.org/saref#Device
-saref:Device rdf:type owl:Class .
+saref:Device rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Restriction ;
+                                   owl:onProperty saref:measuresProperty ;
+                                   owl:allValuesFrom saref:Property
+                                 ] ;
+             rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." ;
+             rdfs:label "Device" .
 
 
 ###  https://w3id.org/saref#Measurement
@@ -387,7 +444,11 @@ saref:Price rdf:type owl:Class .
 
 
 ###  https://w3id.org/saref#Property
-saref:Property rdf:type owl:Class .
+saref:Property rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty saref:isRelatedToMeasurement ;
+                                 owl:allValuesFrom saref:Measurement
+                               ] .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
