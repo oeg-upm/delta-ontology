@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://delta.linkeddata.es/def/core","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://delta.linkeddata.es/def/core","name":"DELTA ontology", "headline":"Document describing the ontology http://delta.linkeddata.es/def/core", "datePublished":"Wed Dec 12 17:22:03 UTC 2018", "version":"0.0.1", "license":"http://purl.org/NET/rdflicense/cc-by4.0", "author":[{"@type":"Person","name":"http://www.garcia-castro.com/foaf.rdf#me","url":"http://www.garcia-castro.com/foaf.rdf#me"},{"@type":"Person","name":"Alba Fernández Izquierdo"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://delta.linkeddata.es/def/core","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://delta.linkeddata.es/def/core","name":"DELTA ontology", "headline":"Document describing the ontology http://delta.linkeddata.es/def/core", "datePublished":"Wed Jan 30 15:04:54 UTC 2019", "version":"0.0.3", "license":"http://purl.org/NET/rdflicense/cc-by4.0", "author":[{"@type":"Person","name":"http://www.garcia-castro.com/foaf.rdf#me","url":"http://www.garcia-castro.com/foaf.rdf#me"},{"@type":"Person","name":"Alba Fernández Izquierdo"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -28,7 +28,7 @@ function loadTOC(){
 				t+='</ul>';
 				j=0;
 			}
-			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
 			i++;
 		}
 		if(jQuery(this).is('h3')){
@@ -36,14 +36,15 @@ function loadTOC(){
 				t+='<ul>';
 			}
 			j++;
-			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).text()+'</a></li>';
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
 		}
-		t = t.replace(' back to ToC','');
 	  });
 	  t+='</ul>';
 	  $("#toc").html(t); 
 }
-    $(function(){
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
       $("#abstract").load("sections/abstract-en.html"); 
       $("#introduction").load("sections/introduction-en.html"); 
       $("#overview").load("sections/overview-en.html"); 
@@ -63,9 +64,9 @@ function loadTOC(){
 
 <dl>
 <dt>Revision:</dt>
-<dd>0.0.4</dd>
+<dd>0.0.3</dd>
 <dt>Authors:</dt>
-<dd>Alba Fernández Izquierdo</dd><dd><a href="http://www.garcia-castro.com/foaf.rdf#me">Raúl García Castro</a></dd>
+<dd><a href="http://www.garcia-castro.com/foaf.rdf#me">http://www.garcia-castro.com/foaf.rdf#me</a></dd><dd>Alba Fernández Izquierdo</dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/cc_by4.0-blue.svg" alt="http://purl.org/NET/rdflicense/cc-by4.0" /></a>
 </dd></dl>
@@ -82,11 +83,14 @@ function loadTOC(){
      <div id="description"></div>
      <div id="crossref"></div>
      <div id="references"></div>
+<html>
 <div id="acknowledgements">
 <h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>
+
+</html>
 
 </div>
 </body>

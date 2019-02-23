@@ -5,10 +5,10 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Aggregator" "sar
 	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "terms:license" ];
 	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "terms:creator" ];
 	"core:stateOfCharge" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
-	"NULL" -> "core:hasBeginning" [ label = "owl:onProperty" ];
 	"NULL" -> "core:TimeInterval" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "core:EnergyMarket" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:hasBeginning" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:EnergyMarket" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasEnd" [ label = "owl:onProperty" ];
 	"NULL" -> "core:activates" [ label = "owl:onProperty" ];
 	"NULL" -> "core:stateOfCharge" [ label = "owl:onProperty" ];
@@ -34,8 +34,8 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Aggregator" "sar
 	"NULL" -> "saref:measuresProperty" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Cluster" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:belongsTo" [ label = "owl:onProperty" ];
-	"NULL" -> "core:hasReward" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasDuration" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasReward" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Profile" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Bid" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
