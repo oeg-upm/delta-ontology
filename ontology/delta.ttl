@@ -435,7 +435,8 @@ core:Prosumer rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Reliability
 core:Reliability rdf:type owl:Class ;
-                 rdfs:subClassOf core:Property .
+                 rdfs:subClassOf core:Property;
+                 rdfs:label "Reliability" . 
 
 
 ###  http://delta.linkeddata.es/def/core#Reward
@@ -513,7 +514,8 @@ saref:Measurement rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty saref:isMeasuredIn ;
                                     owl:allValuesFrom saref:UnitOfMeasure
-                                  ] .
+                                  ];
+                  rdfs:label "Measurement" . 
 
 
 ###  https://w3id.org/saref#Price
