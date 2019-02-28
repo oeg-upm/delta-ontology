@@ -538,47 +538,47 @@ saref:UnitOfMeasure rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://delta.linkeddata.es/def/core#bid_energy
+###  http://delta.linkeddata.es/def/core#BidEnergy
 core:bid_energy rdf:type owl:NamedIndividual ,
                          core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#bid_load
+###  http://delta.linkeddata.es/def/core#BidLoad
 core:bid_load rdf:type owl:NamedIndividual ,
                        core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#bid_price
+###  http://delta.linkeddata.es/def/core#BidPrice
 core:bid_price rdf:type owl:NamedIndividual ,
                         core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#charge_state
+###  http://delta.linkeddata.es/def/core#ChargeState
 core:charge_state rdf:type owl:NamedIndividual ,
                            core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#demand_charge
+###  http://delta.linkeddata.es/def/core#DemandCharge
 core:demand_charge rdf:type owl:NamedIndividual ,
                             core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#electricity_price
+###  http://delta.linkeddata.es/def/core#ElectricityPrice
 core:electricity_price rdf:type owl:NamedIndividual ,
                                 core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#energy_price
+###  http://delta.linkeddata.es/def/core#EnergyPrice
 core:energy_price rdf:type owl:NamedIndividual ,
                            core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#load_control
+###  http://delta.linkeddata.es/def/core#LoadControl
 core:load_control rdf:type owl:NamedIndividual ,
                            core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#load_dispatch
+###  http://delta.linkeddata.es/def/core#LoadDispatch
 core:load_dispatch rdf:type owl:NamedIndividual ,
                             core:Signal .
 
