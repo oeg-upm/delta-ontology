@@ -6,35 +6,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <> .
 
-<> rdf:type owl:Ontology .
-
-
-#################################################################
-#
-#    Data properties
-#
-#################################################################
-
-
-###  http://w3id.org/def/vtc#desiredBehaviour
-
-<http://w3id.org/def/vtc#desiredBehaviour> rdf:type owl:DatatypeProperty .
-
-
-
-
-
-#################################################################
-#
-#    Classes
-#
-#################################################################
-
-
-###  http://w3id.org/def/vtc#TestCaseDesign
-
-<http://w3id.org/def/vtc#TestCaseDesign> rdf:type owl:Class .
-
 
 
 
