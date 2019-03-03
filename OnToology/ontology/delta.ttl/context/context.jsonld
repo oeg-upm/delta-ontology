@@ -37,6 +37,9 @@
       "@id" : "https://w3id.org/saref#measuresProperty",
       "@type" : "@id"
     },
+    "hasValue" : {
+      "@id" : "https://w3id.org/saref#hasValue"
+    },
     "FEID" : {
       "@id" : "http://delta.linkeddata.es/def/core#FEID"
     },
@@ -94,6 +97,9 @@
     },
     "Price" : {
       "@id" : "https://w3id.org/saref#Price"
+    },
+    "clusterName" : {
+      "@id" : "http://delta.linkeddata.es/def/core#clusterName"
     },
     "Incentive" : {
       "@id" : "http://delta.linkeddata.es/def/core#Incentive"
@@ -203,6 +209,9 @@
     },
     "SpatialThing" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "clusterDescription" : {
+      "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
