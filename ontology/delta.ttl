@@ -163,6 +163,17 @@ core:capacitySold rdf:type owl:DatatypeProperty ;
                   rdfs:label "capacity sold" .
 
 
+###  http://delta.linkeddata.es/def/core#clusterDescription
+core:clusterDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:label "cluster description" .
+
+
+###  http://delta.linkeddata.es/def/core#clusterName
+core:clusterName rdf:type owl:DatatypeProperty ;
+                 rdfs:label "cluster name" .
+
+
 ###  http://delta.linkeddata.es/def/core#granularity
 core:granularity rdf:type owl:DatatypeProperty ;
                  rdfs:comment "granularity of the profile" ;
@@ -234,6 +245,14 @@ core:Cluster rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
                                owl:onProperty core:hasAggregatedProperty ;
                                owl:someValuesFrom saref:Property
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty core:clusterDescription ;
+                               owl:allValuesFrom rdfs:Literal
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty core:clusterName ;
+                               owl:allValuesFrom rdfs:Literal
                              ] ;
              rdfs:label "Cluster" .
 
