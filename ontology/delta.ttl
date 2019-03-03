@@ -1,4 +1,5 @@
 @prefix : <http://delta.linkeddata.es/def/core#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -6,15 +7,16 @@
 @prefix core: <http://delta.linkeddata.es/def/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix saref: <https://w3id.org/saref#> .
+@prefix terms: <http://purl.org/dc/terms/> .
 @base <http://delta.linkeddata.es/def/core> .
 
 <http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
-                                       owl:versionInfo "0.0.4" ;
-                                       <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
-                                       <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                       <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
-                                       <http://purl.org/dc/elements/1.1/title> "DELTA ontology" ;
-                                       rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." .
+                                       dc:title "DELTA ontology" ;
+                                       terms:creator <http://www.garcia-castro.com/foaf.rdf#me> ,
+                                                     "Alba Fernández Izquierdo" ;
+                                       terms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+                                       rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
+                                       owl:versionInfo "0.0.4" .
 
 #################################################################
 #    Annotation properties
@@ -25,15 +27,15 @@ core:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+dc:title rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+terms:creator rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+terms:license rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -193,6 +195,10 @@ core:stateOfCharge rdf:type owl:DatatypeProperty ;
 core:type rdf:type owl:DatatypeProperty ;
           rdfs:range rdfs:Literal ;
           rdfs:label "type" .
+
+
+###  https://w3id.org/saref#hasValue
+saref:hasValue rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -435,12 +441,12 @@ core:Prosumer rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Reliability
 core:Reliability rdf:type owl:Class ;
-                 rdfs:subClassOf core:Property;
-                 rdfs:label "Reliability" . 
+                 rdfs:subClassOf core:Property .
 
 
 ###  http://delta.linkeddata.es/def/core#Reward
 core:Reward rdf:type owl:Class ;
+            rdfs:subClassOf core:Property ;
             rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ;
             rdfs:label "Reward" .
 
@@ -514,8 +520,11 @@ saref:Measurement rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
                                     owl:onProperty saref:isMeasuredIn ;
                                     owl:allValuesFrom saref:UnitOfMeasure
-                                  ];
-                  rdfs:label "Measurement" . 
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty saref:hasValue ;
+                                    owl:allValuesFrom xsd:float
+                                  ] .
 
 
 ###  https://w3id.org/saref#Price
@@ -538,49 +547,49 @@ saref:UnitOfMeasure rdf:type owl:Class .
 #    Individuals
 #################################################################
 
-###  http://delta.linkeddata.es/def/core#BidEnergy
+###  http://delta.linkeddata.es/def/core#bid_energy
 core:bid_energy rdf:type owl:NamedIndividual ,
                          core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#BidLoad
+###  http://delta.linkeddata.es/def/core#bid_load
 core:bid_load rdf:type owl:NamedIndividual ,
                        core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#BidPrice
+###  http://delta.linkeddata.es/def/core#bid_price
 core:bid_price rdf:type owl:NamedIndividual ,
                         core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#ChargeState
+###  http://delta.linkeddata.es/def/core#charge_state
 core:charge_state rdf:type owl:NamedIndividual ,
                            core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#DemandCharge
+###  http://delta.linkeddata.es/def/core#demand_charge
 core:demand_charge rdf:type owl:NamedIndividual ,
                             core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#ElectricityPrice
+###  http://delta.linkeddata.es/def/core#electricity_price
 core:electricity_price rdf:type owl:NamedIndividual ,
                                 core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#EnergyPrice
+###  http://delta.linkeddata.es/def/core#energy_price
 core:energy_price rdf:type owl:NamedIndividual ,
                            core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#LoadControl
+###  http://delta.linkeddata.es/def/core#load_control
 core:load_control rdf:type owl:NamedIndividual ,
                            core:Signal .
 
 
-###  http://delta.linkeddata.es/def/core#LoadDispatch
+###  http://delta.linkeddata.es/def/core#load_dispatch
 core:load_dispatch rdf:type owl:NamedIndividual ,
                             core:Signal .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
