@@ -159,6 +159,17 @@
               rdfs:label "capacity sold" .
 
 
+###  http://delta.linkeddata.es/def/core#clusterDescription
+:clusterDescription rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:label "cluster description" .
+
+
+###  http://delta.linkeddata.es/def/core#clusterName
+:clusterName rdf:type owl:DatatypeProperty ;
+             rdfs:label "cluster name" .
+
+
 ###  http://delta.linkeddata.es/def/core#granularity
 :granularity rdf:type owl:DatatypeProperty ;
              rdfs:comment "granularity of the profile" ;
@@ -191,6 +202,10 @@
 :type rdf:type owl:DatatypeProperty ;
       rdfs:range rdfs:Literal ;
       rdfs:label "type" .
+
+
+###  https://w3id.org/saref#hasValue
+<https://w3id.org/saref#hasValue> rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -226,6 +241,14 @@
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :hasAggregatedProperty ;
                            owl:someValuesFrom <https://w3id.org/saref#Property>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :clusterDescription ;
+                           owl:allValuesFrom rdfs:Literal
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :clusterName ;
+                           owl:allValuesFrom rdfs:Literal
                          ] ;
          rdfs:label "Cluster" .
 
@@ -433,12 +456,12 @@
 
 ###  http://delta.linkeddata.es/def/core#Reliability
 :Reliability rdf:type owl:Class ;
-             rdfs:subClassOf :Property;
-             rdfs:label "Reliability"  .
+             rdfs:subClassOf :Property .
 
 
 ###  http://delta.linkeddata.es/def/core#Reward
 :Reward rdf:type owl:Class ;
+        rdfs:subClassOf :Property ;
         rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ;
         rdfs:label "Reward" .
 
@@ -512,8 +535,11 @@
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
                                                        owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
-                                                     ];
-                                     rdfs:label "Measurement" .
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <https://w3id.org/saref#hasValue> ;
+                                                       owl:allValuesFrom xsd:float
+                                                     ] .
 
 
 ###  https://w3id.org/saref#Price
