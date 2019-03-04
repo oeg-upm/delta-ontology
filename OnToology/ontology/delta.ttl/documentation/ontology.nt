@@ -4,7 +4,7 @@
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" .
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://delta.linkeddata.es/def/core> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." .
-<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.4" .
+<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
 # 
 # 
 # #################################################################
@@ -42,46 +42,58 @@
 # http://delta.linkeddata.es/def/core#belongsTo
 <http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://delta.linkeddata.es/def/core#owns> .
+<http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a device and a FEID" .
 <http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
 # 
 # http://delta.linkeddata.es/def/core#estimates
 <http://delta.linkeddata.es/def/core#estimates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#estimates> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Aggregator and the entity that it estimates" .
 <http://delta.linkeddata.es/def/core#estimates> <http://www.w3.org/2000/01/rdf-schema#label> "estimates" .
 # 
 # http://delta.linkeddata.es/def/core#hasAggregatedProperty
 <http://delta.linkeddata.es/def/core#hasAggregatedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasAggregatedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Aggregated property that a FEID or Virtual Node has related to the devices they own" .
 <http://delta.linkeddata.es/def/core#hasAggregatedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has aggregated property" .
 # 
 # http://delta.linkeddata.es/def/core#hasCluster
 <http://delta.linkeddata.es/def/core#hasCluster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasCluster> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an entity and the cluster it belongs to" .
 <http://delta.linkeddata.es/def/core#hasCluster> <http://www.w3.org/2000/01/rdf-schema#label> "has cluster" .
 # 
 # http://delta.linkeddata.es/def/core#hasCurrency
 <http://delta.linkeddata.es/def/core#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a price and its currency" .
 <http://delta.linkeddata.es/def/core#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "has currency" .
 # 
 # http://delta.linkeddata.es/def/core#hasDuration
 <http://delta.linkeddata.es/def/core#hasDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration of an event" .
 <http://delta.linkeddata.es/def/core#hasDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has duration" .
 # 
 # http://delta.linkeddata.es/def/core#hasIncentive
 <http://delta.linkeddata.es/def/core#hasIncentive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasIncentive> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a corrected value of energy and its incentive" .
 <http://delta.linkeddata.es/def/core#hasIncentive> <http://www.w3.org/2000/01/rdf-schema#label> "has incentive" .
 # 
 # http://delta.linkeddata.es/def/core#hasPrice
 <http://delta.linkeddata.es/def/core#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a price and an entity" .
 <http://delta.linkeddata.es/def/core#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price" .
 # 
 # http://delta.linkeddata.es/def/core#hasProfile
 <http://delta.linkeddata.es/def/core#hasProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between an entity and its profile" .
 <http://delta.linkeddata.es/def/core#hasProfile> <http://www.w3.org/2000/01/rdf-schema#label> "has profile" .
 # 
 # http://delta.linkeddata.es/def/core#hasReward
 <http://delta.linkeddata.es/def/core#hasReward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasReward> <http://www.w3.org/2000/01/rdf-schema#domain> <http://delta.linkeddata.es/def/core#Customer> .
+<http://delta.linkeddata.es/def/core#hasReward> <http://www.w3.org/2000/01/rdf-schema#comment> "Link between a customer and its associated reward" .
 <http://delta.linkeddata.es/def/core#hasReward> <http://www.w3.org/2000/01/rdf-schema#label> "has reward" .
 # 
 # http://delta.linkeddata.es/def/core#isAllocatedIn
 <http://delta.linkeddata.es/def/core#isAllocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#isAllocatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Virtual Node and the aggregator associated" .
 <http://delta.linkeddata.es/def/core#isAllocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is allocated in" .
 # 
 # http://delta.linkeddata.es/def/core#isOwnedBy
@@ -94,6 +106,7 @@
 # 
 # http://delta.linkeddata.es/def/core#manage
 <http://delta.linkeddata.es/def/core#manage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#manage> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Virutal Node and the  devices it manages" .
 <http://delta.linkeddata.es/def/core#manage> <http://www.w3.org/2000/01/rdf-schema#label> "manage" .
 # 
 # http://delta.linkeddata.es/def/core#owns
@@ -140,23 +153,31 @@
 # http://delta.linkeddata.es/def/core#clusterDescription
 <http://delta.linkeddata.es/def/core#clusterDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://delta.linkeddata.es/def/core#clusterDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://delta.linkeddata.es/def/core#clusterDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of a cluster" .
 <http://delta.linkeddata.es/def/core#clusterDescription> <http://www.w3.org/2000/01/rdf-schema#label> "cluster description" .
 # 
 # http://delta.linkeddata.es/def/core#clusterName
 <http://delta.linkeddata.es/def/core#clusterName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#clusterName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a cluster" .
 <http://delta.linkeddata.es/def/core#clusterName> <http://www.w3.org/2000/01/rdf-schema#label> "cluster name" .
 # 
 # http://delta.linkeddata.es/def/core#granularity
 <http://delta.linkeddata.es/def/core#granularity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://delta.linkeddata.es/def/core#granularity> <http://www.w3.org/2000/01/rdf-schema#comment> "granularity of the profile" .
+<http://delta.linkeddata.es/def/core#granularity> <http://www.w3.org/2000/01/rdf-schema#comment> "granularity of the profile (e.g., weekly, daily)" .
 <http://delta.linkeddata.es/def/core#granularity> <http://www.w3.org/2000/01/rdf-schema#label> "granularity" .
 # 
 # http://delta.linkeddata.es/def/core#hasBeginning
 <http://delta.linkeddata.es/def/core#hasBeginning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#domain> <http://delta.linkeddata.es/def/core#TimeInterval> .
+<http://delta.linkeddata.es/def/core#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://delta.linkeddata.es/def/core#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#comment> "Beginning of a time interval" .
 <http://delta.linkeddata.es/def/core#hasBeginning> <http://www.w3.org/2000/01/rdf-schema#label> "has beginning" .
 # 
 # http://delta.linkeddata.es/def/core#hasEnd
 <http://delta.linkeddata.es/def/core#hasEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#hasEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://delta.linkeddata.es/def/core#TimeInterval> .
+<http://delta.linkeddata.es/def/core#hasEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://delta.linkeddata.es/def/core#hasEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "End of a time interval" .
 <http://delta.linkeddata.es/def/core#hasEnd> <http://www.w3.org/2000/01/rdf-schema#label> "has end" .
 # 
 # http://delta.linkeddata.es/def/core#hasTimestamp
@@ -222,6 +243,7 @@ _:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/0
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#clusterName> .
 _:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://delta.linkeddata.es/def/core#Cluster> <http://www.w3.org/2000/01/rdf-schema#comment> "Aggrupation of elements, such as FEIDs or Virtual Nodes" .
 <http://delta.linkeddata.es/def/core#Cluster> <http://www.w3.org/2000/01/rdf-schema#label> "Cluster" .
 # 
 # http://delta.linkeddata.es/def/core#Consumer
@@ -250,7 +272,6 @@ _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es
 _:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
 <http://delta.linkeddata.es/def/core#Customer> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity that interacts in the platform" .
 <http://delta.linkeddata.es/def/core#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Customer" .
-<http://delta.linkeddata.es/def/core#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Entity that interacts in the platform" .
 # 
 # http://delta.linkeddata.es/def/core#Device
 <http://delta.linkeddata.es/def/core#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -387,12 +408,8 @@ _:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#type> .
 _:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#rational> .
-<http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification associated to a DVN or a device to collect information about properties" .
+<http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification associated to a Virtual Node or a device to collect information about properties" .
 <http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#label> "Profile" .
-# 
-# http://delta.linkeddata.es/def/core#Profit
-<http://delta.linkeddata.es/def/core#Profit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://delta.linkeddata.es/def/core#Profit> <http://www.w3.org/2000/01/rdf-schema#label> "Profit" .
 # 
 # http://delta.linkeddata.es/def/core#Property
 <http://delta.linkeddata.es/def/core#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -408,6 +425,8 @@ _:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002
 # http://delta.linkeddata.es/def/core#Reliability
 <http://delta.linkeddata.es/def/core#Reliability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Reliability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Property> .
+<http://delta.linkeddata.es/def/core#Reliability> <http://www.w3.org/2000/01/rdf-schema#comment> "Property associated to the reliability of a device" .
+<http://delta.linkeddata.es/def/core#Reliability> <http://www.w3.org/2000/01/rdf-schema#label> "Relibability" .
 # 
 # http://delta.linkeddata.es/def/core#Reward
 <http://delta.linkeddata.es/def/core#Reward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

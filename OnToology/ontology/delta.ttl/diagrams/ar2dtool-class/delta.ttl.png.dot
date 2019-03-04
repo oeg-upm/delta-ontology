@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Aggregator" "saref:Property" "core:TimeInterval" "saref:Device" "core:Reward" "core:Profile" "core:EnergyMarket" "core:Device" "core:Property" "saref:UnitOfMeasure" "saref:Measurement" "core:Incentive" "core:Bid" "core:FEID" "core:Cluster" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Aggregator" "saref:Property" "core:TimeInterval" "saref:Device" "core:Profile" "core:EnergyMarket" "core:Reward" "core:Device" "core:Property" "saref:UnitOfMeasure" "saref:Measurement" "core:Incentive" "core:Bid" "core:FEID" "core:Cluster" ; /*classes style*/
 	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "terms:license" ];
 	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "terms:creator" ];
 	"core:stateOfCharge" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
@@ -32,8 +32,8 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Ag
 	"NULL" -> "core:hasReward" [ label = "owl:onProperty" ];
 	"NULL" -> "core:manage" [ label = "owl:onProperty" ];
 	"NULL" -> "core:clusterName" [ label = "owl:onProperty" ];
-	"NULL" -> "core:Aggregator" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:Property" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Aggregator" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Incentive" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:belongsTo" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasAggregatedProperty" [ label = "owl:onProperty" ];
@@ -43,8 +43,8 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Ag
 	"NULL" -> "core:stateOfCharge" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
-	"NULL" -> "core:clusterDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isRelatedToProperty" [ label = "owl:onProperty" ];
+	"NULL" -> "core:clusterDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasBeginning" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Cluster" [ label = "owl:allValuesFrom" ];
@@ -57,7 +57,10 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Signal" "core:Ag
 	"NULL" -> "core:hasDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Bid" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasProfile" [ label = "owl:onProperty" ];
+	"core:TimeInterval" -> "xsd:dateTimeStamp" [ label = "core:hasBeginning" ];
 	"owl:Thing" -> "rdfs:Literal" [ label = "core:stateOfCharge" ];
 	"owl:Thing" -> "rdfs:Literal" [ label = "core:type" ];
+	"core:Customer" -> "owl:Thing" [ label = "core:hasReward" ];
+	"core:TimeInterval" -> "xsd:dateTimeStamp" [ label = "core:hasEnd" ];
 
 }
