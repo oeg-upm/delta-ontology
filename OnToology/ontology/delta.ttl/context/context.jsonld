@@ -54,9 +54,6 @@
       "@id" : "http://delta.linkeddata.es/def/core#send",
       "@type" : "@id"
     },
-    "Profit" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Profit"
-    },
     "hasCurrency" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasCurrency",
       "@type" : "@id"
@@ -133,10 +130,12 @@
       "@id" : "http://delta.linkeddata.es/def/core#Cluster"
     },
     "hasEnd" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasEnd"
+      "@id" : "http://delta.linkeddata.es/def/core#hasEnd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "hasBeginning" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasBeginning"
+      "@id" : "http://delta.linkeddata.es/def/core#hasBeginning",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "Profile" : {
       "@id" : "http://delta.linkeddata.es/def/core#Profile"
