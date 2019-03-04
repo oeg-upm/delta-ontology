@@ -16,7 +16,7 @@
                                                      "Alba Fernández Izquierdo" ;
                                        terms:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.0.4" .
+                                       owl:versionInfo "0.1.1" .
 
 #################################################################
 #    Annotation properties
@@ -50,56 +50,68 @@ core:activates rdf:type owl:ObjectProperty ;
 ###  http://delta.linkeddata.es/def/core#belongsTo
 core:belongsTo rdf:type owl:ObjectProperty ;
                owl:inverseOf core:owns ;
+               rdfs:comment "Relation between a device and a FEID" ;
                rdfs:label "belongs to" .
 
 
 ###  http://delta.linkeddata.es/def/core#estimates
 core:estimates rdf:type owl:ObjectProperty ;
+               rdfs:comment "Relation between an Aggregator and the entity that it estimates" ;
                rdfs:label "estimates" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasAggregatedProperty
 core:hasAggregatedProperty rdf:type owl:ObjectProperty ;
+                           rdfs:comment "Aggregated property that a FEID or Virtual Node has related to the devices they own" ;
                            rdfs:label "has aggregated property" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasCluster
 core:hasCluster rdf:type owl:ObjectProperty ;
+                rdfs:comment "Relation between an entity and the cluster it belongs to" ;
                 rdfs:label "has cluster" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasCurrency
 core:hasCurrency rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Link between a price and its currency" ;
                  rdfs:label "has currency" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasDuration
 core:hasDuration rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Duration of an event" ;
                  rdfs:label "has duration" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasIncentive
 core:hasIncentive rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Link between a corrected value of energy and its incentive" ;
                   rdfs:label "has incentive" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasPrice
 core:hasPrice rdf:type owl:ObjectProperty ;
+              rdfs:comment "Link between a price and an entity" ;
               rdfs:label "has price" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasProfile
 core:hasProfile rdf:type owl:ObjectProperty ;
+                rdfs:comment "Link between an entity and its profile" ;
                 rdfs:label "has profile" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasReward
 core:hasReward rdf:type owl:ObjectProperty ;
+               rdfs:domain core:Customer ;
+               rdfs:comment "Link between a customer and its associated reward" ;
                rdfs:label "has reward" .
 
 
 ###  http://delta.linkeddata.es/def/core#isAllocatedIn
 core:isAllocatedIn rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Relation between a Virtual Node and the aggregator associated" ;
                    rdfs:label "is allocated in" .
 
 
@@ -115,6 +127,7 @@ core:isRelatedToProperty rdf:type owl:ObjectProperty ;
 
 ###  http://delta.linkeddata.es/def/core#manage
 core:manage rdf:type owl:ObjectProperty ;
+            rdfs:comment "Relation between a Virutal Node and the  devices it manages" ;
             rdfs:label "manage" .
 
 
@@ -166,27 +179,35 @@ core:capacitySold rdf:type owl:DatatypeProperty ;
 ###  http://delta.linkeddata.es/def/core#clusterDescription
 core:clusterDescription rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:comment "Description of a cluster" ;
                         rdfs:label "cluster description" .
 
 
 ###  http://delta.linkeddata.es/def/core#clusterName
 core:clusterName rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "Name of a cluster" ;
                  rdfs:label "cluster name" .
 
 
 ###  http://delta.linkeddata.es/def/core#granularity
 core:granularity rdf:type owl:DatatypeProperty ;
-                 rdfs:comment "granularity of the profile" ;
+                 rdfs:comment "granularity of the profile (e.g., weekly, daily)" ;
                  rdfs:label "granularity" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasBeginning
 core:hasBeginning rdf:type owl:DatatypeProperty ;
+                  rdfs:domain core:TimeInterval ;
+                  rdfs:range xsd:dateTimeStamp ;
+                  rdfs:comment "Beginning of a time interval" ;
                   rdfs:label "has beginning" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasEnd
 core:hasEnd rdf:type owl:DatatypeProperty ;
+            rdfs:domain core:TimeInterval ;
+            rdfs:range xsd:dateTimeStamp ;
+            rdfs:comment "End of a time interval" ;
             rdfs:label "has end" .
 
 
@@ -254,6 +275,7 @@ core:Cluster rdf:type owl:Class ;
                                owl:onProperty core:clusterName ;
                                owl:allValuesFrom rdfs:Literal
                              ] ;
+             rdfs:comment "Aggrupation of elements, such as FEIDs or Virtual Nodes" ;
              rdfs:label "Cluster" .
 
 
@@ -283,8 +305,7 @@ core:Customer rdf:type owl:Class ;
                                 owl:someValuesFrom owl:rational
                               ] ;
               rdfs:comment "Entity that interacts in the platform" ;
-              rdfs:label "Customer" ,
-                         "Entity that interacts in the platform" .
+              rdfs:label "Customer" .
 
 
 ###  http://delta.linkeddata.es/def/core#Device
@@ -436,13 +457,8 @@ core:Profile rdf:type owl:Class ;
                                owl:onProperty core:type ;
                                owl:someValuesFrom owl:rational
                              ] ;
-             rdfs:comment "A specification associated to a DVN or a device to collect information about properties" ;
+             rdfs:comment "A specification associated to a Virtual Node or a device to collect information about properties" ;
              rdfs:label "Profile" .
-
-
-###  http://delta.linkeddata.es/def/core#Profit
-core:Profit rdf:type owl:Class ;
-            rdfs:label "Profit" .
 
 
 ###  http://delta.linkeddata.es/def/core#Property
@@ -460,7 +476,9 @@ core:Prosumer rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Reliability
 core:Reliability rdf:type owl:Class ;
-                 rdfs:subClassOf core:Property .
+                 rdfs:subClassOf core:Property ;
+                 rdfs:comment "Property associated to the reliability of a device" ;
+                 rdfs:label "Relibability" .
 
 
 ###  http://delta.linkeddata.es/def/core#Reward
