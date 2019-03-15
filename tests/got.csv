@@ -54,3 +54,8 @@ estimateVoltageInestability,http://delta.linkeddata.es/def/core#estimateVoltageI
 belongsTo,http://delta.linkeddata.es/def/core#belongsTo
 Profile,http://delta.linkeddata.es/def/core#Profile
 hasProfile,http://delta.linkeddata.es/def/core#hasProfile
+FEID,http://delta.linkeddata.es/def/core#FEID
+Signal,http://delta.linkeddata.es/def/core#Signal
+granularity,http://delta.linkeddata.es/def/core#granularity
+load_dispatch,http://delta.linkeddata.es/def/core#load_dispatch
+demand_charge,http://delta.linkeddata.es/def/core#demand_charge

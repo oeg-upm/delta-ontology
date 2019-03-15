@@ -37,6 +37,9 @@
       "@id" : "https://w3id.org/saref#measuresProperty",
       "@type" : "@id"
     },
+    "hasValue" : {
+      "@id" : "https://w3id.org/saref#hasValue"
+    },
     "FEID" : {
       "@id" : "http://delta.linkeddata.es/def/core#FEID"
     },
@@ -50,9 +53,6 @@
     "send" : {
       "@id" : "http://delta.linkeddata.es/def/core#send",
       "@type" : "@id"
-    },
-    "Profit" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Profit"
     },
     "hasCurrency" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasCurrency",
@@ -95,6 +95,9 @@
     "Price" : {
       "@id" : "https://w3id.org/saref#Price"
     },
+    "clusterName" : {
+      "@id" : "http://delta.linkeddata.es/def/core#clusterName"
+    },
     "Incentive" : {
       "@id" : "http://delta.linkeddata.es/def/core#Incentive"
     },
@@ -127,10 +130,12 @@
       "@id" : "http://delta.linkeddata.es/def/core#Cluster"
     },
     "hasEnd" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasEnd"
+      "@id" : "http://delta.linkeddata.es/def/core#hasEnd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "hasBeginning" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasBeginning"
+      "@id" : "http://delta.linkeddata.es/def/core#hasBeginning",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "Profile" : {
       "@id" : "http://delta.linkeddata.es/def/core#Profile"
@@ -203,6 +208,9 @@
     },
     "SpatialThing" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "clusterDescription" : {
+      "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
