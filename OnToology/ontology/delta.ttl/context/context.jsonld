@@ -4,9 +4,8 @@
       "@id" : "http://delta.linkeddata.es/def/core#belongsTo",
       "@type" : "@id"
     },
-    "hasEnergyMarket" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasEnergyMarket",
-      "@type" : "@id"
+    "UnitOfMeasure" : {
+      "@id" : "https://w3id.org/saref#UnitOfMeasure"
     },
     "hasPrice" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPrice",
@@ -31,16 +30,29 @@
     "Prosumer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
     },
-    "estimateVoltageInestability" : {
-      "@id" : "http://delta.linkeddata.es/def/core#estimateVoltageInestability",
-      "@type" : "@id"
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
     },
     "measuresProperty" : {
-      "@id" : "http://delta.linkeddata.es/def/core#measuresProperty",
+      "@id" : "https://w3id.org/saref#measuresProperty",
       "@type" : "@id"
     },
-    "Profit" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Profit"
+    "hasValue" : {
+      "@id" : "https://w3id.org/saref#hasValue"
+    },
+    "FEID" : {
+      "@id" : "http://delta.linkeddata.es/def/core#FEID"
+    },
+    "Customer" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Customer"
+    },
+    "isAllocatedIn" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn",
+      "@type" : "@id"
+    },
+    "send" : {
+      "@id" : "http://delta.linkeddata.es/def/core#send",
+      "@type" : "@id"
     },
     "hasCurrency" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasCurrency",
@@ -49,25 +61,29 @@
     "Consumer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Consumer"
     },
+    "hasAggregatedProperty" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty",
+      "@type" : "@id"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "activates" : {
+      "@id" : "http://delta.linkeddata.es/def/core#activates",
+      "@type" : "@id"
     },
     "Measurement" : {
       "@id" : "https://w3id.org/saref#Measurement"
     },
-    "estimatesFrequencyInestability" : {
-      "@id" : "http://delta.linkeddata.es/def/core#estimatesFrequencyInestability",
-      "@type" : "@id"
+    "Signal" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Signal"
     },
-    "highVoltage" : {
-      "@id" : "http://delta.linkeddata.es/def/core#highVoltage"
+    "Reliability" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Reliability"
     },
     "hasReward" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasReward",
       "@type" : "@id"
-    },
-    "lowVoltage" : {
-      "@id" : "http://delta.linkeddata.es/def/core#lowVoltage"
     },
     "VirtualNode" : {
       "@id" : "http://delta.linkeddata.es/def/core#VirtualNode"
@@ -79,20 +95,30 @@
     "Price" : {
       "@id" : "https://w3id.org/saref#Price"
     },
+    "clusterName" : {
+      "@id" : "http://delta.linkeddata.es/def/core#clusterName"
+    },
     "Incentive" : {
       "@id" : "http://delta.linkeddata.es/def/core#Incentive"
     },
     "Generation" : {
       "@id" : "http://delta.linkeddata.es/def/core#Generation"
     },
+    "hasCluster" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasCluster",
+      "@type" : "@id"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
-    "underFrequency" : {
-      "@id" : "http://delta.linkeddata.es/def/core#underFrequency"
+    "Energy" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Energy"
     },
     "PriceBidAS" : {
       "@id" : "http://delta.linkeddata.es/def/core#PriceBidAS"
+    },
+    "granularity" : {
+      "@id" : "http://delta.linkeddata.es/def/core#granularity"
     },
     "TimeInterval" : {
       "@id" : "http://delta.linkeddata.es/def/core#TimeInterval"
@@ -100,21 +126,23 @@
     "PriceBid" : {
       "@id" : "http://delta.linkeddata.es/def/core#PriceBid"
     },
-    "hasEnd" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasEnd"
+    "Cluster" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Cluster"
     },
-    "VoltageInestability" : {
-      "@id" : "http://delta.linkeddata.es/def/core#VoltageInestability"
+    "hasEnd" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasEnd",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "hasBeginning" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasBeginning"
+      "@id" : "http://delta.linkeddata.es/def/core#hasBeginning",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
+    "Profile" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Profile"
     },
     "stateOfCharge" : {
       "@id" : "http://delta.linkeddata.es/def/core#stateOfCharge",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
-    },
-    "overFrequency" : {
-      "@id" : "http://delta.linkeddata.es/def/core#overFrequency"
     },
     "PriceBidIntraDay" : {
       "@id" : "http://delta.linkeddata.es/def/core#PriceBidIntraDay"
@@ -122,11 +150,19 @@
     "FlexibilityBid" : {
       "@id" : "http://delta.linkeddata.es/def/core#FlexibilityBid"
     },
-    "CorrectedEnergy" : {
-      "@id" : "http://delta.linkeddata.es/def/core#CorrectedEnergy"
+    "makesMeasurement" : {
+      "@id" : "https://w3id.org/saref#makesMeasurement",
+      "@type" : "@id"
+    },
+    "sendBids" : {
+      "@id" : "http://delta.linkeddata.es/def/core#sendBids",
+      "@type" : "@id"
     },
     "Property" : {
       "@id" : "http://delta.linkeddata.es/def/core#Property"
+    },
+    "Aggregator" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
     },
     "title" : {
       "@id" : "http://purl.org/dc/elements/1.1/title"
@@ -145,21 +181,19 @@
     "PriceBidDayAhead" : {
       "@id" : "http://delta.linkeddata.es/def/core#PriceBidDayAhead"
     },
-    "MinimumCapacityBid" : {
-      "@id" : "http://delta.linkeddata.es/def/core#MinimumCapacityBid"
+    "isMeasuredIn" : {
+      "@id" : "https://w3id.org/saref#isMeasuredIn",
+      "@type" : "@id"
     },
     "capacitySold" : {
       "@id" : "http://delta.linkeddata.es/def/core#capacitySold"
     },
-    "Load" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Load"
-    },
-    "calculatesProperty" : {
-      "@id" : "http://delta.linkeddata.es/def/core#calculatesProperty",
+    "uses" : {
+      "@id" : "http://delta.linkeddata.es/def/core#uses",
       "@type" : "@id"
     },
-    "BuyPrice" : {
-      "@id" : "http://delta.linkeddata.es/def/core#BuyPrice"
+    "Load" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Load"
     },
     "Flexibility" : {
       "@id" : "http://delta.linkeddata.es/def/core#Flexibility"
@@ -168,23 +202,39 @@
       "@id" : "http://delta.linkeddata.es/def/core#manage",
       "@type" : "@id"
     },
+    "hasProfile" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasProfile",
+      "@type" : "@id"
+    },
     "SpatialThing" : {
       "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    },
+    "clusterDescription" : {
+      "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
-    "Device" : {
-      "@id" : "https://w3id.org/saref#Device"
+    "isOwnedBy" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy",
+      "@type" : "@id"
     },
-    "GridInestabilityEstimation" : {
-      "@id" : "http://delta.linkeddata.es/def/core#GridInestabilityEstimation"
+    "owns" : {
+      "@id" : "http://delta.linkeddata.es/def/core#owns",
+      "@type" : "@id"
+    },
+    "isRelatedToMeasurement" : {
+      "@id" : "https://w3id.org/saref#isRelatedToMeasurement",
+      "@type" : "@id"
+    },
+    "Device" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Device"
     },
     "hasTimestamp" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasTimestamp"
     },
-    "FrequencyInestability" : {
-      "@id" : "http://delta.linkeddata.es/def/core#FrequencyInestability"
+    "Power" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Power"
     },
     "isRelatedToProperty" : {
       "@id" : "http://delta.linkeddata.es/def/core#isRelatedToProperty",
@@ -192,9 +242,6 @@
     },
     "preferredNamespaceUri" : {
       "@id" : "http://delta.linkeddata.es/def/core#preferredNamespaceUri"
-    },
-    "PowerConsumtpion" : {
-      "@id" : "http://delta.linkeddata.es/def/core#PowerConsumtpion"
     }
   }
 }

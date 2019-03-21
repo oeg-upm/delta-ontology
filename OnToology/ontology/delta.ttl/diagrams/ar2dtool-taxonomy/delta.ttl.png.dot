@@ -1,22 +1,24 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "base:PriceBid" "base:BuyPrice" "saref:Property" "base:Consumer" "base:Load" "base:PriceBidDayAhead" "base:Generation" "saref:Device" "base:PriceBidIntraDay" "base:Prosumer" "base:FlexibilityBid" "base:Flexibility" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "base:CorrectedEnergy" "saref:Price" "base:Property" "base:PriceBidAS" "base:PowerConsumtpion" "base:Bid" ; /*classes style*/
-	"base:Generation" -> "base:Property" [ label = "rdfs:subClassOf" ];
-	"base:Flexibility" -> "base:Property" [ label = "rdfs:subClassOf" ];
-	"base:FlexibilityBid" -> "base:Bid" [ label = "rdfs:subClassOf" ];
-	"base:CorrectedEnergy" -> "base:Property" [ label = "rdfs:subClassOf" ];
-	"base:BuyPrice" -> "saref:Price" [ label = "rdfs:subClassOf" ];
-	"base:PriceBidAS" -> "base:PriceBid" [ label = "rdfs:subClassOf" ];
-	"base:PriceBidIntraDay" -> "base:PriceBid" [ label = "rdfs:subClassOf" ];
-	"base:Prosumer" -> "saref:Device" [ label = "rdfs:subClassOf" ];
-	"base:Prosumer" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
-	"base:Property" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"base:PriceBid" -> "saref:Price" [ label = "rdfs:subClassOf" ];
-	"base:PriceBid" -> "base:Bid" [ label = "rdfs:subClassOf" ];
-	"base:Consumer" -> "saref:Device" [ label = "rdfs:subClassOf" ];
-	"base:PowerConsumtpion" -> "base:Property" [ label = "rdfs:subClassOf" ];
-	"base:PriceBidDayAhead" -> "base:PriceBid" [ label = "rdfs:subClassOf" ];
-	"base:Load" -> "base:Property" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "core:Customer" "saref:Property" "core:Consumer" "core:Load" "core:PriceBidDayAhead" "core:Generation" "saref:Device" "core:PriceBidIntraDay" "core:Power" "core:Reward" "core:FlexibilityBid" "core:Prosumer" "core:Device" "core:Flexibility" "core:Reliability" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "saref:Price" "core:Property" "core:PriceBidAS" "core:Energy" "core:Bid" "core:PriceBid" ; /*classes style*/
+	"core:Generation" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:Flexibility" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:FlexibilityBid" -> "core:Bid" [ label = "rdfs:subClassOf" ];
+	"core:Reliability" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:Energy" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:PriceBidAS" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
+	"core:PriceBidIntraDay" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
+	"core:Power" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
+	"core:Device" -> "saref:Device" [ label = "rdfs:subClassOf" ];
+	"core:Device" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
+	"core:Property" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:PriceBid" -> "saref:Price" [ label = "rdfs:subClassOf" ];
+	"core:PriceBid" -> "core:Bid" [ label = "rdfs:subClassOf" ];
+	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
+	"core:PriceBidDayAhead" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
+	"core:Reward" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:Load" -> "core:Property" [ label = "rdfs:subClassOf" ];
 
 }

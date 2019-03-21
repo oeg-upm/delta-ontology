@@ -1,23 +1,34 @@
-<h2 id="overv" class="list">DELTA ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<html><h2 id="overv" class="list">DELTA ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul class="hlist">
    <li>
+      <a href="#Aggregator" title="http://delta.linkeddata.es/def/core#Aggregator">Aggregator</a>
+   </li>
+   <li>
       <a href="#Bid" title="http://delta.linkeddata.es/def/core#Bid">Bid</a>
    </li>
    <li>
-      <a href="#BuyPrice" title="http://delta.linkeddata.es/def/core#BuyPrice">Buy price</a>
+      <a href="#Cluster" title="http://delta.linkeddata.es/def/core#Cluster">Cluster</a>
    </li>
    <li>
       <a href="#Consumer" title="http://delta.linkeddata.es/def/core#Consumer">Consumer</a>
    </li>
    <li>
-      <a href="#CorrectedEnergy"
-         title="http://delta.linkeddata.es/def/core#CorrectedEnergy">Corrected energy</a>
+      <a href="#Customer" title="http://delta.linkeddata.es/def/core#Customer">Customer</a>
    </li>
    <li>
-      <a href="#EnergyMarket" title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy market</a>
+      <a href="#Device" title="http://delta.linkeddata.es/def/core#Device">Device</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
+   </li>
+   <li>
+      <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+   </li>
+   <li>
+      <a href="#FEID" title="http://delta.linkeddata.es/def/core#FEID">FEID</a>
    </li>
    <li>
       <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
@@ -27,15 +38,7 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#FlexibilityBid">Flexibility bid</a>
    </li>
    <li>
-      <a href="#FrequencyInestability"
-         title="http://delta.linkeddata.es/def/core#FrequencyInestability">Frequency inestability</a>
-   </li>
-   <li>
       <a href="#Generation" title="http://delta.linkeddata.es/def/core#Generation">Generation</a>
-   </li>
-   <li>
-      <a href="#GridInestabilityEstimation"
-         title="http://delta.linkeddata.es/def/core#GridInestabilityEstimation">Grid inestability estimation</a>
    </li>
    <li>
       <a href="#Incentive" title="http://delta.linkeddata.es/def/core#Incentive">Incentive</a>
@@ -44,12 +47,12 @@ This ontology has the following classes and properties.</span>
       <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
    </li>
    <li>
-      <a href="#MinimumCapacityBid"
-         title="http://delta.linkeddata.es/def/core#MinimumCapacityBid">Minimum  capacity bid</a>
+      <a href="#https://w3id.org/saref#Measurement" title="https://w3id.org/saref#Measurement">
+         <span>measurement</span>
+      </a>
    </li>
    <li>
-      <a href="#PowerConsumtpion"
-         title="http://delta.linkeddata.es/def/core#PowerConsumtpion">Power consumption</a>
+      <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
    </li>
    <li>
       <a href="#PriceBid" title="http://delta.linkeddata.es/def/core#PriceBid">Price bid</a>
@@ -66,16 +69,27 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#PriceBidIntraDay">Price bid intra-day</a>
    </li>
    <li>
-      <a href="#Profit" title="http://delta.linkeddata.es/def/core#Profit">Profit</a>
+      <a href="#Profile" title="http://delta.linkeddata.es/def/core#Profile">Profile</a>
    </li>
    <li>
       <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
    </li>
    <li>
+      <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">
+         <span>property</span>
+      </a>
+   </li>
+   <li>
       <a href="#Prosumer" title="http://delta.linkeddata.es/def/core#Prosumer">Prosumer</a>
    </li>
    <li>
+      <a href="#Reliability" title="http://delta.linkeddata.es/def/core#Reliability">Relibability</a>
+   </li>
+   <li>
       <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
+   </li>
+   <li>
+      <a href="#Signal" title="http://delta.linkeddata.es/def/core#Signal">Signal</a>
    </li>
    <li>
       <a href="#TimeInterval" title="http://delta.linkeddata.es/def/core#TimeInterval">Time interval</a>
@@ -83,28 +97,22 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#VirtualNode" title="http://delta.linkeddata.es/def/core#VirtualNode">Virtual node</a>
    </li>
-   <li>
-      <a href="#VoltageInestability"
-         title="http://delta.linkeddata.es/def/core#VoltageInestability">Voltage inestability</a>
-   </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#belongsTo" title="http://delta.linkeddata.es/def/core#belongsTo">belongs to</a>
+      <a href="#activates" title="http://delta.linkeddata.es/def/core#activates">activates</a>
    </li>
    <li>
-      <a href="#calculatesProperty"
-         title="http://delta.linkeddata.es/def/core#calculatesProperty">calculates property</a>
+      <a href="#belongsTo" title="http://delta.linkeddata.es/def/core#belongsTo">belongs to</a>
    </li>
    <li>
       <a href="#estimates" title="http://delta.linkeddata.es/def/core#estimates">estimates</a>
    </li>
    <li>
-      <a href="#estimatesFrequencyInestability"
-         title="http://delta.linkeddata.es/def/core#estimatesFrequencyInestability">estimates frequency inestability</a>
+      <a href="#hasAggregatedProperty"
+         title="http://delta.linkeddata.es/def/core#hasAggregatedProperty">has aggregated property</a>
    </li>
    <li>
-      <a href="#estimateVoltageInestability"
-         title="http://delta.linkeddata.es/def/core#estimateVoltageInestability">estimates voltage inestability</a>
+      <a href="#hasCluster" title="http://delta.linkeddata.es/def/core#hasCluster">has cluster</a>
    </li>
    <li>
       <a href="#hasCurrency" title="http://delta.linkeddata.es/def/core#hasCurrency">has currency</a>
@@ -113,28 +121,56 @@ This ontology has the following classes and properties.</span>
       <a href="#hasDuration" title="http://delta.linkeddata.es/def/core#hasDuration">has duration</a>
    </li>
    <li>
-      <a href="#hasEnergyMarket"
-         title="http://delta.linkeddata.es/def/core#hasEnergyMarket">has energy market</a>
-   </li>
-   <li>
       <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
    </li>
    <li>
       <a href="#hasPrice" title="http://delta.linkeddata.es/def/core#hasPrice">has price</a>
    </li>
    <li>
+      <a href="#hasProfile" title="http://delta.linkeddata.es/def/core#hasProfile">has profile</a>
+   </li>
+   <li>
       <a href="#hasReward" title="http://delta.linkeddata.es/def/core#hasReward">has reward</a>
+   </li>
+   <li>
+      <a href="#isAllocatedIn"
+         title="http://delta.linkeddata.es/def/core#isAllocatedIn">is allocated in</a>
+   </li>
+   <li>
+      <a href="#isOwnedBy" title="http://delta.linkeddata.es/def/core#isOwnedBy">is owned by</a>
+   </li>
+   <li>
+      <a href="#isRelatedToProperty"
+         title="http://delta.linkeddata.es/def/core#isRelatedToProperty">is related to property</a>
    </li>
    <li>
       <a href="#manage" title="http://delta.linkeddata.es/def/core#manage">manage</a>
    </li>
    <li>
-      <a href="#measuresProperty"
-         title="http://delta.linkeddata.es/def/core#measuresProperty">measures property</a>
+      <a href="#owns" title="http://delta.linkeddata.es/def/core#owns">owns</a>
+   </li>
+   <li>
+      <a href="#send" title="http://delta.linkeddata.es/def/core#send">send</a>
+   </li>
+   <li>
+      <a href="#sendBids" title="http://delta.linkeddata.es/def/core#sendBids">send bids</a>
+   </li>
+   <li>
+      <a href="#uses" title="http://delta.linkeddata.es/def/core#uses">uses</a>
    </li>
 </ul><h4>Data Properties</h4><ul class="hlist">
    <li>
       <a href="#capacitySold" title="http://delta.linkeddata.es/def/core#capacitySold">capacity sold</a>
+   </li>
+   <li>
+      <a href="#clusterDescription"
+         title="http://delta.linkeddata.es/def/core#clusterDescription">cluster description</a>
+   </li>
+   <li>
+      <a href="#clusterName" title="http://delta.linkeddata.es/def/core#clusterName">cluster name</a>
+   </li>
+   <li>
+      <a href="#granularity" title="http://delta.linkeddata.es/def/core#granularity">granularity</a>
    </li>
    <li>
       <a href="#hasBeginning" title="http://delta.linkeddata.es/def/core#hasBeginning">has beginning</a>
@@ -146,24 +182,62 @@ This ontology has the following classes and properties.</span>
       <a href="#hasTimestamp" title="http://delta.linkeddata.es/def/core#hasTimestamp">has timestamp</a>
    </li>
    <li>
-      <a href="#highVoltage" title="http://delta.linkeddata.es/def/core#highVoltage">high voltage</a>
-   </li>
-   <li>
-      <a href="#lowVoltage" title="http://delta.linkeddata.es/def/core#lowVoltage">low voltage</a>
-   </li>
-   <li>
-      <a href="#overFrequency"
-         title="http://delta.linkeddata.es/def/core#overFrequency">over frequency</a>
-   </li>
-   <li>
       <a href="#stateOfCharge"
          title="http://delta.linkeddata.es/def/core#stateOfCharge">state of charge</a>
    </li>
    <li>
       <a href="#type" title="http://delta.linkeddata.es/def/core#type">type</a>
    </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
-      <a href="#underFrequency"
-         title="http://delta.linkeddata.es/def/core#underFrequency">under frequency</a>
+      <a href="#bid_energy" title="http://delta.linkeddata.es/def/core#bid_energy">
+         <span>bid energy</span>
+      </a>
    </li>
-</ul>
+   <li>
+      <a href="#bid_load" title="http://delta.linkeddata.es/def/core#bid_load">
+         <span>bid load</span>
+      </a>
+   </li>
+   <li>
+      <a href="#bid_price" title="http://delta.linkeddata.es/def/core#bid_price">
+         <span>bid price</span>
+      </a>
+   </li>
+   <li>
+      <a href="#charge_state"
+         title="http://delta.linkeddata.es/def/core#charge_state">
+         <span>charge state</span>
+      </a>
+   </li>
+   <li>
+      <a href="#demand_charge"
+         title="http://delta.linkeddata.es/def/core#demand_charge">
+         <span>demand charge</span>
+      </a>
+   </li>
+   <li>
+      <a href="#electricity_price"
+         title="http://delta.linkeddata.es/def/core#electricity_price">
+         <span>electricity price</span>
+      </a>
+   </li>
+   <li>
+      <a href="#energy_price"
+         title="http://delta.linkeddata.es/def/core#energy_price">
+         <span>energy price</span>
+      </a>
+   </li>
+   <li>
+      <a href="#load_control"
+         title="http://delta.linkeddata.es/def/core#load_control">
+         <span>load control</span>
+      </a>
+   </li>
+   <li>
+      <a href="#load_dispatch"
+         title="http://delta.linkeddata.es/def/core#load_dispatch">
+         <span>load dispatch</span>
+      </a>
+   </li>
+</ul></html>
