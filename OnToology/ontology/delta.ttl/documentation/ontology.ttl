@@ -89,6 +89,11 @@
             rdfs:label "has cluster" .
 
 
+###  http://delta.linkeddata.es/def/core#hasComfortSetting
+:hasComfortSetting rdf:type owl:ObjectProperty ;
+                   rdfs:label "has comfort setting" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasCurrency
 :hasCurrency rdf:type owl:ObjectProperty ;
              rdfs:comment "Link between a price and its currency" ;
@@ -140,6 +145,11 @@
            rdfs:domain :Customer ;
            rdfs:comment "Link between a customer and its associated reward" ;
            rdfs:label "has reward" .
+
+
+###  http://delta.linkeddata.es/def/core#hasSystemConstraint
+:hasSystemConstraint rdf:type owl:ObjectProperty ;
+                     rdfs:label "has system constraint" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasTransaction
@@ -364,6 +374,11 @@
          rdfs:label "Cluster" .
 
 
+###  http://delta.linkeddata.es/def/core#ComfortSetting
+:ComfortSetting rdf:type owl:Class ;
+                rdfs:label "Comfort setting" .
+
+
 ###  http://delta.linkeddata.es/def/core#Consumer
 :Consumer rdf:type owl:Class ;
           rdfs:subClassOf :Prosumer ;
@@ -430,6 +445,14 @@
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasCluster ;
                         owl:allValuesFrom :Cluster
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasComfortSetting ;
+                        owl:allValuesFrom :ComfortSetting
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasSystemConstraint ;
+                        owl:allValuesFrom :SystemConstraint
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasTransaction ;
@@ -583,6 +606,11 @@
               rdfs:subClassOf :Signal ;
               rdfs:comment "Signal sent by an entity (e.g., virtual node or aggregator) related to the status" ;
               rdfs:label "Status signal" .
+
+
+###  http://delta.linkeddata.es/def/core#SystemConstraint
+:SystemConstraint rdf:type owl:Class ;
+                  rdfs:label "System constraint" .
 
 
 ###  http://delta.linkeddata.es/def/core#Transaction

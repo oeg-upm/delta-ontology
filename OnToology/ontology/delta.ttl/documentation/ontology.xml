@@ -159,6 +159,15 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasComfortSetting -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting">
+        <rdfs:label>has comfort setting</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#hasCurrency -->
 
 
@@ -244,6 +253,15 @@
         <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
         <rdfs:comment>Link between a customer and its associated reward</rdfs:comment>
         <rdfs:label>has reward</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasSystemConstraint -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSystemConstraint">
+        <rdfs:label>has system constraint</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -624,6 +642,15 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#ComfortSetting -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#ComfortSetting">
+        <rdfs:label>Comfort setting</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Consumer -->
 
 
@@ -729,6 +756,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasCluster"/>
                 <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Cluster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasComfortSetting"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#ComfortSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasSystemConstraint"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#SystemConstraint"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -972,6 +1011,15 @@
         <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Signal"/>
         <rdfs:comment>Signal sent by an entity (e.g., virtual node or aggregator) related to the status</rdfs:comment>
         <rdfs:label>Status signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#SystemConstraint -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#SystemConstraint">
+        <rdfs:label>System constraint</rdfs:label>
     </owl:Class>
     
 

@@ -1,12 +1,14 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "core:Customer" "core:Incentive" "core:Transaction" "core:Bid" "saref:Device" "saref:UnitOfMeasure" "core:Aggregator" "core:Cluster" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "core:Signal" "time:TemporalEntity" "saref:Price" "saref:Property" "core:Profile" "core:FEID" "core:Energy" "core:Payment" "core:EnergyMarket" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Bid" "saref:Device" "saref:UnitOfMeasure" "core:Aggregator" "core:Cluster" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "core:Signal" "time:TemporalEntity" "saref:Price" "saref:Property" "core:Profile" "core:FEID" "core:Energy" "core:Payment" "core:EnergyMarket" ; /*classes style*/
 	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = "terms:license" ];
 	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = "terms:creator" ];
 	"saref:hasValue" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"core:clusterDescription" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
+	"NULL" -> "core:ComfortSetting" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "saref:Price" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:hasSystemConstraint" [ label = "owl:onProperty" ];
 	"NULL" -> "core:type" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasTimestamp" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasEnergy" [ label = "owl:onProperty" ];
@@ -17,8 +19,8 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Incentive" "core
 	"NULL" -> "saref:UnitOfMeasure" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "saref:Measurement" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Profile" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:Reward" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasPrice" [ label = "owl:onProperty" ];
+	"NULL" -> "core:Reward" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Signal" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:measuresProperty" [ label = "owl:onProperty" ];
@@ -52,14 +54,16 @@ node [shape = rectangle, color="orange"]; "core:Customer" "core:Incentive" "core
 	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:hasDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];
+	"NULL" -> "core:SystemConstraint" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isRelatedToProperty" [ label = "owl:onProperty" ];
 	"NULL" -> "core:clusterDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasPayment" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Cluster" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:hasComfortSetting" [ label = "owl:onProperty" ];
 	"NULL" -> "core:sendBids" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:timeStamp" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];

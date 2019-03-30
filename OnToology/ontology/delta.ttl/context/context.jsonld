@@ -38,6 +38,10 @@
       "@id" : "http://delta.linkeddata.es/def/core#consumes",
       "@type" : "@id"
     },
+    "hasComfortSetting" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasComfortSetting",
+      "@type" : "@id"
+    },
     "Prosumer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
     },
@@ -202,6 +206,10 @@
       "@id" : "https://w3id.org/saref#makesMeasurement",
       "@type" : "@id"
     },
+    "hasSystemConstraint" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasSystemConstraint",
+      "@type" : "@id"
+    },
     "sendBids" : {
       "@id" : "http://delta.linkeddata.es/def/core#sendBids",
       "@type" : "@id"
@@ -260,6 +268,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasProfile",
       "@type" : "@id"
     },
+    "ComfortSetting" : {
+      "@id" : "http://delta.linkeddata.es/def/core#ComfortSetting"
+    },
     "clusterDescription" : {
       "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
     },
@@ -287,6 +298,9 @@
     },
     "Device" : {
       "@id" : "http://delta.linkeddata.es/def/core#Device"
+    },
+    "SystemConstraint" : {
+      "@id" : "http://delta.linkeddata.es/def/core#SystemConstraint"
     },
     "hasDescription" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasDescription"
