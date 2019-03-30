@@ -1,24 +1,23 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "core:Customer" "saref:Property" "core:Consumer" "core:Load" "core:PriceBidDayAhead" "core:Generation" "saref:Device" "core:PriceBidIntraDay" "core:Power" "core:Reward" "core:FlexibilityBid" "core:Prosumer" "core:Device" "core:Flexibility" "core:Reliability" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "saref:Price" "core:Property" "core:PriceBidAS" "core:Energy" "core:Bid" "core:PriceBid" ; /*classes style*/
-	"core:Generation" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Flexibility" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:FlexibilityBid" -> "core:Bid" [ label = "rdfs:subClassOf" ];
-	"core:Reliability" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Energy" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:PriceBidAS" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
-	"core:PriceBidIntraDay" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
-	"core:Power" -> "core:Property" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:StatusSignal" "core:Bid" "saref:Device" "core:Consumer" "core:Prosumer" "core:PriceBid" "core:Signal" "time:Interval" "time:TemporalEntity" "saref:Price" "core:DRSignal" "core:Flexibility" "core:Voltage" "saref:Property" "core:Profile" "core:Property" "core:Energy" "core:Device" ; /*classes style*/
+	"core:Flexibility" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Voltage" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"core:Energy" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Power" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
+	"core:Frequency" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"core:Device" -> "saref:Device" [ label = "rdfs:subClassOf" ];
-	"core:Device" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
 	"core:Property" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"core:PriceBid" -> "saref:Price" [ label = "rdfs:subClassOf" ];
+	"core:DRSignal" -> "core:Signal" [ label = "rdfs:subClassOf" ];
+	"core:Profile" -> "saref:Profile" [ label = "rdfs:subClassOf" ];
+	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"core:PriceBid" -> "core:Bid" [ label = "rdfs:subClassOf" ];
+	"core:StatusSignal" -> "core:Signal" [ label = "rdfs:subClassOf" ];
 	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
-	"core:PriceBidDayAhead" -> "core:PriceBid" [ label = "rdfs:subClassOf" ];
-	"core:Reward" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Load" -> "core:Property" [ label = "rdfs:subClassOf" ];
+	"core:Load" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 
 }
