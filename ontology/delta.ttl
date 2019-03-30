@@ -95,6 +95,11 @@ core:hasCluster rdf:type owl:ObjectProperty ;
                 rdfs:label "has cluster" .
 
 
+###  http://delta.linkeddata.es/def/core#hasComfortSetting
+core:hasComfortSetting rdf:type owl:ObjectProperty ;
+                       rdfs:label "has comfort setting" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasCurrency
 core:hasCurrency rdf:type owl:ObjectProperty ;
                  rdfs:comment "Link between a price and its currency" ;
@@ -146,6 +151,11 @@ core:hasReward rdf:type owl:ObjectProperty ;
                rdfs:domain core:Customer ;
                rdfs:comment "Link between a customer and its associated reward" ;
                rdfs:label "has reward" .
+
+
+###  http://delta.linkeddata.es/def/core#hasSystemConstraint
+core:hasSystemConstraint rdf:type owl:ObjectProperty ;
+                         rdfs:label "has system constraint" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasTransaction
@@ -370,6 +380,11 @@ core:Cluster rdf:type owl:Class ;
              rdfs:label "Cluster" .
 
 
+###  http://delta.linkeddata.es/def/core#ComfortSetting
+core:ComfortSetting rdf:type owl:Class ;
+                    rdfs:label "Comfort setting" .
+
+
 ###  http://delta.linkeddata.es/def/core#Consumer
 core:Consumer rdf:type owl:Class ;
               rdfs:subClassOf core:Prosumer ;
@@ -436,6 +451,14 @@ core:FEID rdf:type owl:Class ;
                           [ rdf:type owl:Restriction ;
                             owl:onProperty core:hasCluster ;
                             owl:allValuesFrom core:Cluster
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty core:hasComfortSetting ;
+                            owl:allValuesFrom core:ComfortSetting
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty core:hasSystemConstraint ;
+                            owl:allValuesFrom core:SystemConstraint
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty core:hasTransaction ;
@@ -589,6 +612,11 @@ core:StatusSignal rdf:type owl:Class ;
                   rdfs:subClassOf core:Signal ;
                   rdfs:comment "Signal sent by an entity (e.g., virtual node or aggregator) related to the status" ;
                   rdfs:label "Status signal" .
+
+
+###  http://delta.linkeddata.es/def/core#SystemConstraint
+core:SystemConstraint rdf:type owl:Class ;
+                      rdfs:label "System constraint" .
 
 
 ###  http://delta.linkeddata.es/def/core#Transaction
