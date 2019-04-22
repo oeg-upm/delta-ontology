@@ -8,17 +8,20 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix saref: <https://w3id.org/saref#> .
+
 @prefix terms: <http://purl.org/dc/terms> .
+
 @prefix saref4bldg: <https://w3id.org/def/saref4bldg#> .
 @base <http://delta.linkeddata.es/def/core> .
 
 <http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
-                                       owl:versionInfo "0.1.2" ;
+                                       owl:versionInfo "0.1.3" ;
                                        <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
                                        dc:title "DELTA ontology" ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." .
+
 
 #################################################################
 #    Annotation properties
@@ -96,6 +99,7 @@ core:hasAggregatedProperty rdf:type owl:ObjectProperty ;
                            rdfs:label "has aggregated property" .
 
 
+
 ###  http://delta.linkeddata.es/def/core#hasCurrency
 core:hasCurrency rdf:type owl:ObjectProperty ;
                  rdfs:comment "Link between a price and its currency" ;
@@ -153,6 +157,7 @@ core:hasReward rdf:type owl:ObjectProperty ;
                rdfs:domain core:Customer ;
                rdfs:comment "Link between a customer and its associated reward" ;
                rdfs:label "has reward" .
+
 
 
 ###  http://delta.linkeddata.es/def/core#hasSmartContract
@@ -297,6 +302,7 @@ core:type rdf:type owl:DatatypeProperty ;
           rdfs:label "type" .
 
 
+
 ###  https://w3id.org/saref#hasValue
 saref:hasValue rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
@@ -331,6 +337,10 @@ core:Aggregator rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty core:hasProfile ;
                                   owl:allValuesFrom core:Profile
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty core:hasTransaction ;
+                                  owl:allValuesFrom core:Transaction
                                 ] ;
                 rdfs:comment "Legal entities that aggregate the load or generation of various demand and/or generation/production units and aim at optimizing energy supply and consumption." ;
                 rdfs:label "Aggregator" .
@@ -362,6 +372,11 @@ core:Cluster rdf:type owl:Class ;
                              ] ;
              rdfs:comment "Aggrupation of elements, such as FEIDs or Virtual Nodes" ;
              rdfs:label "Cluster" .
+
+
+###  http://delta.linkeddata.es/def/core#ComfortSetting
+core:ComfortSetting rdf:type owl:Class ;
+                    rdfs:label "Comfort setting" .
 
 
 ###  http://delta.linkeddata.es/def/core#Consumer
@@ -432,8 +447,16 @@ core:FEID rdf:type owl:Class ;
                             owl:allValuesFrom core:Cluster
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty core:hasProfile ;
-                            owl:allValuesFrom core:Profile
+                            owl:onProperty core:hasComfortSetting ;
+                            owl:allValuesFrom core:ComfortSetting
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty core:hasSystemConstraint ;
+                            owl:allValuesFrom core:SystemConstraint
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty core:hasTransaction ;
+                            owl:allValuesFrom core:Transaction
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty core:href ;
@@ -553,10 +576,12 @@ core:Prosumer rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Reward
 core:Reward rdf:type owl:Class ;
+
             rdfs:subClassOf core:Property ;
             rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
                          "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
             rdfs:label "Reward" .
+
 
 
 ###  http://delta.linkeddata.es/def/core#Signal
@@ -595,6 +620,17 @@ core:StatusSignal rdf:type owl:Class ;
                   rdfs:subClassOf core:Signal ;
                   rdfs:comment "Signal sent by an entity (e.g., virtual node or aggregator) related to the status" ;
                   rdfs:label "Status signal" .
+
+
+###  http://delta.linkeddata.es/def/core#SystemConstraint
+core:SystemConstraint rdf:type owl:Class ;
+                      rdfs:label "System constraint" .
+
+
+###  http://delta.linkeddata.es/def/core#Transaction
+core:Transaction rdf:type owl:Class ;
+                 rdfs:comment "Transaction between entities that will be store in the blockchain" ;
+                 rdfs:label "Transaction" .
 
 
 ###  http://delta.linkeddata.es/def/core#VirtualNode
