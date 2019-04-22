@@ -8,7 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix saref: <https://w3id.org/saref#> .
-<<<<<<< HEAD
+@prefix terms: <http://purl.org/dc/terms> .
 @prefix saref4bldg: <https://w3id.org/def/saref4bldg#> .
 @base <http://delta.linkeddata.es/def/core> .
 
@@ -17,9 +17,8 @@
                                        <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
-                                       <http://purl.org/dc/elements/1.1/title> "DELTA ontology" ;
+                                       dc:title "DELTA ontology" ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." .
-
 
 #################################################################
 #    Annotation properties
@@ -29,16 +28,16 @@
 core:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/creator
+###  http://purl.org/dc/termscreator
 terms:creator rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/license
+###  http://purl.org/dc/termslicense
 terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -62,6 +61,12 @@ core:belongsTo rdf:type owl:ObjectProperty ;
                rdfs:label "belongs to" .
 
 
+###  http://delta.linkeddata.es/def/core#belongsToCluster
+core:belongsToCluster rdf:type owl:ObjectProperty ;
+                      rdfs:comment "Relation between an entity and its cluster" ;
+                      rdfs:label "belongs to cluster" .
+
+
 ###  http://delta.linkeddata.es/def/core#consumes
 core:consumes rdf:type owl:ObjectProperty ;
               rdfs:label "consumes" .
@@ -69,6 +74,7 @@ core:consumes rdf:type owl:ObjectProperty ;
 
 ###  http://delta.linkeddata.es/def/core#correspondsToPeriod
 core:correspondsToPeriod rdf:type owl:ObjectProperty ;
+                         rdfs:range time:TemporalEntity ;
                          rdfs:comment "period associated to a profile" ;
                          rdfs:label "has period" .
 
@@ -87,16 +93,7 @@ core:generates rdf:type owl:ObjectProperty ;
 ###  http://delta.linkeddata.es/def/core#hasAggregatedProperty
 core:hasAggregatedProperty rdf:type owl:ObjectProperty ;
                            rdfs:comment "Relationship identifying the properties associated to a group of entities, such as clusters" ;
-
                            rdfs:label "has aggregated property" .
-
-
-###  http://delta.linkeddata.es/def/core#hasCluster
-core:hasCluster rdf:type owl:ObjectProperty ;
-
-                rdfs:comment "Relation between an entity and its cluster" ;
-
-                rdfs:label "has cluster" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasCurrency
@@ -105,14 +102,21 @@ core:hasCurrency rdf:type owl:ObjectProperty ;
                  rdfs:label "has currency" .
 
 
-###  http://delta.linkeddata.es/def/core#hasEnergy
-core:hasEnergy rdf:type owl:ObjectProperty ;
-               rdfs:comment "Relationship identifying the energy that an entity can be related to" .
+###  http://delta.linkeddata.es/def/core#hasDeliveryTime
+core:hasDeliveryTime rdf:type owl:ObjectProperty ;
+                     rdfs:range time:TemporalEntity .
+
 
 ###  http://delta.linkeddata.es/def/core#hasDuration
 core:hasDuration rdf:type owl:ObjectProperty ;
+                 rdfs:range time:TemporalEntity ;
                  rdfs:comment "Duration of an event" ;
                  rdfs:label "has duration" .
+
+
+###  http://delta.linkeddata.es/def/core#hasEnergy
+core:hasEnergy rdf:type owl:ObjectProperty ;
+               rdfs:comment "Relationship identifying the energy that an entity can be related to" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasIncentive
@@ -151,6 +155,13 @@ core:hasReward rdf:type owl:ObjectProperty ;
                rdfs:label "has reward" .
 
 
+###  http://delta.linkeddata.es/def/core#hasSmartContract
+core:hasSmartContract rdf:type owl:ObjectProperty ;
+                      rdfs:range core:SmartContract ;
+                      rdfs:comment "link between the Virtual node and its smart contracts" ;
+                      rdfs:label "has smart contract" .
+
+
 ###  http://delta.linkeddata.es/def/core#isAllocatedIn
 core:isAllocatedIn rdf:type owl:ObjectProperty ;
                    rdfs:comment "Link from a virtual node to its aggregator" ;
@@ -170,6 +181,7 @@ core:isRelatedToProperty rdf:type owl:ObjectProperty ;
 
 ###  http://delta.linkeddata.es/def/core#isValidDuringPeriod
 core:isValidDuringPeriod rdf:type owl:ObjectProperty ;
+                         rdfs:range time:TemporalEntity ;
                          rdfs:comment "Period where an entity, such a contract, is valid" ;
                          rdfs:label "is valid during period" .
 
@@ -238,7 +250,6 @@ saref:measuresProperty rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-
 ###  http://delta.linkeddata.es/def/core#clusterDescription
 core:clusterDescription rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf owl:topDataProperty ;
@@ -257,15 +268,10 @@ core:granularity rdf:type owl:DatatypeProperty ;
                  rdfs:comment "granularity of the profile (e.g., weekly, daily)" ;
                  rdfs:label "granularity" .
 
+
 ###  http://delta.linkeddata.es/def/core#hasDescription
 core:hasDescription rdf:type owl:DatatypeProperty ;
                     rdfs:label "description" .
-
-
-
-###  http://delta.linkeddata.es/def/core#hasTimestamp
-core:hasTimestamp rdf:type owl:DatatypeProperty ;
-                  rdfs:label "has timestamp" .
 
 
 ###  http://delta.linkeddata.es/def/core#href
@@ -279,21 +285,16 @@ core:name rdf:type owl:DatatypeProperty ;
           rdfs:isDefinedBy "name" .
 
 
+###  http://delta.linkeddata.es/def/core#status
+core:status rdf:type owl:DatatypeProperty ;
+            rdfs:comment "The final status as if the DVN fullfiled the request or it failed" ;
+            rdfs:label "status" .
+
+
 ###  http://delta.linkeddata.es/def/core#type
 core:type rdf:type owl:DatatypeProperty ;
           rdfs:range rdfs:Literal ;
           rdfs:label "type" .
-
-###  http://www.w3.org/2006/time#hasBeginning
-time:hasBeginning rdf:type owl:DatatypeProperty ;
-                  rdfs:isDefinedBy "http://www.w3.org/2006/time" ;
-                  rdfs:label "has beginning" .
-
-
-###  http://www.w3.org/2006/time#hasEnd
-time:hasEnd rdf:type owl:DatatypeProperty ;
-            rdfs:isDefinedBy "http://www.w3.org/2006/time" ;
-            rdfs:label "has end" .
 
 
 ###  https://w3id.org/saref#hasValue
@@ -307,10 +308,6 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
 saref:timeStamp rdf:type owl:DatatypeProperty ;
                 rdfs:isDefinedBy "https://w3id.org/def/saref" ;
                 rdfs:label "timestamp" .
-
-###  https://w3id.org/saref#hasValue
-saref:hasValue rdf:type owl:DatatypeProperty .
-
 
 
 #################################################################
@@ -431,7 +428,7 @@ core:FEID rdf:type owl:Class ;
                             owl:someValuesFrom saref:Property
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty core:hasCluster ;
+                            owl:onProperty core:belongsToCluster ;
                             owl:allValuesFrom core:Cluster
                           ] ,
                           [ rdf:type owl:Restriction ;
@@ -496,6 +493,11 @@ core:MarketSettlement rdf:type owl:Class .
 
 ###  http://delta.linkeddata.es/def/core#Payment
 core:Payment rdf:type owl:Class ;
+             rdfs:subClassOf saref:Price ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty core:status ;
+                               owl:someValuesFrom rdfs:Literal
+                             ] ;
              rdfs:comment "Monetary value associated to a contract" ;
              rdfs:label "Payment" .
 
@@ -536,7 +538,6 @@ core:Profile rdf:type owl:Class ;
              rdfs:label "Profile" .
 
 
-
 ###  http://delta.linkeddata.es/def/core#Property
 core:Property rdf:type owl:Class ;
               rdfs:subClassOf saref:Property ;
@@ -550,29 +551,23 @@ core:Prosumer rdf:type owl:Class ;
               rdfs:label "Prosumer" .
 
 
-
-###  http://delta.linkeddata.es/def/core#Reward
-core:Reward rdf:type owl:Class ;
-            rdfs:comment "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
-
-
-
 ###  http://delta.linkeddata.es/def/core#Reward
 core:Reward rdf:type owl:Class ;
             rdfs:subClassOf core:Property ;
-            rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ;
+            rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
+                         "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
             rdfs:label "Reward" .
 
 
 ###  http://delta.linkeddata.es/def/core#Signal
 core:Signal rdf:type owl:Class ;
             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                              owl:onProperty core:isRelatedToProperty ;
-                              owl:allValuesFrom saref:Property
+                              owl:onProperty core:isValidDuringPeriod ;
+                              owl:someValuesFrom time:Interval
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty core:hasTimestamp ;
-                              owl:allValuesFrom xsd:dateTimeStamp
+                              owl:onProperty core:isRelatedToProperty ;
+                              owl:allValuesFrom saref:Property
                             ] ;
             rdfs:comment "Signal sent to the virtual nodes or feids in order to request or offer energy, or ask for actions" ;
             rdfs:label "Signal" .
@@ -583,6 +578,10 @@ core:SmartContract rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty core:agreesOn ;
                                      owl:someValuesFrom saref:Property
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty core:hasDeliveryTime ;
+                                     owl:someValuesFrom time:Instant
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty core:hasPayment ;
@@ -601,24 +600,32 @@ core:StatusSignal rdf:type owl:Class ;
 ###  http://delta.linkeddata.es/def/core#VirtualNode
 core:VirtualNode rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:hasSmartContract ;
+                                   owl:someValuesFrom core:SmartContract
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty core:isAllocatedIn ;
                                    owl:someValuesFrom core:Aggregator
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:manage ;
+                                   owl:someValuesFrom core:FEID
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:manage ;
+                                   owl:someValuesFrom saref:Device
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty core:send ;
                                    owl:someValuesFrom core:Signal
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty core:hasCluster ;
+                                   owl:onProperty core:belongsToCluster ;
                                    owl:allValuesFrom core:Cluster
                                  ] ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty core:hasProfile ;
                                    owl:allValuesFrom core:Profile
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty core:manage ;
-                                   owl:allValuesFrom saref:Device
                                  ] ;
                  rdfs:comment "An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator." ;
                  rdfs:label "Virtual node" .
@@ -698,8 +705,6 @@ saref:Measurement rdf:type owl:Class ;
                                   ] ;
                   rdfs:isDefinedBy "https://w3id.org/def/saref#" ;
                   rdfs:label "Measurement" .
-                                   .
-
 
 
 ###  https://w3id.org/saref#Price
@@ -749,4 +754,4 @@ core:PriceDayAhead rdf:type owl:NamedIndividual .
 core:PriceIntraDay rdf:type owl:NamedIndividual .
 
 
-###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
