@@ -121,6 +121,10 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasReward",
       "@type" : "@id"
     },
+    "hasSmartContract" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract",
+      "@type" : "@id"
+    },
     "VirtualNode" : {
       "@id" : "http://delta.linkeddata.es/def/core#VirtualNode"
     },
@@ -139,10 +143,6 @@
     },
     "Incentive" : {
       "@id" : "http://delta.linkeddata.es/def/core#Incentive"
-    },
-    "hasCluster" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasCluster",
-      "@type" : "@id"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
@@ -172,14 +172,11 @@
     "Cluster" : {
       "@id" : "http://delta.linkeddata.es/def/core#Cluster"
     },
-    "hasEnd" : {
-      "@id" : "http://www.w3.org/2006/time#hasEnd"
+    "status" : {
+      "@id" : "http://delta.linkeddata.es/def/core#status"
     },
     "TemporalEntity" : {
       "@id" : "http://www.w3.org/2006/time#TemporalEntity"
-    },
-    "hasBeginning" : {
-      "@id" : "http://www.w3.org/2006/time#hasBeginning"
     },
     "generates" : {
       "@id" : "http://delta.linkeddata.es/def/core#generates",
@@ -214,6 +211,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#sendBids",
       "@type" : "@id"
     },
+    "termscreator" : {
+      "@id" : "http://purl.org/dc/termscreator"
+    },
     "Property" : {
       "@id" : "http://delta.linkeddata.es/def/core#Property"
     },
@@ -229,6 +229,10 @@
     },
     "Bid" : {
       "@id" : "http://delta.linkeddata.es/def/core#Bid"
+    },
+    "hasDeliveryTime" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasDeliveryTime",
+      "@type" : "@id"
     },
     "type" : {
       "@id" : "http://delta.linkeddata.es/def/core#type",
@@ -284,6 +288,9 @@
     "Transaction" : {
       "@id" : "http://delta.linkeddata.es/def/core#Transaction"
     },
+    "termslicense" : {
+      "@id" : "http://purl.org/dc/termslicense"
+    },
     "isOwnedBy" : {
       "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy",
       "@type" : "@id"
@@ -305,14 +312,15 @@
     "hasDescription" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasDescription"
     },
-    "hasTimestamp" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasTimestamp"
-    },
     "Power" : {
       "@id" : "http://delta.linkeddata.es/def/core#Power"
     },
     "isRelatedToProperty" : {
       "@id" : "http://delta.linkeddata.es/def/core#isRelatedToProperty",
+      "@type" : "@id"
+    },
+    "belongsToCluster" : {
+      "@id" : "http://delta.linkeddata.es/def/core#belongsToCluster",
       "@type" : "@id"
     },
     "preferredNamespaceUri" : {
