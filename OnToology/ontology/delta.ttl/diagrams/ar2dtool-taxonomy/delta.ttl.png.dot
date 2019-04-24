@@ -1,15 +1,16 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:StatusSignal" "core:Bid" "saref:Device" "core:Consumer" "core:Prosumer" "core:PriceBid" "core:Signal" "time:Interval" "time:TemporalEntity" "saref:Price" "core:DRSignal" "core:Flexibility" "core:Voltage" "saref:Property" "core:Profile" "core:Property" "core:Energy" "core:Device" ; /*classes style*/
+node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:StatusSignal" "core:Bid" "saref:Device" "core:Consumer" "core:Prosumer" "core:PriceBid" "core:Reward" "core:Signal" "time:Interval" "time:TemporalEntity" "saref:Price" "core:DRSignal" "core:Flexibility" "core:Voltage" "saref:Property" "core:Profile" "core:Property" "core:Energy" "core:Payment" "core:Device" ; /*classes style*/
 	"core:Flexibility" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
 	"core:Voltage" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"core:Energy" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"core:Power" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
 	"core:Frequency" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
 	"core:Device" -> "saref:Device" [ label = "rdfs:subClassOf" ];
 	"core:Property" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"core:DRSignal" -> "core:Signal" [ label = "rdfs:subClassOf" ];
@@ -18,6 +19,7 @@ node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Freque
 	"core:PriceBid" -> "core:Bid" [ label = "rdfs:subClassOf" ];
 	"core:StatusSignal" -> "core:Signal" [ label = "rdfs:subClassOf" ];
 	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
+	"core:Reward" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:Load" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 
 }

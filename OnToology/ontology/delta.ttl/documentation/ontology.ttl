@@ -22,16 +22,16 @@
 :preferredNamespaceUri rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/termscreator
+<http://purl.org/dc/termscreator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/termslicense
+<http://purl.org/dc/termslicense> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -55,6 +55,12 @@
            rdfs:label "belongs to" .
 
 
+###  http://delta.linkeddata.es/def/core#belongsToCluster
+:belongsToCluster rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relation between an entity and its cluster" ;
+                  rdfs:label "belongs to cluster" .
+
+
 ###  http://delta.linkeddata.es/def/core#consumes
 :consumes rdf:type owl:ObjectProperty ;
           rdfs:label "consumes" .
@@ -62,6 +68,7 @@
 
 ###  http://delta.linkeddata.es/def/core#correspondsToPeriod
 :correspondsToPeriod rdf:type owl:ObjectProperty ;
+                     rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
                      rdfs:comment "period associated to a profile" ;
                      rdfs:label "has period" .
 
@@ -83,15 +90,8 @@
                        rdfs:label "has aggregated property" .
 
 
-###  http://delta.linkeddata.es/def/core#hasCluster
-:hasCluster rdf:type owl:ObjectProperty ;
-            rdfs:comment "Relation between an entity and its cluster" ;
-            rdfs:label "has cluster" .
-
-
 ###  http://delta.linkeddata.es/def/core#hasComfortSetting
-:hasComfortSetting rdf:type owl:ObjectProperty ;
-                   rdfs:label "has comfort setting" .
+:hasComfortSetting rdf:type owl:ObjectProperty .
 
 
 ###  http://delta.linkeddata.es/def/core#hasCurrency
@@ -100,8 +100,14 @@
              rdfs:label "has currency" .
 
 
+###  http://delta.linkeddata.es/def/core#hasDeliveryTime
+:hasDeliveryTime rdf:type owl:ObjectProperty ;
+                 rdfs:range <http://www.w3.org/2006/time#TemporalEntity> .
+
+
 ###  http://delta.linkeddata.es/def/core#hasDuration
 :hasDuration rdf:type owl:ObjectProperty ;
+             rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
              rdfs:comment "Duration of an event" ;
              rdfs:label "has duration" .
 
@@ -147,15 +153,19 @@
            rdfs:label "has reward" .
 
 
+###  http://delta.linkeddata.es/def/core#hasSmartContract
+:hasSmartContract rdf:type owl:ObjectProperty ;
+                  rdfs:range :SmartContract ;
+                  rdfs:comment "link between the Virtual node and its smart contracts" ;
+                  rdfs:label "has smart contract" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasSystemConstraint
-:hasSystemConstraint rdf:type owl:ObjectProperty ;
-                     rdfs:label "has system constraint" .
+:hasSystemConstraint rdf:type owl:ObjectProperty .
 
 
 ###  http://delta.linkeddata.es/def/core#hasTransaction
-:hasTransaction rdf:type owl:ObjectProperty ;
-                rdfs:comment "Link between a transaction and the entity associated" ;
-                rdfs:label "has transaction" .
+:hasTransaction rdf:type owl:ObjectProperty .
 
 
 ###  http://delta.linkeddata.es/def/core#isAllocatedIn
@@ -177,6 +187,7 @@
 
 ###  http://delta.linkeddata.es/def/core#isValidDuringPeriod
 :isValidDuringPeriod rdf:type owl:ObjectProperty ;
+                     rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
                      rdfs:comment "Period where an entity, such a contract, is valid" ;
                      rdfs:label "is valid during period" .
 
@@ -269,11 +280,6 @@
                 rdfs:label "description" .
 
 
-###  http://delta.linkeddata.es/def/core#hasTimestamp
-:hasTimestamp rdf:type owl:DatatypeProperty ;
-              rdfs:label "has timestamp" .
-
-
 ###  http://delta.linkeddata.es/def/core#href
 :href rdf:type owl:DatatypeProperty ;
       rdfs:comment "URI of the endpoint" ;
@@ -285,22 +291,16 @@
       rdfs:isDefinedBy "name" .
 
 
+###  http://delta.linkeddata.es/def/core#status
+:status rdf:type owl:DatatypeProperty ;
+        rdfs:comment "The final status as if the DVN fullfiled the request or it failed" ;
+        rdfs:label "status" .
+
+
 ###  http://delta.linkeddata.es/def/core#type
 :type rdf:type owl:DatatypeProperty ;
       rdfs:range rdfs:Literal ;
       rdfs:label "type" .
-
-
-###  http://www.w3.org/2006/time#hasBeginning
-<http://www.w3.org/2006/time#hasBeginning> rdf:type owl:DatatypeProperty ;
-                                           rdfs:isDefinedBy "http://www.w3.org/2006/time" ;
-                                           rdfs:label "has beginning" .
-
-
-###  http://www.w3.org/2006/time#hasEnd
-<http://www.w3.org/2006/time#hasEnd> rdf:type owl:DatatypeProperty ;
-                                     rdfs:isDefinedBy "http://www.w3.org/2006/time" ;
-                                     rdfs:label "has end" .
 
 
 ###  https://w3id.org/saref#hasValue
@@ -443,7 +443,7 @@
                         owl:someValuesFrom <https://w3id.org/saref#Property>
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :hasCluster ;
+                        owl:onProperty :belongsToCluster ;
                         owl:allValuesFrom :Cluster
                       ] ,
                       [ rdf:type owl:Restriction ;
@@ -516,6 +516,11 @@
 
 ###  http://delta.linkeddata.es/def/core#Payment
 :Payment rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/saref#Price> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :status ;
+                           owl:someValuesFrom rdfs:Literal
+                         ] ;
          rdfs:comment "Monetary value associated to a contract" ;
          rdfs:label "Payment" .
 
@@ -571,18 +576,21 @@
 
 ###  http://delta.linkeddata.es/def/core#Reward
 :Reward rdf:type owl:Class ;
-        rdfs:comment "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" .
+        rdfs:subClassOf :Property ;
+        rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
+                     "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
+        rdfs:label "Reward" .
 
 
 ###  http://delta.linkeddata.es/def/core#Signal
 :Signal rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :isRelatedToProperty ;
-                          owl:allValuesFrom <https://w3id.org/saref#Property>
+                          owl:onProperty :isValidDuringPeriod ;
+                          owl:someValuesFrom <http://www.w3.org/2006/time#Interval>
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasTimestamp ;
-                          owl:allValuesFrom xsd:dateTimeStamp
+                          owl:onProperty :isRelatedToProperty ;
+                          owl:allValuesFrom <https://w3id.org/saref#Property>
                         ] ;
         rdfs:comment "Signal sent to the virtual nodes or feids in order to request or offer energy, or ask for actions" ;
         rdfs:label "Signal" .
@@ -593,6 +601,10 @@
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :agreesOn ;
                                  owl:someValuesFrom <https://w3id.org/saref#Property>
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasDeliveryTime ;
+                                 owl:someValuesFrom <http://www.w3.org/2006/time#Instant>
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasPayment ;
@@ -622,28 +634,32 @@
 ###  http://delta.linkeddata.es/def/core#VirtualNode
 :VirtualNode rdf:type owl:Class ;
              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasSmartContract ;
+                               owl:someValuesFrom :SmartContract
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :isAllocatedIn ;
                                owl:someValuesFrom :Aggregator
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :manage ;
+                               owl:someValuesFrom :FEID
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :manage ;
+                               owl:someValuesFrom <https://w3id.org/saref#Device>
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :send ;
                                owl:someValuesFrom :Signal
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasCluster ;
+                               owl:onProperty :belongsToCluster ;
                                owl:allValuesFrom :Cluster
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasProfile ;
                                owl:allValuesFrom :Profile
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasTransaction ;
-                               owl:allValuesFrom :Transaction
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :manage ;
-                               owl:allValuesFrom <https://w3id.org/saref#Device>
                              ] ;
              rdfs:comment "An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator." ;
              rdfs:label "Virtual node" .

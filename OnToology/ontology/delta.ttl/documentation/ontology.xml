@@ -2,6 +2,7 @@
 <rdf:RDF xmlns="http://delta.linkeddata.es/def/core#"
      xml:base="http://delta.linkeddata.es/def/core"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:dc1="http://purl.org/dc/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -39,24 +40,24 @@
     
 
 
+    <!-- http://purl.org/dc/termscreator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/termscreator"/>
+    
+
+
+    <!-- http://purl.org/dc/termslicense -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/termslicense"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/title -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
@@ -101,6 +102,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#belongsToCluster -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#belongsToCluster">
+        <rdfs:comment>Relation between an entity and its cluster</rdfs:comment>
+        <rdfs:label>belongs to cluster</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#consumes -->
 
 
@@ -114,6 +125,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#correspondsToPeriod">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:comment>period associated to a profile</rdfs:comment>
         <rdfs:label>has period</rdfs:label>
     </owl:ObjectProperty>
@@ -149,22 +161,10 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#hasCluster -->
-
-
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasCluster">
-        <rdfs:comment>Relation between an entity and its cluster</rdfs:comment>
-        <rdfs:label>has cluster</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#hasComfortSetting -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting">
-        <rdfs:label>has comfort setting</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting"/>
     
 
 
@@ -178,10 +178,20 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasDeliveryTime -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDeliveryTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#hasDuration -->
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDuration">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:comment>Duration of an event</rdfs:comment>
         <rdfs:label>has duration</rdfs:label>
     </owl:ObjectProperty>
@@ -257,22 +267,28 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasSmartContract -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSmartContract">
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+        <rdfs:comment>link between the Virtual node and its smart contracts</rdfs:comment>
+        <rdfs:label>has smart contract</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#hasSystemConstraint -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSystemConstraint">
-        <rdfs:label>has system constraint</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSystemConstraint"/>
     
 
 
     <!-- http://delta.linkeddata.es/def/core#hasTransaction -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasTransaction">
-        <rdfs:comment>Link between a transaction and the entity associated</rdfs:comment>
-        <rdfs:label>has transaction</rdfs:label>
-    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasTransaction"/>
     
 
 
@@ -309,6 +325,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isValidDuringPeriod">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:comment>Period where an entity, such a contract, is valid</rdfs:comment>
         <rdfs:label>is valid during period</rdfs:label>
     </owl:ObjectProperty>
@@ -467,15 +484,6 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#hasTimestamp -->
-
-
-    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasTimestamp">
-        <rdfs:label>has timestamp</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#href -->
 
 
@@ -495,32 +503,22 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#status -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#status">
+        <rdfs:comment>The final status as if the DVN fullfiled the request or it failed</rdfs:comment>
+        <rdfs:label>status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#type -->
 
 
     <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#type">
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:label>type</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasBeginning -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#hasBeginning">
-        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
-        <rdfs:label>has beginning</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasEnd -->
-
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#hasEnd">
-        <rdfs:isDefinedBy>http://www.w3.org/2006/time</rdfs:isDefinedBy>
-        <rdfs:label>has end</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -754,7 +752,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasCluster"/>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#belongsToCluster"/>
                 <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Cluster"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -869,6 +867,13 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Payment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Price"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#status"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>Monetary value associated to a contract</rdfs:comment>
         <rdfs:label>Payment</rdfs:label>
     </owl:Class>
@@ -956,7 +961,10 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Reward">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:comment>Reward associated to the customers that is given after using the engagement tools</rdfs:comment>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools (e.g., discounts)</rdfs:comment>
+        <rdfs:label>Reward</rdfs:label>
     </owl:Class>
     
 
@@ -967,14 +975,14 @@
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Signal">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isRelatedToProperty"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isValidDuringPeriod"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Interval"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasTimestamp"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isRelatedToProperty"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Signal sent to the virtual nodes or feids in order to request or offer energy, or ask for actions</rdfs:comment>
@@ -991,6 +999,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#agreesOn"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasDeliveryTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Instant"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1040,8 +1054,26 @@
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#VirtualNode">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasSmartContract"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isAllocatedIn"/>
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Aggregator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#manage"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#manage"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/saref#Device"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1052,7 +1084,7 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasCluster"/>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#belongsToCluster"/>
                 <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Cluster"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1060,18 +1092,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasProfile"/>
                 <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Profile"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasTransaction"/>
-                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Transaction"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#manage"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Device"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator.</rdfs:comment>
