@@ -1,25 +1,28 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:StatusSignal" "core:Bid" "saref:Device" "core:Consumer" "core:Prosumer" "core:PriceBid" "core:Reward" "core:Signal" "time:Interval" "time:TemporalEntity" "saref:Price" "core:DRSignal" "core:Flexibility" "core:Voltage" "saref:Property" "core:Profile" "core:Property" "core:Energy" "core:Payment" "core:Device" ; /*classes style*/
-	"core:Flexibility" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "core:Customer" "saref4bldg:PhysicalObject" "core:Aggregator" "core:Asset" "saref:Property" "core:Consumer" "core:Load" "core:Payment" "saref:Device" "core:Profile" "core:Power" "core:Reward" "core:Prosumer" "time:Interval" "core:Voltage" "core:Flexibility" "core:DRProperty" "time:TemporalEntity" "saref:Price" "saref:Profile" "core:Energy" "core:VirtualNode" "core:Frequency" "time:Instant" "core:FEID" ; /*classes style*/
 	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Flexibility" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
 	"core:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
-	"core:Voltage" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:VirtualNode" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
+	"core:Voltage" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
+	"core:Aggregator" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
+	"core:DRProperty" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:FEID" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"core:FEID" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
 	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
-	"core:Energy" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"core:Power" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"core:Frequency" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Energy" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
+	"core:Power" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
+	"core:Asset" -> "saref:Device" [ label = "rdfs:subClassOf" ];
+	"core:Asset" -> "https://w3id.org/def/openadr#Asset" [ label = "rdfs:subClassOf" ];
+	"core:Frequency" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
 	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
-	"core:Device" -> "saref:Device" [ label = "rdfs:subClassOf" ];
-	"core:Property" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"core:DRSignal" -> "core:Signal" [ label = "rdfs:subClassOf" ];
-	"core:Profile" -> "saref:Profile" [ label = "rdfs:subClassOf" ];
 	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
-	"core:PriceBid" -> "core:Bid" [ label = "rdfs:subClassOf" ];
-	"core:StatusSignal" -> "core:Signal" [ label = "rdfs:subClassOf" ];
+	"core:Profile" -> "saref:Profile" [ label = "rdfs:subClassOf" ];
 	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
-	"core:Reward" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Load" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:Reward" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
+	"core:Load" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
+	"saref:Device" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
 
 }
