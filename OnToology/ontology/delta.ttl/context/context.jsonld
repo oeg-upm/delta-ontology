@@ -27,6 +27,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#consumes",
       "@type" : "@id"
     },
+    "DownFlexibility" : {
+      "@id" : "http://delta.linkeddata.es/def/core#DownFlexibility"
+    },
     "hasComfortSetting" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasComfortSetting",
       "@type" : "@id"
@@ -71,10 +74,6 @@
     },
     "isAllocatedIn" : {
       "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn",
-      "@type" : "@id"
-    },
-    "send" : {
-      "@id" : "https://w3id.org/def/openadr#send",
       "@type" : "@id"
     },
     "hasCurrency" : {
@@ -129,11 +128,17 @@
     "Interval" : {
       "@id" : "http://www.w3.org/2006/time#Interval"
     },
+    "UpFlexibility" : {
+      "@id" : "http://delta.linkeddata.es/def/core#UpFlexibility"
+    },
     "clusterName" : {
       "@id" : "http://delta.linkeddata.es/def/core#clusterName"
     },
     "Incentive" : {
       "@id" : "http://delta.linkeddata.es/def/core#Incentive"
+    },
+    "LoadForecast" : {
+      "@id" : "http://delta.linkeddata.es/def/core#LoadForecast"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
@@ -149,6 +154,10 @@
     },
     "name" : {
       "@id" : "http://delta.linkeddata.es/def/core#name"
+    },
+    "sendEvent" : {
+      "@id" : "https://w3id.org/def/openadr#sendEvent",
+      "@type" : "@id"
     },
     "correspondsToPeriod" : {
       "@id" : "http://delta.linkeddata.es/def/core#correspondsToPeriod",
@@ -176,6 +185,9 @@
     "hasTransaction" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasTransaction",
       "@type" : "@id"
+    },
+    "Phase" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Phase"
     },
     "VTN" : {
       "@id" : "https://w3id.org/def/openadr#VTN"
@@ -228,8 +240,9 @@
       "@id" : "https://w3id.org/saref#hasFeatureOfInterest",
       "@type" : "@id"
     },
-    "Load" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Load"
+    "hasPhase" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasPhase",
+      "@type" : "@id"
     },
     "VEN" : {
       "@id" : "https://w3id.org/def/openadr#VEN"
