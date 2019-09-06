@@ -17,7 +17,7 @@
         <terms:creator>Alba Fernández Izquierdo</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.1.3</owl:versionInfo>
+        <owl:versionInfo>0.1.4</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -197,6 +197,15 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#hasPhase -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasPhase">
+        <rdfs:label>has phase</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#hasProfile -->
 
 
@@ -300,6 +309,13 @@
         <rdfs:comment>Link between the customers and the devices</rdfs:comment>
         <rdfs:label>owns</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#sendEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#sendEvent"/>
     
 
 
@@ -620,6 +636,15 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#DownFlexibility -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#DownFlexibility">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Flexibility"/>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Energy -->
 
 
@@ -747,13 +772,12 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#Load -->
+    <!-- http://delta.linkeddata.es/def/core#LoadForecast -->
 
 
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Load">
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#LoadForecast">
         <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
-        <rdfs:comment>A property related to measurements that are characterized  by a value measured in energy units. It represents the load needed for a device to init</rdfs:comment>
-        <rdfs:label>Load</rdfs:label>
+        <rdfs:label>Load forecast</rdfs:label>
     </owl:Class>
     
 
@@ -762,6 +786,21 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MarketSettlement"/>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Measurement -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasPhase"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Phase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -778,6 +817,15 @@
         </rdfs:subClassOf>
         <rdfs:comment>Monetary value associated to a contract</rdfs:comment>
         <rdfs:label>Payment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Phase -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Phase">
+        <rdfs:label>Phase</rdfs:label>
     </owl:Class>
     
 
@@ -885,10 +933,20 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#UpFlexibility -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#UpFlexibility">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Flexibility"/>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#VirtualNode -->
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#VirtualNode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VEN"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VTN"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -978,7 +1036,7 @@
     <rdf:Description rdf:about="https://w3id.org/def/openadr#VTN">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#send"/>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#sendEvent"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/def/openadr#Event"/>
             </owl:Restriction>
         </rdfs:subClassOf>

@@ -1,12 +1,16 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "core:Customer" "saref4bldg:PhysicalObject" "core:Aggregator" "core:Asset" "saref:Property" "core:Consumer" "core:Load" "core:Payment" "saref:Device" "core:Profile" "core:Power" "core:Reward" "core:Prosumer" "time:Interval" "core:Voltage" "core:Flexibility" "core:DRProperty" "time:TemporalEntity" "saref:Price" "saref:Profile" "core:Energy" "core:VirtualNode" "core:Frequency" "time:Instant" "core:FEID" ; /*classes style*/
+node [shape = rectangle, color="black"]; "core:DownFlexibility" "core:LoadForecast" "time:Instant" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:VirtualNode" "core:DRProperty" "saref:Device" "saref4bldg:PhysicalObject" "core:Consumer" "core:Aggregator" "core:Measurement" "core:Prosumer" "saref:Measurement" "core:Reward" "time:Interval" "time:TemporalEntity" "saref:Price" "core:Asset" "core:Flexibility" "core:Voltage" "saref:Property" "core:Profile" "core:UpFlexibility" "core:FEID" "core:Energy" "core:Payment" ; /*classes style*/
 	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"core:DownFlexibility" -> "core:Flexibility" [ label = "rdfs:subClassOf" ];
 	"core:Flexibility" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
 	"core:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
+	"core:Measurement" -> "saref:Measurement" [ label = "rdfs:subClassOf" ];
 	"core:VirtualNode" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
+	"core:VirtualNode" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
 	"core:Voltage" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
+	"core:UpFlexibility" -> "core:Flexibility" [ label = "rdfs:subClassOf" ];
 	"core:Aggregator" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
 	"core:DRProperty" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"core:FEID" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
@@ -18,11 +22,11 @@ node [shape = rectangle, color="black"]; "core:Customer" "saref4bldg:PhysicalObj
 	"core:Asset" -> "https://w3id.org/def/openadr#Asset" [ label = "rdfs:subClassOf" ];
 	"core:Frequency" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
 	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
+	"core:LoadForecast" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
 	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
 	"core:Profile" -> "saref:Profile" [ label = "rdfs:subClassOf" ];
 	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
 	"core:Reward" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
-	"core:Load" -> "core:DRProperty" [ label = "rdfs:subClassOf" ];
 	"saref:Device" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
 
 }
