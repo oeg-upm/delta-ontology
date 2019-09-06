@@ -46,15 +46,15 @@
 <http://delta.linkeddata.es/def/core#agreesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://delta.linkeddata.es/def/core#agreesOn> <http://www.w3.org/2000/01/rdf-schema#label> "agrees on" .
 # 
-# http://delta.linkeddata.es/def/core#belongsTo
-<http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://delta.linkeddata.es/def/core#owns> .
-<http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a device and a FEID" .
-<http://delta.linkeddata.es/def/core#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to" .
-# 
 # http://delta.linkeddata.es/def/core#consumes
 <http://delta.linkeddata.es/def/core#consumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://delta.linkeddata.es/def/core#consumes> <http://www.w3.org/2000/01/rdf-schema#label> "consumes" .
+# 
+# http://delta.linkeddata.es/def/core#controls
+<http://delta.linkeddata.es/def/core#controls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#controls> <http://www.w3.org/2002/07/owl#inverseOf> <http://delta.linkeddata.es/def/core#isControlledBy> .
+<http://delta.linkeddata.es/def/core#controls> <http://www.w3.org/2000/01/rdf-schema#comment> "relation between a FEID and an asset" .
+<http://delta.linkeddata.es/def/core#controls> <http://www.w3.org/2000/01/rdf-schema#label> "controls" .
 # 
 # http://delta.linkeddata.es/def/core#correspondsToPeriod
 <http://delta.linkeddata.es/def/core#correspondsToPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -126,6 +126,12 @@
 <http://delta.linkeddata.es/def/core#isAllocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://delta.linkeddata.es/def/core#isAllocatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Link from a virtual node to its aggregator" .
 <http://delta.linkeddata.es/def/core#isAllocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is allocated in" .
+# 
+# http://delta.linkeddata.es/def/core#isControlledBy
+<http://delta.linkeddata.es/def/core#isControlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#isControlledBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://delta.linkeddata.es/def/core#owns> .
+<http://delta.linkeddata.es/def/core#isControlledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a device and a FEID" .
+<http://delta.linkeddata.es/def/core#isControlledBy> <http://www.w3.org/2000/01/rdf-schema#label> "is controlled by" .
 # 
 # http://delta.linkeddata.es/def/core#isOwnedBy
 <http://delta.linkeddata.es/def/core#isOwnedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -278,7 +284,7 @@ _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata.
 <http://delta.linkeddata.es/def/core#Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/saref#Device> .
 <http://delta.linkeddata.es/def/core#Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#belongsTo> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#isControlledBy> .
 _:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#FEID> .
 <http://delta.linkeddata.es/def/core#Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
