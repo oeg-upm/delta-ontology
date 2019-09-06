@@ -868,10 +868,10 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#agreesOn" title="http://delta.linkeddata.es/def/core#agreesOn">agrees on</a>
       </li>
       <li>
-         <a href="#belongsTo" title="http://delta.linkeddata.es/def/core#belongsTo">belongs to</a>
+         <a href="#consumes" title="http://delta.linkeddata.es/def/core#consumes">consumes</a>
       </li>
       <li>
-         <a href="#consumes" title="http://delta.linkeddata.es/def/core#consumes">consumes</a>
+         <a href="#controls" title="http://delta.linkeddata.es/def/core#controls">controls</a>
       </li>
       <li>
          <a href="#hasAggregatedProperty"
@@ -916,6 +916,10 @@ This section provides details for each class and property defined by DELTA ontol
       <li>
          <a href="#isAllocatedIn"
             title="http://delta.linkeddata.es/def/core#isAllocatedIn">is allocated in</a>
+      </li>
+      <li>
+         <a href="#isControlledBy"
+            title="http://delta.linkeddata.es/def/core#isControlledBy">is controlled by</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
@@ -966,26 +970,6 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#agreesOn</p>
    </div>
-   <div class="entity" id="belongsTo">
-      <h3>belongs to<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#belongsTo</p>
-      <div class="comment">
-         <span class="markdown">Relation between a device and a FEID</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>is inverse of</dt>
-            <dd>
-               <a href="#owns" title="http://delta.linkeddata.es/def/core#owns">owns</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="consumes">
       <h3>consumes<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -993,6 +977,27 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#consumes</p>
+   </div>
+   <div class="entity" id="controls">
+      <h3>controls<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#controls</p>
+      <div class="comment">
+         <span class="markdown">relation between a FEID and an asset</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#isControlledBy"
+                  title="http://delta.linkeddata.es/def/core#isControlledBy">is controlled by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasAggregatedProperty">
       <h3>has aggregated property<sup class="type-op" title="object property">op</sup>
@@ -1169,6 +1174,27 @@ This section provides details for each class and property defined by DELTA ontol
          <span class="markdown">Link from a virtual node to its aggregator</span>
       </div>
    </div>
+   <div class="entity" id="isControlledBy">
+      <h3>is controlled by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isControlledBy</p>
+      <div class="comment">
+         <span class="markdown">Relation between a device and a FEID</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#controls" title="http://delta.linkeddata.es/def/core#controls">controls</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#owns" title="http://delta.linkeddata.es/def/core#owns">owns</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="https://w3id.org/saref#isMeasuredIn">
       <h3>is measured in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1296,7 +1322,8 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#belongsTo" title="http://delta.linkeddata.es/def/core#belongsTo">belongs to</a>
+               <a href="#isControlledBy"
+                  title="http://delta.linkeddata.es/def/core#isControlledBy">is controlled by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>

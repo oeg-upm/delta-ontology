@@ -52,16 +52,16 @@
           rdfs:label "agrees on" .
 
 
-###  http://delta.linkeddata.es/def/core#belongsTo
-:belongsTo rdf:type owl:ObjectProperty ;
-           owl:inverseOf :owns ;
-           rdfs:comment "Relation between a device and a FEID" ;
-           rdfs:label "belongs to" .
-
-
 ###  http://delta.linkeddata.es/def/core#consumes
 :consumes rdf:type owl:ObjectProperty ;
           rdfs:label "consumes" .
+
+
+###  http://delta.linkeddata.es/def/core#controls
+:controls rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isControlledBy ;
+          rdfs:comment "relation between a FEID and an asset" ;
+          rdfs:label "controls" .
 
 
 ###  http://delta.linkeddata.es/def/core#correspondsToPeriod
@@ -148,6 +148,13 @@
 :isAllocatedIn rdf:type owl:ObjectProperty ;
                rdfs:comment "Link from a virtual node to its aggregator" ;
                rdfs:label "is allocated in" .
+
+
+###  http://delta.linkeddata.es/def/core#isControlledBy
+:isControlledBy rdf:type owl:ObjectProperty ;
+                owl:inverseOf :owns ;
+                rdfs:comment "Relation between a device and a FEID" ;
+                rdfs:label "is controlled by" .
 
 
 ###  http://delta.linkeddata.es/def/core#isOwnedBy
@@ -313,7 +320,7 @@
        rdfs:subClassOf <https://w3id.org/def/openadr#Asset> ,
                        <https://w3id.org/saref#Device> ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :belongsTo ;
+                         owl:onProperty :isControlledBy ;
                          owl:someValuesFrom :FEID
                        ] ,
                        [ rdf:type owl:Restriction ;

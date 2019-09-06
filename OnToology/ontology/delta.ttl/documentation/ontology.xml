@@ -99,22 +99,22 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#belongsTo -->
-
-
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#belongsTo">
-        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#owns"/>
-        <rdfs:comment>Relation between a device and a FEID</rdfs:comment>
-        <rdfs:label>belongs to</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#consumes -->
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#consumes">
         <rdfs:label>consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#controls -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#controls">
+        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#isControlledBy"/>
+        <rdfs:comment>relation between a FEID and an asset</rdfs:comment>
+        <rdfs:label>controls</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -258,6 +258,17 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isAllocatedIn">
         <rdfs:comment>Link from a virtual node to its aggregator</rdfs:comment>
         <rdfs:label>is allocated in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#isControlledBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isControlledBy">
+        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#owns"/>
+        <rdfs:comment>Relation between a device and a FEID</rdfs:comment>
+        <rdfs:label>is controlled by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -541,7 +552,7 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#belongsTo"/>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isControlledBy"/>
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
             </owl:Restriction>
         </rdfs:subClassOf>
