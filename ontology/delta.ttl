@@ -14,7 +14,7 @@
 
 <http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
                                        owl:imports <https://w3id.org/def/openadr> ;
-                                       owl:versionInfo "0.1.3" ;
+                                       owl:versionInfo "0.1.4" ;
                                        <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
@@ -114,6 +114,11 @@ core:hasPayment rdf:type owl:ObjectProperty ;
                 rdfs:label "has payment" .
 
 
+###  http://delta.linkeddata.es/def/core#hasPhase
+core:hasPhase rdf:type owl:ObjectProperty ;
+              rdfs:label "has phase" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasProfile
 core:hasProfile rdf:type owl:ObjectProperty ;
                 rdfs:comment "Link between an entity and its profile" ;
@@ -176,6 +181,10 @@ core:manage rdf:type owl:ObjectProperty ;
 core:owns rdf:type owl:ObjectProperty ;
           rdfs:comment "Link between the customers and the devices" ;
           rdfs:label "owns" .
+
+
+###  https://w3id.org/def/openadr#sendEvent
+<https://w3id.org/def/openadr#sendEvent> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/saref#hasFeatureOfInterest
@@ -367,6 +376,11 @@ core:DRProperty rdf:type owl:Class ;
                 rdfs:label "DRProperty" .
 
 
+###  http://delta.linkeddata.es/def/core#DownFlexibility
+core:DownFlexibility rdf:type owl:Class ;
+                     rdfs:subClassOf core:Flexibility .
+
+
 ###  http://delta.linkeddata.es/def/core#Energy
 core:Energy rdf:type owl:Class ;
             rdfs:subClassOf core:DRProperty ,
@@ -448,15 +462,23 @@ core:KeyPerformanceIndicator rdf:type owl:Class ;
                              rdfs:label "Key Performance Indicator" .
 
 
-###  http://delta.linkeddata.es/def/core#Load
-core:Load rdf:type owl:Class ;
-          rdfs:subClassOf core:DRProperty ;
-          rdfs:comment "A property related to measurements that are characterized  by a value measured in energy units. It represents the load needed for a device to init" ;
-          rdfs:label "Load" .
+###  http://delta.linkeddata.es/def/core#LoadForecast
+core:LoadForecast rdf:type owl:Class ;
+                  rdfs:subClassOf core:DRProperty ;
+                  rdfs:label "Load forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#MarketSettlement
 core:MarketSettlement rdf:type owl:Class .
+
+
+###  http://delta.linkeddata.es/def/core#Measurement
+core:Measurement rdf:type owl:Class ;
+                 rdfs:subClassOf saref:Measurement ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:hasPhase ;
+                                   owl:someValuesFrom core:Phase
+                                 ] .
 
 
 ###  http://delta.linkeddata.es/def/core#Payment
@@ -468,6 +490,11 @@ core:Payment rdf:type owl:Class ;
                              ] ;
              rdfs:comment "Monetary value associated to a contract" ;
              rdfs:label "Payment" .
+
+
+###  http://delta.linkeddata.es/def/core#Phase
+core:Phase rdf:type owl:Class ;
+           rdfs:label "Phase" .
 
 
 ###  http://delta.linkeddata.es/def/core#Power
@@ -535,9 +562,15 @@ core:Transaction rdf:type owl:Class ;
                  rdfs:label "Transaction" .
 
 
+###  http://delta.linkeddata.es/def/core#UpFlexibility
+core:UpFlexibility rdf:type owl:Class ;
+                   rdfs:subClassOf core:Flexibility .
+
+
 ###  http://delta.linkeddata.es/def/core#VirtualNode
 core:VirtualNode rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/def/openadr#VTN> ,
+                 rdfs:subClassOf <https://w3id.org/def/openadr#VEN> ,
+                                 <https://w3id.org/def/openadr#VTN> ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty core:hasSmartContract ;
                                    owl:someValuesFrom core:SmartContract
@@ -594,7 +627,7 @@ time:TemporalEntity rdf:type owl:Class ;
 
 ###  https://w3id.org/def/openadr#VTN
 <https://w3id.org/def/openadr#VTN> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <https://w3id.org/def/openadr#send> ;
+                                                     owl:onProperty <https://w3id.org/def/openadr#sendEvent> ;
                                                      owl:someValuesFrom <https://w3id.org/def/openadr#Event>
                                                    ] .
 
