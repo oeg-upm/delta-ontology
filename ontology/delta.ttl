@@ -14,8 +14,8 @@
 
 <http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
                                        owl:imports <https://w3id.org/def/openadr> ;
-                                       owl:versionInfo "0.1.4" ;
                                        <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
+                                       owl:versionInfo "0.1.4" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
                                        dc:title "DELTA ontology" ;
@@ -55,16 +55,16 @@ core:agreesOn rdf:type owl:ObjectProperty ;
               rdfs:label "agrees on" .
 
 
-###  http://delta.linkeddata.es/def/core#belongsTo
-core:belongsTo rdf:type owl:ObjectProperty ;
-               owl:inverseOf core:owns ;
-               rdfs:comment "Relation between a device and a FEID" ;
-               rdfs:label "belongs to" .
-
-
 ###  http://delta.linkeddata.es/def/core#consumes
 core:consumes rdf:type owl:ObjectProperty ;
               rdfs:label "consumes" .
+
+
+###  http://delta.linkeddata.es/def/core#controls
+core:controls rdf:type owl:ObjectProperty ;
+              owl:inverseOf core:isControlledBy ;
+              rdfs:comment "relation between a FEID and an asset" ;
+              rdfs:label "controls" .
 
 
 ###  http://delta.linkeddata.es/def/core#correspondsToPeriod
@@ -151,6 +151,13 @@ core:hasTransaction rdf:type owl:ObjectProperty .
 core:isAllocatedIn rdf:type owl:ObjectProperty ;
                    rdfs:comment "Link from a virtual node to its aggregator" ;
                    rdfs:label "is allocated in" .
+
+
+###  http://delta.linkeddata.es/def/core#isControlledBy
+core:isControlledBy rdf:type owl:ObjectProperty ;
+                    owl:inverseOf core:owns ;
+                    rdfs:comment "Relation between a device and a FEID" ;
+                    rdfs:label "is controlled by" .
 
 
 ###  http://delta.linkeddata.es/def/core#isOwnedBy
@@ -316,7 +323,7 @@ core:Asset rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/def/openadr#Asset> ,
                            saref:Device ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty core:belongsTo ;
+                             owl:onProperty core:isControlledBy ;
                              owl:someValuesFrom core:FEID
                            ] ,
                            [ rdf:type owl:Restriction ;
