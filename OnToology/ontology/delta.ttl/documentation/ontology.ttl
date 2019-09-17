@@ -9,7 +9,7 @@
 <http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
                                        owl:imports <https://w3id.org/def/openadr> ;
                                        <http://purl.org/dc/elements/1.1/title> "DELTA ontology" ;
-                                       <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
+                                       <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
                                        owl:versionInfo "0.1.4" .
@@ -64,13 +64,6 @@
           rdfs:label "controls" .
 
 
-###  http://delta.linkeddata.es/def/core#correspondsToPeriod
-:correspondsToPeriod rdf:type owl:ObjectProperty ;
-                     rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
-                     rdfs:comment "period associated to a profile" ;
-                     rdfs:label "has period" .
-
-
 ###  http://delta.linkeddata.es/def/core#hasAggregatedProperty
 :hasAggregatedProperty rdf:type owl:ObjectProperty ;
                        rdfs:comment "Relationship identifying the properties associated to a group of entities, such as clusters" ;
@@ -98,12 +91,6 @@
 :hasIncentive rdf:type owl:ObjectProperty ;
               rdfs:comment "A relation between a property and its incentives associated" ;
               rdfs:label "has incentive" .
-
-
-###  http://delta.linkeddata.es/def/core#hasMeasurement
-:hasMeasurement rdf:type owl:ObjectProperty ;
-                rdfs:comment "Link between a KPI and a measurement" ;
-                rdfs:label "has measurement" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasPayment
@@ -144,6 +131,12 @@
 :hasTransaction rdf:type owl:ObjectProperty .
 
 
+###  http://delta.linkeddata.es/def/core#includesMeasurement
+:includesMeasurement rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Link between a KPI and a measurement" ;
+                     rdfs:label "includes measurement" .
+
+
 ###  http://delta.linkeddata.es/def/core#isAllocatedIn
 :isAllocatedIn rdf:type owl:ObjectProperty ;
                rdfs:comment "Link from a virtual node to its aggregator" ;
@@ -152,13 +145,19 @@
 
 ###  http://delta.linkeddata.es/def/core#isControlledBy
 :isControlledBy rdf:type owl:ObjectProperty ;
-                owl:inverseOf :owns ;
                 rdfs:comment "Relation between a device and a FEID" ;
                 rdfs:label "is controlled by" .
 
 
+###  http://delta.linkeddata.es/def/core#isLocatedAt
+:isLocatedAt rdf:type owl:ObjectProperty ;
+             rdfs:comment "Relation between an object and the geographical feature in which it is located at" ;
+             rdfs:label "is located at" .
+
+
 ###  http://delta.linkeddata.es/def/core#isOwnedBy
 :isOwnedBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :owns ;
            rdfs:comment "Link between a device and its customer" ;
            rdfs:label "is owned by" .
 
@@ -185,6 +184,15 @@
 :owns rdf:type owl:ObjectProperty ;
       rdfs:comment "Link between the customers and the devices" ;
       rdfs:label "owns" .
+
+
+###  http://www.opengis.net/ont/geosparql#hasGeometry
+<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
+                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
+                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
+                                                                    "A spatial representation for a given feature." ;
+                                                   rdfs:label "hasGeometry" .
 
 
 ###  https://w3id.org/def/openadr#sendEvent
@@ -265,6 +273,11 @@
 ###  http://delta.linkeddata.es/def/core#name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:isDefinedBy "name" .
+
+
+###  http://delta.linkeddata.es/def/core#sectorName
+:sectorName rdf:type owl:DatatypeProperty ;
+            rdfs:label "sector name" .
 
 
 ###  http://delta.linkeddata.es/def/core#status
@@ -410,6 +423,10 @@
                         owl:someValuesFrom :DRProperty
                       ] ,
                       [ rdf:type owl:Restriction ;
+                        owl:onProperty :isLocatedAt ;
+                        owl:someValuesFrom :Sector
+                      ] ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :hasComfortSetting ;
                         owl:allValuesFrom :ComfortSetting
                       ] ,
@@ -452,7 +469,7 @@
 ###  http://delta.linkeddata.es/def/core#KeyPerformanceIndicator
 :KeyPerformanceIndicator rdf:type owl:Class ;
                          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                           owl:onProperty :hasMeasurement ;
+                                           owl:onProperty :includesMeasurement ;
                                            owl:allValuesFrom <https://w3id.org/saref#Measurement>
                                          ] ,
                                          [ rdf:type owl:Restriction ;
@@ -512,6 +529,10 @@
 :Profile rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/saref#Profile> ,
                          [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/def/openadr#hasDuration> ;
+                           owl:someValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :granularity ;
                            owl:someValuesFrom owl:rational
                          ] ,
@@ -536,6 +557,17 @@
         rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
                      "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
         rdfs:label "Reward" .
+
+
+###  http://delta.linkeddata.es/def/core#Sector
+:Sector rdf:type owl:Class ;
+        rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :sectorName ;
+                          owl:allValuesFrom xsd:string
+                        ] ;
+        rdfs:comment "A section or zone" ;
+        rdfs:label "Sector" .
 
 
 ###  http://delta.linkeddata.es/def/core#SmartContract
@@ -606,6 +638,20 @@
          rdfs:label "Voltage" .
 
 
+###  http://www.opengis.net/ont/geosparql#Feature
+<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
+                                               rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types." ;
+                                               rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
+                                               rdfs:label "Feature" .
+
+
+###  http://www.opengis.net/ont/geosparql#Geometry
+<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
+                                                rdfs:comment <http://www.opengis.net/ont/geosparql> ,
+                                                             "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types." ;
+                                                rdfs:label "Geometry" .
+
+
 ###  http://www.w3.org/2006/time#Instant
 <http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
@@ -616,7 +662,6 @@
 
 ###  http://www.w3.org/2006/time#Interval
 <http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
-                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
                                        rdfs:comment "A temporal entity with an extent or duration" ;
                                        rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
                                        rdfs:label "Time interval" .
@@ -627,13 +672,6 @@
                                              rdfs:comment "A temporal interval or instant." ;
                                              rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
                                              rdfs:label "Temporal entity" .
-
-
-###  https://w3id.org/def/openadr#VTN
-<https://w3id.org/def/openadr#VTN> rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                     owl:onProperty <https://w3id.org/def/openadr#sendEvent> ;
-                                                     owl:someValuesFrom <https://w3id.org/def/openadr#Event>
-                                                   ] .
 
 
 ###  https://w3id.org/def/saref4bldg#PhysicalObject

@@ -41,6 +41,9 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#EnergyMarket" title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy Market</a>
       </li>
       <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/saref#FeatureOfInterest" title="https://w3id.org/saref#FeatureOfInterest">Feature Of Interest</a>
       </li>
       <li>
@@ -51,6 +54,9 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#Frequency" title="http://delta.linkeddata.es/def/core#Frequency">Frequency</a>
+      </li>
+      <li>
+         <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
       </li>
       <li>
          <a href="#Incentive" title="http://delta.linkeddata.es/def/core#Incentive">Incentive</a>
@@ -106,6 +112,9 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
+      </li>
+      <li>
+         <a href="#Sector" title="http://delta.linkeddata.es/def/core#Sector">Sector</a>
       </li>
       <li>
          <a href="#SmartContract"
@@ -342,6 +351,35 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#EnergyMarket</p>
    </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
+      <h3>Feature<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Feature</p>
+      <div class="comment">
+         <span class="markdown">This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Sector" title="http://delta.linkeddata.es/def/core#Sector">Sector</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/saref#FeatureOfInterest">
       <h3>Feature Of Interest<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -413,6 +451,24 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>
             <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#Geometry">
+      <h3>Geometry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#Geometry</p>
+      <div class="comment">
+         <span class="markdown"/>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -705,6 +761,24 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Sector">
+      <h3>Sector<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Sector</p>
+      <div class="comment">
+         <span class="markdown">A section or zone</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="SmartContract">
       <h3>Smart contract<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -748,15 +822,12 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Time interval</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">instant</a>
+            <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">instant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasDuration" title="http://delta.linkeddata.es/def/core#hasDuration">has duration</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#correspondsToPeriod"
-               title="http://delta.linkeddata.es/def/core#correspondsToPeriod">has period</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isValidDuringPeriod"
                title="http://delta.linkeddata.es/def/core#isValidDuringPeriod">is valid during period</a>
             <sup class="type-op" title="object property">op</sup>
@@ -776,13 +847,6 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
-      </dl>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Temporal entity</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="Transaction">
@@ -890,15 +954,7 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
       </li>
       <li>
-         <a href="#hasMeasurement"
-            title="http://delta.linkeddata.es/def/core#hasMeasurement">has measurement</a>
-      </li>
-      <li>
          <a href="#hasPayment" title="http://delta.linkeddata.es/def/core#hasPayment">has payment</a>
-      </li>
-      <li>
-         <a href="#correspondsToPeriod"
-            title="http://delta.linkeddata.es/def/core#correspondsToPeriod">has period</a>
       </li>
       <li>
          <a href="#hasPhase" title="http://delta.linkeddata.es/def/core#hasPhase">has phase</a>
@@ -914,12 +970,22 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#hasSmartContract">has smart contract</a>
       </li>
       <li>
+         <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
+      </li>
+      <li>
+         <a href="#includesMeasurement"
+            title="http://delta.linkeddata.es/def/core#includesMeasurement">includes measurement</a>
+      </li>
+      <li>
          <a href="#isAllocatedIn"
             title="http://delta.linkeddata.es/def/core#isAllocatedIn">is allocated in</a>
       </li>
       <li>
          <a href="#isControlledBy"
             title="http://delta.linkeddata.es/def/core#isControlledBy">is controlled by</a>
+      </li>
+      <li>
+         <a href="#isLocatedAt" title="http://delta.linkeddata.es/def/core#isLocatedAt">is located at</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#isMeasuredIn" title="https://w3id.org/saref#isMeasuredIn">is measured in</a>
@@ -1064,17 +1130,6 @@ This section provides details for each class and property defined by DELTA ontol
          <span class="markdown">A relation between a property and its incentives associated</span>
       </div>
    </div>
-   <div class="entity" id="hasMeasurement">
-      <h3>has measurement<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasMeasurement</p>
-      <div class="comment">
-         <span class="markdown">Link between a KPI and a measurement</span>
-      </div>
-   </div>
    <div class="entity" id="hasPayment">
       <h3>has payment<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1082,26 +1137,6 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPayment</p>
-   </div>
-   <div class="entity" id="correspondsToPeriod">
-      <h3>has period<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#correspondsToPeriod</p>
-      <div class="comment">
-         <span class="markdown">period associated to a profile</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Temporal entity</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="hasPhase">
       <h3>has phase<sup class="type-op" title="object property">op</sup>
@@ -1163,6 +1198,46 @@ This section provides details for each class and property defined by DELTA ontol
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://www.opengis.net/ont/geosparql#hasGeometry">
+      <h3>hasGeometry<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#hasGeometry</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
+         </dd>
+         <dd>http://delta.linkeddata.es/def/core</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="includesMeasurement">
+      <h3>includes measurement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#includesMeasurement</p>
+      <div class="comment">
+         <span class="markdown">Link between a KPI and a measurement</span>
+      </div>
+   </div>
    <div class="entity" id="isAllocatedIn">
       <h3>is allocated in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1189,10 +1264,20 @@ This section provides details for each class and property defined by DELTA ontol
             <dt>is inverse of</dt>
             <dd>
                <a href="#controls" title="http://delta.linkeddata.es/def/core#controls">controls</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#owns" title="http://delta.linkeddata.es/def/core#owns">owns</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="isLocatedAt">
+      <h3>is located at<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isLocatedAt</p>
+      <div class="comment">
+         <span class="markdown">Relation between an object and the geographical feature in which it is located at</span>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/saref#isMeasuredIn">
@@ -1216,6 +1301,15 @@ This section provides details for each class and property defined by DELTA ontol
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isOwnedBy</p>
       <div class="comment">
          <span class="markdown">Link between a device and its customer</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#owns" title="http://delta.linkeddata.es/def/core#owns">owns</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/saref#isRelatedToMeasurement">
@@ -1322,8 +1416,7 @@ This section provides details for each class and property defined by DELTA ontol
          <dl>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#isControlledBy"
-                  title="http://delta.linkeddata.es/def/core#isControlledBy">is controlled by</a>
+               <a href="#isOwnedBy" title="http://delta.linkeddata.es/def/core#isOwnedBy">is owned by</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -1356,6 +1449,9 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#name" title="http://delta.linkeddata.es/def/core#name">
             <span>name</span>
          </a>
+      </li>
+      <li>
+         <a href="#sectorName" title="http://delta.linkeddata.es/def/core#sectorName">sector name</a>
       </li>
       <li>
          <a href="#status" title="http://delta.linkeddata.es/def/core#status">status</a>
@@ -1458,6 +1554,14 @@ This section provides details for each class and property defined by DELTA ontol
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
+   </div>
+   <div class="entity" id="sectorName">
+      <h3>sector name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#sectorName</p>
    </div>
    <div class="entity" id="status">
       <h3>status<sup class="type-dp" title="data property">dp</sup>

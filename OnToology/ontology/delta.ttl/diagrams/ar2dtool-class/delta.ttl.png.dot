@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:DRProperty" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "saref:Property" "core:Profile" "core:FEID" "core:Payment" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "core:DRProperty" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:FEID" "core:Payment" ; /*classes style*/
 	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"http://delta.linkeddata.es/def/core" -> "https://w3id.org/def/openadr" [ label = "owl:imports" ];
@@ -9,6 +9,7 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"core:clusterDescription" -> "owl:topDataProperty" [ label = "rdfs:subPropertyOf" ];
 	"NULL" -> "core:hasPhase" [ label = "owl:onProperty" ];
 	"NULL" -> "core:ComfortSetting" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "https://w3id.org/def/openadr#hasDuration" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasSystemConstraint" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasSmartContract" [ label = "owl:onProperty" ];
 	"NULL" -> "core:type" [ label = "owl:onProperty" ];
@@ -23,9 +24,11 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:status" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Phase" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:measuresProperty" [ label = "owl:onProperty" ];
+	"NULL" -> "core:isLocatedAt" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:hasValue" [ label = "owl:onProperty" ];
 	"NULL" -> "owl:rational" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:isAllocatedIn" [ label = "owl:onProperty" ];
+	"NULL" -> "core:sectorName" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:isAbout" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:isMeasuredIn" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasReward" [ label = "owl:onProperty" ];
@@ -33,11 +36,11 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:clusterName" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Payment" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:name" [ label = "owl:onProperty" ];
-	"NULL" -> "https://w3id.org/def/openadr#sendEvent" [ label = "owl:onProperty" ];
-	"NULL" -> "saref:Property" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Aggregator" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "saref:Property" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Incentive" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:MarketSettlement" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:includesMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "core:consumes" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasAggregatedProperty" [ label = "owl:onProperty" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:someValuesFrom" ];
@@ -47,30 +50,30 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:hasIncentive" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "core:hasMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:hasDescription" [ label = "owl:onProperty" ];
-	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];
+	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:SystemConstraint" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:clusterDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasPayment" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasComfortSetting" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:timeStamp" [ label = "owl:onProperty" ];
-	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
-	"NULL" -> "core:isControlledBy" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:isControlledBy" [ label = "owl:onProperty" ];
+	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "core:agreesOn" [ label = "owl:onProperty" ];
-	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Sector" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:isRelatedToMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "core:DRProperty" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "https://w3id.org/def/openadr#Event" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasProfile" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
+	"http://www.opengis.net/ont/geosparql#Geometry" -> "http://www.opengis.net/ont/geosparql" [ label = "rdfs:comment" ];
 	"owl:Thing" -> "core:SmartContract" [ label = "core:hasSmartContract" ];
-	"owl:Thing" -> "time:TemporalEntity" [ label = "core:correspondsToPeriod" ];
+	"http://www.opengis.net/ont/geosparql#Feature" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "http://www.opengis.net/ont/geosparql#hasGeometry" ];
 	"owl:Thing" -> "time:TemporalEntity" [ label = "core:hasDuration" ];
 	"owl:Thing" -> "rdfs:Literal" [ label = "core:type" ];
 	"core:Customer" -> "owl:Thing" [ label = "core:hasReward" ];

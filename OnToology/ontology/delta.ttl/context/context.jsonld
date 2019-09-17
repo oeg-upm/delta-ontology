@@ -42,6 +42,9 @@
     "DRProperty" : {
       "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
     },
+    "Sector" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Sector"
+    },
     "Voltage" : {
       "@id" : "http://delta.linkeddata.es/def/core#Voltage"
     },
@@ -55,6 +58,9 @@
     "measuresProperty" : {
       "@id" : "https://w3id.org/saref#measuresProperty",
       "@type" : "@id"
+    },
+    "Geometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
     },
     "hasValue" : {
       "@id" : "https://w3id.org/saref#hasValue"
@@ -87,6 +93,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty",
       "@type" : "@id"
     },
+    "Feature" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
@@ -112,14 +121,11 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract",
       "@type" : "@id"
     },
-    "Event" : {
-      "@id" : "https://w3id.org/def/openadr#Event"
-    },
     "VirtualNode" : {
       "@id" : "http://delta.linkeddata.es/def/core#VirtualNode"
     },
     "hasDuration" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasDuration",
+      "@id" : "https://w3id.org/def/openadr#hasDuration",
       "@type" : "@id"
     },
     "Price" : {
@@ -140,6 +146,10 @@
     "LoadForecast" : {
       "@id" : "http://delta.linkeddata.es/def/core#LoadForecast"
     },
+    "isLocatedAt" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isLocatedAt",
+      "@type" : "@id"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
     },
@@ -157,10 +167,6 @@
     },
     "sendEvent" : {
       "@id" : "https://w3id.org/def/openadr#sendEvent",
-      "@type" : "@id"
-    },
-    "correspondsToPeriod" : {
-      "@id" : "http://delta.linkeddata.es/def/core#correspondsToPeriod",
       "@type" : "@id"
     },
     "granularity" : {
@@ -189,6 +195,10 @@
     "Phase" : {
       "@id" : "http://delta.linkeddata.es/def/core#Phase"
     },
+    "includesMeasurement" : {
+      "@id" : "http://delta.linkeddata.es/def/core#includesMeasurement",
+      "@type" : "@id"
+    },
     "VTN" : {
       "@id" : "https://w3id.org/def/openadr#VTN"
     },
@@ -209,6 +219,10 @@
     "termscreator" : {
       "@id" : "http://purl.org/dc/termscreator"
     },
+    "hasGeometry" : {
+      "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
+      "@type" : "@id"
+    },
     "Property" : {
       "@id" : "https://w3id.org/saref#Property"
     },
@@ -221,6 +235,9 @@
     "hasIncentive" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasIncentive",
       "@type" : "@id"
+    },
+    "sectorName" : {
+      "@id" : "http://delta.linkeddata.es/def/core#sectorName"
     },
     "type" : {
       "@id" : "http://delta.linkeddata.es/def/core#type",
@@ -270,10 +287,6 @@
     },
     "clusterDescription" : {
       "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
-    },
-    "hasMeasurement" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasMeasurement",
-      "@type" : "@id"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
