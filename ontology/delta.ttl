@@ -758,6 +758,12 @@ core:DownFlexibility rdf:type owl:NamedIndividual ,
                      rdfs:label "Down flexibility" .
 
 
+###  http://delta.linkeddata.es/def/core#EnergyConsumption
+core:EnergyConsumption rdf:type owl:NamedIndividual ,
+                                core:Energy ;
+                       rdfs:label "Energy consumption" .
+
+
 ###  http://delta.linkeddata.es/def/core#EnergyGeneration
 core:EnergyGeneration rdf:type owl:NamedIndividual ,
                                core:Energy ;
