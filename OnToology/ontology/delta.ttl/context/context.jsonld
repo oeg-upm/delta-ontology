@@ -23,9 +23,6 @@
       "@id" : "http://delta.linkeddata.es/def/core#consumes",
       "@type" : "@id"
     },
-    "DownFlexibility" : {
-      "@id" : "http://delta.linkeddata.es/def/core#DownFlexibility"
-    },
     "hasComfortSetting" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasComfortSetting",
       "@type" : "@id"
@@ -38,9 +35,6 @@
     },
     "topDataProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
-    },
-    "DRProperty" : {
-      "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
     },
     "Sector" : {
       "@id" : "http://delta.linkeddata.es/def/core#Sector"
@@ -134,17 +128,11 @@
     "Interval" : {
       "@id" : "http://www.w3.org/2006/time#Interval"
     },
-    "UpFlexibility" : {
-      "@id" : "http://delta.linkeddata.es/def/core#UpFlexibility"
-    },
     "clusterName" : {
       "@id" : "http://delta.linkeddata.es/def/core#clusterName"
     },
     "Incentive" : {
       "@id" : "http://delta.linkeddata.es/def/core#Incentive"
-    },
-    "LoadForecast" : {
-      "@id" : "http://delta.linkeddata.es/def/core#LoadForecast"
     },
     "isLocatedAt" : {
       "@id" : "http://delta.linkeddata.es/def/core#isLocatedAt",
@@ -224,7 +212,7 @@
       "@type" : "@id"
     },
     "Property" : {
-      "@id" : "https://w3id.org/saref#Property"
+      "@id" : "http://delta.linkeddata.es/def/core#Property"
     },
     "Aggregator" : {
       "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
@@ -256,6 +244,9 @@
     "hasFeatureOfInterest" : {
       "@id" : "https://w3id.org/saref#hasFeatureOfInterest",
       "@type" : "@id"
+    },
+    "Load" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Load"
     },
     "hasPhase" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPhase",

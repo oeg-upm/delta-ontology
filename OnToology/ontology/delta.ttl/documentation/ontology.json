@@ -32,7 +32,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
   } ]
 }, {
   "@id" : "_:genid13",
@@ -470,19 +470,10 @@
     "@id" : "_:genid10"
   } ]
 }, {
-  "@id" : "http://delta.linkeddata.es/def/core#DRProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "DRProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/saref#Property"
-  } ]
-}, {
   "@id" : "http://delta.linkeddata.es/def/core#DownFlexibility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Flexibility"
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Flexibility" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Down flexibility"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Energy",
@@ -494,9 +485,15 @@
     "@value" : "Energy"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
   }, {
     "@id" : "_:genid11"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#EnergyGeneration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Energy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy generation"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket",
@@ -540,7 +537,7 @@
     "@value" : "Flexibility"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Frequency",
@@ -552,7 +549,7 @@
     "@value" : "Frequency"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Incentive",
@@ -577,13 +574,19 @@
     "@id" : "_:genid20"
   } ]
 }, {
-  "@id" : "http://delta.linkeddata.es/def/core#LoadForecast",
+  "@id" : "http://delta.linkeddata.es/def/core#Load",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load forecast"
+    "@value" : "Load"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#LoadForecast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Load" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Load forecast"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#MarketSettlement",
@@ -626,7 +629,19 @@
     "@value" : "Power"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#PowerConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Power" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power consumption"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#PowerGeneration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Power" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power generation"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PriceAS",
@@ -656,6 +671,15 @@
     "@id" : "_:genid25"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/saref#Property"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#Prosumer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -679,7 +703,7 @@
     "@value" : "Reward"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Sector",
@@ -725,9 +749,9 @@
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#UpFlexibility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Flexibility"
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Flexibility" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Up flexibility"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#VirtualNode",
@@ -763,7 +787,7 @@
     "@value" : "Voltage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#DRProperty"
+    "@id" : "http://delta.linkeddata.es/def/core#Property"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#activates",

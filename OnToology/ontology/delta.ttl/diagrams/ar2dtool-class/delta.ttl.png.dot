@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "core:DRProperty" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:FEID" "core:Payment" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:Property" "core:FEID" "core:Payment" ; /*classes style*/
 	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"http://delta.linkeddata.es/def/core" -> "https://w3id.org/def/openadr" [ label = "owl:imports" ];
@@ -17,6 +17,7 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:granularity" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:FeatureOfInterest" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "saref:UnitOfMeasure" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:Property" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:Measurement" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Profile" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Reward" [ label = "owl:allValuesFrom" ];
@@ -36,8 +37,8 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:clusterName" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Payment" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:name" [ label = "owl:onProperty" ];
-	"NULL" -> "core:Aggregator" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:Property" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Aggregator" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Incentive" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:MarketSettlement" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:includesMeasurement" [ label = "owl:onProperty" ];
@@ -48,27 +49,26 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "saref:hasFeatureOfInterest" [ label = "owl:onProperty" ];
 	"NULL" -> "core:FEID" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasIncentive" [ label = "owl:onProperty" ];
-	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasDescription" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];
 	"NULL" -> "core:SystemConstraint" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:clusterDescription" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasPayment" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasComfortSetting" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:timeStamp" [ label = "owl:onProperty" ];
-	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isControlledBy" [ label = "owl:onProperty" ];
+	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "core:agreesOn" [ label = "owl:onProperty" ];
-	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Sector" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "saref:isRelatedToMeasurement" [ label = "owl:onProperty" ];
-	"NULL" -> "core:DRProperty" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:hasProfile" [ label = "owl:onProperty" ];
 	"NULL" -> "xsd:string" [ label = "owl:someValuesFrom" ];
 	"http://www.opengis.net/ont/geosparql#Geometry" -> "http://www.opengis.net/ont/geosparql" [ label = "rdfs:comment" ];

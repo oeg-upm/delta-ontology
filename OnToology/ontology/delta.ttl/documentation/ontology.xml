@@ -658,30 +658,11 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#DRProperty -->
-
-
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#DRProperty">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
-        <rdfs:label>DRProperty</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://delta.linkeddata.es/def/core#DownFlexibility -->
-
-
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#DownFlexibility">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Flexibility"/>
-    </owl:Class>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#Energy -->
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Energy">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasIncentive"/>
@@ -712,7 +693,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasAggregatedProperty"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -755,7 +736,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Flexibility">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
         <rdfs:comment>Flexibility is a property that indicates the ability to increase or reduce the production of power plants or the consumption of demand processes</rdfs:comment>
         <rdfs:label>Flexibility</rdfs:label>
     </owl:Class>
@@ -766,7 +747,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Frequency">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
         <rdfs:comment>Frequency constraint related to the grid</rdfs:comment>
         <rdfs:label>Frequency</rdfs:label>
     </owl:Class>
@@ -810,12 +791,12 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#LoadForecast -->
+    <!-- http://delta.linkeddata.es/def/core#Load -->
 
 
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#LoadForecast">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
-        <rdfs:label>Load forecast</rdfs:label>
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Load">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
+        <rdfs:label>Load</rdfs:label>
     </owl:Class>
     
 
@@ -872,7 +853,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Power">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
         <rdfs:comment>A property related to measurements that are characterized  by a value measured in power units</rdfs:comment>
         <rdfs:label>Power</rdfs:label>
     </owl:Class>
@@ -908,6 +889,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#Property -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Property">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Property"/>
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Prosumer -->
 
 
@@ -923,7 +914,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Reward">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools</rdfs:comment>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools (e.g., discounts)</rdfs:comment>
         <rdfs:label>Reward</rdfs:label>
@@ -994,15 +985,6 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#UpFlexibility -->
-
-
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#UpFlexibility">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Flexibility"/>
-    </owl:Class>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#VirtualNode -->
 
 
@@ -1049,7 +1031,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Voltage">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#DRProperty"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
         <rdfs:comment>Voltage constraint related to the grid</rdfs:comment>
         <rdfs:label>Voltage</rdfs:label>
     </owl:Class>
@@ -1248,6 +1230,56 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#DownFlexibility -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#DownFlexibility">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Flexibility"/>
+        <rdfs:label>Down flexibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyGeneration -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyGeneration">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Energy"/>
+        <rdfs:label>Energy generation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#LoadForecast -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#LoadForecast">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Load"/>
+        <rdfs:label>Load forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerConsumption -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerConsumption">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Power"/>
+        <rdfs:label>Power consumption</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerGeneration -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerGeneration">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Power"/>
+        <rdfs:label>Power generation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#PriceAS -->
 
 
@@ -1266,6 +1298,16 @@
 
 
     <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PriceIntraDay"/>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#UpFlexibility -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#UpFlexibility">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Flexibility"/>
+        <rdfs:label>Up flexibility</rdfs:label>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 

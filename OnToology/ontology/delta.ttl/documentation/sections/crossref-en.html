@@ -26,15 +26,6 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
       </li>
       <li>
-         <a href="#DownFlexibility"
-            title="http://delta.linkeddata.es/def/core#DownFlexibility">
-            <span>down flexibility</span>
-         </a>
-      </li>
-      <li>
-         <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
-      </li>
-      <li>
          <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
       </li>
       <li>
@@ -71,7 +62,7 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#KeyPerformanceIndicator">Key Performance Indicator</a>
       </li>
       <li>
-         <a href="#LoadForecast" title="http://delta.linkeddata.es/def/core#LoadForecast">Load forecast</a>
+         <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
       </li>
       <li>
          <a href="#Measurement" title="http://delta.linkeddata.es/def/core#Measurement">
@@ -105,6 +96,9 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#https://w3id.org/saref#Profile" title="https://w3id.org/saref#Profile">Profile</a>
       </li>
       <li>
+         <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
       </li>
       <li>
@@ -136,12 +130,6 @@ This section provides details for each class and property defined by DELTA ontol
       <li>
          <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">
             <span>unit of measure</span>
-         </a>
-      </li>
-      <li>
-         <a href="#UpFlexibility"
-            title="http://delta.linkeddata.es/def/core#UpFlexibility">
-            <span>up flexibility</span>
          </a>
       </li>
       <li>
@@ -284,47 +272,6 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
-   <div class="entity" id="DownFlexibility">
-      <h3>down flexibility<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#DownFlexibility</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="DRProperty">
-      <h3>DRProperty<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#DRProperty</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Frequency" title="http://delta.linkeddata.es/def/core#Frequency">Frequency</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#LoadForecast" title="http://delta.linkeddata.es/def/core#LoadForecast">Load forecast</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Voltage" title="http://delta.linkeddata.es/def/core#Voltage">Voltage</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Energy">
       <h3>Energy<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -338,8 +285,14 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#EnergyGeneration"
+               title="http://delta.linkeddata.es/def/core#EnergyGeneration">Energy generation</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -423,16 +376,16 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
+         <dt>has members</dt>
          <dd>
             <a href="#DownFlexibility"
-               title="http://delta.linkeddata.es/def/core#DownFlexibility">down flexibility</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#UpFlexibility"
-               title="http://delta.linkeddata.es/def/core#UpFlexibility">up flexibility</a>
-            <sup class="type-c" title="class">c</sup>
+               title="http://delta.linkeddata.es/def/core#DownFlexibility">Down flexibility</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#UpFlexibility"
+               title="http://delta.linkeddata.es/def/core#UpFlexibility">Up flexibility</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -449,7 +402,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -518,18 +471,24 @@ This section provides details for each class and property defined by DELTA ontol
          <dd/>
       </dl>
    </div>
-   <div class="entity" id="LoadForecast">
-      <h3>Load forecast<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Load">
+      <h3>Load<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#LoadForecast</p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Load</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#LoadForecast"
+               title="http://delta.linkeddata.es/def/core#LoadForecast">Load forecast</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -631,8 +590,16 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#PowerConsumption"
+               title="http://delta.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PowerGeneration"
+               title="http://delta.linkeddata.es/def/core#PowerGeneration">Power generation</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -698,6 +665,32 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Property">
+      <h3>Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Property</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Frequency" title="http://delta.linkeddata.es/def/core#Frequency">Frequency</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Voltage" title="http://delta.linkeddata.es/def/core#Voltage">Voltage</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/saref#Property">
       <h3>Property<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -714,7 +707,7 @@ This section provides details for each class and property defined by DELTA ontol
          <dd/>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Price" title="https://w3id.org/saref#Price">price</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -756,7 +749,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -872,21 +865,6 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
    </div>
-   <div class="entity" id="UpFlexibility">
-      <h3>up flexibility<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#UpFlexibility</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="VirtualNode">
       <h3>Virtual node<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -917,7 +895,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#DRProperty" title="http://delta.linkeddata.es/def/core#DRProperty">DRProperty</a>
+            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1601,6 +1579,124 @@ This section provides details for each class and property defined by DELTA ontol
             </dd>
          </dl>
       </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#DownFlexibility"
+            title="http://delta.linkeddata.es/def/core#DownFlexibility">Down flexibility</a>
+      </li>
+      <li>
+         <a href="#EnergyGeneration"
+            title="http://delta.linkeddata.es/def/core#EnergyGeneration">Energy generation</a>
+      </li>
+      <li>
+         <a href="#LoadForecast"
+            title="http://delta.linkeddata.es/def/core#LoadForecast">Load forecast</a>
+      </li>
+      <li>
+         <a href="#PowerConsumption"
+            title="http://delta.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
+      </li>
+      <li>
+         <a href="#PowerGeneration"
+            title="http://delta.linkeddata.es/def/core#PowerGeneration">Power generation</a>
+      </li>
+      <li>
+         <a href="#UpFlexibility"
+            title="http://delta.linkeddata.es/def/core#UpFlexibility">Up flexibility</a>
+      </li>
+   </ul>
+   <div class="entity" id="DownFlexibility">
+      <h3>Down flexibility<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#DownFlexibility</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EnergyGeneration">
+      <h3>Energy generation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#EnergyGeneration</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LoadForecast">
+      <h3>Load forecast<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#LoadForecast</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PowerConsumption">
+      <h3>Power consumption<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PowerConsumption</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PowerGeneration">
+      <h3>Power generation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PowerGeneration</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="UpFlexibility">
+      <h3>Up flexibility<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#UpFlexibility</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
