@@ -387,20 +387,9 @@
           rdfs:label "Customer" .
 
 
-###  http://delta.linkeddata.es/def/core#DRProperty
-:DRProperty rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/saref#Property> ;
-            rdfs:label "DRProperty" .
-
-
-###  http://delta.linkeddata.es/def/core#DownFlexibility
-:DownFlexibility rdf:type owl:Class ;
-                 rdfs:subClassOf :Flexibility .
-
-
 ###  http://delta.linkeddata.es/def/core#Energy
 :Energy rdf:type owl:Class ;
-        rdfs:subClassOf :DRProperty ,
+        rdfs:subClassOf :Property ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :hasIncentive ;
                           owl:allValuesFrom :Incentive
@@ -420,7 +409,7 @@
                       <https://w3id.org/def/saref4bldg#PhysicalObject> ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasAggregatedProperty ;
-                        owl:someValuesFrom :DRProperty
+                        owl:someValuesFrom :Property
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :isLocatedAt ;
@@ -448,14 +437,14 @@
 
 ###  http://delta.linkeddata.es/def/core#Flexibility
 :Flexibility rdf:type owl:Class ;
-             rdfs:subClassOf :DRProperty ;
+             rdfs:subClassOf :Property ;
              rdfs:comment "Flexibility is a property that indicates the ability to increase or reduce the production of power plants or the consumption of demand processes" ;
              rdfs:label "Flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#Frequency
 :Frequency rdf:type owl:Class ;
-           rdfs:subClassOf :DRProperty ;
+           rdfs:subClassOf :Property ;
            rdfs:comment "Frequency constraint related to the grid" ;
            rdfs:label "Frequency" .
 
@@ -483,10 +472,10 @@
                          rdfs:label "Key Performance Indicator" .
 
 
-###  http://delta.linkeddata.es/def/core#LoadForecast
-:LoadForecast rdf:type owl:Class ;
-              rdfs:subClassOf :DRProperty ;
-              rdfs:label "Load forecast" .
+###  http://delta.linkeddata.es/def/core#Load
+:Load rdf:type owl:Class ;
+      rdfs:subClassOf :Property ;
+      rdfs:label "Load" .
 
 
 ###  http://delta.linkeddata.es/def/core#MarketSettlement
@@ -520,7 +509,7 @@
 
 ###  http://delta.linkeddata.es/def/core#Power
 :Power rdf:type owl:Class ;
-       rdfs:subClassOf :DRProperty ;
+       rdfs:subClassOf :Property ;
        rdfs:comment "A property related to measurements that are characterized  by a value measured in power units" ;
        rdfs:label "Power" .
 
@@ -544,6 +533,12 @@
          rdfs:label "Profile" .
 
 
+###  http://delta.linkeddata.es/def/core#Property
+:Property rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/saref#Property> ;
+          rdfs:label "Property" .
+
+
 ###  http://delta.linkeddata.es/def/core#Prosumer
 :Prosumer rdf:type owl:Class ;
           rdfs:subClassOf :Customer ;
@@ -553,7 +548,7 @@
 
 ###  http://delta.linkeddata.es/def/core#Reward
 :Reward rdf:type owl:Class ;
-        rdfs:subClassOf :DRProperty ;
+        rdfs:subClassOf :Property ;
         rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
                      "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
         rdfs:label "Reward" .
@@ -598,11 +593,6 @@
              rdfs:label "Transaction" .
 
 
-###  http://delta.linkeddata.es/def/core#UpFlexibility
-:UpFlexibility rdf:type owl:Class ;
-               rdfs:subClassOf :Flexibility .
-
-
 ###  http://delta.linkeddata.es/def/core#VirtualNode
 :VirtualNode rdf:type owl:Class ;
              rdfs:subClassOf <https://w3id.org/def/openadr#VEN> ,
@@ -633,7 +623,7 @@
 
 ###  http://delta.linkeddata.es/def/core#Voltage
 :Voltage rdf:type owl:Class ;
-         rdfs:subClassOf :DRProperty ;
+         rdfs:subClassOf :Property ;
          rdfs:comment "Voltage constraint related to the grid" ;
          rdfs:label "Voltage" .
 
@@ -756,6 +746,36 @@
 #    Individuals
 #################################################################
 
+###  http://delta.linkeddata.es/def/core#DownFlexibility
+:DownFlexibility rdf:type owl:NamedIndividual ,
+                          :Flexibility ;
+                 rdfs:label "Down flexibility" .
+
+
+###  http://delta.linkeddata.es/def/core#EnergyGeneration
+:EnergyGeneration rdf:type owl:NamedIndividual ,
+                           :Energy ;
+                  rdfs:label "Energy generation" .
+
+
+###  http://delta.linkeddata.es/def/core#LoadForecast
+:LoadForecast rdf:type owl:NamedIndividual ,
+                       :Load ;
+              rdfs:label "Load forecast" .
+
+
+###  http://delta.linkeddata.es/def/core#PowerConsumption
+:PowerConsumption rdf:type owl:NamedIndividual ,
+                           :Power ;
+                  rdfs:label "Power consumption" .
+
+
+###  http://delta.linkeddata.es/def/core#PowerGeneration
+:PowerGeneration rdf:type owl:NamedIndividual ,
+                          :Power ;
+                 rdfs:label "Power generation" .
+
+
 ###  http://delta.linkeddata.es/def/core#PriceAS
 :PriceAS rdf:type owl:NamedIndividual .
 
@@ -766,6 +786,12 @@
 
 ###  http://delta.linkeddata.es/def/core#PriceIntraDay
 :PriceIntraDay rdf:type owl:NamedIndividual .
+
+
+###  http://delta.linkeddata.es/def/core#UpFlexibility
+:UpFlexibility rdf:type owl:NamedIndividual ,
+                        :Flexibility ;
+               rdfs:label "Up flexibility" .
 
 
 ###  Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
