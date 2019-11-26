@@ -1240,6 +1240,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#EnergyConsumption -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyConsumption">
+        <rdf:type rdf:resource="http://delta.linkeddata.es/def/core#Energy"/>
+        <rdfs:label>Energy consumption</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#EnergyGeneration -->
 
 

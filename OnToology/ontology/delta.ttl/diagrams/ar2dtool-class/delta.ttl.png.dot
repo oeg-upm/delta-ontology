@@ -52,8 +52,8 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasDescription" [ label = "owl:onProperty" ];
+	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];
 	"NULL" -> "core:SystemConstraint" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:clusterDescription" [ label = "owl:onProperty" ];
@@ -61,9 +61,9 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasComfortSetting" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:timeStamp" [ label = "owl:onProperty" ];
+	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "core:isControlledBy" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "core:agreesOn" [ label = "owl:onProperty" ];
 	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
