@@ -1,5 +1,9 @@
 {
   "@context" : {
+    "isDerivedFrom" : {
+      "@id" : "https://w3id.org/def/saref4city#isDerivedFrom",
+      "@type" : "@id"
+    },
     "UnitOfMeasure" : {
       "@id" : "https://w3id.org/saref#UnitOfMeasure"
     },
@@ -12,11 +16,19 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
+    "quantifiesKPI" : {
+      "@id" : "http://delta.linkeddata.es/def/core#quantifiesKPI",
+      "@type" : "@id"
+    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license"
     },
     "hasPayment" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPayment",
+      "@type" : "@id"
+    },
+    "manages" : {
+      "@id" : "http://delta.linkeddata.es/def/core#manages",
       "@type" : "@id"
     },
     "consumes" : {
@@ -62,10 +74,6 @@
     "FEID" : {
       "@id" : "http://delta.linkeddata.es/def/core#FEID"
     },
-    "isControlledBy" : {
-      "@id" : "http://delta.linkeddata.es/def/core#isControlledBy",
-      "@type" : "@id"
-    },
     "Instant" : {
       "@id" : "http://www.w3.org/2006/time#Instant"
     },
@@ -95,10 +103,6 @@
     },
     "isValidDuringPeriod" : {
       "@id" : "http://delta.linkeddata.es/def/core#isValidDuringPeriod",
-      "@type" : "@id"
-    },
-    "activates" : {
-      "@id" : "http://delta.linkeddata.es/def/core#activates",
       "@type" : "@id"
     },
     "Measurement" : {
@@ -153,10 +157,6 @@
     "name" : {
       "@id" : "http://delta.linkeddata.es/def/core#name"
     },
-    "sendEvent" : {
-      "@id" : "https://w3id.org/def/openadr#sendEvent",
-      "@type" : "@id"
-    },
     "granularity" : {
       "@id" : "http://delta.linkeddata.es/def/core#granularity"
     },
@@ -183,10 +183,6 @@
     "Phase" : {
       "@id" : "http://delta.linkeddata.es/def/core#Phase"
     },
-    "includesMeasurement" : {
-      "@id" : "http://delta.linkeddata.es/def/core#includesMeasurement",
-      "@type" : "@id"
-    },
     "VTN" : {
       "@id" : "https://w3id.org/def/openadr#VTN"
     },
@@ -194,7 +190,7 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
     },
     "KeyPerformanceIndicator" : {
-      "@id" : "http://delta.linkeddata.es/def/core#KeyPerformanceIndicator"
+      "@id" : "https://w3id.org/def/saref4city#KeyPerformanceIndicator"
     },
     "makesMeasurement" : {
       "@id" : "https://w3id.org/saref#makesMeasurement",
@@ -206,6 +202,9 @@
     },
     "termscreator" : {
       "@id" : "http://purl.org/dc/termscreator"
+    },
+    "KeyPerfomanceIndicatorAssessement" : {
+      "@id" : "https://w3id.org/def/saref4city#KeyPerfomanceIndicatorAssessement"
     },
     "hasGeometry" : {
       "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -252,8 +251,8 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasPhase",
       "@type" : "@id"
     },
-    "controls" : {
-      "@id" : "http://delta.linkeddata.es/def/core#controls",
+    "consistsOf" : {
+      "@id" : "https://w3id.org/saref#consistsOf",
       "@type" : "@id"
     },
     "VEN" : {
@@ -265,16 +264,15 @@
     "Flexibility" : {
       "@id" : "http://delta.linkeddata.es/def/core#Flexibility"
     },
-    "manage" : {
-      "@id" : "http://delta.linkeddata.es/def/core#manage",
-      "@type" : "@id"
-    },
     "hasProfile" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasProfile",
       "@type" : "@id"
     },
     "ComfortSetting" : {
       "@id" : "http://delta.linkeddata.es/def/core#ComfortSetting"
+    },
+    "SpatialThing" : {
+      "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
     },
     "clusterDescription" : {
       "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
@@ -284,6 +282,10 @@
     },
     "Transaction" : {
       "@id" : "http://delta.linkeddata.es/def/core#Transaction"
+    },
+    "sendsEvent" : {
+      "@id" : "https://w3id.org/def/openadr#sendsEvent",
+      "@type" : "@id"
     },
     "termslicense" : {
       "@id" : "http://purl.org/dc/termslicense"
@@ -318,9 +320,6 @@
     },
     "preferredNamespaceUri" : {
       "@id" : "http://delta.linkeddata.es/def/core#preferredNamespaceUri"
-    },
-    "PhysicalObject" : {
-      "@id" : "https://w3id.org/def/saref4bldg#PhysicalObject"
     }
   }
 }

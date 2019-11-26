@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:VirtualNode" "core:Sector" "saref:Device" "saref4bldg:PhysicalObject" "core:Consumer" "core:Aggregator" "core:Measurement" "core:Prosumer" "saref:Measurement" "core:Reward" "time:TemporalEntity" "saref:Price" "core:Asset" "core:Flexibility" "http://www.opengis.net/ont/geosparql#Feature" "core:Voltage" "saref:Property" "core:Profile" "core:Property" "core:FEID" "core:Energy" "core:Payment" ; /*classes style*/
+node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:VirtualNode" "core:Sector" "saref:Device" "core:Consumer" "core:Aggregator" "core:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "core:Prosumer" "saref:Measurement" "core:Reward" "time:TemporalEntity" "saref:Price" "core:Asset" "core:Flexibility" "http://www.opengis.net/ont/geosparql#Feature" "core:Voltage" "saref:Property" "core:Profile" "core:Property" "core:FEID" "core:Energy" "core:Payment" ; /*classes style*/
 	"core:Flexibility" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"core:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
@@ -11,7 +11,7 @@ node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Freque
 	"core:Voltage" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:Sector" -> "http://www.opengis.net/ont/geosparql#Feature" [ label = "rdfs:subClassOf" ];
 	"core:Aggregator" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
-	"core:FEID" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"core:FEID" -> "saref:Device" [ label = "rdfs:subClassOf" ];
 	"core:FEID" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
 	"core:Energy" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:Power" -> "core:Property" [ label = "rdfs:subClassOf" ];
@@ -25,6 +25,6 @@ node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Freque
 	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
 	"core:Reward" -> "core:Property" [ label = "rdfs:subClassOf" ];
 	"core:Load" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"saref:Device" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"saref:Device" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
 
 }
