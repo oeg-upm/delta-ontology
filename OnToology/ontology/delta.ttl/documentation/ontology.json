@@ -490,6 +490,12 @@
     "@id" : "_:genid11"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#EnergyConsumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Energy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy consumption"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyGeneration",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://delta.linkeddata.es/def/core#Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
