@@ -15,9 +15,11 @@
         <owl:imports rdf:resource="https://w3id.org/def/openadr"/>
         <dc:title>DELTA ontology</dc:title>
         <terms:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms:creator>Alba Fernández Izquierdo</terms:creator>
+        <terms:creator>Andrea Cimmino</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.1.4</owl:versionInfo>
+        <owl:versionInfo>0.1.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -81,15 +83,6 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#activates -->
-
-
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#activates">
-        <rdfs:label>activates</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#agreesOn -->
 
 
@@ -108,17 +101,6 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#controls -->
-
-
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#controls">
-        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#isControlledBy"/>
-        <rdfs:comment>relation between a FEID and an asset</rdfs:comment>
-        <rdfs:label>controls</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#hasAggregatedProperty -->
 
 
@@ -132,7 +114,9 @@
     <!-- http://delta.linkeddata.es/def/core#hasComfortSetting -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting"/>
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting">
+        <rdfs:label>has comfort settings</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -220,23 +204,17 @@
     <!-- http://delta.linkeddata.es/def/core#hasSystemConstraint -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSystemConstraint"/>
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSystemConstraint">
+        <rdfs:label>has system constraint</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- http://delta.linkeddata.es/def/core#hasTransaction -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasTransaction"/>
-    
-
-
-    <!-- http://delta.linkeddata.es/def/core#includesMeasurement -->
-
-
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#includesMeasurement">
-        <rdfs:comment>Link between a KPI and a measurement</rdfs:comment>
-        <rdfs:label>includes measurement</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasTransaction">
+        <rdfs:label>has transaction</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -247,16 +225,6 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isAllocatedIn">
         <rdfs:comment>Link from a virtual node to its aggregator</rdfs:comment>
         <rdfs:label>is allocated in</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://delta.linkeddata.es/def/core#isControlledBy -->
-
-
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isControlledBy">
-        <rdfs:comment>Relation between a device and a FEID</rdfs:comment>
-        <rdfs:label>is controlled by</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -302,12 +270,12 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#manage -->
+    <!-- http://delta.linkeddata.es/def/core#manages -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#manage">
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#manages">
         <rdfs:comment>Relation between a Virutal Node and the  devices it manages</rdfs:comment>
-        <rdfs:label>manage</rdfs:label>
+        <rdfs:label>manages</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -318,6 +286,15 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#owns">
         <rdfs:comment>Link between the customers and the devices</rdfs:comment>
         <rdfs:label>owns</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#quantifiesKPI -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#quantifiesKPI">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/saref4city"/>
     </owl:ObjectProperty>
     
 
@@ -335,10 +312,30 @@
     
 
 
-    <!-- https://w3id.org/def/openadr#sendEvent -->
+    <!-- https://w3id.org/def/openadr#sendsEvent -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#sendEvent"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#sendsEvent"/>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#isDerivedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/saref4city#isDerivedFrom">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/saref4city"/>
+        <rdfs:label>is derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/saref#consistsOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/saref#consistsOf">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/saref"/>
+        <rdfs:label>consists of</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -573,12 +570,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isControlledBy"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isOwnedBy"/>
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
             </owl:Restriction>
@@ -689,17 +680,17 @@
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#FEID">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VEN"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#PhysicalObject"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasAggregatedProperty"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/saref#Device"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isLocatedAt"/>
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Sector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/saref#consistsOf"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -760,33 +751,6 @@
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Incentive">
         <rdfs:comment>Incentive (usually monetary) associated to energy values</rdfs:comment>
         <rdfs:label>Incentive</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://delta.linkeddata.es/def/core#KeyPerformanceIndicator -->
-
-
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#KeyPerformanceIndicator">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#includesMeasurement"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Measurement"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasDescription"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#name"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>Key Performance Indicator</rdfs:label>
     </owl:Class>
     
 
@@ -874,12 +838,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#granularity"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#type"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1005,12 +963,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#manage"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasProfile"/>
                 <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Profile"/>
             </owl:Restriction>
@@ -1060,6 +1012,13 @@
     
 
 
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    
+
+
     <!-- http://www.w3.org/2006/time#Instant -->
 
 
@@ -1094,13 +1053,34 @@
     
 
 
-    <!-- https://w3id.org/def/saref4bldg#PhysicalObject -->
+    <!-- https://w3id.org/def/saref4city#KeyPerfomanceIndicatorAssessement -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/saref4bldg#PhysicalObject">
-        <rdfs:comment>Any Object that has a proper space region.</rdfs:comment>
-        <rdfs:isDefinedBy>https://w3id.org/def/saref4bldg#</rdfs:isDefinedBy>
-        <rdfs:label>Physical object</rdfs:label>
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#KeyPerfomanceIndicatorAssessement">
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/saref4city"/>
+        <rdfs:label>Key performance indicator assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/saref4city#KeyPerformanceIndicator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/saref4city#KeyPerformanceIndicator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#quantifiesKPI"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/def/saref4city#KeyPerformanceIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4city#isDerivedFrom"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/saref4city"/>
+        <rdfs:label>Key Performance Indicator</rdfs:label>
     </owl:Class>
     
 
@@ -1115,7 +1095,7 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/saref#Property"/>
             </owl:Restriction>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#PhysicalObject"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
         <rdfs:comment>A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device&apos;s user vs. the point of view of the device&apos;s manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
         <rdfs:isDefinedBy>https://w3id.org/def/saref#</rdfs:isDefinedBy>
         <rdfs:label>Device</rdfs:label>
