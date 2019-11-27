@@ -20,7 +20,7 @@
                                                                           "Andrea Cimmino" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.1.5" .
+                                       owl:versionInfo "0.1.6" .
 
 #################################################################
 #    Annotation properties
@@ -756,6 +756,12 @@ core:EnergyGeneration rdf:type owl:NamedIndividual ,
                       rdfs:label "Energy generation" .
 
 
+###  http://delta.linkeddata.es/def/core#EnergyGenerationForecast
+core:EnergyGenerationForecast rdf:type owl:NamedIndividual ,
+                                       core:Energy ;
+                              rdfs:label "Energy generation forecast" .
+
+
 ###  http://delta.linkeddata.es/def/core#LoadForecast
 core:LoadForecast rdf:type owl:NamedIndividual ,
                            core:Load ;
@@ -772,6 +778,12 @@ core:PowerConsumption rdf:type owl:NamedIndividual ,
 core:PowerGeneration rdf:type owl:NamedIndividual ,
                               core:Power ;
                      rdfs:label "Power generation" .
+
+
+###  http://delta.linkeddata.es/def/core#PowerGenerationForecast
+core:PowerGenerationForecast rdf:type owl:NamedIndividual ,
+                                      core:Power ;
+                             rdfs:label "Power generation forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#PriceAS
