@@ -387,17 +387,6 @@ core:Customer rdf:type owl:Class ;
               rdfs:label "Customer" .
 
 
-###  http://delta.linkeddata.es/def/core#Energy
-core:Energy rdf:type owl:Class ;
-            rdfs:subClassOf core:Property ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty core:hasIncentive ;
-                              owl:allValuesFrom core:Incentive
-                            ] ;
-            rdfs:comment "A property related to measurements that are characterized  by a value measured in energy units" ;
-            rdfs:label "Energy" .
-
-
 ###  http://delta.linkeddata.es/def/core#EnergyMarket
 core:EnergyMarket rdf:type owl:Class ;
                   rdfs:label "Energy Market" .
@@ -435,16 +424,9 @@ core:FEID rdf:type owl:Class ;
           rdfs:label "FEID" .
 
 
-###  http://delta.linkeddata.es/def/core#Flexibility
-core:Flexibility rdf:type owl:Class ;
-                 rdfs:subClassOf core:Property ;
-                 rdfs:comment "Flexibility is a property that indicates the ability to increase or reduce the production of power plants or the consumption of demand processes" ;
-                 rdfs:label "Flexibility" .
-
-
 ###  http://delta.linkeddata.es/def/core#Frequency
 core:Frequency rdf:type owl:Class ;
-               rdfs:subClassOf core:Property ;
+               rdfs:subClassOf saref:Property ;
                rdfs:comment "Frequency constraint related to the grid" ;
                rdfs:label "Frequency" .
 
@@ -453,12 +435,6 @@ core:Frequency rdf:type owl:Class ;
 core:Incentive rdf:type owl:Class ;
                rdfs:comment "Incentive (usually monetary) associated to energy values" ;
                rdfs:label "Incentive" .
-
-
-###  http://delta.linkeddata.es/def/core#Load
-core:Load rdf:type owl:Class ;
-          rdfs:subClassOf core:Property ;
-          rdfs:label "Load" .
 
 
 ###  http://delta.linkeddata.es/def/core#MarketSettlement
@@ -490,13 +466,6 @@ core:Phase rdf:type owl:Class ;
            rdfs:label "Phase" .
 
 
-###  http://delta.linkeddata.es/def/core#Power
-core:Power rdf:type owl:Class ;
-           rdfs:subClassOf core:Property ;
-           rdfs:comment "A property related to measurements that are characterized  by a value measured in power units" ;
-           rdfs:label "Power" .
-
-
 ###  http://delta.linkeddata.es/def/core#Profile
 core:Profile rdf:type owl:Class ;
              rdfs:subClassOf saref:Profile ,
@@ -512,12 +481,6 @@ core:Profile rdf:type owl:Class ;
              rdfs:label "Profile" .
 
 
-###  http://delta.linkeddata.es/def/core#Property
-core:Property rdf:type owl:Class ;
-              rdfs:subClassOf saref:Property ;
-              rdfs:label "Property" .
-
-
 ###  http://delta.linkeddata.es/def/core#Prosumer
 core:Prosumer rdf:type owl:Class ;
               rdfs:subClassOf core:Customer ;
@@ -527,7 +490,7 @@ core:Prosumer rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Reward
 core:Reward rdf:type owl:Class ;
-            rdfs:subClassOf core:Property ;
+            rdfs:subClassOf saref:Property ;
             rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
                          "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
             rdfs:label "Reward" .
@@ -598,7 +561,7 @@ core:VirtualNode rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Voltage
 core:Voltage rdf:type owl:Class ;
-             rdfs:subClassOf core:Property ;
+             rdfs:subClassOf saref:Property ;
              rdfs:comment "Voltage constraint related to the grid" ;
              rdfs:label "Voltage" .
 
@@ -675,6 +638,17 @@ saref:Device rdf:type owl:Class ;
              rdfs:label "Device" .
 
 
+###  https://w3id.org/saref#Energy
+saref:Energy rdf:type owl:Class ;
+             rdfs:subClassOf saref:Property ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty core:hasIncentive ;
+                               owl:allValuesFrom core:Incentive
+                             ] ;
+             rdfs:comment "A property related to measurements that are characterized  by a value measured in energy units" ;
+             rdfs:label "Energy" .
+
+
 ###  https://w3id.org/saref#FeatureOfInterest
 saref:FeatureOfInterest rdf:type owl:Class ;
                         rdfs:isDefinedBy "https://w3id.org/def/saref#" ;
@@ -701,6 +675,13 @@ saref:Measurement rdf:type owl:Class ;
                                   ] ;
                   rdfs:isDefinedBy "https://w3id.org/def/saref#" ;
                   rdfs:label "Measurement" .
+
+
+###  https://w3id.org/saref#Power
+saref:Power rdf:type owl:Class ;
+            rdfs:subClassOf saref:Property ;
+            rdfs:comment "A property related to measurements that are characterized  by a value measured in power units" ;
+            rdfs:label "Power" .
 
 
 ###  https://w3id.org/saref#Price
@@ -739,50 +720,48 @@ saref:UnitOfMeasure rdf:type owl:Class ;
 #################################################################
 
 ###  http://delta.linkeddata.es/def/core#DownFlexibility
-core:DownFlexibility rdf:type owl:NamedIndividual ,
-                              core:Flexibility ;
+core:DownFlexibility rdf:type owl:NamedIndividual ;
                      rdfs:label "Down flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyConsumption
 core:EnergyConsumption rdf:type owl:NamedIndividual ,
-                                core:Energy ;
+                                saref:Energy ;
                        rdfs:label "Energy consumption" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGeneration
 core:EnergyGeneration rdf:type owl:NamedIndividual ,
-                               core:Energy ;
+                               saref:Energy ;
                       rdfs:label "Energy generation" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGenerationForecast
 core:EnergyGenerationForecast rdf:type owl:NamedIndividual ,
-                                       core:Energy ;
+                                       saref:Energy ;
                               rdfs:label "Energy generation forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#LoadForecast
-core:LoadForecast rdf:type owl:NamedIndividual ,
-                           core:Load ;
+core:LoadForecast rdf:type owl:NamedIndividual ;
                   rdfs:label "Load forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerConsumption
 core:PowerConsumption rdf:type owl:NamedIndividual ,
-                               core:Power ;
+                               saref:Power ;
                       rdfs:label "Power consumption" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerGeneration
 core:PowerGeneration rdf:type owl:NamedIndividual ,
-                              core:Power ;
+                              saref:Power ;
                      rdfs:label "Power generation" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerGenerationForecast
 core:PowerGenerationForecast rdf:type owl:NamedIndividual ,
-                                      core:Power ;
+                                      saref:Power ;
                              rdfs:label "Power generation forecast" .
 
 
@@ -799,8 +778,7 @@ core:PriceIntraDay rdf:type owl:NamedIndividual .
 
 
 ###  http://delta.linkeddata.es/def/core#UpFlexibility
-core:UpFlexibility rdf:type owl:NamedIndividual ,
-                            core:Flexibility ;
+core:UpFlexibility rdf:type owl:NamedIndividual ;
                    rdfs:label "Up flexibility" .
 
 
