@@ -26,7 +26,7 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
       </li>
       <li>
-         <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+         <a href="#https://w3id.org/saref#Energy" title="https://w3id.org/saref#Energy">Energy</a>
       </li>
       <li>
          <a href="#EnergyMarket" title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy Market</a>
@@ -39,9 +39,6 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#FEID" title="http://delta.linkeddata.es/def/core#FEID">FEID</a>
-      </li>
-      <li>
-         <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
       </li>
       <li>
          <a href="#Frequency" title="http://delta.linkeddata.es/def/core#Frequency">Frequency</a>
@@ -66,9 +63,6 @@ This section provides details for each class and property defined by DELTA ontol
             title="https://w3id.org/def/saref4city#KeyPerfomanceIndicatorAssessement">Key performance indicator assessment</a>
       </li>
       <li>
-         <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
-      </li>
-      <li>
          <a href="#Measurement" title="http://delta.linkeddata.es/def/core#Measurement">
             <span>measurement</span>
          </a>
@@ -83,7 +77,7 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#Phase" title="http://delta.linkeddata.es/def/core#Phase">Phase</a>
       </li>
       <li>
-         <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+         <a href="#https://w3id.org/saref#Power" title="https://w3id.org/saref#Power">Power</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#Price" title="https://w3id.org/saref#Price">
@@ -95,9 +89,6 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#https://w3id.org/saref#Profile" title="https://w3id.org/saref#Profile">Profile</a>
-      </li>
-      <li>
-         <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
       </li>
       <li>
          <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
@@ -275,20 +266,20 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Energy">
+   <div class="entity" id="https://w3id.org/saref#Energy">
       <h3>Energy<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Energy</p>
+         <strong>IRI:</strong> https://w3id.org/saref#Energy</p>
       <div class="comment">
          <span class="markdown">A property related to measurements that are characterized  by a value measured in energy units</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has members</dt>
@@ -297,6 +288,8 @@ This section provides details for each class and property defined by DELTA ontol
                title="http://delta.linkeddata.es/def/core#EnergyConsumption">Energy consumption</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#EnergyGeneration"
                title="http://delta.linkeddata.es/def/core#EnergyGeneration">Energy generation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#EnergyGenerationForecast"
+               title="http://delta.linkeddata.es/def/core#EnergyGenerationForecast">Energy generation forecast</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -368,32 +361,6 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Flexibility">
-      <h3>Flexibility<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Flexibility</p>
-      <div class="comment">
-         <span class="markdown">Flexibility is a property that indicates the ability to increase or reduce the production of power plants or the consumption of demand processes</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#DownFlexibility"
-               title="http://delta.linkeddata.es/def/core#DownFlexibility">Down flexibility</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#UpFlexibility"
-               title="http://delta.linkeddata.es/def/core#UpFlexibility">Up flexibility</a>
-            <sup class="type-ni" title="named individual">ni</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Frequency">
       <h3>Frequency<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -407,7 +374,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -496,27 +463,6 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Load">
-      <h3>Load<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Load</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#LoadForecast"
-               title="http://delta.linkeddata.es/def/core#LoadForecast">Load forecast</a>
-            <sup class="type-ni" title="named individual">ni</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Measurement">
       <h3>measurement<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -579,20 +525,20 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Phase</p>
    </div>
-   <div class="entity" id="Power">
+   <div class="entity" id="https://w3id.org/saref#Power">
       <h3>Power<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Power</p>
+         <strong>IRI:</strong> https://w3id.org/saref#Power</p>
       <div class="comment">
          <span class="markdown">A property related to measurements that are characterized  by a value measured in power units</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has members</dt>
@@ -601,6 +547,8 @@ This section provides details for each class and property defined by DELTA ontol
                title="http://delta.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#PowerGeneration"
                title="http://delta.linkeddata.es/def/core#PowerGeneration">Power generation</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PowerGenerationForecast"
+               title="http://delta.linkeddata.es/def/core#PowerGenerationForecast">Power generation forecast</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -667,32 +615,6 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Property">
-      <h3>Property<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Property</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Frequency" title="http://delta.linkeddata.es/def/core#Frequency">Frequency</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Voltage" title="http://delta.linkeddata.es/def/core#Voltage">Voltage</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="https://w3id.org/saref#Property">
       <h3>Property<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -709,7 +631,11 @@ This section provides details for each class and property defined by DELTA ontol
          <dd/>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <a href="#https://w3id.org/saref#Energy" title="https://w3id.org/saref#Energy">Energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Frequency" title="http://delta.linkeddata.es/def/core#Frequency">Frequency</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Power" title="https://w3id.org/saref#Power">Power</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Voltage" title="http://delta.linkeddata.es/def/core#Voltage">Voltage</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/saref#Price" title="https://w3id.org/saref#Price">price</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -751,7 +677,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -897,7 +823,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Property" title="http://delta.linkeddata.es/def/core#Property">Property</a>
+            <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1614,6 +1540,10 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#EnergyGeneration">Energy generation</a>
       </li>
       <li>
+         <a href="#EnergyGenerationForecast"
+            title="http://delta.linkeddata.es/def/core#EnergyGenerationForecast">Energy generation forecast</a>
+      </li>
+      <li>
          <a href="#LoadForecast"
             title="http://delta.linkeddata.es/def/core#LoadForecast">Load forecast</a>
       </li>
@@ -1624,6 +1554,10 @@ This section provides details for each class and property defined by DELTA ontol
       <li>
          <a href="#PowerGeneration"
             title="http://delta.linkeddata.es/def/core#PowerGeneration">Power generation</a>
+      </li>
+      <li>
+         <a href="#PowerGenerationForecast"
+            title="http://delta.linkeddata.es/def/core#PowerGenerationForecast">Power generation forecast</a>
       </li>
       <li>
          <a href="#UpFlexibility"
@@ -1637,13 +1571,6 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#DownFlexibility</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="EnergyConsumption">
       <h3>Energy consumption<sup class="type-ni" title="named individual">ni</sup>
@@ -1655,7 +1582,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+            <a href="#https://w3id.org/saref#Energy" title="https://w3id.org/saref#Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1670,7 +1597,22 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Energy" title="http://delta.linkeddata.es/def/core#Energy">Energy</a>
+            <a href="#https://w3id.org/saref#Energy" title="https://w3id.org/saref#Energy">Energy</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EnergyGenerationForecast">
+      <h3>Energy generation forecast<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#EnergyGenerationForecast</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Energy" title="https://w3id.org/saref#Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1682,13 +1624,6 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#LoadForecast</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#Load" title="http://delta.linkeddata.es/def/core#Load">Load</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="PowerConsumption">
       <h3>Power consumption<sup class="type-ni" title="named individual">ni</sup>
@@ -1700,7 +1635,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+            <a href="#https://w3id.org/saref#Power" title="https://w3id.org/saref#Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1715,7 +1650,22 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Power" title="http://delta.linkeddata.es/def/core#Power">Power</a>
+            <a href="#https://w3id.org/saref#Power" title="https://w3id.org/saref#Power">Power</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PowerGenerationForecast">
+      <h3>Power generation forecast<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PowerGenerationForecast</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://w3id.org/saref#Power" title="https://w3id.org/saref#Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1727,13 +1677,6 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#UpFlexibility</p>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#Flexibility" title="http://delta.linkeddata.es/def/core#Flexibility">Flexibility</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

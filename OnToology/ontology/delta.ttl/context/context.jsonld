@@ -152,7 +152,7 @@
       "@id" : "https://w3id.org/saref#timeStamp"
     },
     "Energy" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Energy"
+      "@id" : "https://w3id.org/saref#Energy"
     },
     "name" : {
       "@id" : "http://delta.linkeddata.es/def/core#name"
@@ -211,7 +211,7 @@
       "@type" : "@id"
     },
     "Property" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Property"
+      "@id" : "https://w3id.org/saref#Property"
     },
     "Aggregator" : {
       "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
@@ -244,9 +244,6 @@
       "@id" : "https://w3id.org/saref#hasFeatureOfInterest",
       "@type" : "@id"
     },
-    "Load" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Load"
-    },
     "hasPhase" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPhase",
       "@type" : "@id"
@@ -260,9 +257,6 @@
     },
     "Frequency" : {
       "@id" : "http://delta.linkeddata.es/def/core#Frequency"
-    },
-    "Flexibility" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Flexibility"
     },
     "hasProfile" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasProfile",
@@ -312,7 +306,7 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasDescription"
     },
     "Power" : {
-      "@id" : "http://delta.linkeddata.es/def/core#Power"
+      "@id" : "https://w3id.org/saref#Power"
     },
     "isRelatedToProperty" : {
       "@id" : "http://delta.linkeddata.es/def/core#isRelatedToProperty",
