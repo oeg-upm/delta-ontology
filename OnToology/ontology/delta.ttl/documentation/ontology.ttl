@@ -736,9 +736,10 @@
                           rdfs:label "Energy generation forecast" .
 
 
-###  http://delta.linkeddata.es/def/core#LoadForecast
-:LoadForecast rdf:type owl:NamedIndividual ;
-              rdfs:label "Load forecast" .
+###  http://delta.linkeddata.es/def/core#EnergyLoadForecast
+:EnergyLoadForecast rdf:type owl:NamedIndividual ,
+                             <https://w3id.org/saref#Energy> ;
+                    rdfs:label "Energy load forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerConsumption
@@ -757,6 +758,12 @@
 :PowerGenerationForecast rdf:type owl:NamedIndividual ,
                                   <https://w3id.org/saref#Power> ;
                          rdfs:label "Power generation forecast" .
+
+
+###  http://delta.linkeddata.es/def/core#PowerLoadForecast
+:PowerLoadForecast rdf:type owl:NamedIndividual ,
+                            <https://w3id.org/saref#Power> ;
+                   rdfs:label "Power load forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#PriceAS

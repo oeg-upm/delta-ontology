@@ -460,6 +460,12 @@
     "@value" : "Energy generation forecast"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#EnergyLoadForecast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Energy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy load forecast"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -513,12 +519,6 @@
     "@value" : "Incentive"
   } ]
 }, {
-  "@id" : "http://delta.linkeddata.es/def/core#LoadForecast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Load forecast"
-  } ]
-}, {
   "@id" : "http://delta.linkeddata.es/def/core#MarketSettlement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -566,6 +566,12 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Power generation forecast"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#PowerLoadForecast",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://w3id.org/saref#Power" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power load forecast"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PriceAS",
