@@ -660,9 +660,10 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 <http://delta.linkeddata.es/def/core#EnergyGenerationForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Energy> .
 <http://delta.linkeddata.es/def/core#EnergyGenerationForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Energy generation forecast" .
 # 
-# http://delta.linkeddata.es/def/core#LoadForecast
-<http://delta.linkeddata.es/def/core#LoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://delta.linkeddata.es/def/core#LoadForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Load forecast" .
+# http://delta.linkeddata.es/def/core#EnergyLoadForecast
+<http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Energy> .
+<http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Energy load forecast" .
 # 
 # http://delta.linkeddata.es/def/core#PowerConsumption
 <http://delta.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -678,6 +679,11 @@ _:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/saref#
 <http://delta.linkeddata.es/def/core#PowerGenerationForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#PowerGenerationForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Power> .
 <http://delta.linkeddata.es/def/core#PowerGenerationForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Power generation forecast" .
+# 
+# http://delta.linkeddata.es/def/core#PowerLoadForecast
+<http://delta.linkeddata.es/def/core#PowerLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#PowerLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/saref#Power> .
+<http://delta.linkeddata.es/def/core#PowerLoadForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Power load forecast" .
 # 
 # http://delta.linkeddata.es/def/core#PriceAS
 <http://delta.linkeddata.es/def/core#PriceAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

@@ -1218,11 +1218,12 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#LoadForecast -->
+    <!-- http://delta.linkeddata.es/def/core#EnergyLoadForecast -->
 
 
-    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#LoadForecast">
-        <rdfs:label>Load forecast</rdfs:label>
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyLoadForecast">
+        <rdf:type rdf:resource="https://w3id.org/saref#Energy"/>
+        <rdfs:label>Energy load forecast</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1253,6 +1254,16 @@
     <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerGenerationForecast">
         <rdf:type rdf:resource="https://w3id.org/saref#Power"/>
         <rdfs:label>Power generation forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerLoadForecast -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerLoadForecast">
+        <rdf:type rdf:resource="https://w3id.org/saref#Power"/>
+        <rdfs:label>Power load forecast</rdfs:label>
     </owl:NamedIndividual>
     
 

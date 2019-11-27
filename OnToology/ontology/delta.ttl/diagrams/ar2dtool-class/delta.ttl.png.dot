@@ -60,8 +60,8 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "xsd:float" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:hasComfortSetting" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:timeStamp" [ label = "owl:onProperty" ];
-	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Property" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "core:isValidDuringPeriod" [ label = "owl:onProperty" ];
 	"NULL" -> "core:agreesOn" [ label = "owl:onProperty" ];
 	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
