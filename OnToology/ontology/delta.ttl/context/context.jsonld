@@ -1,5 +1,9 @@
 {
   "@context" : {
+    "belongsTo" : {
+      "@id" : "https://w3id.org/def/openadr#belongsTo",
+      "@type" : "@id"
+    },
     "isDerivedFrom" : {
       "@id" : "https://w3id.org/def/saref4city#isDerivedFrom",
       "@type" : "@id"
@@ -110,6 +114,10 @@
     },
     "MarketSettlement" : {
       "@id" : "http://delta.linkeddata.es/def/core#MarketSettlement"
+    },
+    "hasPoints" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasPoints",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "hasReward" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasReward",
@@ -223,6 +231,10 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasIncentive",
       "@type" : "@id"
     },
+    "hasDeliveryTime" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasDeliveryTime",
+      "@type" : "@id"
+    },
     "sectorName" : {
       "@id" : "http://delta.linkeddata.es/def/core#sectorName"
     },
@@ -257,6 +269,9 @@
     },
     "Frequency" : {
       "@id" : "http://delta.linkeddata.es/def/core#Frequency"
+    },
+    "CustomerCluster" : {
+      "@id" : "http://delta.linkeddata.es/def/core#CustomerCluster"
     },
     "hasProfile" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasProfile",
@@ -294,6 +309,10 @@
     },
     "isRelatedToMeasurement" : {
       "@id" : "https://w3id.org/saref#isRelatedToMeasurement",
+      "@type" : "@id"
+    },
+    "allocates" : {
+      "@id" : "http://delta.linkeddata.es/def/core#allocates",
       "@type" : "@id"
     },
     "Device" : {

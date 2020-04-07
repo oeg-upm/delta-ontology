@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "https://w3id.org/def/saref4city#KeyPerformanceIndicator" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:Payment" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "https://w3id.org/def/saref4city#KeyPerformanceIndicator" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:Payment" ; /*classes style*/
 	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"http://delta.linkeddata.es/def/core" -> "https://w3id.org/def/openadr" [ label = "owl:imports" ];
@@ -21,6 +21,7 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "saref:Measurement" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Profile" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Reward" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "xsd:float" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "https://w3id.org/def/saref4city#KeyPerformanceIndicator" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:status" [ label = "owl:onProperty" ];
@@ -48,7 +49,9 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "rdfs:Literal" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:href" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:hasFeatureOfInterest" [ label = "owl:onProperty" ];
+	"NULL" -> "core:hasPoints" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasIncentive" [ label = "owl:onProperty" ];
+	"NULL" -> "core:CustomerCluster" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
@@ -66,10 +69,12 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:SystemConstraint" "
 	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Sector" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "https://w3id.org/def/openadr#belongsTo" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:isRelatedToMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasProfile" [ label = "owl:onProperty" ];
 	"http://www.opengis.net/ont/geosparql#Geometry" -> "http://www.opengis.net/ont/geosparql" [ label = "rdfs:comment" ];
 	"owl:Thing" -> "core:SmartContract" [ label = "core:hasSmartContract" ];
+	"owl:Thing" -> "xsd:float" [ label = "core:hasPoints" ];
 	"http://www.opengis.net/ont/geosparql#Feature" -> "http://www.opengis.net/ont/geosparql#Geometry" [ label = "http://www.opengis.net/ont/geosparql#hasGeometry" ];
 	"owl:Thing" -> "time:TemporalEntity" [ label = "core:hasDuration" ];
 	"owl:Thing" -> "rdfs:Literal" [ label = "core:type" ];
