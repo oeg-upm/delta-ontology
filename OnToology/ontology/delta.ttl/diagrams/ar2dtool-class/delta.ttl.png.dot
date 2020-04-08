@@ -20,8 +20,8 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:quantifiesKPI" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Measurement" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Profile" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "core:Reward" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "xsd:float" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Reward" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "https://w3id.org/def/saref4city#KeyPerformanceIndicator" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:status" [ label = "owl:onProperty" ];
