@@ -49,6 +49,12 @@
           rdfs:label "agrees on" .
 
 
+###  http://delta.linkeddata.es/def/core#allocates
+:allocates rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isAllocatedIn ;
+           rdfs:label "allocates" .
+
+
 ###  http://delta.linkeddata.es/def/core#consumes
 :consumes rdf:type owl:ObjectProperty ;
           rdfs:label "consumes" .
@@ -69,6 +75,11 @@
 :hasCurrency rdf:type owl:ObjectProperty ;
              rdfs:comment "Link between a price and its currency" ;
              rdfs:label "has currency" .
+
+
+###  http://delta.linkeddata.es/def/core#hasDeliveryTime
+:hasDeliveryTime rdf:type owl:ObjectProperty ;
+                 rdfs:label "has delivery time" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasDuration
@@ -262,6 +273,13 @@
                 rdfs:label "description" .
 
 
+###  http://delta.linkeddata.es/def/core#hasPoints
+:hasPoints rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:float ;
+           rdfs:comment "Points that are used by the DELTA platform to calculate the customers rewards" ;
+           rdfs:label "has points" .
+
+
 ###  http://delta.linkeddata.es/def/core#href
 :href rdf:type owl:DatatypeProperty ;
       rdfs:comment "URI of the endpoint" ;
@@ -370,8 +388,16 @@
 ###  http://delta.linkeddata.es/def/core#Customer
 :Customer rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty <https://w3id.org/def/openadr#belongsTo> ;
+                            owl:someValuesFrom :CustomerCluster
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :hasReward ;
                             owl:allValuesFrom :Reward
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasPoints ;
+                            owl:someValuesFrom xsd:float
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :type ;
@@ -379,6 +405,12 @@
                           ] ;
           rdfs:comment "Entity that interacts in the platform" ;
           rdfs:label "Customer" .
+
+
+###  http://delta.linkeddata.es/def/core#CustomerCluster
+:CustomerCluster rdf:type owl:Class ;
+                 rdfs:comment "Groups of customers" ;
+                 rdfs:label "Customer cluster" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyMarket
