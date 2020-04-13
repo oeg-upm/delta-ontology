@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1501"
-node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "https://w3id.org/def/saref4city#KeyPerformanceIndicator" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:Payment" ; /*classes style*/
+node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "core:Index" "core:SystemConstraint" "core:Customer" "core:Incentive" "core:Transaction" "core:Sector" "http://www.opengis.net/ont/geosparql#Geometry" "saref:UnitOfMeasure" "core:Aggregator" "core:ComfortSetting" "saref:Measurement" "core:MarketSettlement" "saref:FeatureOfInterest" "core:Reward" "time:TemporalEntity" "core:SmartContract" "https://w3id.org/def/saref4city#KeyPerformanceIndicator" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "saref:Property" "core:Profile" "core:Payment" ; /*classes style*/
 	"http://delta.linkeddata.es/def/core" -> "http://purl.org/NET/rdflicense/cc-by4.0" [ label = ":license" ];
 	"http://delta.linkeddata.es/def/core" -> "http://www.garcia-castro.com/foaf.rdf#me" [ label = ":creator" ];
 	"http://delta.linkeddata.es/def/core" -> "https://w3id.org/def/openadr" [ label = "owl:imports" ];
@@ -20,8 +20,8 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:quantifiesKPI" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:Measurement" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Profile" [ label = "owl:allValuesFrom" ];
-	"NULL" -> "xsd:float" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Reward" [ label = "owl:allValuesFrom" ];
+	"NULL" -> "xsd:float" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "xsd:string" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "https://w3id.org/def/saref4city#KeyPerformanceIndicator" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:status" [ label = "owl:onProperty" ];
@@ -40,8 +40,8 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:clusterName" [ label = "owl:onProperty" ];
 	"NULL" -> "core:Payment" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Asset" [ label = "owl:someValuesFrom" ];
-	"NULL" -> "saref:Property" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Aggregator" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "saref:Property" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Incentive" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:MarketSettlement" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:consumes" [ label = "owl:onProperty" ];
@@ -54,6 +54,7 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:CustomerCluster" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "core:Transaction" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Customer" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:Index" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "xsd:dateTime" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:isOwnedBy" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasTransaction" [ label = "owl:onProperty" ];
@@ -69,6 +70,7 @@ node [shape = rectangle, color="orange"]; "core:Phase" "core:CustomerCluster" "c
 	"NULL" -> "core:SmartContract" [ label = "owl:someValuesFrom" ];
 	"NULL" -> "rdfs:Literal" [ label = "owl:allValuesFrom" ];
 	"NULL" -> "core:Sector" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "core:hasIndex" [ label = "owl:onProperty" ];
 	"NULL" -> "https://w3id.org/def/openadr#belongsTo" [ label = "owl:onProperty" ];
 	"NULL" -> "saref:isRelatedToMeasurement" [ label = "owl:onProperty" ];
 	"NULL" -> "core:hasProfile" [ label = "owl:onProperty" ];

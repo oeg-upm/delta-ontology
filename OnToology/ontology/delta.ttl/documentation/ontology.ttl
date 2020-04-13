@@ -14,7 +14,7 @@
                                                                           "Andrea Cimmino" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.1.6" .
+                                       owl:versionInfo "0.1.7" .
 
 #################################################################
 #    Annotation properties
@@ -93,6 +93,12 @@
 :hasIncentive rdf:type owl:ObjectProperty ;
               rdfs:comment "A relation between a property and its incentives associated" ;
               rdfs:label "has incentive" .
+
+
+###  http://delta.linkeddata.es/def/core#hasIndex
+:hasIndex rdf:type owl:ObjectProperty ;
+          rdfs:comment "Link between a Virtual Node and its index" ;
+          rdfs:label "has index" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasPayment
@@ -190,6 +196,14 @@
                                                    rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ,
                                                                     "A spatial representation for a given feature." ;
                                                    rdfs:label "hasGeometry" .
+
+
+###  https://w3id.org/def/openadr#belongsTo
+<https://w3id.org/def/openadr#belongsTo> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/def/openadr#hasDuration
+<https://w3id.org/def/openadr#hasDuration> rdf:type owl:ObjectProperty .
 
 
 ###  https://w3id.org/def/openadr#sendsEvent
@@ -463,6 +477,12 @@
            rdfs:label "Incentive" .
 
 
+###  http://delta.linkeddata.es/def/core#Index
+:Index rdf:type owl:Class ;
+       rdfs:comment "Reliability and Fairness Index that refers to the distribution network configuration" ;
+       rdfs:label "Index" .
+
+
 ###  http://delta.linkeddata.es/def/core#MarketSettlement
 :MarketSettlement rdf:type owl:Class .
 
@@ -566,6 +586,10 @@
              rdfs:subClassOf <https://w3id.org/def/openadr#VEN> ,
                              <https://w3id.org/def/openadr#VTN> ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasIndex ;
+                               owl:someValuesFrom :Index
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :hasSmartContract ;
                                owl:someValuesFrom :SmartContract
                              ] ,
@@ -630,6 +654,18 @@
                                              rdfs:comment "A temporal interval or instant." ;
                                              rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
                                              rdfs:label "Temporal entity" .
+
+
+###  https://w3id.org/def/openadr#Asset
+<https://w3id.org/def/openadr#Asset> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/openadr#VEN
+<https://w3id.org/def/openadr#VEN> rdf:type owl:Class .
+
+
+###  https://w3id.org/def/openadr#VTN
+<https://w3id.org/def/openadr#VTN> rdf:type owl:Class .
 
 
 ###  https://w3id.org/def/saref4city#KeyPerfomanceIndicatorAssessement

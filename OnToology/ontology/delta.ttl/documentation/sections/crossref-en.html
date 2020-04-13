@@ -54,6 +54,9 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#Incentive" title="http://delta.linkeddata.es/def/core#Incentive">Incentive</a>
       </li>
       <li>
+         <a href="#Index" title="http://delta.linkeddata.es/def/core#Index">Index</a>
+      </li>
+      <li>
          <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">
             <span>instant</span>
          </a>
@@ -149,6 +152,7 @@ This section provides details for each class and property defined by DELTA ontol
          <dt>has super-classes</dt>
          <dd>
             <span class="dotted" title="https://w3id.org/def/openadr#VTN">v t n</span>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -164,6 +168,7 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>
             <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/def/openadr#Asset">asset</span>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -375,6 +380,7 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>
             <a href="#https://w3id.org/saref#Device" title="https://w3id.org/saref#Device">Device</a>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/def/openadr#VEN">v e n</span>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -423,6 +429,17 @@ This section provides details for each class and property defined by DELTA ontol
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Incentive</p>
       <div class="comment">
          <span class="markdown">Incentive (usually monetary) associated to energy values</span>
+      </div>
+   </div>
+   <div class="entity" id="Index">
+      <h3>Index<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Index</p>
+      <div class="comment">
+         <span class="markdown">Reliability and Fairness Index that refers to the distribution network configuration</span>
       </div>
    </div>
    <div class="entity" id="http://www.w3.org/2006/time#Instant">
@@ -825,7 +842,9 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted" title="https://w3id.org/def/openadr#VEN">v e n</span>, <span class="dotted" title="https://w3id.org/def/openadr#VTN">v t n</span>
+            <span class="dotted" title="https://w3id.org/def/openadr#VEN">v e n</span>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/def/openadr#VTN">v t n</span>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -885,6 +904,9 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
+      </li>
+      <li>
+         <a href="#hasIndex" title="http://delta.linkeddata.es/def/core#hasIndex">has index</a>
       </li>
       <li>
          <a href="#hasPayment" title="http://delta.linkeddata.es/def/core#hasPayment">has payment</a>
@@ -1089,6 +1111,17 @@ This section provides details for each class and property defined by DELTA ontol
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasIncentive</p>
       <div class="comment">
          <span class="markdown">A relation between a property and its incentives associated</span>
+      </div>
+   </div>
+   <div class="entity" id="hasIndex">
+      <h3>has index<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasIndex</p>
+      <div class="comment">
+         <span class="markdown">Link between a Virtual Node and its index</span>
       </div>
    </div>
    <div class="entity" id="hasPayment">
