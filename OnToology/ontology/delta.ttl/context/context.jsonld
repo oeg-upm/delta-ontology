@@ -11,11 +11,18 @@
     "UnitOfMeasure" : {
       "@id" : "https://w3id.org/saref#UnitOfMeasure"
     },
+    "hasIndex" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasIndex",
+      "@type" : "@id"
+    },
     "Reward" : {
       "@id" : "http://delta.linkeddata.es/def/core#Reward"
     },
     "EnergyMarket" : {
       "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket"
+    },
+    "Index" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Index"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"

@@ -19,7 +19,7 @@
         <terms:creator>Andrea Cimmino</terms:creator>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.1.6</owl:versionInfo>
+        <owl:versionInfo>0.1.7</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -166,6 +166,16 @@
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIncentive">
         <rdfs:comment>A relation between a property and its incentives associated</rdfs:comment>
         <rdfs:label>has incentive</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#hasIndex -->
+
+
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIndex">
+        <rdfs:comment>Link between a Virtual Node and its index</rdfs:comment>
+        <rdfs:label>has index</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -328,6 +338,20 @@
         <rdfs:isDefinedBy>A spatial representation for a given feature.</rdfs:isDefinedBy>
         <rdfs:label>hasGeometry</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/openadr#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#belongsTo"/>
+    
+
+
+    <!-- https://w3id.org/def/openadr#hasDuration -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasDuration"/>
     
 
 
@@ -779,6 +803,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#Index -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Index">
+        <rdfs:comment>Reliability and Fairness Index that refers to the distribution network configuration</rdfs:comment>
+        <rdfs:label>Index</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#MarketSettlement -->
 
 
@@ -944,6 +978,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VTN"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasIndex"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Index"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasSmartContract"/>
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
             </owl:Restriction>
@@ -1043,6 +1083,27 @@
         <rdfs:isDefinedBy>http://www.w3.org/2006/time#</rdfs:isDefinedBy>
         <rdfs:label>Temporal entity</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/openadr#Asset -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#Asset"/>
+    
+
+
+    <!-- https://w3id.org/def/openadr#VEN -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#VEN"/>
+    
+
+
+    <!-- https://w3id.org/def/openadr#VTN -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#VTN"/>
     
 
 

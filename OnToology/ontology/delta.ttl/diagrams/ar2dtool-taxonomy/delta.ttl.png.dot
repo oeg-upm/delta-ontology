@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "time:Instant" "core:Frequency" "core:Customer" "saref:Profile" "core:VirtualNode" "saref:Power" "core:Sector" "saref:Energy" "saref:Device" "core:Consumer" "core:Aggregator" "core:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "core:Prosumer" "saref:Measurement" "core:Reward" "time:TemporalEntity" "saref:Price" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "core:Voltage" "saref:Property" "core:Profile" "core:FEID" "core:Payment" ; /*classes style*/
+node [shape = rectangle, color="black"]; "https://w3id.org/def/openadr#VEN" "time:Instant" "core:Frequency" "core:Customer" "saref:Profile" "core:VirtualNode" "saref:Power" "core:Sector" "saref:Energy" "https://w3id.org/def/openadr#VTN" "saref:Device" "core:Consumer" "core:Aggregator" "core:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "core:Prosumer" "https://w3id.org/def/openadr#Asset" "saref:Measurement" "core:Reward" "time:TemporalEntity" "saref:Price" "core:Asset" "http://www.opengis.net/ont/geosparql#Feature" "core:Voltage" "saref:Property" "core:Profile" "core:FEID" "core:Payment" ; /*classes style*/
 	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"core:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
 	"core:Measurement" -> "saref:Measurement" [ label = "rdfs:subClassOf" ];
