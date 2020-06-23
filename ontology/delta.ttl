@@ -14,9 +14,9 @@
 
 <http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
                                        owl:imports <https://w3id.org/def/openadr> ;
+                                       owl:versionInfo "0.1.8" ;
                                        <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
                                                                           "Andrea Cimmino" ;
-                                       owl:versionInfo "0.1.7" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        <http://purl.org/dc/terms/creator> "Alba Fernández Izquierdo" ;
                                        dc:title "DELTA ontology" ;
@@ -123,6 +123,12 @@ core:hasProfile rdf:type owl:ObjectProperty ;
                 rdfs:label "has profile" .
 
 
+###  http://delta.linkeddata.es/def/core#hasRedundancy
+core:hasRedundancy rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Redundancy of  a FEID" ;
+                   rdfs:label "has redundancy" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasReward
 core:hasReward rdf:type owl:ObjectProperty ;
                rdfs:domain core:Customer ;
@@ -193,6 +199,18 @@ core:owns rdf:type owl:ObjectProperty ;
 ###  http://delta.linkeddata.es/def/core#quantifiesKPI
 core:quantifiesKPI rdf:type owl:ObjectProperty ;
                    rdfs:isDefinedBy <https://w3id.org/def/saref4city> .
+
+
+###  http://delta.linkeddata.es/def/core#requests
+core:requests rdf:type owl:ObjectProperty ;
+              rdfs:comment "Relationship between a DR request and the measurement of the property it needs" ;
+              rdfs:label "requests" .
+
+
+###  http://delta.linkeddata.es/def/core#sendsRequest
+core:sendsRequest rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relationship between a FEID and its request" ;
+                  rdfs:label "sends requests" .
 
 
 ###  http://www.opengis.net/ont/geosparql#hasGeometry
@@ -288,9 +306,23 @@ core:granularity rdf:type owl:DatatypeProperty ;
                  rdfs:label "granularity" .
 
 
+###  http://delta.linkeddata.es/def/core#hasConstraint
+core:hasConstraint rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:float ;
+                   rdfs:comment "Constraint associated to a DR request" ;
+                   rdfs:label "has constraint" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasDescription
 core:hasDescription rdf:type owl:DatatypeProperty ;
                     rdfs:label "description" .
+
+
+###  http://delta.linkeddata.es/def/core#hasOccurrence
+core:hasOccurrence rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:dateTimeStamp ;
+                   rdfs:comment "Date when a DR request is sent" ;
+                   rdfs:label "has occurrence" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasPoints
@@ -300,15 +332,48 @@ core:hasPoints rdf:type owl:DatatypeProperty ;
                rdfs:label "has points" .
 
 
+###  http://delta.linkeddata.es/def/core#hasReliability
+core:hasReliability rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:float .
+
+
 ###  http://delta.linkeddata.es/def/core#href
 core:href rdf:type owl:DatatypeProperty ;
           rdfs:comment "URI of the endpoint" ;
           rdfs:label "href" .
 
 
+###  http://delta.linkeddata.es/def/core#implementsDRType
+core:implementsDRType rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "DR type that is implemented by the FEID (e.g., implicit or explicit)" ;
+                      rdfs:label "implements DR type" .
+
+
+###  http://delta.linkeddata.es/def/core#ip
+core:ip rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string ;
+        rdfs:comment "IP address of a thing" ;
+        rdfs:label "ip" .
+
+
+###  http://delta.linkeddata.es/def/core#isAvailable
+core:isAvailable rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:comment "Availability of a FEID" ;
+                 rdfs:label "is available" .
+
+
 ###  http://delta.linkeddata.es/def/core#name
 core:name rdf:type owl:DatatypeProperty ;
           rdfs:isDefinedBy "name" .
+
+
+###  http://delta.linkeddata.es/def/core#port
+core:port rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:integer ;
+          rdfs:comment "Address of the service within the system." ;
+          rdfs:label "port" .
 
 
 ###  http://delta.linkeddata.es/def/core#sectorName
@@ -433,6 +498,24 @@ core:CustomerCluster rdf:type owl:Class ;
                      rdfs:label "Customer cluster" .
 
 
+###  http://delta.linkeddata.es/def/core#DRRequest
+core:DRRequest rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty core:requests ;
+                                 owl:someValuesFrom core:Measurement
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty core:hasConstraint ;
+                                 owl:someValuesFrom xsd:float
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty core:hasOccurrence ;
+                                 owl:someValuesFrom xsd:dateTimeStamp
+                               ] ;
+               rdfs:comment "Action that is requested by a FEID" ;
+               rdfs:label "DR request" .
+
+
 ###  http://delta.linkeddata.es/def/core#EnergyMarket
 core:EnergyMarket rdf:type owl:Class ;
                   rdfs:label "Energy Market" .
@@ -443,8 +526,16 @@ core:FEID rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/def/openadr#VEN> ,
                           saref:Device ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty core:hasRedundancy ;
+                            owl:someValuesFrom time:Duration
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty core:isLocatedAt ;
                             owl:someValuesFrom core:Sector
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty core:sendsRequest ;
+                            owl:someValuesFrom core:DRRequest
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty saref:consistsOf ;
@@ -608,6 +699,10 @@ core:VirtualNode rdf:type owl:Class ;
                                    owl:allValuesFrom core:Profile
                                  ] ,
                                  [ rdf:type owl:Restriction ;
+                                   owl:onProperty core:hasReliability ;
+                                   owl:someValuesFrom xsd:float
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty core:href ;
                                    owl:someValuesFrom owl:rational
                                  ] ;
@@ -638,6 +733,10 @@ core:Voltage rdf:type owl:Class ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
 <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Duration
+time:Duration rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2006/time#Instant
@@ -787,15 +886,28 @@ saref:UnitOfMeasure rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://delta.linkeddata.es/def/core#DownFlexibility
-core:DownFlexibility rdf:type owl:NamedIndividual ;
-                     rdfs:label "Down flexibility" .
+###  http://delta.linkeddata.es/def/core#ConsumptionCapacity
+core:ConsumptionCapacity rdf:type owl:NamedIndividual ,
+                                  saref:Power ;
+                         rdfs:label "Consumption capacity" .
+
+
+###  http://delta.linkeddata.es/def/core#ContractedPower
+core:ContractedPower rdf:type owl:NamedIndividual ,
+                              saref:Power ;
+                     rdfs:label "Contracted power" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyConsumption
 core:EnergyConsumption rdf:type owl:NamedIndividual ,
                                 saref:Energy ;
                        rdfs:label "Energy consumption" .
+
+
+###  http://delta.linkeddata.es/def/core#EnergyDownFlexibility
+core:EnergyDownFlexibility rdf:type owl:NamedIndividual ,
+                                    saref:Energy ;
+                           rdfs:label "Energy down flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGeneration
@@ -814,6 +926,18 @@ core:EnergyGenerationForecast rdf:type owl:NamedIndividual ,
 core:EnergyLoadForecast rdf:type owl:NamedIndividual ,
                                  saref:Energy ;
                         rdfs:label "Energy load forecast" .
+
+
+###  http://delta.linkeddata.es/def/core#EnergyUpFlexibility
+core:EnergyUpFlexibility rdf:type owl:NamedIndividual ,
+                                  saref:Energy ;
+                         rdfs:label "Energy up flexibility" .
+
+
+###  http://delta.linkeddata.es/def/core#GenerationCapacity
+core:GenerationCapacity rdf:type owl:NamedIndividual ,
+                                 saref:Power ;
+                        rdfs:label "Generation capacity" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerConsumption
@@ -852,9 +976,10 @@ core:PriceDayAhead rdf:type owl:NamedIndividual .
 core:PriceIntraDay rdf:type owl:NamedIndividual .
 
 
-###  http://delta.linkeddata.es/def/core#UpFlexibility
-core:UpFlexibility rdf:type owl:NamedIndividual ;
-                   rdfs:label "Up flexibility" .
+###  http://delta.linkeddata.es/def/core#StorageCapacity
+core:StorageCapacity rdf:type owl:NamedIndividual ,
+                              saref:Energy ;
+                     rdfs:label "Storage capacity" .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
