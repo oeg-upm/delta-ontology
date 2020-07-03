@@ -582,17 +582,6 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#hasOccurrence -->
-
-
-    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasOccurrence">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <rdfs:comment>Date when a DR request is sent</rdfs:comment>
-        <rdfs:label>has occurrence</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://delta.linkeddata.es/def/core#hasPoints -->
 
 
@@ -672,6 +661,17 @@
 
     <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#name">
         <rdfs:isDefinedBy>name</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#occurs -->
+
+
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#occurs">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Date when a DR request is sent</rdfs:comment>
+        <rdfs:label>has occurrence</rdfs:label>
     </owl:DatatypeProperty>
     
 

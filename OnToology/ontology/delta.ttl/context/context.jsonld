@@ -92,6 +92,10 @@
     "Instant" : {
       "@id" : "http://www.w3.org/2006/time#Instant"
     },
+    "occurs" : {
+      "@id" : "http://delta.linkeddata.es/def/core#occurs",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+    },
     "Customer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Customer"
     },
@@ -352,10 +356,6 @@
     "isOwnedBy" : {
       "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy",
       "@type" : "@id"
-    },
-    "hasOccurrence" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasOccurrence",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
     },
     "owns" : {
       "@id" : "http://delta.linkeddata.es/def/core#owns",

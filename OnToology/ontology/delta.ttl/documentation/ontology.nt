@@ -290,12 +290,6 @@
 <http://delta.linkeddata.es/def/core#hasIp> <http://www.w3.org/2000/01/rdf-schema#comment> "IP address of a thing" .
 <http://delta.linkeddata.es/def/core#hasIp> <http://www.w3.org/2000/01/rdf-schema#label> "ip" .
 # 
-# http://delta.linkeddata.es/def/core#hasOccurrence
-<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when a DR request is sent" .
-<http://delta.linkeddata.es/def/core#hasOccurrence> <http://www.w3.org/2000/01/rdf-schema#label> "has occurrence" .
-# 
 # http://delta.linkeddata.es/def/core#hasPoints
 <http://delta.linkeddata.es/def/core#hasPoints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://delta.linkeddata.es/def/core#hasPoints> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
@@ -338,6 +332,12 @@
 # http://delta.linkeddata.es/def/core#name
 <http://delta.linkeddata.es/def/core#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://delta.linkeddata.es/def/core#name> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "name" .
+# 
+# http://delta.linkeddata.es/def/core#occurs
+<http://delta.linkeddata.es/def/core#occurs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://delta.linkeddata.es/def/core#occurs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
+<http://delta.linkeddata.es/def/core#occurs> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when a DR request is sent" .
+<http://delta.linkeddata.es/def/core#occurs> <http://www.w3.org/2000/01/rdf-schema#label> "has occurrence" .
 # 
 # http://delta.linkeddata.es/def/core#sectorName
 <http://delta.linkeddata.es/def/core#sectorName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
