@@ -332,6 +332,19 @@ core:hasDescription rdf:type owl:DatatypeProperty ;
                     rdfs:label "description" .
 
 
+###  http://delta.linkeddata.es/def/core#hasHref
+core:hasHref rdf:type owl:DatatypeProperty ;
+             rdfs:comment "URI of the endpoint" ;
+             rdfs:label "href" .
+
+
+###  http://delta.linkeddata.es/def/core#hasIp
+core:hasIp rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:comment "IP address of a thing" ;
+           rdfs:label "ip" .
+
+
 ###  http://delta.linkeddata.es/def/core#hasOccurrence
 core:hasOccurrence rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:dateTimeStamp ;
@@ -344,6 +357,13 @@ core:hasPoints rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:float ;
                rdfs:comment "Points that are used by the DELTA platform to calculate the customers rewards" ;
                rdfs:label "has points" .
+
+
+###  http://delta.linkeddata.es/def/core#hasPort
+core:hasPort rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "Address of the service within the system." ;
+             rdfs:label "port" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasReliability
@@ -364,24 +384,11 @@ core:hasViolationValue rdf:type owl:DatatypeProperty ;
                                   "has violation value" .
 
 
-###  http://delta.linkeddata.es/def/core#href
-core:href rdf:type owl:DatatypeProperty ;
-          rdfs:comment "URI of the endpoint" ;
-          rdfs:label "href" .
-
-
 ###  http://delta.linkeddata.es/def/core#implementsDRType
 core:implementsDRType rdf:type owl:DatatypeProperty ;
                       rdfs:range xsd:string ;
                       rdfs:comment "DR type that is implemented by the FEID (e.g., implicit or explicit)" ;
                       rdfs:label "implements DR type" .
-
-
-###  http://delta.linkeddata.es/def/core#ip
-core:ip rdf:type owl:DatatypeProperty ;
-        rdfs:range xsd:string ;
-        rdfs:comment "IP address of a thing" ;
-        rdfs:label "ip" .
 
 
 ###  http://delta.linkeddata.es/def/core#isAvailable
@@ -394,13 +401,6 @@ core:isAvailable rdf:type owl:DatatypeProperty ;
 ###  http://delta.linkeddata.es/def/core#name
 core:name rdf:type owl:DatatypeProperty ;
           rdfs:isDefinedBy "name" .
-
-
-###  http://delta.linkeddata.es/def/core#port
-core:port rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:integer ;
-          rdfs:comment "Address of the service within the system." ;
-          rdfs:label "port" .
 
 
 ###  http://delta.linkeddata.es/def/core#sectorName
@@ -436,6 +436,20 @@ core:type rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://delta.linkeddata.es/def/core#Action
+core:Action rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty core:isRequestedTo ;
+                              owl:someValuesFrom core:VirtualNode
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty core:requiresMeasurement ;
+                              owl:someValuesFrom core:Measurement
+                            ] ;
+            rdfs:comment "Action that is requested by a FEID" ;
+            rdfs:label "DR request" .
+
 
 ###  http://delta.linkeddata.es/def/core#Aggregator
 core:Aggregator rdf:type owl:Class ;
@@ -525,20 +539,6 @@ core:CustomerCluster rdf:type owl:Class ;
                      rdfs:label "Customer cluster" .
 
 
-###  http://delta.linkeddata.es/def/core#DRRequest
-core:DRRequest rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty core:isRequestedTo ;
-                                 owl:someValuesFrom core:VirtualNode
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty core:requiresMeasurement ;
-                                 owl:someValuesFrom core:Measurement
-                               ] ;
-               rdfs:comment "Action that is requested by a FEID" ;
-               rdfs:label "DR request" .
-
-
 ###  http://delta.linkeddata.es/def/core#EnergyMarket
 core:EnergyMarket rdf:type owl:Class ;
                   rdfs:label "Energy Market" .
@@ -548,6 +548,10 @@ core:EnergyMarket rdf:type owl:Class ;
 core:FEID rdf:type owl:Class ;
           rdfs:subClassOf <https://saref.etsi.org/core/Device> ,
                           <https://w3id.org/def/openadr#VEN> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty core:detects ;
+                            owl:someValuesFrom core:Violation
+                          ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty core:hasRedundancy ;
                             owl:someValuesFrom time:Duration
@@ -573,7 +577,7 @@ core:FEID rdf:type owl:Class ;
                             owl:allValuesFrom core:Transaction
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty core:href ;
+                            owl:onProperty core:hasHref ;
                             owl:allValuesFrom xsd:string
                           ] ;
           rdfs:comment "An intelligent device, responsible for collecting information stemming from the field devices (home appliances, distributed energy resources, storage components etc.) to the DELTA Virtual Nodes and facilitate end-to-end communication of signals from/to the Aggregator and to/from the field devices. FEIDs will be equipped with smart meters measuring energy related data (e.g. consumption, generation, emissions, power coefficient, etc.) and through an intelligent lightweight toolkit compute real-time flexibility, providing them as input to the DVN Agent using fog computing techniques, aligned to a strategy (i.e. time interval) imposed to the specific Node by the Aggregator." ;
@@ -705,7 +709,7 @@ core:Violation rdf:type owl:Class ;
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty core:requests ;
-                                 owl:someValuesFrom core:DRRequest
+                                 owl:someValuesFrom core:Action
                                ] ;
                rdfs:comment "Violation of the grid" ;
                rdfs:label "Violation" .
@@ -732,12 +736,12 @@ core:VirtualNode rdf:type owl:Class ;
                                    owl:allValuesFrom core:Profile
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty core:hasReliability ;
-                                   owl:someValuesFrom xsd:float
+                                   owl:onProperty core:hasHref ;
+                                   owl:someValuesFrom owl:rational
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty core:href ;
-                                   owl:someValuesFrom owl:rational
+                                   owl:onProperty core:hasReliability ;
+                                   owl:someValuesFrom xsd:float
                                  ] ;
                  rdfs:comment "An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator." ;
                  rdfs:label "Virtual node" .
