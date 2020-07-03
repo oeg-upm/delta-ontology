@@ -345,8 +345,8 @@ core:hasIp rdf:type owl:DatatypeProperty ;
            rdfs:label "ip" .
 
 
-###  http://delta.linkeddata.es/def/core#hasOccurrence
-core:hasOccurrence rdf:type owl:DatatypeProperty ;
+###  http://delta.linkeddata.es/def/core#occurs
+core:occurs rdf:type owl:DatatypeProperty ;
                    rdfs:range xsd:dateTimeStamp ;
                    rdfs:comment "Date when a DR request is sent" ;
                    rdfs:label "has occurrence" .
