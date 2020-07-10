@@ -27,16 +27,17 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#CustomerCluster">Customer cluster</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
+         <a href="#https://saref.etsi.org/saref4ener/Device" title="https://saref.etsi.org/saref4ener/Device">Device</a>
       </li>
       <li>
          <a href="#Action" title="http://delta.linkeddata.es/def/core#Action">DR request</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+         <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
       </li>
       <li>
-         <a href="#EnergyMarket" title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy Market</a>
+         <a href="#EnergyMarket"
+            title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy Market</a>
       </li>
       <li>
          <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
@@ -87,12 +88,10 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#Phase" title="http://delta.linkeddata.es/def/core#Phase">Phase</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+         <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">
-            <span>price</span>
-         </a>
+         <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
       </li>
       <li>
          <a href="#Profile" title="http://delta.linkeddata.es/def/core#Profile">Profile</a>
@@ -130,9 +129,7 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#Transaction" title="http://delta.linkeddata.es/def/core#Transaction">Transaction</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/UnitOfMeasure" title="https://saref.etsi.org/core/UnitOfMeasure">
-            <span>unit of measure</span>
-         </a>
+         <a href="#https://saref.etsi.org/core/UnitOfMeasure" title="https://saref.etsi.org/core/UnitOfMeasure">Unit of measure</a>
       </li>
       <li>
          <a href="#Violation" title="http://delta.linkeddata.es/def/core#Violation">Violation</a>
@@ -172,8 +169,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/def/openadr#Asset">asset</span>
+            <a href="#https://saref.etsi.org/saref4ener/Device" title="https://saref.etsi.org/saref4ener/Device">Device</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -255,13 +251,13 @@ This section provides details for each class and property defined by DELTA ontol
          <span class="markdown">Groups of customers</span>
       </div>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core/Device">
+   <div class="entity" id="https://saref.etsi.org/saref4ener/Device">
       <h3>Device<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core/Device</p>
+         <strong>IRI:</strong> https://saref.etsi.org/saref4ener/Device</p>
       <div class="comment">
          <span class="markdown">A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended.</span>
       </div>
@@ -307,13 +303,13 @@ This section provides details for each class and property defined by DELTA ontol
          <dd/>
       </dl>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core/Energy">
+   <div class="entity" id="https://saref.etsi.org/saref4ener/Energy">
       <h3>Energy<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core/Energy</p>
+         <strong>IRI:</strong> https://saref.etsi.org/saref4ener/Energy</p>
       <div class="comment">
          <span class="markdown">A property related to measurements that are characterized  by a value measured in energy units</span>
       </div>
@@ -387,6 +383,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/FeatureOfInterest</p>
+      <div class="comment">
+         <span class="markdown">A feature of interest represents any real world entity from which a property is measured.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
@@ -405,7 +404,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
+            <a href="#https://saref.etsi.org/saref4ener/Device" title="https://saref.etsi.org/saref4ener/Device">Device</a>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="https://w3id.org/def/openadr#VEN">v e n</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -573,7 +572,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">price</a>
+            <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -585,14 +584,17 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Phase</p>
+      <div class="comment">
+         <span class="markdown">Phase of a measurement</span>
+      </div>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core/Power">
+   <div class="entity" id="https://saref.etsi.org/saref4ener/Power">
       <h3>Power<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core/Power</p>
+         <strong>IRI:</strong> https://saref.etsi.org/saref4ener/Power</p>
       <div class="comment">
          <span class="markdown">A property related to measurements that are characterized  by a value measured in power units</span>
       </div>
@@ -623,12 +625,21 @@ This section provides details for each class and property defined by DELTA ontol
       </dl>
    </div>
    <div class="entity" id="https://saref.etsi.org/core/Price">
-      <h3>price<sup class="type-c" title="class">c</sup>
+      <h3>Price<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/Price</p>
+      <div class="comment">
+         <span class="markdown">A saref:Property crelated to some measurements that are characterized by a certain value that is measured using saref:Currency</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://saref.etsi.org/core/">https://saref.etsi.org/core/</a>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -639,6 +650,15 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>
             <a href="#Payment" title="http://delta.linkeddata.es/def/core#Payment">Payment</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#PriceAS" title="http://delta.linkeddata.es/def/core#PriceAS">Price AS</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PriceDayAhead"
+               title="http://delta.linkeddata.es/def/core#PriceDayAhead">Price day ahead</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PriceIntraDay"
+               title="http://delta.linkeddata.es/def/core#PriceIntraDay">Price intra day</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -691,6 +711,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/Property</p>
+      <div class="comment">
+         <span class="markdown">A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
@@ -700,12 +723,12 @@ This section provides details for each class and property defined by DELTA ontol
          <dd/>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Frequency" title="http://delta.linkeddata.es/def/core#Frequency">Frequency</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Voltage" title="http://delta.linkeddata.es/def/core#Voltage">Voltage</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">price</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -776,6 +799,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#SmartContract</p>
+      <div class="comment">
+         <span class="markdown">Computer program or a transaction protocol which is intended to automatically execute, control or document legally relevant events and actions according to the terms of a contract or an agreement</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -794,6 +820,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#SystemConstraint</p>
+      <div class="comment">
+         <span class="markdown">Constraints of the grid that limits a system</span>
+      </div>
    </div>
    <div class="entity" id="http://www.w3.org/2006/time#TemporalEntity">
       <h3>Temporal entity<sup class="type-c" title="class">c</sup>
@@ -817,7 +846,8 @@ This section provides details for each class and property defined by DELTA ontol
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasDuration" title="http://delta.linkeddata.es/def/core#hasDuration">has duration</a>
+            <a href="#hasDurationCode"
+               title="http://delta.linkeddata.es/def/core#hasDurationCode">has duration code</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isValidDuringPeriod"
                title="http://delta.linkeddata.es/def/core#isValidDuringPeriod">is valid during period</a>
             <sup class="type-op" title="object property">op</sup>
@@ -847,16 +877,19 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Transaction</p>
       <div class="comment">
-         <span class="markdown">Transaction between entities that will be store in the blockchain</span>
+         <span class="markdown">Transaction between entities that will be store in the smart contract</span>
       </div>
    </div>
    <div class="entity" id="https://saref.etsi.org/core/UnitOfMeasure">
-      <h3>unit of measure<sup class="type-c" title="class">c</sup>
+      <h3>Unit of measure<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/UnitOfMeasure</p>
+      <div class="comment">
+         <span class="markdown">The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
@@ -924,10 +957,16 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#allocates" title="http://delta.linkeddata.es/def/core#allocates">allocates</a>
       </li>
       <li>
+         <a href="#https://w3id.org/def/openadr#belongsTo" title="https://w3id.org/def/openadr#belongsTo">belongs to</a>
+      </li>
+      <li>
          <a href="#https://saref.etsi.org/core/consistsOf" title="https://saref.etsi.org/core/consistsOf">consists of</a>
       </li>
       <li>
          <a href="#consumes" title="http://delta.linkeddata.es/def/core#consumes">consumes</a>
+      </li>
+      <li>
+         <a href="#detects" title="http://delta.linkeddata.es/def/core#detects">detects</a>
       </li>
       <li>
          <a href="#hasAggregatedProperty"
@@ -945,10 +984,11 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#hasDeliveryTime">has delivery time</a>
       </li>
       <li>
-         <a href="#hasDuration" title="http://delta.linkeddata.es/def/core#hasDuration">has duration</a>
+         <a href="#https://w3id.org/def/openadr#hasDuration" title="https://w3id.org/def/openadr#hasDuration">has duration</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/hasFeatureOfInterest" title="https://saref.etsi.org/core/hasFeatureOfInterest">has feature of interest</a>
+         <a href="#hasDurationCode"
+            title="http://delta.linkeddata.es/def/core#hasDurationCode">has duration code</a>
       </li>
       <li>
          <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
@@ -1008,14 +1048,6 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#isOwnedBy" title="http://delta.linkeddata.es/def/core#isOwnedBy">is owned by</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/isRelatedToMeasurement"
-            title="https://saref.etsi.org/core/isRelatedToMeasurement">is related to measurement</a>
-      </li>
-      <li>
-         <a href="#isRelatedToProperty"
-            title="http://delta.linkeddata.es/def/core#isRelatedToProperty">is related to property</a>
-      </li>
-      <li>
          <a href="#isRequestedTo"
             title="http://delta.linkeddata.es/def/core#isRequestedTo">is requested to</a>
       </li>
@@ -1025,6 +1057,9 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/isAbout" title="https://saref.etsi.org/core/isAbout">isAbout</a>
+      </li>
+      <li>
+         <a href="#https://saref.etsi.org/core/isMeasurementOf" title="https://saref.etsi.org/core/isMeasurementOf">isMeasurementOf</a>
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/makesMeasurement" title="https://saref.etsi.org/core/makesMeasurement">makes measurement</a>
@@ -1039,12 +1074,13 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#owns" title="http://delta.linkeddata.es/def/core#owns">owns</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/saref4city/quantifiesKPI" title="https://saref.etsi.org/saref4city/quantifiesKPI">
-            <span>quantifies k p i</span>
-         </a>
+         <a href="#https://saref.etsi.org/saref4city/quantifiesKPI" title="https://saref.etsi.org/saref4city/quantifiesKPI">quantifies KPI</a>
       </li>
       <li>
-         <a href="#detects" title="http://delta.linkeddata.es/def/core#detects">Relationship between the FEID and the violation it detects</a>
+         <a href="#https://saref.etsi.org/core/relatesToMeasurement" title="https://saref.etsi.org/core/relatesToMeasurement">relates to measurement</a>
+      </li>
+      <li>
+         <a href="#https://saref.etsi.org/core/relatesToProperty" title="https://saref.etsi.org/core/relatesToProperty">relates to property</a>
       </li>
       <li>
          <a href="#requests" title="http://delta.linkeddata.es/def/core#requests">requests</a>
@@ -1052,6 +1088,9 @@ This section provides details for each class and property defined by DELTA ontol
       <li>
          <a href="#requiresMeasurement"
             title="http://delta.linkeddata.es/def/core#requiresMeasurement">requires measurement</a>
+      </li>
+      <li>
+         <a href="#https://w3id.org/def/openadr#sendsEvent" title="https://w3id.org/def/openadr#sendsEvent">sends event</a>
       </li>
    </ul>
    <div class="entity" id="agreesOn">
@@ -1061,6 +1100,10 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#agreesOn</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://delta.linkeddata.es/def/core</dd>
+      </dl>
    </div>
    <div class="entity" id="allocates">
       <h3>allocates<sup class="type-op" title="object property">op</sup>
@@ -1069,6 +1112,10 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#allocates</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://delta.linkeddata.es/def/core</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>is inverse of</dt>
@@ -1080,6 +1127,17 @@ This section provides details for each class and property defined by DELTA ontol
          </dl>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/def/openadr#belongsTo">
+      <h3>belongs to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#belongsTo</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a VE, Resource or Asset with the Group of targets associated</span>
+      </div>
+   </div>
    <div class="entity" id="https://saref.etsi.org/core/consistsOf">
       <h3>consists of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1087,10 +1145,13 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/consistsOf</p>
+      <div class="comment">
+         <span class="markdown">A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
-            <a href="https://w3id.org/saref">https://w3id.org/saref</a>
+            <a href="https://saref.etsi.org/core">https://saref.etsi.org/core</a>
          </dd>
       </dl>
    </div>
@@ -1101,6 +1162,20 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#consumes</p>
+      <div class="comment">
+         <span class="markdown">Relation between an aggregator and the market settlement it consumes</span>
+      </div>
+   </div>
+   <div class="entity" id="detects">
+      <h3>detects<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#detects</p>
+      <div class="comment">
+         <span class="markdown">Relationship between the FEID and the violation it detects</span>
+      </div>
    </div>
    <div class="entity" id="hasAggregatedProperty">
       <h3>has aggregated property<sup class="type-op" title="object property">op</sup>
@@ -1120,6 +1195,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasComfortSetting</p>
+      <div class="comment">
+         <span class="markdown">Relation to define the comfort settings of a system</span>
+      </div>
    </div>
    <div class="entity" id="hasCurrency">
       <h3>has currency<sup class="type-op" title="object property">op</sup>
@@ -1139,16 +1217,30 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasDeliveryTime</p>
+      <div class="comment">
+         <span class="markdown">Link to the delivery time</span>
+      </div>
    </div>
-   <div class="entity" id="hasDuration">
+   <div class="entity" id="https://w3id.org/def/openadr#hasDuration">
       <h3>has duration<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasDuration</p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#hasDuration</p>
       <div class="comment">
-         <span class="markdown">Duration of an event</span>
+         <span class="markdown">Relationship between an event and its duration</span>
+      </div>
+   </div>
+   <div class="entity" id="hasDurationCode">
+      <h3>has duration code<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasDurationCode</p>
+      <div class="comment">
+         <span class="markdown">Duration code of an event</span>
       </div>
       <div class="description">
          <dl>
@@ -1159,18 +1251,6 @@ This section provides details for each class and property defined by DELTA ontol
             </dd>
          </dl>
       </div>
-   </div>
-   <div class="entity" id="https://saref.etsi.org/core/hasFeatureOfInterest">
-      <h3>has feature of interest<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core/hasFeatureOfInterest</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>http://delta.linkeddata.es/def/core</dd>
-      </dl>
    </div>
    <div class="entity" id="hasIncentive">
       <h3>has incentive<sup class="type-op" title="object property">op</sup>
@@ -1201,6 +1281,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPayment</p>
+      <div class="comment">
+         <span class="markdown">Relation between a smart contract and the payment associated</span>
+      </div>
    </div>
    <div class="entity" id="hasPhase">
       <h3>has phase<sup class="type-op" title="object property">op</sup>
@@ -1209,6 +1292,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPhase</p>
+      <div class="comment">
+         <span class="markdown">Link between a phase and a measurement</span>
+      </div>
    </div>
    <div class="entity" id="hasProfile">
       <h3>has profile<sup class="type-op" title="object property">op</sup>
@@ -1280,6 +1366,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasSystemConstraint</p>
+      <div class="comment">
+         <span class="markdown">Link to the grid constraints of a system</span>
+      </div>
    </div>
    <div class="entity" id="hasTransaction">
       <h3>has transaction<sup class="type-op" title="object property">op</sup>
@@ -1288,6 +1377,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasTransaction</p>
+      <div class="comment">
+         <span class="markdown">Link between a smart contracts and the transactions it stores</span>
+      </div>
    </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#hasGeometry">
       <h3>hasGeometry<sup class="type-op" title="object property">op</sup>
@@ -1296,12 +1388,14 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://www.opengis.net/ont/geosparql#hasGeometry</p>
+      <div class="comment">
+         <span class="markdown">A spatial representation for a given feature.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
             <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a>
          </dd>
-         <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
       <div class="description">
          <dl>
@@ -1356,6 +1450,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/saref4city/isDerivedFrom</p>
+      <div class="comment">
+         <span class="markdown">is derived from</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
@@ -1406,26 +1503,6 @@ This section provides details for each class and property defined by DELTA ontol
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core/isRelatedToMeasurement">
-      <h3>is related to measurement<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core/isRelatedToMeasurement</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>http://delta.linkeddata.es/def/core</dd>
-      </dl>
-   </div>
-   <div class="entity" id="isRelatedToProperty">
-      <h3>is related to property<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isRelatedToProperty</p>
-   </div>
    <div class="entity" id="isRequestedTo">
       <h3>is requested to<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1433,6 +1510,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isRequestedTo</p>
+      <div class="comment">
+         <span class="markdown">Relationship between  an action and the virtual node in charge of perform it</span>
+      </div>
    </div>
    <div class="entity" id="isValidDuringPeriod">
       <h3>is valid during period<sup class="type-op" title="object property">op</sup>
@@ -1469,6 +1549,21 @@ This section provides details for each class and property defined by DELTA ontol
          <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
    </div>
+   <div class="entity" id="https://saref.etsi.org/core/isMeasurementOf">
+      <h3>isMeasurementOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/isMeasurementOf</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a measurement and the feature of interest whose quality was measured</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://delta.linkeddata.es/def/core</dd>
+      </dl>
+   </div>
    <div class="entity" id="https://saref.etsi.org/core/makesMeasurement">
       <h3>makes measurement<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1476,6 +1571,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/makesMeasurement</p>
+      <div class="comment">
+         <span class="markdown">A relationship specifying the property that can be measured by a certain device</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
@@ -1499,6 +1597,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/measuresProperty</p>
+      <div class="comment">
+         <span class="markdown">A relationship specifying the property that can be measured by a certain device</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
@@ -1525,26 +1626,51 @@ This section provides details for each class and property defined by DELTA ontol
       </div>
    </div>
    <div class="entity" id="https://saref.etsi.org/saref4city/quantifiesKPI">
-      <h3>quantifies k p i<sup class="type-op" title="object property">op</sup>
+      <h3>quantifies KPI<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/saref4city/quantifiesKPI</p>
+      <div class="comment">
+         <span class="markdown">quantifies KPI</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>
-            <a href="https://saref.etsi.org/saref4city">https://saref.etsi.org/saref4city</a>
+            <a href="https://saref.etsi.org/saref4city/v1.1.2/">https://saref.etsi.org/saref4city/v1.1.2/</a>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="detects">
-      <h3>Relationship between the FEID and the violation it detects<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="https://saref.etsi.org/core/relatesToMeasurement">
+      <h3>relates to measurement<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#detects</p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/relatesToMeasurement</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a property and the measurements it relates to</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://delta.linkeddata.es/def/core</dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://saref.etsi.org/core/relatesToProperty">
+      <h3>relates to property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/relatesToProperty</p>
+      <div class="comment">
+         <span class="markdown">A relationship between a measurement and the property it relates to</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>http://delta.linkeddata.es/def/core</dd>
+      </dl>
    </div>
    <div class="entity" id="requests">
       <h3>requests<sup class="type-op" title="object property">op</sup>
@@ -1568,6 +1694,17 @@ This section provides details for each class and property defined by DELTA ontol
          <span class="markdown">Relationship between a DR request and the needed measurement in order to solve a violation</span>
       </div>
    </div>
+   <div class="entity" id="https://w3id.org/def/openadr#sendsEvent">
+      <h3>sends event<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/openadr#sendsEvent</p>
+      <div class="comment">
+         <span class="markdown">A link between a node and the event it sends</span>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
@@ -1583,19 +1720,28 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#hasDescription">description</a>
       </li>
       <li>
-         <a href="#granularity" title="http://delta.linkeddata.es/def/core#granularity">granularity</a>
+         <a href="#hasCreationDateTime"
+            title="http://delta.linkeddata.es/def/core#hasCreationDateTime">has creation date time</a>
       </li>
       <li>
-         <a href="#occurs" title="http://delta.linkeddata.es/def/core#occurs">has occurrence</a>
+         <a href="#hasGranularity"
+            title="http://delta.linkeddata.es/def/core#hasGranularity">has granularity</a>
       </li>
       <li>
-         <a href="#hasPoints" title="http://delta.linkeddata.es/def/core#hasPoints">has points</a>
+         <a href="#hasHref" title="http://delta.linkeddata.es/def/core#hasHref">has href</a>
+      </li>
+      <li>
+         <a href="#hasIp" title="http://delta.linkeddata.es/def/core#hasIp">has ip</a>
+      </li>
+      <li>
+         <a href="#hasPoint" title="http://delta.linkeddata.es/def/core#hasPoint">has point</a>
+      </li>
+      <li>
+         <a href="#hasPort" title="http://delta.linkeddata.es/def/core#hasPort">has port</a>
       </li>
       <li>
          <a href="#hasReliability"
-            title="http://delta.linkeddata.es/def/core#hasReliability">
-            <span>has reliability</span>
-         </a>
+            title="http://delta.linkeddata.es/def/core#hasReliability">has reliability</a>
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/hasValue" title="https://saref.etsi.org/core/hasValue">has value</a>
@@ -1605,25 +1751,14 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#hasViolationType">has violation type</a>
       </li>
       <li>
-         <a href="#hasHref" title="http://delta.linkeddata.es/def/core#hasHref">href</a>
-      </li>
-      <li>
          <a href="#implementsDRType"
             title="http://delta.linkeddata.es/def/core#implementsDRType">implements DR type</a>
-      </li>
-      <li>
-         <a href="#hasIp" title="http://delta.linkeddata.es/def/core#hasIp">ip</a>
       </li>
       <li>
          <a href="#isAvailable" title="http://delta.linkeddata.es/def/core#isAvailable">is available</a>
       </li>
       <li>
-         <a href="#name" title="http://delta.linkeddata.es/def/core#name">
-            <span>name</span>
-         </a>
-      </li>
-      <li>
-         <a href="#hasPort" title="http://delta.linkeddata.es/def/core#hasPort">port</a>
+         <a href="#occurs" title="http://delta.linkeddata.es/def/core#occurs">occurs</a>
       </li>
       <li>
          <a href="#sectorName" title="http://delta.linkeddata.es/def/core#sectorName">sector name</a>
@@ -1632,10 +1767,7 @@ This section provides details for each class and property defined by DELTA ontol
          <a href="#status" title="http://delta.linkeddata.es/def/core#status">status</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core/timeStamp" title="https://saref.etsi.org/core/timeStamp">timestamp</a>
-      </li>
-      <li>
-         <a href="#type" title="http://delta.linkeddata.es/def/core#type">type</a>
+         <a href="#https://saref.etsi.org/core/hasTimestamp" title="https://saref.etsi.org/core/hasTimestamp">timestamp</a>
       </li>
       <li>
          <a href="#hasViolationValue"
@@ -1680,43 +1812,65 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasDescription</p>
    </div>
-   <div class="entity" id="granularity">
-      <h3>granularity<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="hasCreationDateTime">
+      <h3>has creation date time<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#granularity</p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasCreationDateTime</p>
       <div class="comment">
-         <span class="markdown">granularity of the profile (e.g., weekly, daily)</span>
+         <span class="markdown">Creation date of a profile</span>
       </div>
    </div>
-   <div class="entity" id="occurs">
-      <h3>has occurrence<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="hasGranularity">
+      <h3>has granularity<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#occurs</p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasGranularity</p>
       <div class="comment">
-         <span class="markdown">Date when a DR request is sent</span>
+         <span class="markdown">Granularity of the profile (e.g., weekly, daily)</span>
+      </div>
+   </div>
+   <div class="entity" id="hasHref">
+      <h3>has href<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasHref</p>
+      <div class="comment">
+         <span class="markdown">URI of the endpoint</span>
+      </div>
+   </div>
+   <div class="entity" id="hasIp">
+      <h3>has ip<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasIp</p>
+      <div class="comment">
+         <span class="markdown">IP address of a thing</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasPoints">
-      <h3>has points<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="hasPoint">
+      <h3>has point<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPoints</p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPoint</p>
       <div class="comment">
          <span class="markdown">Points that are used by the DELTA platform to calculate the customers rewards</span>
       </div>
@@ -1729,6 +1883,25 @@ This section provides details for each class and property defined by DELTA ontol
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasPort">
+      <h3>has port<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPort</p>
+      <div class="comment">
+         <span class="markdown">Address of the service within the system.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasReliability">
       <h3>has reliability<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1736,6 +1909,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasReliability</p>
+      <div class="comment">
+         <span class="markdown">Reliability associated to a virtual node</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -1752,6 +1928,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> https://saref.etsi.org/core/hasValue</p>
+      <div class="comment">
+         <span class="markdown">A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
@@ -1772,24 +1951,14 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasViolationType</p>
+      <div class="comment">
+         <span class="markdown">Relationship between a violation and its type, which can be overvoltage, undervoltage or overloading.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
+            <dd>{ "overloading" , "overvoltage" , "undervoltage" }</dd>
          </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasHref">
-      <h3>href<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasHref</p>
-      <div class="comment">
-         <span class="markdown">URI of the endpoint</span>
       </div>
    </div>
    <div class="entity" id="implementsDRType">
@@ -1800,33 +1969,12 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#implementsDRType</p>
       <div class="comment">
-         <span class="markdown">DR type that is implemented by the FEID (e.g., implicit or explicit)</span>
+         <span class="markdown">DR type that is implemented by the FEID, which can be implicit or explicit</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasIp">
-      <h3>ip<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasIp</p>
-      <div class="comment">
-         <span class="markdown">IP address of a thing</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
+            <dd>{ "explicit" , "implicit" }</dd>
          </dl>
       </div>
    </div>
@@ -1838,7 +1986,7 @@ This section provides details for each class and property defined by DELTA ontol
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#isAvailable</p>
       <div class="comment">
-         <span class="markdown">Availability of a FEID</span>
+         <span class="markdown">Value that indicates whether the FEID is available</span>
       </div>
       <div class="description">
          <dl>
@@ -1849,33 +1997,21 @@ This section provides details for each class and property defined by DELTA ontol
          </dl>
       </div>
    </div>
-   <div class="entity" id="name">
-      <h3>name<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="occurs">
+      <h3>occurs<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#name</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>http://delta.linkeddata.es/def/core</dd>
-      </dl>
-   </div>
-   <div class="entity" id="hasPort">
-      <h3>port<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#hasPort</p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#occurs</p>
       <div class="comment">
-         <span class="markdown">Address of the service within the system.</span>
+         <span class="markdown">Date when a DR request is sent</span>
       </div>
       <div class="description">
          <dl>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</span>
             </dd>
          </dl>
       </div>
@@ -1887,6 +2023,9 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#sectorName</p>
+      <div class="comment">
+         <span class="markdown">Name of a sector</span>
+      </div>
    </div>
    <div class="entity" id="status">
       <h3>status<sup class="type-dp" title="data property">dp</sup>
@@ -1899,33 +2038,20 @@ This section provides details for each class and property defined by DELTA ontol
          <span class="markdown">The final status as if the DVN fullfiled the request or it failed</span>
       </div>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core/timeStamp">
+   <div class="entity" id="https://saref.etsi.org/core/hasTimestamp">
       <h3>timestamp<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core/timeStamp</p>
+         <strong>IRI:</strong> https://saref.etsi.org/core/hasTimestamp</p>
+      <div class="comment">
+         <span class="markdown">A relationship stating the timestamp of an entity (e.g. a measurement).</span>
+      </div>
       <dl class="definedBy">
          <dt>Is defined by</dt>
          <dd>http://delta.linkeddata.es/def/core</dd>
       </dl>
-   </div>
-   <div class="entity" id="type">
-      <h3>type<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#type</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
-            </dd>
-         </dl>
-      </div>
    </div>
    <div class="entity" id="hasViolationValue">
       <h3>Value of the violation<sup class="type-dp" title="data property">dp</sup>
@@ -1999,6 +2125,17 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#PowerLoadForecast">Power load forecast</a>
       </li>
       <li>
+         <a href="#PriceAS" title="http://delta.linkeddata.es/def/core#PriceAS">Price AS</a>
+      </li>
+      <li>
+         <a href="#PriceDayAhead"
+            title="http://delta.linkeddata.es/def/core#PriceDayAhead">Price day ahead</a>
+      </li>
+      <li>
+         <a href="#PriceIntraDay"
+            title="http://delta.linkeddata.es/def/core#PriceIntraDay">Price intra day</a>
+      </li>
+      <li>
          <a href="#StorageCapacity"
             title="http://delta.linkeddata.es/def/core#StorageCapacity">Storage capacity</a>
       </li>
@@ -2013,7 +2150,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2028,7 +2165,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2043,7 +2180,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2058,7 +2195,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2073,7 +2210,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2088,7 +2225,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2103,7 +2240,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2118,7 +2255,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2133,7 +2270,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2148,7 +2285,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2163,7 +2300,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2178,7 +2315,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2193,7 +2330,52 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
+            <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceAS">
+      <h3>Price AS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PriceAS</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceDayAhead">
+      <h3>Price day ahead<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PriceDayAhead</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PriceIntraDay">
+      <h3>Price intra day<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#PriceIntraDay</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2208,7 +2390,7 @@ This section provides details for each class and property defined by DELTA ontol
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
+            <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

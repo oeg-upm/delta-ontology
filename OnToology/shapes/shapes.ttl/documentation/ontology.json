@@ -1,0 +1,2750 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#NodeShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#PropertyShape",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#datatype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#nodeKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#path",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#pattern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/shacl#targetClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#0061f5279aeaf06aba9b84b07f84471c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasReliability"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#00dd6c55f68ca7d72892137aaaa8cb6f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/def/saref"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship specifying the property that can be measured by a certain device"
+  }, {
+    "@value" : "makes measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship specifying the property that can be measured by a certain device"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "makes measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/makesMeasurement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#02ff2363a7027c370bab1998f0bfced0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between a Virutal Node and the  devices it manages"
+  }, {
+    "@value" : "manages"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relation between a Virutal Node and the  devices it manages"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "manages"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#manages"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#06cd1f84c321d7099899f32d480b74e6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Frequency"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Frequency constraint related to the grid"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Frequency"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Frequency"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#07e375dd9600e5dab24a1339515e17ca",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#clusterName"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#08d3a1c1c7086accd24e3fa865cb8e94",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Asset"
+  }, {
+    "@value" : "Element contained in the FEID that detects and responds to events in an environment"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Asset"
+  }, {
+    "@value" : "Element contained in the FEID that detects and responds to events in an environment"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#3722d11405a90c0775fa2602411fbd49"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Asset"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#09bbd3c916692f508aaca75e04c18648",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship identifying what an entity, such as a Profile, is about"
+  }, {
+    "@value" : "isAbout"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship identifying what an entity, such as a Profile, is about"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "isAbout"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/isAbout"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#0a54bef008045497a6bedac1db7086ad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Value that indicates whether the FEID is available"
+  }, {
+    "@value" : "is available"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Value that indicates whether the FEID is available"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is available"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isAvailable"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "true|false|0|1"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#1277b387effe1ea8b7cf6171d6155a1b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Instant"
+  }, {
+    "@value" : "http://www.w3.org/2006/time#"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A temporal entity with zero extent or duration"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://www.w3.org/2006/time#Instant"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#14ffc5caa004487c821bf9987d25341b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#d12f4d5879159c35c9440ab64921c949"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#4dbe021536fe2df95a1b2bf20860f8b0"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#64fa52c0b7adcbf451b13e34488a69e2"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#8dcea278f8f5ef5a48f821324db74452"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#165feeb1511eeaaaa25efda98ffbf0ed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Incentive"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Incentive (usually monetary) associated to energy values"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Incentive"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Incentive"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#18f42e8695325ee0f6df68ba859124df",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Relationship between a smart contract and the property it agrees on"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "agrees on"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "agrees on"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#agreesOn"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#1bb809498402f765e4c173591d101d5e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between a Virtual Node and its index"
+  }, {
+    "@value" : "has index"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between a Virtual Node and its index"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has index"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasIndex"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#1cb0cd571bd196e621a73e9c7421b6dd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation to define the comfort settings of a system"
+  }, {
+    "@value" : "has comfort settings"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relation to define the comfort settings of a system"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has comfort settings"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasComfortSetting"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#20778218195f4e44df3b095260d9ce5c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Description of a cluster"
+  }, {
+    "@value" : "cluster description"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Description of a cluster"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "cluster description"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#20ff058d2509d485ec0d4177a2927e52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isValidDuringPeriod"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#239a8bc1b0f260a77ef24fe6a6761a7c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#2445a5a4e659005cbf4fe4791382e631",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Index"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Reliability and Fairness Index that refers to the distribution network configuration"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Index"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Index"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#2482c9f878541d01ce71c79a854f1c8e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between the customers and the devices"
+  }, {
+    "@value" : "owns"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between the customers and the devices"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "owns"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#owns"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#24a0e2933558e74c6c7ce383d1019230",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Transaction"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasTransaction"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#25c421833c75c00a45cd08a0a123dbdd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Price"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A saref:Property crelated to some measurements that are characterized by a certain value that is measured using saref:Currency"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Price"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/core/Price"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#265a4d2569feb9268ec8cecf5b2fa331",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#59e642db6778e3a18dff830b47a894fd"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/saref4ener/Device"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#26650f052c4f7c6d35b673dd70c9a844",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#SystemConstraint"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasSystemConstraint"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#269e40c40c9bba725aacbd9f3955bbd4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasGranularity"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#27844dd3d7b5511b791ec18768ad65c3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#291a97cd4fcfaece7330a0e3f20a2d52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DR type that is implemented by the FEID, which can be implicit or explicit"
+  }, {
+    "@value" : "implements DR type"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "DR type that is implemented by the FEID, which can be implicit or explicit"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "implements DR type"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#implementsDRType"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#295241dc66aa899207b87fee7fdde0aa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Phase"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Phase of a measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Phase"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Phase"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#29e9ddb6f112e5d3b199f8bb281fdfcb",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasHref"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#2c76513ce43bdbce876e88e109939a4a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Reward"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Reward associated to the customers that is given after using the engagement tools"
+  }, {
+    "@value" : "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Reward"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Reward"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#2dfb03c431dbba8249d1e5475fcb32ef",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between the FEID and the violation it detects"
+  }, {
+    "@value" : "detects"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between the FEID and the violation it detects"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "detects"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#detects"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#2eb40bec10fb3e156483c651734a26e8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy Market"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Energy Market"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#31b817d725f3be8a67461f5e66f84017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasRedundancy"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3296b5505610ab9b7d061a37b4bfa3b4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Virtual node"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Virtual node"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#c68aaec70d73b5a0799e3dbae030559a"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#0061f5279aeaf06aba9b84b07f84471c"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#239a8bc1b0f260a77ef24fe6a6761a7c"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#29e9ddb6f112e5d3b199f8bb281fdfcb"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#721bff425fc055758c8ad68b4cc979e2"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#80a493235634f257bcd9222144b30db3"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#VirtualNode"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A spatial representation for a given feature."
+  }, {
+    "@value" : "hasGeometry"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A spatial representation for a given feature."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "hasGeometry"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3472ae0aa521125fbe084e68abcc82ac",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasCreationDateTime"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#34c0f55f8f3f3c58d9cb361df2984c77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feature Of Interest"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A feature of interest represents any real world entity from which a property is measured."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Feature Of Interest"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3722d11405a90c0775fa2602411fbd49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#39da0e7e5171ee5f35047d0e2fc5c2b0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Address of the service within the system."
+  }, {
+    "@value" : "has port"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Address of the service within the system."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has port"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasPort"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "[\\-+]?[0-9]+"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3a6b50e6cdb56066152d9541a523926a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Points that are used by the DELTA platform to calculate the customers rewards"
+  }, {
+    "@value" : "has point"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Points that are used by the DELTA platform to calculate the customers rewards"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has point"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasPoint"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3c34c9450ffc50184879c686354a19bd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relation between a property and its incentives associated"
+  }, {
+    "@value" : "has incentive"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relation between a property and its incentives associated"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has incentive"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasIncentive"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3d574abd439932c81087b2367591af30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Relation between a virtual node and its associated aggregator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "allocates"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "allocates"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#allocates"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3e18b0f9fac2d3bdcd51a2fdadcbda53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.w3.org/2006/time#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Temporal entity"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A temporal interval or instant."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Temporal entity"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#3f1eb5b266169c0ad8281667842801dc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#sectorName"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4001db189c528be6b961ca3251e38628",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Duration code of an event"
+  }, {
+    "@value" : "has duration code"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Duration code of an event"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has duration code"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasDurationCode"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4012c46a13b61861aa209c7ab964215f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between an aggregator and the market settlement it consumes"
+  }, {
+    "@value" : "consumes"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relation between an aggregator and the market settlement it consumes"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "consumes"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#consumes"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#40d8b2a07c2c92e6be6650a2d560ce36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between a DR request and the needed measurement in order to solve a violation"
+  }, {
+    "@value" : "requires measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between a DR request and the needed measurement in order to solve a violation"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "requires measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#requiresMeasurement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#422dff5e648059bbc67dc78fd8549175",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#requiresMeasurement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#441c44c846df8778951fcf5e4e874ef2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#ComfortSetting"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasComfortSetting"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#451e91a2de4845ad70fbf93cbabe6582",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/core"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)"
+  }, {
+    "@value" : "consists of"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "consists of"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/consistsOf"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#46c49188e92a41af246c78c33025be9c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "IP address of a thing"
+  }, {
+    "@value" : "has ip"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "IP address of a thing"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has ip"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasIp"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : ".*"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4781143dc263d22541fe7d5eb9bb9fd0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "The final status as if the DVN fullfiled the request or it failed"
+  }, {
+    "@value" : "status"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "The final status as if the DVN fullfiled the request or it failed"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "status"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#status"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4c441e387479eb1dc5d5927ebccb0c1f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/def/saref"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship between a property and the measurements it relates to"
+  }, {
+    "@value" : "relates to measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship between a property and the measurements it relates to"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "relates to measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/relatesToMeasurement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4c94fdc7133fbb36fca4db11790ac3c0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between an object and the geographical feature in which it is located at"
+  }, {
+    "@value" : "is located at"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relation between an object and the geographical feature in which it is located at"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is located at"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isLocatedAt"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4dbe021536fe2df95a1b2bf20860f8b0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/isMeasuredIn"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4df8fc838c030d09c82b20c90f83270d",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A property related to measurements that are characterized  by a value measured in power units"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Power"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/saref4ener/Power"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#4ee895947f64a077b87f0a78ba131eea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#VEN"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#502898d72a77a36190b2820684311a5b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/def/saref"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship stating the timestamp of an entity (e.g. a measurement)."
+  }, {
+    "@value" : "timestamp"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship stating the timestamp of an entity (e.g. a measurement)."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "timestamp"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/hasTimestamp"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#55f1ad7b7453cddeefa17b7ae5c08a4d",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#consumes"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#56e55ed67e63b0e3bc3bdb668403f0df",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Period where an entity, such a contract, is valid"
+  }, {
+    "@value" : "is valid during period"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://www.w3.org/2006/time#TemporalEntity"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Period where an entity, such a contract, is valid"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is valid during period"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isValidDuringPeriod"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#59b216a8be42837c0c259e431d3bb05c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/saref4city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Key Performance Indicator"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Key Performance Indicator"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#27844dd3d7b5511b791ec18768ad65c3"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/saref4city/KeyPerformanceIndicator"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#59e642db6778e3a18dff830b47a894fd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/measuresProperty"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#5b3c20471e6c4f1eb8193eed8e9a46cc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#MarketSettlement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#6073469d7e43fdd35cca3abe1a18e357",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#detects"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#633148788542504d74847bcb62dd9f02",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/saref4city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Key performance indicator assessment"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Key performance indicator assessment"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#63c3379aee82b90474fcec794d046763",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Creation date of a profile"
+  }, {
+    "@value" : "has creation date time"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Creation date of a profile"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has creation date time"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasCreationDateTime"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#64fa52c0b7adcbf451b13e34488a69e2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/hasValue"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#66e0cc473e396ca6c8bb55136e71dec8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link to the grid constraints of a system"
+  }, {
+    "@value" : "has system constraint"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link to the grid constraints of a system"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has system constraint"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasSystemConstraint"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#67dd096cfb81c19996b5ad2155b34633",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "URI of the endpoint"
+  }, {
+    "@value" : "has href"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "URI of the endpoint"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has href"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasHref"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#690a9bdb948125ca6eee0095ed0192f1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between an entity and its profile"
+  }, {
+    "@value" : "has profile"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between an entity and its profile"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has profile"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasProfile"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#69b60efa27218069432ff4b16275b281",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aggregator"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Legal entities that aggregate the load or generation of various demand and/or generation/production units and aim at optimizing energy supply and consumption."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Aggregator"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#24a0e2933558e74c6c7ce383d1019230"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#55f1ad7b7453cddeefa17b7ae5c08a4d"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#8c2466d26cd6ddfeb20f4f5937776391"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Aggregator"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#6a1945885726eb6e13a1d2122b216692",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between a smart contracts and the transactions it stores"
+  }, {
+    "@value" : "has transaction"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between a smart contracts and the transactions it stores"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has transaction"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasTransaction"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#6ace7559c09873d57bb26d2909a563c6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#6f8385de3a9bfd183a51097ff872d104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Transaction"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Transaction between entities that will be store in the smart contract"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Transaction"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Transaction"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#6f9bacd7f09e824a96b55ee659b51a74",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Voltage"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Voltage constraint related to the grid"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Voltage"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Voltage"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#705c819be3a3475ad6f1f80f8acdb78b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Payment"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasPayment"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#721bff425fc055758c8ad68b4cc979e2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#767c3a5d4d61bd3efc80712a745a7a69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between a phase and a measurement"
+  }, {
+    "@value" : "has phase"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between a phase and a measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has phase"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasPhase"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#7692926076a0fde4218ac527fbc7a8ac",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Violation"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Violation of the grid"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Violation"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#93dfd3b21eda51eda9dfac0fdd3b5f16"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#965d58a3370bf9b5eb133b91271ed0a4"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Violation"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#769dbe2ae9f587b0e9296f18f451fc69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasPoint"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#7779e34e58058fea1f5bee8ad38dbac4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Value of the violation"
+  }, {
+    "@value" : "has violation value"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Value of the violation"
+  }, {
+    "@value" : "has violation value"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasViolationValue"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#7873e25d1b2942cc93291252cdaa925a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasDuration"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#790eda9f1006c334de8cd96c41827613",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://w3id.org/def/openadr#VTN"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#7dada9c47022ad0d97b3bc2c081f8b6a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/relatesToMeasurement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#7eefdcfbd871aadfaba7f6b20716472a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link from a virtual node to its aggregator"
+  }, {
+    "@value" : "is allocated in"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link from a virtual node to its aggregator"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is allocated in"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isAllocatedIn"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#7fd858883e55601117acf9441b2384d5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship between a measurement and the property it relates to"
+  }, {
+    "@value" : "relates to property"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship between a measurement and the property it relates to"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "relates to property"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/relatesToProperty"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#80a493235634f257bcd9222144b30db3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Profile"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasProfile"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#81e402ed2be6b12621e408dcddf3c4cc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between a customer and its associated reward"
+  }, {
+    "@value" : "has reward"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between a customer and its associated reward"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has reward"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8201de84ab7293072ff09fe677636e92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Prosumer"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Entity that consumes or produces energy"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Prosumer"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8364b445e9e682c4da09959f102b4d5a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Redundancy of  a FEID"
+  }, {
+    "@value" : "has redundancy"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Redundancy of  a FEID"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has redundancy"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasRedundancy"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#853295804fc5c9d5bd63c0fb0b746f02",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/consistsOf"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#85da287bcfff367e1228ca2dd1edf698",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Date when a DR request is sent"
+  }, {
+    "@value" : "occurs"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Date when a DR request is sent"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "occurs"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#occurs"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#898ca65656cb2d48b8982b71dc5946c1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between a device and its customer"
+  }, {
+    "@value" : "is owned by"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between a device and its customer"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is owned by"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isOwnedBy"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8ae9f5fbbdc8652bc11b6da89406c127",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Sector"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A section or zone"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Sector"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#3f1eb5b266169c0ad8281667842801dc"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Sector"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8b8c7ddf45ade3ee44978cc71cba6c05",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8c2466d26cd6ddfeb20f4f5937776391",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Profile"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasProfile"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8c9f0a3ef50fe390869f7c693885d425",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feature"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Feature"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#3348f96caa15fb50d86f0a2231585642"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8d10b345ffc8b8beb14149f95695dd18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Incentive"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasIncentive"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8d711ddd7f055534995745dea48abcaa",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#ac3922273149c29c9290b50b2466f107"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Measurement"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#8dcea278f8f5ef5a48f821324db74452",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/hasTimestamp"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9095f11e562673f4eb650b48121c2c07",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship identifying the properties associated to a group of entities, such as clusters"
+  }, {
+    "@value" : "has aggregated property"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship identifying the properties associated to a group of entities, such as clusters"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has aggregated property"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasAggregatedProperty"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#93dfd3b21eda51eda9dfac0fdd3b5f16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#requests"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#94097b671d5b79ddec2691857b2de886",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link to the delivery time"
+  }, {
+    "@value" : "has delivery time"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link to the delivery time"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has delivery time"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasDeliveryTime"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#94ed6d1fb959a29cb64e8b1533a5daf4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Unit of measure"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \\\"watt\\\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Unit of measure"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#965d58a3370bf9b5eb133b91271ed0a4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasDurationCode"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9ac28bb6ed32eedb3520bf16792d00ff",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/isAbout"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9bdbc3f968c5d8a848166cb709f7917a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/saref4city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is derived from"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "is derived from"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is derived from"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9c11ce01cfe4e21eda7f5c6e4d54321a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Comfort setting"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Comfort setting"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#ComfortSetting"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9d51a7175209bf780cb3dead4b06930c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#agreesOn"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9e81a8547fd8cabc79752e243c8d2b67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Geometry"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@value" : "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Geometry"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#9eadaa09dfe493b378e6da3015289c4c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A link between a node and the event it sends"
+  }, {
+    "@value" : "sends event"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A link between a node and the event it sends"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "sends event"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#sendsEvent"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#a3607a15db680cd836a799a9cb2e3ed7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasHref"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#a65aa3ee68947729dd6c81aa242208dd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "description"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "description"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasDescription"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#a853b04756c5e216cb6c8d8cf618ca1b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Profile"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A specification associated to a device to collect information about a certain Property (e.g., Energy) or Commodity (e.g.Water) for optimizing its usage in the home, office or building in which the device is located. This specification is about a certain Property or Commodity (saref:isAbout), can be calculated over a time span (saref:hasTime ) and can be associated to some costs (saref:hasPrice). An example is the Power Profile defined in the SAREF4ENER extension that can be associated to a device for optimizing the Energy efficiency in the home, office or building in which the device is located."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Profile"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#9ac28bb6ed32eedb3520bf16792d00ff"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/core/Profile"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#a9bc244ad9841794e498e5cd9ee70b0a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Smart contract"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Computer program or a transaction protocol which is intended to automatically execute, control or document legally relevant events and actions according to the terms of a contract or an agreement"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Smart contract"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#20ff058d2509d485ec0d4177a2927e52"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#705c819be3a3475ad6f1f80f8acdb78b"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#9d51a7175209bf780cb3dead4b06930c"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#SmartContract"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#ac3922273149c29c9290b50b2466f107",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasPhase"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#ad86bf6d8a3b5e9dbdef6fc4184dc92e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between a grid violation and the DR request to solve it."
+  }, {
+    "@value" : "requests"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between a grid violation and the DR request to solve it."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "requests"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#requests"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#af530bb5a28868a442711e7ccf4cf736",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Customer"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Entity that interacts in the platform"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Customer"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#e7f576c6fdcf1d576dbb44fdb37856ae"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#fc3b2406ff3de0c52b6a8484af3913c0"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#769dbe2ae9f587b0e9296f18f451fc69"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Customer"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#afe0abf2a97f2cd10f4bc76f8000b66d",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#status"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#b20290b0313b42ad08d79459dd3d438c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Name of a cluster"
+  }, {
+    "@value" : "cluster name"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Name of a cluster"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "cluster name"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#clusterName"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#bc91e258aeacab7f8c392f3bc810695a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Granularity of the profile (e.g., weekly, daily)"
+  }, {
+    "@value" : "has granularity"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Granularity of the profile (e.g., weekly, daily)"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has granularity"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasGranularity"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#bd3753db268c24fafcb046b1d8a3f6e7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Reliability associated to a virtual node"
+  }, {
+    "@value" : "has reliability"
+  } ],
+  "http://www.w3.org/ns/shacl#datatype" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Reliability associated to a virtual node"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has reliability"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasReliability"
+  } ],
+  "http://www.w3.org/ns/shacl#pattern" : [ {
+    "@value" : "(\\+|-)?([0-9]+(\\.[0-9]*)?|\\.[0-9]+)([Ee](\\+|-)?[0-9]+)?|(\\+|-)?INF|NaN"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#bd851bd791b544c23ccdcb0180fd0e3b",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://www.w3.org/2006/time#Duration"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#bf9052440bc809caa71dfd45f4e67b29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Profile"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A specification associated to a Virtual Node or a device to collect information about properties"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Profile"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#269e40c40c9bba725aacbd9f3955bbd4"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#3472ae0aa521125fbe084e68abcc82ac"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#7873e25d1b2942cc93291252cdaa925a"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Profile"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c088fd6854acbca9eecaf9b9dec3d43c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/def/saref"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes."
+  }, {
+    "@value" : "has value"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has value"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/hasValue"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c388433e234ce7c726b903790c7b8ec3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship between a measurement and the feature of interest whose quality was measured"
+  }, {
+    "@value" : "isMeasurementOf"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship between a measurement and the feature of interest whose quality was measured"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "isMeasurementOf"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/isMeasurementOf"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c3dedfc509b62e6b5124507ad30baf9c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between a violation and its type, which can be overvoltage, undervoltage or overloading."
+  }, {
+    "@value" : "has violation type"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between a violation and its type, which can be overvoltage, undervoltage or overloading."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has violation type"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasViolationType"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c4a137f431f95db10e4258d52047fe36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#clusterDescription"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c68aaec70d73b5a0799e3dbae030559a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasIndex"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c74aea024300dcc0f9d69a4b095a9cbe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Name of a sector"
+  }, {
+    "@value" : "sector name"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Name of a sector"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "sector name"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#Literal"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#sectorName"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#c7631f7ea426736bfbe8a2a56c754e2f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between an event and its duration"
+  }, {
+    "@value" : "has duration"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between an event and its duration"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has duration"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#hasDuration"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#ced11dd1e0b17249ae49e3fe17cc9e1e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isRequestedTo"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#d12f4d5879159c35c9440ab64921c949",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/isMeasurementOf"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#d54ab943480e6e6b1f11317c58d5a4d0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between a VE, Resource or Asset with the Group of targets associated"
+  }, {
+    "@value" : "belongs to"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between a VE, Resource or Asset with the Group of targets associated"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "belongs to"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#belongsTo"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#d8fcc404ec3569ab405576151e2c63f9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Property"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Property"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#7dada9c47022ad0d97b3bc2c081f8b6a"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#da4b88c5f707bd9e959f419e8c007cb4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Payment"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Monetary value associated to a contract"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Payment"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#afe0abf2a97f2cd10f4bc76f8000b66d"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Payment"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#db085280eb44e73456450bcaf4d931b0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/def/saref"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is measured in"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is measured in"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/isMeasuredIn"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#de5b225056b93d1ceb5b0537b8e2873e",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between  an action and the virtual node in charge of perform it"
+  }, {
+    "@value" : "is requested to"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between  an action and the virtual node in charge of perform it"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "is requested to"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isRequestedTo"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#e4831dbb0bf83e060dd243221283d064",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://w3id.org/def/saref"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A relationship specifying the property that can be measured by a certain device"
+  }, {
+    "@value" : "measures property"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A relationship specifying the property that can be measured by a certain device"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "measures property"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/core/measuresProperty"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#e764f2994e4b5fc9a31d03a6f7dcfb08",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "System constraint"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Constraints of the grid that limits a system"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "System constraint"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#SystemConstraint"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#e7f576c6fdcf1d576dbb44fdb37856ae",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Reward"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasReward"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#e9b63a5ee77b2128f47adc33a6802758",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Link between a price and its currency"
+  }, {
+    "@value" : "has currency"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Link between a price and its currency"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has currency"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasCurrency"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#e9c7e0779796fe475b71471bf6ee1e0d",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/saref4city/v1.1.2/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "quantifies KPI"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "quantifies KPI"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "quantifies KPI"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://saref.etsi.org/saref4city/quantifiesKPI"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#ea22a479a38fa6574fcaa18547984b38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has smart contract"
+  }, {
+    "@value" : "link between the Virtual node and its smart contracts"
+  } ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#SmartContract"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "link between the Virtual node and its smart contracts"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has smart contract"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#eaba42ad0f3b181ff1bfc423dd1f98e6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FEID"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "An intelligent device, responsible for collecting information stemming from the field devices (home appliances, distributed energy resources, storage components etc.) to the DELTA Virtual Nodes and facilitate end-to-end communication of signals from/to the Aggregator and to/from the field devices. FEIDs will be equipped with smart meters measuring energy related data (e.g. consumption, generation, emissions, power coefficient, etc.) and through an intelligent lightweight toolkit compute real-time flexibility, providing them as input to the DVN Agent using fog computing techniques, aligned to a strategy (i.e. time interval) imposed to the specific Node by the Aggregator."
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "FEID"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#a3607a15db680cd836a799a9cb2e3ed7"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#f4c21661f49c2f6d8ab94f5051d811e9"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#f529cca2b4ac0464cf18c01783e660f7"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#26650f052c4f7c6d35b673dd70c9a844"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#31b817d725f3be8a67461f5e66f84017"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#441c44c846df8778951fcf5e4e874ef2"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#6073469d7e43fdd35cca3abe1a18e357"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#853295804fc5c9d5bd63c0fb0b746f02"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#FEID"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#eb271c53427ec97b87c6f833402cda5f",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relation between a smart contract and the payment associated"
+  }, {
+    "@value" : "has payment"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relation between a smart contract and the payment associated"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "has payment"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasPayment"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#f03a1635978b715f0ede1091a430bebe",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Relationship between a violation and  a profile that describes such violation"
+  }, {
+    "@value" : "includes profile"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Relationship between a violation and  a profile that describes such violation"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "includes profile"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#BlankNodeOrIRI"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#includesProfile"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#f03ab33ecb8ce5e8323543938c19e474",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "DR request"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Action that is requested by a FEID"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "DR request"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#ced11dd1e0b17249ae49e3fe17cc9e1e"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#422dff5e648059bbc67dc78fd8549175"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Action"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#f1ed01ff4ad7e0110c28d4231cd9616c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "http://www.w3.org/2006/time#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Time interval"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A temporal entity with an extent or duration"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Time interval"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://www.w3.org/2006/time#Interval"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#f3c5f5bfcb3ecc7e3ab4e57cb1e8f5a8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "A property related to measurements that are characterized  by a value measured in energy units"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Energy"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#8d10b345ffc8b8beb14149f95695dd18"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "https://saref.etsi.org/saref4ener/Energy"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#f4c21661f49c2f6d8ab94f5051d811e9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Transaction"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#hasTransaction"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#f529cca2b4ac0464cf18c01783e660f7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#isLocatedAt"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#fc1c82ef29467283436eb9678755cc07",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Customer cluster"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Groups of customers"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Customer cluster"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#CustomerCluster"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#fc3b2406ff3de0c52b6a8484af3913c0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#PropertyShape" ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRIOrLiteral"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://w3id.org/def/openadr#belongsTo"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#fd8c4d36069c070047ef34d08b6a70af",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Consumer"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Entity that consumes energy"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Consumer"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Consumer"
+  } ]
+}, {
+  "@id" : "https://astrea.linkeddata.es/shapes#fe675bd455c346602d8e51291a519f5c",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/ns/shacl#NodeShape" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cluster"
+  } ],
+  "http://www.w3.org/ns/shacl#description" : [ {
+    "@value" : "Aggrupation of elements, such as FEIDs or Virtual Nodes"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@value" : "Cluster"
+  } ],
+  "http://www.w3.org/ns/shacl#nodeKind" : [ {
+    "@id" : "http://www.w3.org/ns/shacl#IRI"
+  } ],
+  "http://www.w3.org/ns/shacl#property" : [ {
+    "@id" : "https://astrea.linkeddata.es/shapes#c4a137f431f95db10e4258d52047fe36"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#07e375dd9600e5dab24a1339515e17ca"
+  }, {
+    "@id" : "https://astrea.linkeddata.es/shapes#8b8c7ddf45ade3ee44978cc71cba6c05"
+  } ],
+  "http://www.w3.org/ns/shacl#targetClass" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Cluster"
+  } ]
+} ]
