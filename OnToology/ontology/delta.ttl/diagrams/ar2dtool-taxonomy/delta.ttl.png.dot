@@ -1,30 +1,26 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "time:Instant" "core:Load" "core:Frequency" "core:Customer" "core:Power" "saref:Profile" "core:VirtualNode" "core:Sector" "saref:Device" "saref4bldg:PhysicalObject" "core:Consumer" "core:Aggregator" "core:Measurement" "core:Prosumer" "saref:Measurement" "core:Reward" "time:TemporalEntity" "saref:Price" "core:Asset" "core:Flexibility" "http://www.opengis.net/ont/geosparql#Feature" "core:Voltage" "saref:Property" "core:Profile" "core:Property" "core:FEID" "core:Energy" "core:Payment" ; /*classes style*/
-	"core:Flexibility" -> "core:Property" [ label = "rdfs:subClassOf" ];
+node [shape = rectangle, color="black"]; "saref:Measurement" "saref:Price" "https://w3id.org/def/openadr#VEN" ":Power" "time:Instant" "delta:Frequency" "delta:Customer" "delta:VirtualNode" "delta:Sector" "https://w3id.org/def/openadr#VTN" "delta:Consumer" "delta:Aggregator" "delta:Measurement" "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" "delta:Prosumer" "delta:Reward" ":Energy" "time:TemporalEntity" "saref:Profile" "delta:Asset" "http://www.opengis.net/ont/geosparql#Feature" "delta:Voltage" "delta:Profile" "delta:FEID" "saref:Property" "delta:Payment" ":Device" ; /*classes style*/
+	"delta:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
+	"delta:Measurement" -> "saref:Measurement" [ label = "rdfs:subClassOf" ];
+	"delta:VirtualNode" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
+	"delta:VirtualNode" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
+	":Device" -> "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing" [ label = "rdfs:subClassOf" ];
+	"delta:Voltage" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 	"saref:Price" -> "saref:Property" [ label = "rdfs:subClassOf" ];
-	"core:Payment" -> "saref:Price" [ label = "rdfs:subClassOf" ];
-	"core:Measurement" -> "saref:Measurement" [ label = "rdfs:subClassOf" ];
-	"core:VirtualNode" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
-	"core:VirtualNode" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
-	"core:Voltage" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Sector" -> "http://www.opengis.net/ont/geosparql#Feature" [ label = "rdfs:subClassOf" ];
-	"core:Aggregator" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
-	"core:FEID" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
-	"core:FEID" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
-	"core:Energy" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Power" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Asset" -> "saref:Device" [ label = "rdfs:subClassOf" ];
-	"core:Asset" -> "https://w3id.org/def/openadr#Asset" [ label = "rdfs:subClassOf" ];
-	"core:Frequency" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Prosumer" -> "core:Customer" [ label = "rdfs:subClassOf" ];
-	"core:Property" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"delta:Sector" -> "http://www.opengis.net/ont/geosparql#Feature" [ label = "rdfs:subClassOf" ];
+	"delta:Aggregator" -> "https://w3id.org/def/openadr#VTN" [ label = "rdfs:subClassOf" ];
+	":Energy" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"delta:FEID" -> ":Device" [ label = "rdfs:subClassOf" ];
+	"delta:FEID" -> "https://w3id.org/def/openadr#VEN" [ label = "rdfs:subClassOf" ];
+	":Power" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"delta:Asset" -> ":Device" [ label = "rdfs:subClassOf" ];
+	"delta:Frequency" -> "saref:Property" [ label = "rdfs:subClassOf" ];
+	"delta:Prosumer" -> "delta:Customer" [ label = "rdfs:subClassOf" ];
 	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
-	"core:Profile" -> "saref:Profile" [ label = "rdfs:subClassOf" ];
-	"core:Consumer" -> "core:Prosumer" [ label = "rdfs:subClassOf" ];
-	"core:Reward" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"core:Load" -> "core:Property" [ label = "rdfs:subClassOf" ];
-	"saref:Device" -> "saref4bldg:PhysicalObject" [ label = "rdfs:subClassOf" ];
+	"delta:Profile" -> "saref:Profile" [ label = "rdfs:subClassOf" ];
+	"delta:Consumer" -> "delta:Prosumer" [ label = "rdfs:subClassOf" ];
+	"delta:Reward" -> "saref:Property" [ label = "rdfs:subClassOf" ];
 
 }
