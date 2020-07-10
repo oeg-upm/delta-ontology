@@ -16,7 +16,7 @@
                                        owl:imports <https://w3id.org/def/openadr> ;
                                        <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
                                                                           <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> ;
-                                       owl:versionInfo "0.1.10" ;
+                                       owl:versionInfo "0.2.0" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/albafernandezizquierdo/> ;
                                        dc:title "DELTA ontology" ;
