@@ -75,11 +75,11 @@ delta:hasDeliveryTime rdf:type owl:ObjectProperty ;
                       rdfs:label "has delivery time" .
 
 
-###  http://delta.linkeddata.es/def/core#hasDurationCode
-delta:hasDurationCode rdf:type owl:ObjectProperty ;
-                      rdfs:range time:TemporalEntity ;
-                      rdfs:comment "Duration code of an event" ;
-                      rdfs:label "has duration code" .
+###  http://delta.linkeddata.es/def/core#hasDurationDescription
+delta:hasDurationDescription rdf:type owl:ObjectProperty ;
+                      rdfs:range time:Duration ;
+                      rdfs:comment "Duration description of a violation, indicanting value and unit" ;
+                      rdfs:label "has duration description " .
 
 
 ###  http://delta.linkeddata.es/def/core#hasIncentive
