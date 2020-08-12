@@ -740,6 +740,9 @@
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Measurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Measurement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Measurement"
   }, {
@@ -1255,9 +1258,10 @@
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#hasRequiredMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Relationship between a violation condition and the associated measurement that is required."
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has required measurement"
   } ]
 }, {
