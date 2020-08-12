@@ -72,11 +72,11 @@
 <http://delta.linkeddata.es/def/core#hasDeliveryTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the delivery time" .
 <http://delta.linkeddata.es/def/core#hasDeliveryTime> <http://www.w3.org/2000/01/rdf-schema#label> "has delivery time" .
 # 
-# http://delta.linkeddata.es/def/core#hasDurationCode
-<http://delta.linkeddata.es/def/core#hasDurationCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://delta.linkeddata.es/def/core#hasDurationCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#TemporalEntity> .
-<http://delta.linkeddata.es/def/core#hasDurationCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration code of an event" .
-<http://delta.linkeddata.es/def/core#hasDurationCode> <http://www.w3.org/2000/01/rdf-schema#label> "has duration code" .
+# http://delta.linkeddata.es/def/core#hasDurationDescription
+<http://delta.linkeddata.es/def/core#hasDurationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://delta.linkeddata.es/def/core#hasDurationDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Duration> .
+<http://delta.linkeddata.es/def/core#hasDurationDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Duration description of a violation, indicanting value and unit" .
+<http://delta.linkeddata.es/def/core#hasDurationDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has duration description" .
 # 
 # http://delta.linkeddata.es/def/core#hasIncentive
 <http://delta.linkeddata.es/def/core#hasIncentive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -655,7 +655,7 @@ _:genid36 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://delta.linkeddata
 <http://delta.linkeddata.es/def/core#Violation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Violation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasDurationCode> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasDurationDescription> .
 _:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2006/time#Duration> .
 <http://delta.linkeddata.es/def/core#Violation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .

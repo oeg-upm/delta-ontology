@@ -81,11 +81,11 @@
                  rdfs:label "has delivery time" .
 
 
-###  http://delta.linkeddata.es/def/core#hasDurationCode
-:hasDurationCode rdf:type owl:ObjectProperty ;
-                 rdfs:range <http://www.w3.org/2006/time#TemporalEntity> ;
-                 rdfs:comment "Duration code of an event" ;
-                 rdfs:label "has duration code" .
+###  http://delta.linkeddata.es/def/core#hasDurationDescription
+:hasDurationDescription rdf:type owl:ObjectProperty ;
+                 rdfs:range <http://www.w3.org/2006/time#Duration> ;
+                 rdfs:comment "Duration description of a violation, indicanting value and unit" ;
+                 rdfs:label "has duration description" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasIncentive
@@ -731,7 +731,7 @@
 ###  http://delta.linkeddata.es/def/core#Violation
 :Violation rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasDurationCode ;
+                             owl:onProperty :hasDurationDescription ;
                              owl:someValuesFrom <http://www.w3.org/2006/time#Duration>
                            ] ,
                            [ rdf:type owl:Restriction ;

@@ -257,7 +257,7 @@
   "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#hasDurationCode"
+    "@id" : "http://delta.linkeddata.es/def/core#hasDurationDescription"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2006/time#Duration"
@@ -1021,10 +1021,10 @@
     "@value" : "description"
   } ]
 }, {
-  "@id" : "http://delta.linkeddata.es/def/core#hasDurationCode",
+  "@id" : "http://delta.linkeddata.es/def/core#hasDurationDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Duration code of an event"
+    "@value" : "Duration description of a violation, indicanting value and unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has duration code"

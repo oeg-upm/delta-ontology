@@ -141,13 +141,13 @@
     
 
 
-    <!-- http://delta.linkeddata.es/def/core#hasDurationCode -->
+    <!-- http://delta.linkeddata.es/def/core#hasDurationDescription -->
 
 
-    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDurationCode">
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDurationDescription">
         <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
-        <rdfs:comment>Duration code of an event</rdfs:comment>
-        <rdfs:label>has duration code</rdfs:label>
+        <rdfs:comment>Duration description of a violation, indicanting value and unit</rdfs:comment>
+        <rdfs:label>has duration description</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1198,7 +1198,7 @@
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Violation">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasDurationCode"/>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasDurationDescription"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Duration"/>
             </owl:Restriction>
         </rdfs:subClassOf>
