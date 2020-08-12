@@ -121,7 +121,7 @@
 # 
 # http://delta.linkeddata.es/def/core#hasRequiredMeasurement
 <http://delta.linkeddata.es/def/core#hasRequiredMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://delta.linkeddata.es/def/core#hasRequiredMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Relationship between a violation condition and the associated measurement that is required." .
+<http://delta.linkeddata.es/def/core#hasRequiredMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a violation condition and the associated measurement that is required." .
 <http://delta.linkeddata.es/def/core#hasRequiredMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has required measurement" .
 # 
 # http://delta.linkeddata.es/def/core#hasReward
@@ -610,6 +610,7 @@ _:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://delta.linkeddata.es/def/core#hasPhase> .
 _:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://delta.linkeddata.es/def/core#Phase> .
+<http://delta.linkeddata.es/def/core#Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement" .
 # 
 # http://delta.linkeddata.es/def/core#OvervoltageViolation
 <http://delta.linkeddata.es/def/core#OvervoltageViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
