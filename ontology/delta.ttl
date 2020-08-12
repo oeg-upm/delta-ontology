@@ -28,14 +28,14 @@
 
 ###  http://delta.linkeddata.es/def/core#agreesOn
 delta:agreesOn rdf:type owl:ObjectProperty ;
-               rdfs:isDefinedBy "Relationship between a smart contract and the property it agrees on" ;
+               rdfs:isDefinedBy "Relationship between a smart contract and the property it agrees on." ;
                rdfs:label "agrees on" .
 
 
 ###  http://delta.linkeddata.es/def/core#allocates
 delta:allocates rdf:type owl:ObjectProperty ;
                 owl:inverseOf delta:isAllocatedIn ;
-                rdfs:isDefinedBy "Relation between a virtual node and its associated aggregator" ;
+                rdfs:isDefinedBy "Relation between a virtual node and its associated aggregator." ;
                 rdfs:label "allocates" .
 
 
@@ -53,19 +53,19 @@ delta:consumes rdf:type owl:ObjectProperty ;
 
 ###  http://delta.linkeddata.es/def/core#detects
 delta:detects rdf:type owl:ObjectProperty ;
-              rdfs:comment "Relationship between the FEID and the violation it detects" ;
+              rdfs:comment "Relationship between the FEID and the violation it detects." ;
               rdfs:label "detects" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasAggregatedProperty
 delta:hasAggregatedProperty rdf:type owl:ObjectProperty ;
-                            rdfs:comment "Relationship identifying the properties associated to a group of entities, such as clusters" ;
+                            rdfs:comment "Relationship identifying the properties associated to a group of entities, such as clusters." ;
                             rdfs:label "has aggregated property" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasComfortSetting
 delta:hasComfortSetting rdf:type owl:ObjectProperty ;
-                        rdfs:comment "Relation to define the comfort settings of a system" ;
+                        rdfs:comment "Relation to define the comfort settings of a system." ;
                         rdfs:label "has comfort settings" .
 
 
@@ -77,15 +77,15 @@ delta:hasCurrency rdf:type owl:ObjectProperty ;
 
 ###  http://delta.linkeddata.es/def/core#hasDeliveryTime
 delta:hasDeliveryTime rdf:type owl:ObjectProperty ;
-                      rdfs:comment "Link to the delivery time" ;
+                      rdfs:comment "Link to the delivery time." ;
                       rdfs:label "has delivery time" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasDurationDescription
 delta:hasDurationDescription rdf:type owl:ObjectProperty ;
                              rdfs:range time:Duration ;
-                             rdfs:comment "Duration description of a violation, indicanting value and unit" ;
-                             rdfs:label "has duration description " .
+                             rdfs:comment "Duration description of a violation, indicanting value and unit." ;
+                             rdfs:label "has duration description" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasEstimatedMeasurement
@@ -96,13 +96,13 @@ delta:hasEstimatedMeasurement rdf:type owl:ObjectProperty ;
 
 ###  http://delta.linkeddata.es/def/core#hasIncentive
 delta:hasIncentive rdf:type owl:ObjectProperty ;
-                   rdfs:comment "A relation between a property and its incentives associated" ;
+                   rdfs:comment "A relation between a property and its incentives associated." ;
                    rdfs:label "has incentive" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasIndex
 delta:hasIndex rdf:type owl:ObjectProperty ;
-               rdfs:comment "Link between a Virtual Node and its index" ;
+               rdfs:comment "Link between a Virtual Node and its index." ;
                rdfs:label "has index" .
 
 
