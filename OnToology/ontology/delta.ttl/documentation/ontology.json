@@ -356,19 +356,19 @@
   "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
+    "@id" : "https://saref.etsi.org/core/Property"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/isMeasuredIn"
+    "@id" : "https://saref.etsi.org/core/measuresProperty"
   } ]
 }, {
   "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+    "@id" : "http://delta.linkeddata.es/def/core#Incentive"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/isMeasurementOf"
+    "@id" : "http://delta.linkeddata.es/def/core#hasIncentive"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -384,13 +384,31 @@
   "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/isMeasuredIn"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/isMeasurementOf"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://saref.etsi.org/core/hasTimestamp"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -399,7 +417,7 @@
     "@id" : "https://saref.etsi.org/core/hasValue"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/Property"
@@ -408,7 +426,7 @@
     "@id" : "https://saref.etsi.org/core/isAbout"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/Measurement"
@@ -417,31 +435,13 @@
     "@id" : "https://saref.etsi.org/core/relatesToMeasurement"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://saref.etsi.org/core/Measurement"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom"
-  } ]
-}, {
-  "@id" : "_:genid55",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://saref.etsi.org/core/Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/measuresProperty"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Incentive"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#hasIncentive"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -527,7 +527,7 @@
     "@value" : "Element contained in the FEID that detects and responds to events in an environment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/saref4ener/Device"
+    "@id" : "https://saref.etsi.org/core/Device"
   }, {
     "@id" : "_:genid13"
   } ]
@@ -567,13 +567,13 @@
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#ConsumptionCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Power" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Consumption capacity"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#ContractedPower",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Power" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Contracted power"
   } ]
@@ -604,31 +604,31 @@
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyConsumption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Energy" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Energy consumption"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyDownFlexibility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Energy" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Energy down flexibility"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyGeneration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Energy" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Energy generation"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyGenerationForecast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Energy" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Energy generation forecast"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyLoadForecast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Energy" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Energy load forecast"
   } ]
@@ -640,7 +640,7 @@
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyUpFlexibility",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Energy" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Energy up flexibility"
   } ]
@@ -654,7 +654,7 @@
     "@value" : "FEID"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/saref4ener/Device"
+    "@id" : "https://saref.etsi.org/core/Device"
   }, {
     "@id" : "https://w3id.org/def/openadr#VEN"
   }, {
@@ -700,7 +700,7 @@
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#GenerationCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Power" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Generation capacity"
   } ]
@@ -785,25 +785,25 @@
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PowerConsumption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Power" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Power consumption"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PowerGeneration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Power" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Power generation"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PowerGenerationForecast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Power" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Power generation forecast"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#PowerLoadForecast",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Power" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Power load forecast"
   } ]
@@ -901,7 +901,7 @@
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#StorageCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/saref4ener/Energy" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Storage capacity"
   } ]
@@ -1598,6 +1598,38 @@
     "@value" : "Temporal entity"
   } ]
 }, {
+  "@id" : "https://saref.etsi.org/core/Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "https://saref.etsi.org/core/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid48"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/Energy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property related to measurements that are characterized  by a value measured in energy units"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  }, {
+    "@id" : "_:genid49"
+  } ]
+}, {
   "@id" : "https://saref.etsi.org/core/FeatureOfInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1619,13 +1651,25 @@
     "@value" : "Measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid48"
-  }, {
-    "@id" : "_:genid49"
-  }, {
     "@id" : "_:genid50"
   }, {
     "@id" : "_:genid51"
+  }, {
+    "@id" : "_:genid52"
+  }, {
+    "@id" : "_:genid53"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/Power",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property related to measurements that are characterized  by a value measured in power units"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Price",
@@ -1655,7 +1699,7 @@
     "@value" : "Profile"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid54"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Property",
@@ -1670,7 +1714,7 @@
     "@value" : "Property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid53"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/UnitOfMeasure",
@@ -1823,7 +1867,7 @@
     "@value" : "Key Performance Indicator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom",
@@ -1848,50 +1892,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "quantifies KPI"
-  } ]
-}, {
-  "@id" : "https://saref.etsi.org/saref4ener/Device",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@value" : "https://saref.etsi.org/core/"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid55"
-  } ]
-}, {
-  "@id" : "https://saref.etsi.org/saref4ener/Energy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A property related to measurements that are characterized  by a value measured in energy units"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Energy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/core/Property"
-  }, {
-    "@id" : "_:genid56"
-  } ]
-}, {
-  "@id" : "https://saref.etsi.org/saref4ener/Power",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A property related to measurements that are characterized  by a value measured in power units"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Power"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/core/Property"
   } ]
 }, {
   "@id" : "https://w3id.org/def/openadr#VEN",

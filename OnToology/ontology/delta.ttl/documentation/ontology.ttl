@@ -533,7 +533,7 @@
 
 ###  http://delta.linkeddata.es/def/core#Asset
 :Asset rdf:type owl:Class ;
-       rdfs:subClassOf <https://saref.etsi.org/saref4ener/Device> ,
+       rdfs:subClassOf <https://saref.etsi.org/core/Device> ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :isOwnedBy ;
                          owl:someValuesFrom :Customer
@@ -603,7 +603,7 @@
 
 ###  http://delta.linkeddata.es/def/core#FEID
 :FEID rdf:type owl:Class ;
-      rdfs:subClassOf <https://saref.etsi.org/saref4ener/Device> ,
+      rdfs:subClassOf <https://saref.etsi.org/core/Device> ,
                       <https://w3id.org/def/openadr#VEN> ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :detects ;
@@ -902,6 +902,29 @@
                                              rdfs:label "Temporal entity" .
 
 
+###  https://saref.etsi.org/core/Device
+<https://saref.etsi.org/core/Device> rdf:type owl:Class ;
+                                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                           owl:onProperty <https://saref.etsi.org/core/measuresProperty> ;
+                                                           owl:allValuesFrom <https://saref.etsi.org/core/Property>
+                                                         ] ;
+                                     rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+                                     rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." ;
+                                     rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
+                                     rdfs:label "Device" .
+
+
+###  https://saref.etsi.org/core/Energy
+<https://saref.etsi.org/core/Energy> rdf:type owl:Class ;
+                                     rdfs:subClassOf <https://saref.etsi.org/core/Property> ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasIncentive ;
+                                                       owl:allValuesFrom :Incentive
+                                                     ] ;
+                                     rdfs:comment "A property related to measurements that are characterized  by a value measured in energy units" ;
+                                     rdfs:label "Energy" .
+
+
 ###  https://saref.etsi.org/core/FeatureOfInterest
 <https://saref.etsi.org/core/FeatureOfInterest> rdf:type owl:Class ;
                                                 rdfs:comment "A feature of interest represents any real world entity from which a property is measured." ;
@@ -929,6 +952,13 @@
                                                           ] ;
                                           rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
                                           rdfs:label "Measurement" .
+
+
+###  https://saref.etsi.org/core/Power
+<https://saref.etsi.org/core/Power> rdf:type owl:Class ;
+                                    rdfs:subClassOf <https://saref.etsi.org/core/Property> ;
+                                    rdfs:comment "A property related to measurements that are characterized  by a value measured in power units" ;
+                                    rdfs:label "Power" .
 
 
 ###  https://saref.etsi.org/core/Price
@@ -984,36 +1014,6 @@
                                                             rdfs:label "Key Performance Indicator" .
 
 
-###  https://saref.etsi.org/saref4ener/Device
-<https://saref.etsi.org/saref4ener/Device> rdf:type owl:Class ;
-                                           owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://saref.etsi.org/core/measuresProperty> ;
-                                                                 owl:allValuesFrom <https://saref.etsi.org/core/Property>
-                                                               ] ;
-                                           rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-                                           rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." ;
-                                           rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
-                                           rdfs:label "Device" .
-
-
-###  https://saref.etsi.org/saref4ener/Energy
-<https://saref.etsi.org/saref4ener/Energy> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://saref.etsi.org/core/Property> ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :hasIncentive ;
-                                                             owl:allValuesFrom :Incentive
-                                                           ] ;
-                                           rdfs:comment "A property related to measurements that are characterized  by a value measured in energy units" ;
-                                           rdfs:label "Energy" .
-
-
-###  https://saref.etsi.org/saref4ener/Power
-<https://saref.etsi.org/saref4ener/Power> rdf:type owl:Class ;
-                                          rdfs:subClassOf <https://saref.etsi.org/core/Property> ;
-                                          rdfs:comment "A property related to measurements that are characterized  by a value measured in power units" ;
-                                          rdfs:label "Power" .
-
-
 ###  https://w3id.org/def/openadr#VEN
 <https://w3id.org/def/openadr#VEN> rdf:type owl:Class .
 
@@ -1028,79 +1028,79 @@
 
 ###  http://delta.linkeddata.es/def/core#ConsumptionCapacity
 :ConsumptionCapacity rdf:type owl:NamedIndividual ,
-                              <https://saref.etsi.org/saref4ener/Power> ;
+                              <https://saref.etsi.org/core/Power> ;
                      rdfs:label "Consumption capacity" .
 
 
 ###  http://delta.linkeddata.es/def/core#ContractedPower
 :ContractedPower rdf:type owl:NamedIndividual ,
-                          <https://saref.etsi.org/saref4ener/Power> ;
+                          <https://saref.etsi.org/core/Power> ;
                  rdfs:label "Contracted power" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyConsumption
 :EnergyConsumption rdf:type owl:NamedIndividual ,
-                            <https://saref.etsi.org/saref4ener/Energy> ;
+                            <https://saref.etsi.org/core/Energy> ;
                    rdfs:label "Energy consumption" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyDownFlexibility
 :EnergyDownFlexibility rdf:type owl:NamedIndividual ,
-                                <https://saref.etsi.org/saref4ener/Energy> ;
+                                <https://saref.etsi.org/core/Energy> ;
                        rdfs:label "Energy down flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGeneration
 :EnergyGeneration rdf:type owl:NamedIndividual ,
-                           <https://saref.etsi.org/saref4ener/Energy> ;
+                           <https://saref.etsi.org/core/Energy> ;
                   rdfs:label "Energy generation" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGenerationForecast
 :EnergyGenerationForecast rdf:type owl:NamedIndividual ,
-                                   <https://saref.etsi.org/saref4ener/Energy> ;
+                                   <https://saref.etsi.org/core/Energy> ;
                           rdfs:label "Energy generation forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyLoadForecast
 :EnergyLoadForecast rdf:type owl:NamedIndividual ,
-                             <https://saref.etsi.org/saref4ener/Energy> ;
+                             <https://saref.etsi.org/core/Energy> ;
                     rdfs:label "Energy load forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyUpFlexibility
 :EnergyUpFlexibility rdf:type owl:NamedIndividual ,
-                              <https://saref.etsi.org/saref4ener/Energy> ;
+                              <https://saref.etsi.org/core/Energy> ;
                      rdfs:label "Energy up flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#GenerationCapacity
 :GenerationCapacity rdf:type owl:NamedIndividual ,
-                             <https://saref.etsi.org/saref4ener/Power> ;
+                             <https://saref.etsi.org/core/Power> ;
                     rdfs:label "Generation capacity" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerConsumption
 :PowerConsumption rdf:type owl:NamedIndividual ,
-                           <https://saref.etsi.org/saref4ener/Power> ;
+                           <https://saref.etsi.org/core/Power> ;
                   rdfs:label "Power consumption" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerGeneration
 :PowerGeneration rdf:type owl:NamedIndividual ,
-                          <https://saref.etsi.org/saref4ener/Power> ;
+                          <https://saref.etsi.org/core/Power> ;
                  rdfs:label "Power generation" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerGenerationForecast
 :PowerGenerationForecast rdf:type owl:NamedIndividual ,
-                                  <https://saref.etsi.org/saref4ener/Power> ;
+                                  <https://saref.etsi.org/core/Power> ;
                          rdfs:label "Power generation forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerLoadForecast
 :PowerLoadForecast rdf:type owl:NamedIndividual ,
-                            <https://saref.etsi.org/saref4ener/Power> ;
+                            <https://saref.etsi.org/core/Power> ;
                    rdfs:label "Power load forecast" .
 
 
@@ -1124,7 +1124,7 @@
 
 ###  http://delta.linkeddata.es/def/core#StorageCapacity
 :StorageCapacity rdf:type owl:NamedIndividual ,
-                          <https://saref.etsi.org/saref4ener/Energy> ;
+                          <https://saref.etsi.org/core/Energy> ;
                  rdfs:label "Storage capacity" .
 
 
