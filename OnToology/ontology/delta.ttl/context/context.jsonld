@@ -201,7 +201,7 @@
       "@id" : "http://purl.org/dc/terms/creator"
     },
     "Energy" : {
-      "@id" : "https://saref.etsi.org/saref4ener/Energy"
+      "@id" : "https://saref.etsi.org/core/Energy"
     },
     "hasPoint" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPoint",
@@ -392,7 +392,7 @@
       "@type" : "@id"
     },
     "Device" : {
-      "@id" : "https://saref.etsi.org/saref4ener/Device"
+      "@id" : "https://saref.etsi.org/core/Device"
     },
     "Violation" : {
       "@id" : "http://delta.linkeddata.es/def/core#Violation"
@@ -413,7 +413,7 @@
       "@id" : "https://saref.etsi.org/core/hasTimestamp"
     },
     "Power" : {
-      "@id" : "https://saref.etsi.org/saref4ener/Power"
+      "@id" : "https://saref.etsi.org/core/Power"
     },
     "belongsToCluster" : {
       "@id" : "http://delta.linkeddata.es/def/core#belongsToCluster",

@@ -6,6 +6,41 @@
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
    <graph edgedefault="directed" id="G" parse.edges="23" parse.nodes="31" parse.order="free">
+      <node id="nid_saref:Energy">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="120.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">saref:Energy</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+      <node id="nid_saref:Property">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="140.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">saref:Property</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf0" source="nid_saref:Energy" target="nid_saref:Property">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_delta:Payment">
          <data key="d0">
             <y:ShapeNode>
@@ -30,7 +65,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf0" source="nid_delta:Payment" target="nid_saref:Price">
+    <edge id="eid_rdfs:subClassOf1" source="nid_delta:Payment" target="nid_saref:Price">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -65,42 +100,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf1" source="nid_delta:LineLoadingViolation" target="nid_delta:Violation">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_delta:Feeder">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="120.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">delta:Feeder</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-      <node id="nid_delta:Asset">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="110.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">delta:Asset</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf2" source="nid_delta:Feeder" target="nid_delta:Asset">
+    <edge id="eid_rdfs:subClassOf2" source="nid_delta:LineLoadingViolation" target="nid_delta:Violation">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -204,31 +204,31 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_:Device">
+      <node id="nid_delta:Feeder">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="70.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="120.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">:Device</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">delta:Feeder</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-      <node id="nid_http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+      <node id="nid_delta:Asset">
          <data key="d0">
             <y:ShapeNode>
-               <y:Geometry height="30.0" width="520.0" x="0.0" y="0.0" />
+               <y:Geometry height="30.0" width="110.0" x="0.0" y="0.0" />
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</y:NodeLabel>
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">delta:Asset</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf6" source="nid_:Device" target="nid_http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+    <edge id="eid_rdfs:subClassOf6" source="nid_delta:Feeder" target="nid_delta:Asset">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -246,18 +246,6 @@
                <y:Fill color="#000000" transparent="false" />
                <y:BorderStyle color="#000000" type="line" width="1.0" />
                <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">delta:Voltage</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-      <node id="nid_saref:Property">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="140.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">saref:Property</y:NodeLabel>
                <y:Shape type="rectangle" />
             </y:ShapeNode>
          </data>
@@ -320,6 +308,41 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_saref:Device">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="120.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">saref:Device</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+      <node id="nid_http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="520.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf10" source="nid_saref:Device" target="nid_http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_delta:Aggregator">
          <data key="d0">
             <y:ShapeNode>
@@ -332,30 +355,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf10" source="nid_delta:Aggregator" target="nid_https://w3id.org/def/openadr#VTN">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_:Energy">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="70.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">:Energy</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf11" source="nid_:Energy" target="nid_saref:Property">
+    <edge id="eid_rdfs:subClassOf11" source="nid_delta:Aggregator" target="nid_https://w3id.org/def/openadr#VTN">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -401,7 +401,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf13" source="nid_delta:FEID" target="nid_:Device">
+    <edge id="eid_rdfs:subClassOf13" source="nid_delta:FEID" target="nid_saref:Device">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -423,30 +423,7 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_:Power">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="60.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">:Power</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf15" source="nid_:Power" target="nid_saref:Property">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_rdfs:subClassOf16" source="nid_delta:Asset" target="nid_:Device">
+    <edge id="eid_rdfs:subClassOf15" source="nid_delta:Asset" target="nid_saref:Device">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -469,7 +446,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf17" source="nid_delta:Frequency" target="nid_saref:Property">
+    <edge id="eid_rdfs:subClassOf16" source="nid_delta:Frequency" target="nid_saref:Property">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -504,7 +481,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf18" source="nid_delta:Prosumer" target="nid_delta:Customer">
+    <edge id="eid_rdfs:subClassOf17" source="nid_delta:Prosumer" target="nid_delta:Customer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -539,7 +516,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf19" source="nid_time:Instant" target="nid_time:TemporalEntity">
+    <edge id="eid_rdfs:subClassOf18" source="nid_time:Instant" target="nid_time:TemporalEntity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -574,7 +551,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf20" source="nid_delta:Profile" target="nid_saref:Profile">
+    <edge id="eid_rdfs:subClassOf19" source="nid_delta:Profile" target="nid_saref:Profile">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -597,7 +574,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf21" source="nid_delta:Consumer" target="nid_delta:Prosumer">
+    <edge id="eid_rdfs:subClassOf20" source="nid_delta:Consumer" target="nid_delta:Prosumer">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -620,7 +597,30 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf22" source="nid_delta:Reward" target="nid_saref:Property">
+    <edge id="eid_rdfs:subClassOf21" source="nid_delta:Reward" target="nid_saref:Property">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_saref:Power">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="110.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">saref:Power</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf22" source="nid_saref:Power" target="nid_saref:Property">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
