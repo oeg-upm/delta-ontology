@@ -237,7 +237,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasRequiredMeasurement">
-        <rdfs:label>Relationship between a violation condition and the associated measurement that is required.</rdfs:label>
+        <rdfs:comment>Relationship between a violation condition and the associated measurement that is required.</rdfs:comment>
         <rdfs:label>has required measurement</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1127,6 +1127,7 @@
                 <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Phase"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label>Measurement</rdfs:label>
     </owl:Class>
     
 

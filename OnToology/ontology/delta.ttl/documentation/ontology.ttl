@@ -139,8 +139,8 @@
 
 ###  http://delta.linkeddata.es/def/core#hasRequiredMeasurement
 :hasRequiredMeasurement rdf:type owl:ObjectProperty ;
-                        rdfs:label "Relationship between a violation condition and the associated measurement that is required." ,
-                                   "has required measurement" .
+                        rdfs:comment "Relationship between a violation condition and the associated measurement that is required." ;
+                        rdfs:label "has required measurement" .
 
 
 ###  http://delta.linkeddata.es/def/core#hasReward
@@ -684,7 +684,8 @@
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasPhase ;
                                owl:someValuesFrom :Phase
-                             ] .
+                             ] ;
+             rdfs:label "Measurement" .
 
 
 ###  http://delta.linkeddata.es/def/core#OvervoltageViolation
