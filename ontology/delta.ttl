@@ -527,7 +527,7 @@ delta:Aggregator rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Asset
 delta:Asset rdf:type owl:Class ;
-            rdfs:subClassOf <https://saref.etsi.org/saref4ener/Device> ,
+            rdfs:subClassOf <https://saref.etsi.org/core/Device> ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty delta:isOwnedBy ;
                               owl:someValuesFrom delta:Customer
@@ -597,7 +597,7 @@ delta:EnergyMarket rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#FEID
 delta:FEID rdf:type owl:Class ;
-           rdfs:subClassOf <https://saref.etsi.org/saref4ener/Device> ,
+           rdfs:subClassOf <https://saref.etsi.org/core/Device> ,
                            <https://w3id.org/def/openadr#VEN> ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty delta:detects ;
@@ -978,8 +978,8 @@ saref:UnitOfMeasure rdf:type owl:Class ;
                                                             rdfs:label "Key Performance Indicator" .
 
 
-###  https://saref.etsi.org/saref4ener/Device
-<https://saref.etsi.org/saref4ener/Device> rdf:type owl:Class ;
+###  https://saref.etsi.org/core/Device
+<https://saref.etsi.org/core/Device> rdf:type owl:Class ;
                                            owl:equivalentClass [ rdf:type owl:Restriction ;
                                                                  owl:onProperty saref:measuresProperty ;
                                                                  owl:allValuesFrom saref:Property
@@ -990,8 +990,8 @@ saref:UnitOfMeasure rdf:type owl:Class ;
                                            rdfs:label "Device" .
 
 
-###  https://saref.etsi.org/saref4ener/Energy
-<https://saref.etsi.org/saref4ener/Energy> rdf:type owl:Class ;
+###  https://saref.etsi.org/core/Energy
+<https://saref.etsi.org/core/Energy> rdf:type owl:Class ;
                                            rdfs:subClassOf saref:Property ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty delta:hasIncentive ;
@@ -1001,8 +1001,8 @@ saref:UnitOfMeasure rdf:type owl:Class ;
                                            rdfs:label "Energy" .
 
 
-###  https://saref.etsi.org/saref4ener/Power
-<https://saref.etsi.org/saref4ener/Power> rdf:type owl:Class ;
+###  https://saref.etsi.org/core/Power
+<https://saref.etsi.org/core/Power> rdf:type owl:Class ;
                                           rdfs:subClassOf saref:Property ;
                                           rdfs:comment "A property related to measurements that are characterized  by a value measured in power units" ;
                                           rdfs:label "Power" .
@@ -1022,79 +1022,79 @@ saref:UnitOfMeasure rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#ConsumptionCapacity
 delta:ConsumptionCapacity rdf:type owl:NamedIndividual ,
-                                   <https://saref.etsi.org/saref4ener/Power> ;
+                                   <https://saref.etsi.org/core/Power> ;
                           rdfs:label "Consumption capacity" .
 
 
 ###  http://delta.linkeddata.es/def/core#ContractedPower
 delta:ContractedPower rdf:type owl:NamedIndividual ,
-                               <https://saref.etsi.org/saref4ener/Power> ;
+                               <https://saref.etsi.org/core/Power> ;
                       rdfs:label "Contracted power" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyConsumption
 delta:EnergyConsumption rdf:type owl:NamedIndividual ,
-                                 <https://saref.etsi.org/saref4ener/Energy> ;
+                                 <https://saref.etsi.org/core/Energy> ;
                         rdfs:label "Energy consumption" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyDownFlexibility
 delta:EnergyDownFlexibility rdf:type owl:NamedIndividual ,
-                                     <https://saref.etsi.org/saref4ener/Energy> ;
+                                     <https://saref.etsi.org/core/Energy> ;
                             rdfs:label "Energy down flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGeneration
 delta:EnergyGeneration rdf:type owl:NamedIndividual ,
-                                <https://saref.etsi.org/saref4ener/Energy> ;
+                                <https://saref.etsi.org/core/Energy> ;
                        rdfs:label "Energy generation" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyGenerationForecast
 delta:EnergyGenerationForecast rdf:type owl:NamedIndividual ,
-                                        <https://saref.etsi.org/saref4ener/Energy> ;
+                                        <https://saref.etsi.org/core/Energy> ;
                                rdfs:label "Energy generation forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyLoadForecast
 delta:EnergyLoadForecast rdf:type owl:NamedIndividual ,
-                                  <https://saref.etsi.org/saref4ener/Energy> ;
+                                  <https://saref.etsi.org/core/Energy> ;
                          rdfs:label "Energy load forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#EnergyUpFlexibility
 delta:EnergyUpFlexibility rdf:type owl:NamedIndividual ,
-                                   <https://saref.etsi.org/saref4ener/Energy> ;
+                                   <https://saref.etsi.org/core/Energy> ;
                           rdfs:label "Energy up flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#GenerationCapacity
 delta:GenerationCapacity rdf:type owl:NamedIndividual ,
-                                  <https://saref.etsi.org/saref4ener/Power> ;
+                                  <https://saref.etsi.org/core/Power> ;
                          rdfs:label "Generation capacity" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerConsumption
 delta:PowerConsumption rdf:type owl:NamedIndividual ,
-                                <https://saref.etsi.org/saref4ener/Power> ;
+                                <https://saref.etsi.org/core/Power> ;
                        rdfs:label "Power consumption" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerGeneration
 delta:PowerGeneration rdf:type owl:NamedIndividual ,
-                               <https://saref.etsi.org/saref4ener/Power> ;
+                               <https://saref.etsi.org/core/Power> ;
                       rdfs:label "Power generation" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerGenerationForecast
 delta:PowerGenerationForecast rdf:type owl:NamedIndividual ,
-                                       <https://saref.etsi.org/saref4ener/Power> ;
+                                       <https://saref.etsi.org/core/Power> ;
                               rdfs:label "Power generation forecast" .
 
 
 ###  http://delta.linkeddata.es/def/core#PowerLoadForecast
 delta:PowerLoadForecast rdf:type owl:NamedIndividual ,
-                                 <https://saref.etsi.org/saref4ener/Power> ;
+                                 <https://saref.etsi.org/core/Power> ;
                         rdfs:label "Power load forecast" .
 
 
@@ -1118,7 +1118,7 @@ delta:PriceIntraDay rdf:type owl:NamedIndividual ,
 
 ###  http://delta.linkeddata.es/def/core#StorageCapacity
 delta:StorageCapacity rdf:type owl:NamedIndividual ,
-                               <https://saref.etsi.org/saref4ener/Energy> ;
+                               <https://saref.etsi.org/core/Energy> ;
                       rdfs:label "Storage capacity" .
 
 
