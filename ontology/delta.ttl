@@ -608,6 +608,17 @@ delta:CustomerCluster rdf:type owl:Class ;
                       rdfs:label "Customer cluster" .
 
 
+###  http://delta.linkeddata.es/def/core#Discount
+delta:Discount rdf:type owl:Class ;
+               rdfs:subClassOf delta:Reward ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty delta:isDefinedIn ;
+                                 owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
+                               ] ;
+               rdfs:comment "Reward associated to the customer in terms of monetary remuneration" ;
+               rdfs:label "Discount" .
+
+
 ###  http://delta.linkeddata.es/def/core#EnergyMarket
 delta:EnergyMarket rdf:type owl:Class ;
                    rdfs:label "Energy Market" .
