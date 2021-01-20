@@ -16,7 +16,7 @@
                                        owl:imports <https://w3id.org/def/openadr> ;
                                        <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
                                                                           <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> ;
-                                       owl:versionInfo "0.2.4" ;
+                                       owl:versionInfo "0.2.5" ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/albafernandezizquierdo/> ;
                                        dc:title "DELTA ontology" ;
@@ -583,7 +583,7 @@ delta:ComfortSetting rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Consumer
 delta:Consumer rdf:type owl:Class ;
-               rdfs:subClassOf delta:Prosumer ;
+               rdfs:subClassOf delta:Customer ;
                rdfs:comment "Entity that consumes energy" ;
                rdfs:label "Consumer" .
 
@@ -754,7 +754,7 @@ delta:Point rdf:type owl:Class ;
 
 ###  http://delta.linkeddata.es/def/core#Producer
 delta:Producer rdf:type owl:Class ;
-               rdfs:subClassOf delta:Prosumer ;
+               rdfs:subClassOf delta:Customer ;
                rdfs:label "Entity that produces energy" ,
                           "Producer" .
 
