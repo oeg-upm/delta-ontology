@@ -1232,7 +1232,7 @@
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Producer">
         <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
-        <rdfs:label>Entity that produces energy</rdfs:label>
+        <rdfs:comment>Entity that produces energy</rdfs:comment>
         <rdfs:label>Producer</rdfs:label>
     </owl:Class>
     

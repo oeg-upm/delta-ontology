@@ -665,7 +665,7 @@ _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 # http://delta.linkeddata.es/def/core#Producer
 <http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Customer> .
-<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Entity that produces energy" .
+<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity that produces energy" .
 <http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Producer" .
 # 
 # http://delta.linkeddata.es/def/core#Profile

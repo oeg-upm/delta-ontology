@@ -43,9 +43,6 @@ This section provides details for each class and property defined by DELTA ontol
             title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy Market</a>
       </li>
       <li>
-         <a href="#Producer" title="http://delta.linkeddata.es/def/core#Producer">Entity that produces energy</a>
-      </li>
-      <li>
          <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
       </li>
       <li>
@@ -114,6 +111,9 @@ This section provides details for each class and property defined by DELTA ontol
       </li>
       <li>
          <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
+      </li>
+      <li>
+         <a href="#Producer" title="http://delta.linkeddata.es/def/core#Producer">Producer</a>
       </li>
       <li>
          <a href="#Profile" title="http://delta.linkeddata.es/def/core#Profile">Profile</a>
@@ -267,7 +267,7 @@ This section provides details for each class and property defined by DELTA ontol
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Consumer" title="http://delta.linkeddata.es/def/core#Consumer">Consumer</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Producer" title="http://delta.linkeddata.es/def/core#Producer">Entity that produces energy</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Producer" title="http://delta.linkeddata.es/def/core#Producer">Producer</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Prosumer" title="http://delta.linkeddata.es/def/core#Prosumer">Prosumer</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -405,21 +405,6 @@ This section provides details for each class and property defined by DELTA ontol
       </h3>
       <p>
          <strong>IRI:</strong> http://delta.linkeddata.es/def/core#EnergyMarket</p>
-   </div>
-   <div class="entity" id="Producer">
-      <h3>Entity that produces energy<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Producer</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Customer" title="http://delta.linkeddata.es/def/core#Customer">Customer</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
    </div>
    <div class="entity" id="http://www.opengis.net/ont/geosparql#Feature">
       <h3>Feature<sup class="type-c" title="class">c</sup>
@@ -821,6 +806,24 @@ This section provides details for each class and property defined by DELTA ontol
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#PriceIntraDay"
                title="http://delta.linkeddata.es/def/core#PriceIntraDay">Price intra day</a>
             <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Producer">
+      <h3>Producer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://delta.linkeddata.es/def/core#Producer</p>
+      <div class="comment">
+         <span class="markdown">Entity that produces energy</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Customer" title="http://delta.linkeddata.es/def/core#Customer">Customer</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
