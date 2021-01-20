@@ -1227,6 +1227,17 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#Producer -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Producer">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Prosumer"/>
+        <rdfs:label>Entity that produces energy</rdfs:label>
+        <rdfs:label>Producer</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#Profile -->
 
 
@@ -1454,6 +1465,17 @@
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
         <rdfs:comment>Voltage constraint related to the grid</rdfs:comment>
         <rdfs:label>Voltage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Voucher -->
+
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Voucher">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+        <rdfs:comment>Reward associated to the customer in terms of a voucher</rdfs:comment>
+        <rdfs:label>Voucher</rdfs:label>
     </owl:Class>
     
 
@@ -1798,6 +1820,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#EnergyStorage -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyStorage">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy storage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#EnergyUpFlexibility -->
 
 
@@ -1828,6 +1860,16 @@
     
 
 
+    <!-- http://delta.linkeddata.es/def/core#PowerDownFlexibility -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerDownFlexibility">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power down flexibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://delta.linkeddata.es/def/core#PowerGeneration -->
 
 
@@ -1854,6 +1896,16 @@
     <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerLoadForecast">
         <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
         <rdfs:label>Power load forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerUpFlexibility -->
+
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerUpFlexibility">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power up flexibility</rdfs:label>
     </owl:NamedIndividual>
     
 

@@ -2,7 +2,7 @@
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul class="hlist">
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#Aggregator" title="http://delta.linkeddata.es/def/core#Aggregator">Aggregator</a>
    </li>
@@ -41,6 +41,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#EnergyMarket"
          title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy Market</a>
+   </li>
+   <li>
+      <a href="#Producer" title="http://delta.linkeddata.es/def/core#Producer">Entity that produces energy</a>
    </li>
    <li>
       <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
@@ -163,7 +166,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Voltage" title="http://delta.linkeddata.es/def/core#Voltage">Voltage</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#Voucher" title="http://delta.linkeddata.es/def/core#Voucher">Voucher</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#agreesOn" title="http://delta.linkeddata.es/def/core#agreesOn">agrees on</a>
    </li>
@@ -331,7 +337,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://w3id.org/def/openadr#sendsEvent" title="https://w3id.org/def/openadr#sendsEvent">sends event</a>
    </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#https://saref.etsi.org/core/hasValue" title="https://saref.etsi.org/core/hasValue">A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</a>
    </li>
@@ -398,7 +404,7 @@ This ontology has the following classes and properties.</span>
       <a href="#hasViolationValue"
          title="http://delta.linkeddata.es/def/core#hasViolationValue">Value of the violation</a>
    </li>
-</ul><h4>Named Individuals</h4><ul class="hlist">
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#ConsumptionCapacity"
          title="http://delta.linkeddata.es/def/core#ConsumptionCapacity">Consumption capacity</a>
@@ -428,6 +434,10 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#EnergyLoadForecast">Energy load forecast</a>
    </li>
    <li>
+      <a href="#EnergyStorage"
+         title="http://delta.linkeddata.es/def/core#EnergyStorage">Energy storage</a>
+   </li>
+   <li>
       <a href="#EnergyUpFlexibility"
          title="http://delta.linkeddata.es/def/core#EnergyUpFlexibility">Energy up flexibility</a>
    </li>
@@ -440,6 +450,10 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
    </li>
    <li>
+      <a href="#PowerDownFlexibility"
+         title="http://delta.linkeddata.es/def/core#PowerDownFlexibility">Power down flexibility</a>
+   </li>
+   <li>
       <a href="#PowerGeneration"
          title="http://delta.linkeddata.es/def/core#PowerGeneration">Power generation</a>
    </li>
@@ -450,6 +464,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#PowerLoadForecast"
          title="http://delta.linkeddata.es/def/core#PowerLoadForecast">Power load forecast</a>
+   </li>
+   <li>
+      <a href="#PowerUpFlexibility"
+         title="http://delta.linkeddata.es/def/core#PowerUpFlexibility">Power up flexibility</a>
    </li>
    <li>
       <a href="#PriceAS" title="http://delta.linkeddata.es/def/core#PriceAS">Price AS</a>

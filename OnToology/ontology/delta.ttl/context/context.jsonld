@@ -214,6 +214,9 @@
     "Energy" : {
       "@id" : "https://saref.etsi.org/core/Energy"
     },
+    "Producer" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Producer"
+    },
     "isRequestedTo" : {
       "@id" : "http://delta.linkeddata.es/def/core#isRequestedTo",
       "@type" : "@id"
@@ -318,6 +321,9 @@
     "hasDeliveryTime" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasDeliveryTime",
       "@type" : "@id"
+    },
+    "Voucher" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Voucher"
     },
     "sectorName" : {
       "@id" : "http://delta.linkeddata.es/def/core#sectorName"

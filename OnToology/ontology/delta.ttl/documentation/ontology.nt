@@ -662,6 +662,12 @@ _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 <http://delta.linkeddata.es/def/core#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Reward associated to the customer in terms of  points" .
 <http://delta.linkeddata.es/def/core#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point" .
 # 
+# http://delta.linkeddata.es/def/core#Producer
+<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Prosumer> .
+<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Entity that produces energy" .
+<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Producer" .
+# 
 # http://delta.linkeddata.es/def/core#Profile
 <http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://delta.linkeddata.es/def/core#Profile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Profile> .
@@ -799,6 +805,12 @@ _:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 <http://delta.linkeddata.es/def/core#Voltage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Property> .
 <http://delta.linkeddata.es/def/core#Voltage> <http://www.w3.org/2000/01/rdf-schema#comment> "Voltage constraint related to the grid" .
 <http://delta.linkeddata.es/def/core#Voltage> <http://www.w3.org/2000/01/rdf-schema#label> "Voltage" .
+# 
+# http://delta.linkeddata.es/def/core#Voucher
+<http://delta.linkeddata.es/def/core#Voucher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://delta.linkeddata.es/def/core#Voucher> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Reward> .
+<http://delta.linkeddata.es/def/core#Voucher> <http://www.w3.org/2000/01/rdf-schema#comment> "Reward associated to the customer in terms of a voucher" .
+<http://delta.linkeddata.es/def/core#Voucher> <http://www.w3.org/2000/01/rdf-schema#label> "Voucher" .
 # 
 # http://www.opengis.net/ont/geosparql#Feature
 <http://www.opengis.net/ont/geosparql#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -988,6 +1000,11 @@ _:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://saref.etsi.org/
 <http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Energy> .
 <http://delta.linkeddata.es/def/core#EnergyLoadForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Energy load forecast" .
 # 
+# http://delta.linkeddata.es/def/core#EnergyStorage
+<http://delta.linkeddata.es/def/core#EnergyStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#EnergyStorage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Energy> .
+<http://delta.linkeddata.es/def/core#EnergyStorage> <http://www.w3.org/2000/01/rdf-schema#label> "Energy storage" .
+# 
 # http://delta.linkeddata.es/def/core#EnergyUpFlexibility
 <http://delta.linkeddata.es/def/core#EnergyUpFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#EnergyUpFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Energy> .
@@ -1003,6 +1020,11 @@ _:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://saref.etsi.org/
 <http://delta.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Power> .
 <http://delta.linkeddata.es/def/core#PowerConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "Power consumption" .
 # 
+# http://delta.linkeddata.es/def/core#PowerDownFlexibility
+<http://delta.linkeddata.es/def/core#PowerDownFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#PowerDownFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Power> .
+<http://delta.linkeddata.es/def/core#PowerDownFlexibility> <http://www.w3.org/2000/01/rdf-schema#label> "Power down flexibility" .
+# 
 # http://delta.linkeddata.es/def/core#PowerGeneration
 <http://delta.linkeddata.es/def/core#PowerGeneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#PowerGeneration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Power> .
@@ -1017,6 +1039,11 @@ _:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://saref.etsi.org/
 <http://delta.linkeddata.es/def/core#PowerLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://delta.linkeddata.es/def/core#PowerLoadForecast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Power> .
 <http://delta.linkeddata.es/def/core#PowerLoadForecast> <http://www.w3.org/2000/01/rdf-schema#label> "Power load forecast" .
+# 
+# http://delta.linkeddata.es/def/core#PowerUpFlexibility
+<http://delta.linkeddata.es/def/core#PowerUpFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://delta.linkeddata.es/def/core#PowerUpFlexibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://saref.etsi.org/core/Power> .
+<http://delta.linkeddata.es/def/core#PowerUpFlexibility> <http://www.w3.org/2000/01/rdf-schema#label> "Power up flexibility" .
 # 
 # http://delta.linkeddata.es/def/core#PriceAS
 <http://delta.linkeddata.es/def/core#PriceAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
