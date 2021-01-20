@@ -669,6 +669,12 @@
     "@value" : "Energy Market"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#EnergyStorage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy storage"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#EnergyUpFlexibility",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Energy" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -844,6 +850,12 @@
     "@value" : "Power consumption"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#PowerDownFlexibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power down flexibility"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#PowerGeneration",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -862,6 +874,12 @@
     "@value" : "Power load forecast"
   } ]
 }, {
+  "@id" : "http://delta.linkeddata.es/def/core#PowerUpFlexibility",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Power" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Power up flexibility"
+  } ]
+}, {
   "@id" : "http://delta.linkeddata.es/def/core#PriceAS",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Price" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -878,6 +896,17 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/Price" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Price intra day"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#Producer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Entity that produces energy"
+  }, {
+    "@value" : "Producer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Profile",
@@ -1044,6 +1073,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://saref.etsi.org/core/Property"
+  } ]
+}, {
+  "@id" : "http://delta.linkeddata.es/def/core#Voucher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reward associated to the customer in terms of a voucher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Voucher"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://delta.linkeddata.es/def/core#Reward"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#agreesOn",

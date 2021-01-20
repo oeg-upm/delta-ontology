@@ -746,6 +746,13 @@ owl:topDataProperty rdfs:range xsd:float .
        rdfs:label "Point" .
 
 
+###  http://delta.linkeddata.es/def/core#Producer
+:Producer rdf:type owl:Class ;
+          rdfs:subClassOf :Prosumer ;
+          rdfs:label "Entity that produces energy" ,
+                     "Producer" .
+
+
 ###  http://delta.linkeddata.es/def/core#Profile
 :Profile rdf:type owl:Class ;
          rdfs:subClassOf <https://saref.etsi.org/core/Profile> ,
@@ -893,6 +900,13 @@ owl:topDataProperty rdfs:range xsd:float .
          rdfs:subClassOf <https://saref.etsi.org/core/Property> ;
          rdfs:comment "Voltage constraint related to the grid" ;
          rdfs:label "Voltage" .
+
+
+###  http://delta.linkeddata.es/def/core#Voucher
+:Voucher rdf:type owl:Class ;
+         rdfs:subClassOf :Reward ;
+         rdfs:comment "Reward associated to the customer in terms of a voucher" ;
+         rdfs:label "Voucher" .
 
 
 ###  http://www.opengis.net/ont/geosparql#Feature
@@ -1105,6 +1119,12 @@ owl:topDataProperty rdfs:range xsd:float .
                     rdfs:label "Energy load forecast" .
 
 
+###  http://delta.linkeddata.es/def/core#EnergyStorage
+:EnergyStorage rdf:type owl:NamedIndividual ,
+                        <https://saref.etsi.org/core/Energy> ;
+               rdfs:label "Energy storage" .
+
+
 ###  http://delta.linkeddata.es/def/core#EnergyUpFlexibility
 :EnergyUpFlexibility rdf:type owl:NamedIndividual ,
                               <https://saref.etsi.org/core/Energy> ;
@@ -1123,6 +1143,12 @@ owl:topDataProperty rdfs:range xsd:float .
                   rdfs:label "Power consumption" .
 
 
+###  http://delta.linkeddata.es/def/core#PowerDownFlexibility
+:PowerDownFlexibility rdf:type owl:NamedIndividual ,
+                               <https://saref.etsi.org/core/Power> ;
+                      rdfs:label "Power down flexibility" .
+
+
 ###  http://delta.linkeddata.es/def/core#PowerGeneration
 :PowerGeneration rdf:type owl:NamedIndividual ,
                           <https://saref.etsi.org/core/Power> ;
@@ -1139,6 +1165,12 @@ owl:topDataProperty rdfs:range xsd:float .
 :PowerLoadForecast rdf:type owl:NamedIndividual ,
                             <https://saref.etsi.org/core/Power> ;
                    rdfs:label "Power load forecast" .
+
+
+###  http://delta.linkeddata.es/def/core#PowerUpFlexibility
+:PowerUpFlexibility rdf:type owl:NamedIndividual ,
+                             <https://saref.etsi.org/core/Power> ;
+                    rdfs:label "Power up flexibility" .
 
 
 ###  http://delta.linkeddata.es/def/core#PriceAS
