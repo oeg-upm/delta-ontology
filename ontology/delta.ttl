@@ -755,8 +755,8 @@ delta:Point rdf:type owl:Class ;
 ###  http://delta.linkeddata.es/def/core#Producer
 delta:Producer rdf:type owl:Class ;
                rdfs:subClassOf delta:Customer ;
-               rdfs:label "Entity that produces energy" ,
-                          "Producer" .
+               rdfs:comment "Entity that produces energy" ;
+               rdfs:label "Producer" .
 
 
 ###  http://delta.linkeddata.es/def/core#Profile
