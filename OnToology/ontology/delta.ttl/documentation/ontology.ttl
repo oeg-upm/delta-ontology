@@ -14,7 +14,7 @@
                                                                           <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.2.4" .
+                                       owl:versionInfo "0.2.5" .
 
 #################################################################
 #    Annotation properties
@@ -577,7 +577,7 @@ owl:topDataProperty rdfs:range xsd:float .
 
 ###  http://delta.linkeddata.es/def/core#Consumer
 :Consumer rdf:type owl:Class ;
-          rdfs:subClassOf :Prosumer ;
+          rdfs:subClassOf :Customer ;
           rdfs:comment "Entity that consumes energy" ;
           rdfs:label "Consumer" .
 
@@ -748,7 +748,7 @@ owl:topDataProperty rdfs:range xsd:float .
 
 ###  http://delta.linkeddata.es/def/core#Producer
 :Producer rdf:type owl:Class ;
-          rdfs:subClassOf :Prosumer ;
+          rdfs:subClassOf :Customer ;
           rdfs:label "Entity that produces energy" ,
                      "Producer" .
 
