@@ -749,8 +749,8 @@ owl:topDataProperty rdfs:range xsd:float .
 ###  http://delta.linkeddata.es/def/core#Producer
 :Producer rdf:type owl:Class ;
           rdfs:subClassOf :Customer ;
-          rdfs:label "Entity that produces energy" ,
-                     "Producer" .
+          rdfs:comment "Entity that produces energy" ;
+          rdfs:label "Producer" .
 
 
 ###  http://delta.linkeddata.es/def/core#Profile

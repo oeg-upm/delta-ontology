@@ -900,9 +900,10 @@
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Producer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Entity that produces energy"
-  }, {
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Producer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
