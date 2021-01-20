@@ -502,7 +502,7 @@
     "@id" : "https://w3id.org/def/openadr"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.4"
+    "@value" : "0.2.5"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Action",
@@ -581,7 +581,7 @@
     "@value" : "Consumer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
+    "@id" : "http://delta.linkeddata.es/def/core#Customer"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#ConsumptionCapacity",
@@ -906,7 +906,7 @@
     "@value" : "Producer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
+    "@id" : "http://delta.linkeddata.es/def/core#Customer"
   } ]
 }, {
   "@id" : "http://delta.linkeddata.es/def/core#Profile",

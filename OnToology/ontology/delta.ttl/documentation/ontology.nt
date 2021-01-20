@@ -6,7 +6,7 @@
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> .
 <http://delta.linkeddata.es/def/core> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
 <http://delta.linkeddata.es/def/core> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." .
-<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.4" .
+<http://delta.linkeddata.es/def/core> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.5" .
 # 
 # 
 # #################################################################
@@ -511,7 +511,7 @@ _:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000/
 # 
 # http://delta.linkeddata.es/def/core#Consumer
 <http://delta.linkeddata.es/def/core#Consumer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://delta.linkeddata.es/def/core#Consumer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Prosumer> .
+<http://delta.linkeddata.es/def/core#Consumer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Customer> .
 <http://delta.linkeddata.es/def/core#Consumer> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity that consumes energy" .
 <http://delta.linkeddata.es/def/core#Consumer> <http://www.w3.org/2000/01/rdf-schema#label> "Consumer" .
 # 
@@ -664,7 +664,7 @@ _:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 # 
 # http://delta.linkeddata.es/def/core#Producer
 <http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Prosumer> .
+<http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://delta.linkeddata.es/def/core#Customer> .
 <http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Entity that produces energy" .
 <http://delta.linkeddata.es/def/core#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Producer" .
 # 

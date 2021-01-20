@@ -17,7 +17,7 @@
         <terms:creator rdf:resource="https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.2.4</owl:versionInfo>
+        <owl:versionInfo>0.2.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -961,7 +961,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Consumer">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Prosumer"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
         <rdfs:comment>Entity that consumes energy</rdfs:comment>
         <rdfs:label>Consumer</rdfs:label>
     </owl:Class>
@@ -1231,7 +1231,7 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Producer">
-        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Prosumer"/>
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
         <rdfs:label>Entity that produces energy</rdfs:label>
         <rdfs:label>Producer</rdfs:label>
     </owl:Class>
