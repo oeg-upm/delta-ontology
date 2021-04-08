@@ -598,11 +598,11 @@ delta:Battery rdf:type owl:Class ;
 delta:Boundary rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty delta:hasLowerBoundary ;
-                                 owl:someValuesFrom delta:Boundary
+                                 owl:someValuesFrom saref:Measurement
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty delta:hasUpperBoundary ;
-                                 owl:someValuesFrom delta:Boundary
+                                 owl:someValuesFrom saref:Measurement
                                ] ;
                rdfs:comment "Limit of a value." ;
                rdfs:label "Boundary" .
