@@ -1,1298 +1,1965 @@
-@prefix : <http://delta.linkeddata.es/def/core#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix delta: <http://delta.linkeddata.es/def/core#> .
-@prefix saref: <https://saref.etsi.org/core/> .
-@prefix terms: <http://purl.org/dc/terms> .
-@prefix saref4bldg: <https://w3id.org/def/saref4bldg#> .
-@base <http://delta.linkeddata.es/def/core> .
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://delta.linkeddata.es/def/core#"
+     xml:base="http://delta.linkeddata.es/def/core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:delta="http://delta.linkeddata.es/def/core#"
+     xmlns:saref="https://saref.etsi.org/core/"
+     xmlns:terms="http://purl.org/dc/terms"
+     xmlns:terms1="http://purl.org/dc/terms/"
+     xmlns:saref4bldg="https://w3id.org/def/saref4bldg#">
+    <owl:Ontology rdf:about="http://delta.linkeddata.es/def/core">
+        <owl:imports rdf:resource="https://w3id.org/def/openadr"/>
+        <dc:title>DELTA ontology</dc:title>
+        <terms1:creator rdf:resource="http://www.garcia-castro.com/foaf.rdf#me"/>
+        <terms1:creator rdf:resource="https://www.linkedin.com/in/albafernandezizquierdo/"/>
+        <terms1:creator rdf:resource="https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/"/>
+        <terms1:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
+        <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
+        <owl:versionInfo>0.2.6</owl:versionInfo>
+    </owl:Ontology>
+    
 
-<http://delta.linkeddata.es/def/core> rdf:type owl:Ontology ;
-                                       owl:imports <https://w3id.org/def/openadr> ;
-                                       dc:title "DELTA ontology" ;
-                                       <http://purl.org/dc/terms/creator> <http://www.garcia-castro.com/foaf.rdf#me> ,
-                                                                          <https://www.linkedin.com/in/albafernandezizquierdo/> ,
-                                                                          <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> ;
-                                       <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                       rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.2.6" .
 
-#################################################################
-#    Annotation properties
-#################################################################
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-###  http://purl.org/dc/elements/1.1/title
-dc:title rdf:type owl:AnnotationProperty .
+    
 
 
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+    <!-- http://purl.org/dc/elements/1.1/title -->
 
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
 
-#################################################################
-#    Object Properties
-#################################################################
 
-###  http://delta.linkeddata.es/def/core#agreesOn
-delta:agreesOn rdf:type owl:ObjectProperty ;
-               rdfs:isDefinedBy "Relationship between a smart contract and the property it agrees on." ;
-               rdfs:label "agrees on" .
+    <!-- http://purl.org/dc/terms/creator -->
 
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
 
-###  http://delta.linkeddata.es/def/core#allocates
-delta:allocates rdf:type owl:ObjectProperty ;
-                owl:inverseOf delta:isAllocatedIn ;
-                rdfs:isDefinedBy "Relation between a virtual node and its associated aggregator." ;
-                rdfs:label "allocates" .
 
+    <!-- http://purl.org/dc/terms/license -->
 
-###  http://delta.linkeddata.es/def/core#belongsToCluster
-delta:belongsToCluster rdf:type owl:ObjectProperty ;
-                       rdfs:comment "Relationship between a virtual node and the cluster it belongs to." ;
-                       rdfs:label "belongs to cluster" .
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
 
 
-###  http://delta.linkeddata.es/def/core#consumes
-delta:consumes rdf:type owl:ObjectProperty ;
-               rdfs:comment "Relation between an aggregator and the market settlement it consumes" ;
-               rdfs:label "consumes" .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
+    
 
-###  http://delta.linkeddata.es/def/core#detects
-delta:detects rdf:type owl:ObjectProperty ;
-              rdfs:comment "Relationship between the FEID and the violation it detects." ;
-              rdfs:label "detects" .
 
+    <!-- http://delta.linkeddata.es/def/core#agreesOn -->
 
-###  http://delta.linkeddata.es/def/core#hasAggregatedProperty
-delta:hasAggregatedProperty rdf:type owl:ObjectProperty ;
-                            rdfs:comment "Relationship identifying the properties associated to a group of entities, such as clusters." ;
-                            rdfs:label "has aggregated property" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#agreesOn">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:isDefinedBy>Relationship between a smart contract and the property it agrees on.</rdfs:isDefinedBy>
+        <rdfs:label>agrees on</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasBoundary
-delta:hasBoundary rdf:type owl:ObjectProperty ;
-                  rdfs:comment "A relationship defining the boundary values (min and max values) of an entity" ;
-                  rdfs:label "has boundary" .
+    <!-- http://delta.linkeddata.es/def/core#allocates -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#allocates">
+        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#isAllocatedIn"/>
+        <rdfs:isDefinedBy>Relation between a virtual node and its associated aggregator.</rdfs:isDefinedBy>
+        <rdfs:label>allocates</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasComfortSetting
-delta:hasComfortSetting rdf:type owl:ObjectProperty ;
-                        rdfs:comment "Relation to define the comfort settings of a system." ;
-                        rdfs:label "has comfort settings" .
 
+    <!-- http://delta.linkeddata.es/def/core#belongsToCluster -->
 
-###  http://delta.linkeddata.es/def/core#hasCurrency
-delta:hasCurrency rdf:type owl:ObjectProperty ;
-                  rdfs:comment "Link between a price and its currency" ;
-                  rdfs:label "has currency" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#belongsToCluster">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#VirtualNode"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Cluster"/>
+        <rdfs:comment>Relationship between a virtual node and the cluster it belongs to.</rdfs:comment>
+        <rdfs:label>belongs to cluster</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasDeliveryTime
-delta:hasDeliveryTime rdf:type owl:ObjectProperty ;
-                      rdfs:comment "Link to the delivery time." ;
-                      rdfs:label "has delivery time" .
+    <!-- http://delta.linkeddata.es/def/core#consumes -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#consumes">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Aggregator"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#MarketSettlement"/>
+        <rdfs:comment>Relation between an aggregator and the market settlement it consumes</rdfs:comment>
+        <rdfs:label>consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasDurationDescription
-delta:hasDurationDescription rdf:type owl:ObjectProperty ;
-                             rdfs:range time:Duration ;
-                             rdfs:comment "Duration description of a violation, indicanting value and unit." ;
-                             rdfs:label "has duration description" .
 
+    <!-- http://delta.linkeddata.es/def/core#detects -->
 
-###  http://delta.linkeddata.es/def/core#hasEstimatedMeasurement
-delta:hasEstimatedMeasurement rdf:type owl:ObjectProperty ;
-                              rdfs:comment "Relationship between a violation condition and the current associated measurement that is estimated." ;
-                              rdfs:label "has estimated measurement" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#detects">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
+        <rdfs:comment>Relationship between the FEID and the violation it detects.</rdfs:comment>
+        <rdfs:label>detects</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasIncentive
-delta:hasIncentive rdf:type owl:ObjectProperty ;
-                   rdfs:comment "A relation between a property and its incentives associated." ;
-                   rdfs:label "has incentive" .
+    <!-- http://delta.linkeddata.es/def/core#hasAggregatedProperty -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasAggregatedProperty">
+        <rdfs:comment>Relationship identifying the properties associated to a group of entities, such as clusters.</rdfs:comment>
+        <rdfs:label>has aggregated property</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasIndex
-delta:hasIndex rdf:type owl:ObjectProperty ;
-               rdfs:comment "Link between a Virtual Node and its index." ;
-               rdfs:label "has index" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasBoundary -->
 
-###  http://delta.linkeddata.es/def/core#hasLowerBoundary
-delta:hasLowerBoundary rdf:type owl:ObjectProperty ;
-                       rdfs:domain delta:Boundary ;
-                       rdfs:range delta:Measurement ;
-                       rdfs:comment "A relationship defining the lower boundary of an entity (e.g. a comfort setting)." ;
-                       rdfs:label "has lower boundary" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasBoundary">
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+        <rdfs:comment>A relationship defining the boundary values (min and max values) of an entity</rdfs:comment>
+        <rdfs:label>has boundary</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasPayment
-delta:hasPayment rdf:type owl:ObjectProperty ;
-                 rdfs:comment "Relation between a smart contract and the payment associated" ;
-                 rdfs:label "has payment" .
+    <!-- http://delta.linkeddata.es/def/core#hasComfortSetting -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting">
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#ComfortSetting"/>
+        <rdfs:comment>Relation to define the comfort settings of a system.</rdfs:comment>
+        <rdfs:label>has comfort settings</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasPhase
-delta:hasPhase rdf:type owl:ObjectProperty ;
-               rdfs:comment "Link between a phase and a measurement" ;
-               rdfs:label "has phase" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasCurrency -->
 
-###  http://delta.linkeddata.es/def/core#hasProfile
-delta:hasProfile rdf:type owl:ObjectProperty ;
-                 owl:inverseOf delta:isProfileOf ;
-                 rdfs:comment "Link between an entity and its profile" ;
-                 rdfs:label "has profile" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasCurrency">
+        <rdfs:comment>Link between a price and its currency</rdfs:comment>
+        <rdfs:label>has currency</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasRedundancy
-delta:hasRedundancy rdf:type owl:ObjectProperty ;
-                    rdfs:comment "Redundancy of  a FEID" ;
-                    rdfs:label "has redundancy" .
+    <!-- http://delta.linkeddata.es/def/core#hasDeliveryTime -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDeliveryTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>Link to the delivery time.</rdfs:comment>
+        <rdfs:label>has delivery time</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasRequiredMeasurement
-delta:hasRequiredMeasurement rdf:type owl:ObjectProperty ;
-                             rdfs:comment "Relationship between a violation condition and the associated measurement that is required." ;
-                             rdfs:label "has required measurement" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasDurationDescription -->
 
-###  http://delta.linkeddata.es/def/core#hasReward
-delta:hasReward rdf:type owl:ObjectProperty ;
-                rdfs:domain delta:Customer ;
-                rdfs:comment "Link between a customer and its associated reward" ;
-                rdfs:label "has reward" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDurationDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#Duration"/>
+        <rdfs:comment>Duration description of a violation, indicanting value and unit.</rdfs:comment>
+        <rdfs:label>has duration description</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasSmartContract
-delta:hasSmartContract rdf:type owl:ObjectProperty ;
-                       rdfs:range delta:SmartContract ;
-                       rdfs:comment "link between the Virtual node and its smart contracts" ;
-                       rdfs:label "has smart contract" .
+    <!-- http://delta.linkeddata.es/def/core#hasEstimatedMeasurement -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#ViolationCondition"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+        <rdfs:comment>Relationship between a violation condition and the current associated measurement that is estimated.</rdfs:comment>
+        <rdfs:label>has estimated measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasSystemConstraint
-delta:hasSystemConstraint rdf:type owl:ObjectProperty ;
-                          rdfs:comment "Link to the grid constraints of a system" ;
-                          rdfs:label "has system constraint" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasIncentive -->
 
-###  http://delta.linkeddata.es/def/core#hasTransaction
-delta:hasTransaction rdf:type owl:ObjectProperty ;
-                     rdfs:comment "Link between a smart contracts and the transactions it stores" ;
-                     rdfs:label "has transaction" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIncentive">
+        <rdfs:comment>A relation between a property and its incentives associated.</rdfs:comment>
+        <rdfs:label>has incentive</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasUpperBoundary
-delta:hasUpperBoundary rdf:type owl:ObjectProperty ;
-                       rdfs:domain delta:Boundary ;
-                       rdfs:range delta:Measurement ;
-                       rdfs:comment "A relationship defining the upper boundary of an entity (e.g. a comfort setting)." ;
-                       rdfs:label "has upper boundary" .
+    <!-- http://delta.linkeddata.es/def/core#hasIndex -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIndex">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#VirtualNode"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Index"/>
+        <rdfs:comment>Link between a Virtual Node and its index.</rdfs:comment>
+        <rdfs:label>has index</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasViolationCondition
-delta:hasViolationCondition rdf:type owl:ObjectProperty ;
-                            rdfs:comment "Relationship between a violation and all its conditions" ;
-                            rdfs:label "has violation condition" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasLowerBoundary -->
 
-###  http://delta.linkeddata.es/def/core#includesProfile
-delta:includesProfile rdf:type owl:ObjectProperty ;
-                      rdfs:comment "Relationship between a violation and  a profile that describes such violation" ;
-                      rdfs:label "includes profile" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasLowerBoundary">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+        <rdfs:comment>A relationship defining the lower boundary of an entity (e.g. a comfort setting).</rdfs:comment>
+        <rdfs:label>has lower boundary</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#isAllocatedIn
-delta:isAllocatedIn rdf:type owl:ObjectProperty ;
-                    rdfs:comment "Link from a virtual node to its aggregator" ;
-                    rdfs:label "is allocated in" .
+    <!-- http://delta.linkeddata.es/def/core#hasPayment -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasPayment">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Payment"/>
+        <rdfs:comment>Relation between a smart contract and the payment associated</rdfs:comment>
+        <rdfs:label>has payment</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#isDefinedIn
-delta:isDefinedIn rdf:type owl:ObjectProperty ;
-                  rdfs:range <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure> ;
-                  rdfs:comment "A relationship defining the currency associated to a value" ;
-                  rdfs:label "is defined in" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasPhase -->
 
-###  http://delta.linkeddata.es/def/core#isLocatedAt
-delta:isLocatedAt rdf:type owl:ObjectProperty ;
-                  rdfs:comment "Relation between an object and the geographical feature in which it is located at" ;
-                  rdfs:label "is located at" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasPhase">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Phase"/>
+        <rdfs:comment>Link between a phase and a measurement</rdfs:comment>
+        <rdfs:label>has phase</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#isOwnedBy
-delta:isOwnedBy rdf:type owl:ObjectProperty ;
-                owl:inverseOf delta:owns ;
-                rdfs:comment "Link between a device and its customer" ;
-                rdfs:label "is owned by" .
+    <!-- http://delta.linkeddata.es/def/core#hasProfile -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasProfile">
+        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#isProfileOf"/>
+        <rdfs:comment>Link between an entity and its profile</rdfs:comment>
+        <rdfs:label>has profile</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#isProfileOf
-delta:isProfileOf rdf:type owl:ObjectProperty ;
-                  rdfs:comment "Relationship between a profile and a device." ;
-                  rdfs:label "is profile of" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasRedundancy -->
 
-###  http://delta.linkeddata.es/def/core#isRelatedTo
-delta:isRelatedTo rdf:type owl:ObjectProperty ;
-                  rdfs:comment "Relationship  between a violation and the related DVNs, FEIDs or Feeders." ;
-                  rdfs:label "isRelatedTo" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasRedundancy">
+        <rdfs:comment>Redundancy of  a FEID</rdfs:comment>
+        <rdfs:label>has redundancy</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#isRequestedTo
-delta:isRequestedTo rdf:type owl:ObjectProperty ;
-                    rdfs:comment "Relationship between  an action and the virtual node in charge of perform it" ;
-                    rdfs:label "is requested to" .
+    <!-- http://delta.linkeddata.es/def/core#hasRequiredMeasurement -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasRequiredMeasurement">
+        <rdfs:comment>Relationship between a violation condition and the associated measurement that is required.</rdfs:comment>
+        <rdfs:label>has required measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#isValidDuringPeriod
-delta:isValidDuringPeriod rdf:type owl:ObjectProperty ;
-                          rdfs:range time:TemporalEntity ;
-                          rdfs:comment "Period where an entity, such a contract, is valid" ;
-                          rdfs:label "is valid during period" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasReward -->
 
-###  http://delta.linkeddata.es/def/core#manages
-delta:manages rdf:type owl:ObjectProperty ;
-              rdfs:comment "Relation between a Virutal Node and the  devices it manages" ;
-              rdfs:label "manages" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasReward">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
+        <rdfs:comment>Link between a customer and its associated reward</rdfs:comment>
+        <rdfs:label>has reward</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#owns
-delta:owns rdf:type owl:ObjectProperty ;
-           rdfs:comment "Link between the customers and the devices" ;
-           rdfs:label "owns" .
+    <!-- http://delta.linkeddata.es/def/core#hasSmartContract -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSmartContract">
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+        <rdfs:comment>link between the Virtual node and its smart contracts</rdfs:comment>
+        <rdfs:label>has smart contract</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#requests
-delta:requests rdf:type owl:ObjectProperty ;
-               rdfs:comment "Relationship between a grid violation and the requested property to solve it." ;
-               rdfs:label "requests" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasSystemConstraint -->
 
-###  http://delta.linkeddata.es/def/core#requiresMeasurement
-delta:requiresMeasurement rdf:type owl:ObjectProperty ;
-                          rdfs:comment "Relationship between a DR request and the needed measurement in order to solve a violation" ;
-                          rdfs:label "requires measurement" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasSystemConstraint">
+        <rdfs:comment>Link to the grid constraints of a system</rdfs:comment>
+        <rdfs:label>has system constraint</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://www.opengis.net/ont/geosparql#hasGeometry
-<http://www.opengis.net/ont/geosparql#hasGeometry> rdf:type owl:ObjectProperty ;
-                                                   rdfs:domain <http://www.opengis.net/ont/geosparql#Feature> ;
-                                                   rdfs:range <http://www.opengis.net/ont/geosparql#Geometry> ;
-                                                   rdfs:comment "A spatial representation for a given feature." ;
-                                                   rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
-                                                   rdfs:label "hasGeometry" .
+    <!-- http://delta.linkeddata.es/def/core#hasTransaction -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasTransaction">
+        <rdfs:comment>Link between a smart contracts and the transactions it stores</rdfs:comment>
+        <rdfs:label>has transaction</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  https://saref.etsi.org/core/consistsOf
-saref:consistsOf rdf:type owl:ObjectProperty ;
-                 rdfs:comment "A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)" ;
-                 rdfs:isDefinedBy <https://saref.etsi.org/core> ;
-                 rdfs:label "consists of" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasUpperBoundary -->
 
-###  https://saref.etsi.org/core/isAbout
-saref:isAbout rdf:type owl:ObjectProperty ;
-              rdfs:comment "A relationship identifying what an entity, such as a Profile, is about" ;
-              rdfs:isDefinedBy "https://saref.etsi.org/core" ;
-              rdfs:label "isAbout" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasUpperBoundary">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+        <rdfs:comment>A relationship defining the upper boundary of an entity (e.g. a comfort setting).</rdfs:comment>
+        <rdfs:label>has upper boundary</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  https://saref.etsi.org/core/isMeasuredIn
-saref:isMeasuredIn rdf:type owl:ObjectProperty ;
-                   rdfs:isDefinedBy "https://w3id.org/def/saref" ;
-                   rdfs:label "is measured in" .
+    <!-- http://delta.linkeddata.es/def/core#hasViolationCondition -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasViolationCondition">
+        <rdfs:comment>Relationship between a violation and all its conditions</rdfs:comment>
+        <rdfs:label>has violation condition</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  https://saref.etsi.org/core/isMeasurementOf
-saref:isMeasurementOf rdf:type owl:ObjectProperty ;
-                      rdfs:comment "A relationship between a measurement and the feature of interest whose quality was measured" ;
-                      rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
-                      rdfs:label "isMeasurementOf" .
 
+    <!-- http://delta.linkeddata.es/def/core#includesProfile -->
 
-###  https://saref.etsi.org/core/makesMeasurement
-saref:makesMeasurement rdf:type owl:ObjectProperty ;
-                       rdfs:comment "A relationship specifying the property that can be measured by a certain device" ;
-                       rdfs:isDefinedBy "https://w3id.org/def/saref" ;
-                       rdfs:label "makes measurement" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#includesProfile">
+        <rdfs:comment>Relationship between a violation and  a profile that describes such violation</rdfs:comment>
+        <rdfs:label>includes profile</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  https://saref.etsi.org/core/measuresProperty
-saref:measuresProperty rdf:type owl:ObjectProperty ;
-                       rdfs:comment "A relationship specifying the property that can be measured by a certain device" ;
-                       rdfs:isDefinedBy "https://w3id.org/def/saref" ;
-                       rdfs:label "measures property" .
+    <!-- http://delta.linkeddata.es/def/core#isAllocatedIn -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isAllocatedIn">
+        <rdfs:comment>Link from a virtual node to its aggregator</rdfs:comment>
+        <rdfs:label>is allocated in</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  https://saref.etsi.org/core/relatesToMeasurement
-saref:relatesToMeasurement rdf:type owl:ObjectProperty ;
-                           rdfs:comment "A relationship between a property and the measurements it relates to" ;
-                           rdfs:isDefinedBy "https://w3id.org/def/saref" ;
-                           rdfs:label "relates to measurement" .
 
+    <!-- http://delta.linkeddata.es/def/core#isDefinedIn -->
 
-###  https://saref.etsi.org/core/relatesToProperty
-saref:relatesToProperty rdf:type owl:ObjectProperty ;
-                        rdfs:comment "A relationship between a measurement and the property it relates to" ;
-                        rdfs:isDefinedBy "https://saref.etsi.org/core" ;
-                        rdfs:label "relates to property" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isDefinedIn">
+        <rdfs:comment>A relationship defining the currency associated to a value</rdfs:comment>
+        <rdfs:label>is defined in</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  https://saref.etsi.org/saref4city/isDerivedFrom
-<https://saref.etsi.org/saref4city/isDerivedFrom> rdf:type owl:ObjectProperty ;
-                                                  rdfs:comment "is derived from" ;
-                                                  rdfs:isDefinedBy <https://saref.etsi.org/saref4city> ;
-                                                  rdfs:label "is derived from" .
+    <!-- http://delta.linkeddata.es/def/core#isLocatedAt -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isLocatedAt">
+        <rdfs:comment>Relation between an object and the geographical feature in which it is located at</rdfs:comment>
+        <rdfs:label>is located at</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  https://saref.etsi.org/saref4city/quantifiesKPI
-<https://saref.etsi.org/saref4city/quantifiesKPI> rdf:type owl:ObjectProperty ;
-                                                  rdfs:comment "quantifies KPI" ;
-                                                  rdfs:isDefinedBy <https://saref.etsi.org/saref4city/v1.1.2/> ;
-                                                  rdfs:label "quantifies KPI" .
 
+    <!-- http://delta.linkeddata.es/def/core#isOwnedBy -->
 
-###  https://w3id.org/def/openadr#belongsTo
-<https://w3id.org/def/openadr#belongsTo> rdf:type owl:ObjectProperty ;
-                                         rdfs:comment "Relationship between a VE, Resource or Asset with the Group of targets associated" ;
-                                         rdfs:label "belongs to" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isOwnedBy">
+        <owl:inverseOf rdf:resource="http://delta.linkeddata.es/def/core#owns"/>
+        <rdfs:comment>Link between a device and its customer</rdfs:comment>
+        <rdfs:label>is owned by</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  https://w3id.org/def/openadr#hasDuration
-<https://w3id.org/def/openadr#hasDuration> rdf:type owl:ObjectProperty ;
-                                           rdfs:comment "Relationship between an event and its duration" ;
-                                           rdfs:label "has duration" .
+    <!-- http://delta.linkeddata.es/def/core#isProfileOf -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isProfileOf">
+        <rdfs:comment>Relationship between a profile and a device.</rdfs:comment>
+        <rdfs:label>is profile of</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  https://w3id.org/def/openadr#sendsEvent
-<https://w3id.org/def/openadr#sendsEvent> rdf:type owl:ObjectProperty ;
-                                          rdfs:comment "A link between a node and the event it sends" ;
-                                          rdfs:label "sends event" .
 
+    <!-- http://delta.linkeddata.es/def/core#isRelatedTo -->
 
-#################################################################
-#    Data properties
-#################################################################
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isRelatedTo">
+        <rdfs:comment>Relationship  between a violation and the related DVNs, FEIDs or Feeders.</rdfs:comment>
+        <rdfs:label>isRelatedTo</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#clusterDescription
-delta:clusterDescription rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf owl:topDataProperty ;
-                         rdfs:comment "Description of a cluster" ;
-                         rdfs:label "cluster description" .
 
+    <!-- http://delta.linkeddata.es/def/core#isRequestedTo -->
 
-###  http://delta.linkeddata.es/def/core#clusterName
-delta:clusterName rdf:type owl:DatatypeProperty ;
-                  rdfs:comment "Name of a cluster" ;
-                  rdfs:label "cluster name" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isRequestedTo">
+        <rdfs:comment>Relationship between  an action and the virtual node in charge of perform it</rdfs:comment>
+        <rdfs:label>is requested to</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasCreationDateTime
-delta:hasCreationDateTime rdf:type owl:DatatypeProperty ;
-                          rdfs:comment "Creation date of a profile" ;
-                          rdfs:label "has creation date time" .
+    <!-- http://delta.linkeddata.es/def/core#isValidDuringPeriod -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isValidDuringPeriod">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>Period where an entity, such a contract, is valid</rdfs:comment>
+        <rdfs:label>is valid during period</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasDescription
-delta:hasDescription rdf:type owl:DatatypeProperty ;
-                     rdfs:label "description" .
 
+    <!-- http://delta.linkeddata.es/def/core#manages -->
 
-###  http://delta.linkeddata.es/def/core#hasGranularity
-delta:hasGranularity rdf:type owl:DatatypeProperty ;
-                     rdfs:comment "Granularity of the profile (e.g., weekly, daily)" ;
-                     rdfs:label "has granularity" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#manages">
+        <rdfs:comment>Relation between a Virutal Node and the  devices it manages</rdfs:comment>
+        <rdfs:label>manages</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasHref
-delta:hasHref rdf:type owl:DatatypeProperty ;
-              rdfs:comment "URI of the endpoint" ;
-              rdfs:label "has href" .
+    <!-- http://delta.linkeddata.es/def/core#owns -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#owns">
+        <rdfs:comment>Link between the customers and the devices</rdfs:comment>
+        <rdfs:label>owns</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasIp
-delta:hasIp rdf:type owl:DatatypeProperty ;
-            rdfs:range xsd:string ;
-            rdfs:comment "IP address of a thing" ;
-            rdfs:label "has ip" .
 
+    <!-- http://delta.linkeddata.es/def/core#requests -->
 
-###  http://delta.linkeddata.es/def/core#hasPort
-delta:hasPort rdf:type owl:DatatypeProperty ;
-              rdfs:range xsd:integer ;
-              rdfs:comment "Address of the service within the system." ;
-              rdfs:label "has port" .
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#requests">
+        <rdfs:comment>Relationship between a grid violation and the requested property to solve it.</rdfs:comment>
+        <rdfs:label>requests</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasReliability
-delta:hasReliability rdf:type owl:DatatypeProperty ;
-                     rdfs:range xsd:float ;
-                     rdfs:comment "Reliability associated to a virtual node" ;
-                     rdfs:label "has reliability" .
+    <!-- http://delta.linkeddata.es/def/core#requiresMeasurement -->
 
+    <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#requiresMeasurement">
+        <rdfs:comment>Relationship between a DR request and the needed measurement in order to solve a violation</rdfs:comment>
+        <rdfs:label>requires measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#hasRewardValue
-delta:hasRewardValue rdf:type owl:DatatypeProperty ;
-                     rdfs:comment "A relationship defining the value of a certain reward, e.g., points or money" ;
-                     rdfs:label "has reward value" .
 
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
 
-###  http://delta.linkeddata.es/def/core#hasViolationType
-delta:hasViolationType rdf:type owl:DatatypeProperty ;
-                       rdfs:range [ rdf:type rdfs:Datatype ;
-                                    owl:oneOf [ rdf:type rdf:List ;
-                                                rdf:first "overloading" ;
-                                                rdf:rest [ rdf:type rdf:List ;
-                                                           rdf:first "overvoltage" ;
-                                                           rdf:rest [ rdf:type rdf:List ;
-                                                                      rdf:first "undervoltage" ;
-                                                                      rdf:rest rdf:nil
-                                                                    ]
-                                                         ]
-                                              ]
-                                  ] ;
-                       rdfs:comment "Relationship between a violation and its type, which can be overvoltage, undervoltage or overloading." ;
-                       rdfs:label "has violation type" .
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+        <rdfs:domain rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:comment>A spatial representation for a given feature.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label>hasGeometry</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#hasViolationValue
-delta:hasViolationValue rdf:type owl:DatatypeProperty ;
-                        rdfs:range xsd:float ;
-                        rdfs:label "Value of the violation" ,
-                                   "has violation value" .
+    <!-- https://saref.etsi.org/core/consistsOf -->
 
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/consistsOf">
+        <rdfs:comment>A relationship indicating a composite entity that consists of other entities (e.g., a temperature/humidity sensor that consists of a temperature sensor and a humidity sensor)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core"/>
+        <rdfs:label>consists of</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#implementsDRType
-delta:implementsDRType rdf:type owl:DatatypeProperty ;
-                       rdfs:range [ rdf:type rdfs:Datatype ;
-                                    owl:oneOf [ rdf:type rdf:List ;
-                                                rdf:first "explicit" ;
-                                                rdf:rest [ rdf:type rdf:List ;
-                                                           rdf:first "implicit" ;
-                                                           rdf:rest rdf:nil
-                                                         ]
-                                              ]
-                                  ] ;
-                       rdfs:comment "DR type that is implemented by the FEID, which can be implicit or explicit" ;
-                       rdfs:label "implements DR type" .
 
+    <!-- https://saref.etsi.org/core/isAbout -->
 
-###  http://delta.linkeddata.es/def/core#isAvailable
-delta:isAvailable rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:boolean ;
-                  rdfs:comment "Value that indicates whether the FEID is available" ;
-                  rdfs:label "is available" .
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isAbout">
+        <rdfs:comment>A relationship identifying what an entity, such as a Profile, is about</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core</rdfs:isDefinedBy>
+        <rdfs:label>isAbout</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#occurs
-delta:occurs rdf:type owl:DatatypeProperty ;
-             rdfs:range xsd:dateTimeStamp ;
-             rdfs:comment "Date when a violation occurs" ;
-             rdfs:label "occurs" .
+    <!-- https://saref.etsi.org/core/isMeasuredIn -->
 
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn">
+        <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
+        <rdfs:label>is measured in</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#sectorName
-delta:sectorName rdf:type owl:DatatypeProperty ;
-                 rdfs:comment "Name of a sector" ;
-                 rdfs:label "sector name" .
 
+    <!-- https://saref.etsi.org/core/isMeasurementOf -->
 
-###  http://delta.linkeddata.es/def/core#status
-delta:status rdf:type owl:DatatypeProperty ;
-             rdfs:comment "The final status as if the DVN fullfiled the request or it failed" ;
-             rdfs:label "status" .
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasurementOf">
+        <rdfs:comment>A relationship between a measurement and the feature of interest whose quality was measured</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label>isMeasurementOf</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#supportsAutomatedDR
-delta:supportsAutomatedDR rdf:type owl:DatatypeProperty ;
-                          rdfs:domain delta:FEID ;
-                          rdfs:range xsd:boolean ;
-                          rdfs:comment "A relationship that indicates whether a FEID accepts or rejects DR requests automatically." ;
-                          rdfs:label "supports automated DR" .
+    <!-- https://saref.etsi.org/core/makesMeasurement -->
 
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/makesMeasurement">
+        <rdfs:comment>A relationship specifying the property that can be measured by a certain device</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
+        <rdfs:label>makes measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://www.w3.org/2002/07/owl#topDataProperty
-owl:topDataProperty rdfs:range xsd:float .
 
+    <!-- https://saref.etsi.org/core/measuresProperty -->
 
-###  https://saref.etsi.org/core/hasTimestamp
-saref:hasTimestamp rdf:type owl:DatatypeProperty ;
-                   rdfs:comment "A relationship stating the timestamp of an entity (e.g. a measurement)." ;
-                   rdfs:isDefinedBy "https://w3id.org/def/saref" ;
-                   rdfs:label "timestamp" .
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/measuresProperty">
+        <rdfs:comment>A relationship specifying the property that can be measured by a certain device</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
+        <rdfs:label>measures property</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  https://saref.etsi.org/core/hasValue
-saref:hasValue rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf owl:topDataProperty ;
-               rdfs:isDefinedBy "https://w3id.org/def/saref" ;
-               rdfs:label "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes." ,
-                          "has value" .
+    <!-- https://saref.etsi.org/core/relatesToMeasurement -->
 
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToMeasurement">
+        <rdfs:comment>A relationship between a property and the measurements it relates to</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
+        <rdfs:label>relates to measurement</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-#################################################################
-#    Classes
-#################################################################
 
-###  http://delta.linkeddata.es/def/core#Action
-delta:Action rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty delta:isRequestedTo ;
-                               owl:someValuesFrom delta:VirtualNode
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty delta:requiresMeasurement ;
-                               owl:someValuesFrom delta:Measurement
-                             ] ;
-             rdfs:comment "Action that is requested by a FEID" ;
-             rdfs:label "DR request" .
+    <!-- https://saref.etsi.org/core/relatesToProperty -->
 
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToProperty">
+        <rdfs:comment>A relationship between a measurement and the property it relates to</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core</rdfs:isDefinedBy>
+        <rdfs:label>relates to property</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#Aggregator
-delta:Aggregator rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/def/openadr#VTN> ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty delta:consumes ;
-                                   owl:someValuesFrom delta:MarketSettlement
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty delta:hasProfile ;
-                                   owl:allValuesFrom delta:Profile
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty delta:hasTransaction ;
-                                   owl:allValuesFrom delta:Transaction
-                                 ] ;
-                 rdfs:comment "Legal entities that aggregate the load or generation of various demand and/or generation/production units and aim at optimizing energy supply and consumption." ;
-                 rdfs:label "Aggregator" .
 
+    <!-- https://saref.etsi.org/saref4city/isDerivedFrom -->
 
-###  http://delta.linkeddata.es/def/core#Asset
-delta:Asset rdf:type owl:Class ;
-            rdfs:subClassOf saref:Device ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty delta:isOwnedBy ;
-                              owl:someValuesFrom delta:Customer
-                            ] ;
-            rdfs:label "Asset" ,
-                       "Element contained in the FEID that detects and responds to events in an environment" .
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/isDerivedFrom">
+        <rdfs:comment>is derived from</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city"/>
+        <rdfs:label>is derived from</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#Battery
-delta:Battery rdf:type owl:Class ;
-              rdfs:subClassOf delta:Asset ;
-              rdfs:label "Battery" .
+    <!-- https://saref.etsi.org/saref4city/quantifiesKPI -->
 
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/saref4city/quantifiesKPI">
+        <rdfs:comment>quantifies KPI</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city/v1.1.2/"/>
+        <rdfs:label>quantifies KPI</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#Boundary
-delta:Boundary rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty delta:hasLowerBoundary ;
-                                 owl:someValuesFrom saref:Measurement
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty delta:hasUpperBoundary ;
-                                 owl:someValuesFrom saref:Measurement
-                               ] ;
-               rdfs:comment "Limit of a value." ;
-               rdfs:label "Boundary" .
 
+    <!-- https://w3id.org/def/openadr#belongsTo -->
 
-###  http://delta.linkeddata.es/def/core#Cluster
-delta:Cluster rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty delta:hasAggregatedProperty ;
-                                owl:someValuesFrom saref:Property
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty delta:clusterDescription ;
-                                owl:allValuesFrom rdfs:Literal
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty delta:clusterName ;
-                                owl:allValuesFrom rdfs:Literal
-                              ] ;
-              rdfs:comment "Aggrupation of elements, such as FEIDs or Virtual Nodes" ;
-              rdfs:label "Cluster" .
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#belongsTo">
+        <rdfs:comment>Relationship between a VE, Resource or Asset with the Group of targets associated</rdfs:comment>
+        <rdfs:label>belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#ComfortSetting
-delta:ComfortSetting rdf:type owl:Class ;
-                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty delta:hasBoundary ;
-                                       owl:someValuesFrom delta:Boundary
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty saref:isAbout ;
-                                       owl:someValuesFrom saref:Property
-                                     ] ;
-                     rdfs:label "Comfort setting" .
+    <!-- https://w3id.org/def/openadr#hasDuration -->
 
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasDuration">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>Relationship between an event and its duration</rdfs:comment>
+        <rdfs:label>has duration</rdfs:label>
+    </owl:ObjectProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#Consumer
-delta:Consumer rdf:type owl:Class ;
-               rdfs:subClassOf delta:Customer ;
-               rdfs:comment "Entity that consumes energy" ;
-               rdfs:label "Consumer" .
 
+    <!-- https://w3id.org/def/openadr#sendsEvent -->
 
-###  http://delta.linkeddata.es/def/core#Customer
-delta:Customer rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty <https://w3id.org/def/openadr#belongsTo> ;
-                                 owl:someValuesFrom delta:CustomerCluster
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty delta:hasReward ;
-                                 owl:allValuesFrom delta:Reward
-                               ] ;
-               rdfs:comment "Entity that interacts in the platform" ;
-               rdfs:label "Customer" .
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#sendsEvent">
+        <rdfs:comment>A link between a node and the event it sends</rdfs:comment>
+        <rdfs:label>sends event</rdfs:label>
+    </owl:ObjectProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#CustomerCluster
-delta:CustomerCluster rdf:type owl:Class ;
-                      rdfs:comment "Groups of customers" ;
-                      rdfs:label "Customer cluster" .
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
+    
 
-###  http://delta.linkeddata.es/def/core#Discount
-delta:Discount rdf:type owl:Class ;
-               rdfs:subClassOf delta:Reward ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty delta:isDefinedIn ;
-                                 owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
-                               ] ;
-               rdfs:comment "Reward associated to the customer in terms of monetary remuneration" ;
-               rdfs:label "Discount" .
 
+    <!-- http://delta.linkeddata.es/def/core#clusterDescription -->
 
-###  http://delta.linkeddata.es/def/core#EnergyMarket
-delta:EnergyMarket rdf:type owl:Class ;
-                   rdfs:label "Energy Market" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#clusterDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment>Description of a cluster</rdfs:comment>
+        <rdfs:label>cluster description</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#FEID
-delta:FEID rdf:type owl:Class ;
-           rdfs:subClassOf saref:Device ,
-                           <https://w3id.org/def/openadr#VEN> ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty delta:detects ;
-                             owl:someValuesFrom delta:Violation
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty delta:hasRedundancy ;
-                             owl:someValuesFrom time:Duration
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty delta:isLocatedAt ;
-                             owl:someValuesFrom delta:Sector
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty saref:consistsOf ;
-                             owl:someValuesFrom delta:Asset
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty delta:hasComfortSetting ;
-                             owl:allValuesFrom delta:ComfortSetting
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty delta:hasSystemConstraint ;
-                             owl:allValuesFrom delta:SystemConstraint
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty delta:hasTransaction ;
-                             owl:allValuesFrom delta:Transaction
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty delta:hasHref ;
-                             owl:allValuesFrom xsd:anyURI
-                           ] ;
-           rdfs:comment "An intelligent device, responsible for collecting information stemming from the field devices (home appliances, distributed energy resources, storage components etc.) to the DELTA Virtual Nodes and facilitate end-to-end communication of signals from/to the Aggregator and to/from the field devices. FEIDs will be equipped with smart meters measuring energy related data (e.g. consumption, generation, emissions, power coefficient, etc.) and through an intelligent lightweight toolkit compute real-time flexibility, providing them as input to the DVN Agent using fog computing techniques, aligned to a strategy (i.e. time interval) imposed to the specific Node by the Aggregator." ;
-           rdfs:label "FEID" .
+    <!-- http://delta.linkeddata.es/def/core#clusterName -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#clusterName">
+        <rdfs:comment>Name of a cluster</rdfs:comment>
+        <rdfs:label>cluster name</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#Feeder
-delta:Feeder rdf:type owl:Class ;
-             rdfs:subClassOf delta:Asset ;
-             rdfs:comment "A feeder is physical asset which belongs to the system operator and used for transferring electricity from sub-stations to areas." ;
-             rdfs:label "Feeder" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasCreationDateTime -->
 
-###  http://delta.linkeddata.es/def/core#Frequency
-delta:Frequency rdf:type owl:Class ;
-                rdfs:subClassOf saref:Property ;
-                rdfs:comment "Frequency constraint related to the grid" ;
-                rdfs:label "Frequency" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasCreationDateTime">
+        <rdfs:comment>Creation date of a profile</rdfs:comment>
+        <rdfs:label>has creation date time</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#HVAC
-delta:HVAC rdf:type owl:Class ;
-           rdfs:subClassOf delta:Asset ;
-           rdfs:label "HVAC" .
+    <!-- http://delta.linkeddata.es/def/core#hasDescription -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasDescription">
+        <rdfs:label>description</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#Incentive
-delta:Incentive rdf:type owl:Class ;
-                rdfs:comment "Incentive (usually monetary) associated to energy values" ;
-                rdfs:label "Incentive" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasGranularity -->
 
-###  http://delta.linkeddata.es/def/core#Index
-delta:Index rdf:type owl:Class ;
-            rdfs:comment "Reliability and Fairness Index that refers to the distribution network configuration" ;
-            rdfs:label "Index" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasGranularity">
+        <rdfs:comment>Granularity of the profile (e.g., weekly, daily)</rdfs:comment>
+        <rdfs:label>has granularity</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#Lightbulb
-delta:Lightbulb rdf:type owl:Class ;
-                rdfs:subClassOf delta:Asset ;
-                rdfs:label "Lightbulb" .
+    <!-- http://delta.linkeddata.es/def/core#hasHref -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasHref">
+        <rdfs:comment>URI of the endpoint</rdfs:comment>
+        <rdfs:label>has href</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#LineLoadingViolation
-delta:LineLoadingViolation rdf:type owl:Class ;
-                           rdfs:subClassOf delta:Violation ;
-                           rdfs:comment "Violation of the grid related to line loading." ;
-                           rdfs:label "Line loading violation" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasIp -->
 
-###  http://delta.linkeddata.es/def/core#MarketSettlement
-delta:MarketSettlement rdf:type owl:Class .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasIp">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>IP address of a thing</rdfs:comment>
+        <rdfs:label>has ip</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#Measurement
-delta:Measurement rdf:type owl:Class ;
-                  rdfs:subClassOf saref:Measurement ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty delta:hasPhase ;
-                                    owl:someValuesFrom delta:Phase
-                                  ] ;
-                  rdfs:label "Measurement" .
-
-
-###  http://delta.linkeddata.es/def/core#MonetaryRemuneration
-delta:MonetaryRemuneration rdf:type owl:Class ;
-                           rdfs:subClassOf delta:Reward ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty delta:isDefinedIn ;
-                                             owl:someValuesFrom <http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure>
-                                           ] ;
-                           rdfs:comment "Reward associated to the customer in terms of monetary remuneration" ;
-                           rdfs:label "Monetary remuneration" .
-
-
-###  http://delta.linkeddata.es/def/core#OvervoltageViolation
-delta:OvervoltageViolation rdf:type owl:Class ;
-                           rdfs:subClassOf delta:Violation ;
-                           rdfs:comment "Violation of the grid related to overvoltage." ;
-                           rdfs:label "Overvoltage violation" .
-
-
-###  http://delta.linkeddata.es/def/core#Payment
-delta:Payment rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty delta:status ;
-                                owl:someValuesFrom rdfs:Literal
-                              ] ;
-              rdfs:comment "Monetary value associated to a contract" ;
-              rdfs:label "Payment" .
-
-
-###  http://delta.linkeddata.es/def/core#Phase
-delta:Phase rdf:type owl:Class ;
-            rdfs:comment "Phase of a measurement" ;
-            rdfs:label "Phase" .
-
-
-###  http://delta.linkeddata.es/def/core#Point
-delta:Point rdf:type owl:Class ;
-            rdfs:subClassOf delta:Reward ;
-            rdfs:comment "Reward associated to the customer in terms of  points" ;
-            rdfs:label "Point" .
-
-
-###  http://delta.linkeddata.es/def/core#Producer
-delta:Producer rdf:type owl:Class ;
-               rdfs:subClassOf delta:Customer ;
-               rdfs:comment "Entity that produces energy" ;
-               rdfs:label "Producer" .
-
-
-###  http://delta.linkeddata.es/def/core#Profile
-delta:Profile rdf:type owl:Class ;
-              rdfs:subClassOf saref:Profile ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty <https://w3id.org/def/openadr#hasDuration> ;
-                                owl:someValuesFrom time:TemporalEntity
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty delta:hasCreationDateTime ;
-                                owl:someValuesFrom xsd:dateTime
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty delta:hasGranularity ;
-                                owl:someValuesFrom owl:rational
-                              ] ;
-              rdfs:comment "A specification associated to a Virtual Node or a device to collect information about properties" ;
-              rdfs:label "Profile" .
-
-
-###  http://delta.linkeddata.es/def/core#Prosumer
-delta:Prosumer rdf:type owl:Class ;
-               rdfs:subClassOf delta:Customer ;
-               rdfs:comment "Entity that consumes or produces energy" ;
-               rdfs:label "Prosumer" .
-
-
-###  http://delta.linkeddata.es/def/core#Relay
-delta:Relay rdf:type owl:Class ;
-            rdfs:subClassOf delta:Asset ;
-            rdfs:label "Relay" .
-
-
-###  http://delta.linkeddata.es/def/core#Reward
-delta:Reward rdf:type owl:Class ;
-             rdfs:subClassOf [ rdf:type owl:Restriction ;
-                               owl:onProperty delta:hasRewardValue ;
-                               owl:someValuesFrom xsd:float
-                             ] ;
-             rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
-                          "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
-             rdfs:label "Reward" .
-
-
-###  http://delta.linkeddata.es/def/core#Sector
-delta:Sector rdf:type owl:Class ;
-             rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Feature> ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty delta:sectorName ;
-                               owl:allValuesFrom xsd:string
-                             ] ;
-             rdfs:comment "A section or zone" ;
-             rdfs:label "Sector" .
-
-
-###  http://delta.linkeddata.es/def/core#SmartContract
-delta:SmartContract rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty delta:agreesOn ;
-                                      owl:someValuesFrom saref:Property
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty delta:isValidDuringPeriod ;
-                                      owl:someValuesFrom time:TemporalEntity
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty delta:hasPayment ;
-                                      owl:allValuesFrom delta:Payment
-                                    ] ;
-                    rdfs:comment "Computer program or a transaction protocol which is intended to automatically execute, control or document legally relevant events and actions according to the terms of a contract or an agreement" ;
-                    rdfs:label "Smart contract" .
-
-
-###  http://delta.linkeddata.es/def/core#SystemConstraint
-delta:SystemConstraint rdf:type owl:Class ;
-                       rdfs:comment "Constraints of the grid that limits a system" ;
-                       rdfs:label "System constraint" .
-
-
-###  http://delta.linkeddata.es/def/core#Transaction
-delta:Transaction rdf:type owl:Class ;
-                  rdfs:comment "Transaction between entities that will be store in the smart contract" ;
-                  rdfs:label "Transaction" .
-
-
-###  http://delta.linkeddata.es/def/core#Violation
-delta:Violation rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty delta:hasDurationDescription ;
-                                  owl:someValuesFrom time:Duration
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty delta:requests ;
-                                  owl:someValuesFrom saref:Property
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty delta:hasViolationCondition ;
-                                  owl:allValuesFrom delta:ViolationCondition
-                                ] ;
-                rdfs:comment "Violation of the grid" ;
-                rdfs:label "Violation" .
-
-
-###  http://delta.linkeddata.es/def/core#ViolationCondition
-delta:ViolationCondition rdf:type owl:Class ;
-                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                           owl:onProperty delta:hasEstimatedMeasurement ;
-                                           owl:someValuesFrom delta:Measurement
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty delta:hasRequiredMeasurement ;
-                                           owl:someValuesFrom delta:Measurement
-                                         ] ;
-                         rdfs:comment "Condition associated to a violation. It indicates that the estimated measurement of a property does not coincide with the required one." ;
-                         rdfs:label "Violation condition" .
-
-
-###  http://delta.linkeddata.es/def/core#VirtualNode
-delta:VirtualNode rdf:type owl:Class ;
-                  rdfs:subClassOf <https://w3id.org/def/openadr#VEN> ,
-                                  <https://w3id.org/def/openadr#VTN> ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty delta:hasIndex ;
-                                    owl:someValuesFrom delta:Index
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty delta:hasSmartContract ;
-                                    owl:someValuesFrom delta:SmartContract
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty delta:isAllocatedIn ;
-                                    owl:someValuesFrom delta:Aggregator
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty delta:hasProfile ;
-                                    owl:allValuesFrom delta:Profile
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty delta:hasHref ;
-                                    owl:someValuesFrom owl:rational
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty delta:hasReliability ;
-                                    owl:someValuesFrom xsd:float
-                                  ] ;
-                  rdfs:comment "An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator." ;
-                  rdfs:label "Virtual node" .
-
-
-###  http://delta.linkeddata.es/def/core#Voltage
-delta:Voltage rdf:type owl:Class ;
-              rdfs:subClassOf saref:Property ;
-              rdfs:comment "Voltage constraint related to the grid" ;
-              rdfs:label "Voltage" .
-
-
-###  http://delta.linkeddata.es/def/core#Voucher
-delta:Voucher rdf:type owl:Class ;
-              rdfs:subClassOf delta:Reward ;
-              rdfs:comment "Reward associated to the customer in terms of a voucher" ;
-              rdfs:label "Voucher" .
-
-
-###  http://www.opengis.net/ont/geosparql#Feature
-<http://www.opengis.net/ont/geosparql#Feature> rdf:type owl:Class ;
-                                               rdfs:comment "This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types." ;
-                                               rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
-                                               rdfs:label "Feature" .
-
-
-###  http://www.opengis.net/ont/geosparql#Geometry
-<http://www.opengis.net/ont/geosparql#Geometry> rdf:type owl:Class ;
-                                                rdfs:comment <http://www.opengis.net/ont/geosparql> ,
-                                                             "The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types." ;
-                                                rdfs:label "Geometry" .
-
-
-###  http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> rdf:type owl:Class .
-
-
-###  http://www.w3.org/2006/time#Duration
-time:Duration rdf:type owl:Class .
-
-
-###  http://www.w3.org/2006/time#Instant
-time:Instant rdf:type owl:Class ;
-             rdfs:subClassOf time:TemporalEntity ;
-             rdfs:comment "A temporal entity with zero extent or duration" ;
-             rdfs:isDefinedBy "Instant" ,
-                              "http://www.w3.org/2006/time#" .
-
-
-###  http://www.w3.org/2006/time#Interval
-time:Interval rdf:type owl:Class ;
-              rdfs:comment "A temporal entity with an extent or duration" ;
-              rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
-              rdfs:label "Time interval" .
-
-
-###  http://www.w3.org/2006/time#TemporalEntity
-time:TemporalEntity rdf:type owl:Class ;
-                    rdfs:comment "A temporal interval or instant." ;
-                    rdfs:isDefinedBy "http://www.w3.org/2006/time#" ;
-                    rdfs:label "Temporal entity" .
-
-
-###  https://saref.etsi.org/core/Device
-saref:Device rdf:type owl:Class ;
-             owl:equivalentClass [ rdf:type owl:Restriction ;
-                                   owl:onProperty saref:measuresProperty ;
-                                   owl:allValuesFrom saref:Property
-                                 ] ;
-             rdfs:subClassOf <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
-             rdfs:comment "A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device's user vs. the point of view of the device's manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended." ;
-             rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
-             rdfs:label "Device" .
-
-
-###  https://saref.etsi.org/core/Energy
-saref:Energy rdf:type owl:Class ;
-             rdfs:subClassOf saref:Property ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty delta:hasIncentive ;
-                               owl:allValuesFrom delta:Incentive
-                             ] ;
-             rdfs:comment "A property related to measurements that are characterized  by a value measured in energy units" ;
-             rdfs:label "Energy" .
-
-
-###  https://saref.etsi.org/core/FeatureOfInterest
-saref:FeatureOfInterest rdf:type owl:Class ;
-                        rdfs:comment "A feature of interest represents any real world entity from which a property is measured." ;
-                        rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
-                        rdfs:label "Feature Of Interest" .
-
-
-###  https://saref.etsi.org/core/Measurement
-saref:Measurement rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty saref:isMeasuredIn ;
-                                    owl:allValuesFrom saref:UnitOfMeasure
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty saref:isMeasurementOf ;
-                                    owl:allValuesFrom saref:FeatureOfInterest
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty saref:hasTimestamp ;
-                                    owl:allValuesFrom xsd:dateTime
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty saref:hasValue ;
-                                    owl:allValuesFrom xsd:float
-                                  ] ;
-                  rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
-                  rdfs:label "Measurement" .
-
-
-###  https://saref.etsi.org/core/Power
-saref:Power rdf:type owl:Class ;
-            rdfs:subClassOf saref:Property ;
-            rdfs:comment "A property related to measurements that are characterized  by a value measured in power units" ;
-            rdfs:label "Power" .
-
-
-###  https://saref.etsi.org/core/Price
-saref:Price rdf:type owl:Class ;
-            rdfs:subClassOf saref:Property ;
-            rdfs:comment "A saref:Property crelated to some measurements that are characterized by a certain value that is measured using saref:Currency" ;
-            rdfs:isDefinedBy saref: ;
-            rdfs:label "Price" .
-
-
-###  https://saref.etsi.org/core/Profile
-saref:Profile rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                owl:onProperty saref:isAbout ;
-                                owl:allValuesFrom saref:Property
-                              ] ;
-              rdfs:comment "A specification associated to a device to collect information about a certain Property (e.g., Energy) or Commodity (e.g.Water) for optimizing its usage in the home, office or building in which the device is located. This specification is about a certain Property or Commodity (saref:isAbout), can be calculated over a time span (saref:hasTime ) and can be associated to some costs (saref:hasPrice). An example is the Power Profile defined in the SAREF4ENER extension that can be associated to a device for optimizing the Energy efficiency in the home, office or building in which the device is located." ;
-              rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
-              rdfs:label "Profile" .
-
-
-###  https://saref.etsi.org/core/Property
-saref:Property rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty saref:relatesToMeasurement ;
-                                 owl:allValuesFrom saref:Measurement
-                               ] ;
-               rdfs:comment "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature" ;
-               rdfs:isDefinedBy "https://saref.etsi.org/core/" ;
-               rdfs:label "Property" .
-
-
-###  https://saref.etsi.org/core/UnitOfMeasure
-saref:UnitOfMeasure rdf:type owl:Class ;
-                    rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \\\"watt\\\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)." ;
-                    rdfs:isDefinedBy "https://saref.etsi.org/core" ;
-                    rdfs:label "Unit of measure" .
-
-
-###  https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement
-<https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement> rdf:type owl:Class ;
-                                                                      rdfs:isDefinedBy <https://saref.etsi.org/saref4city> ;
-                                                                      rdfs:label "Key performance indicator assessment" .
-
-
-###  https://saref.etsi.org/saref4city/KeyPerformanceIndicator
-<https://saref.etsi.org/saref4city/KeyPerformanceIndicator> rdf:type owl:Class ;
-                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                              owl:onProperty <https://saref.etsi.org/saref4city/isDerivedFrom> ;
-                                                                              owl:allValuesFrom saref:Measurement
-                                                                            ] ;
-                                                            rdfs:isDefinedBy <https://saref.etsi.org/saref4city> ;
-                                                            rdfs:label "Key Performance Indicator" .
-
-
-###  https://w3id.org/def/openadr#VEN
-<https://w3id.org/def/openadr#VEN> rdf:type owl:Class .
-
-
-###  https://w3id.org/def/openadr#VTN
-<https://w3id.org/def/openadr#VTN> rdf:type owl:Class .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://delta.linkeddata.es/def/core#ConsumptionCapacity
-delta:ConsumptionCapacity rdf:type owl:NamedIndividual ,
-                                   saref:Power ;
-                          rdfs:label "Consumption capacity" .
-
-
-###  http://delta.linkeddata.es/def/core#ContractedPower
-delta:ContractedPower rdf:type owl:NamedIndividual ,
-                               saref:Power ;
-                      rdfs:label "Contracted power" .
-
-
-###  http://delta.linkeddata.es/def/core#EnergyConsumption
-delta:EnergyConsumption rdf:type owl:NamedIndividual ,
-                                 saref:Energy ;
-                        rdfs:label "Energy consumption" .
-
-
-###  http://delta.linkeddata.es/def/core#EnergyDownFlexibility
-delta:EnergyDownFlexibility rdf:type owl:NamedIndividual ,
-                                     saref:Energy ;
-                            rdfs:label "Energy down flexibility" .
-
-
-###  http://delta.linkeddata.es/def/core#EnergyGeneration
-delta:EnergyGeneration rdf:type owl:NamedIndividual ,
-                                saref:Energy ;
-                       rdfs:label "Energy generation" .
-
+    <!-- http://delta.linkeddata.es/def/core#hasPort -->
 
-###  http://delta.linkeddata.es/def/core#EnergyGenerationForecast
-delta:EnergyGenerationForecast rdf:type owl:NamedIndividual ,
-                                        saref:Energy ;
-                               rdfs:label "Energy generation forecast" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasPort">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>Address of the service within the system.</rdfs:comment>
+        <rdfs:label>has port</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#EnergyLoadForecast
-delta:EnergyLoadForecast rdf:type owl:NamedIndividual ,
-                                  saref:Energy ;
-                         rdfs:label "Energy load forecast" .
+    <!-- http://delta.linkeddata.es/def/core#hasReliability -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasReliability">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:comment>Reliability associated to a virtual node</rdfs:comment>
+        <rdfs:label>has reliability</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#EnergyStorage
-delta:EnergyStorage rdf:type owl:NamedIndividual ,
-                             saref:Energy ;
-                    rdfs:label "Energy storage" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasRewardValue -->
 
-###  http://delta.linkeddata.es/def/core#EnergyUpFlexibility
-delta:EnergyUpFlexibility rdf:type owl:NamedIndividual ,
-                                   saref:Energy ;
-                          rdfs:label "Energy up flexibility" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasRewardValue">
+        <rdfs:comment>A relationship defining the value of a certain reward, e.g., points or money</rdfs:comment>
+        <rdfs:label>has reward value</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#GenerationCapacity
-delta:GenerationCapacity rdf:type owl:NamedIndividual ,
-                                  saref:Power ;
-                         rdfs:label "Generation capacity" .
+    <!-- http://delta.linkeddata.es/def/core#hasViolationType -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasViolationType">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>overloading</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>overvoltage</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>undervoltage</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>Relationship between a violation and its type, which can be overvoltage, undervoltage or overloading.</rdfs:comment>
+        <rdfs:label>has violation type</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#PowerConsumption
-delta:PowerConsumption rdf:type owl:NamedIndividual ,
-                                saref:Power ;
-                       rdfs:label "Power consumption" .
 
+    <!-- http://delta.linkeddata.es/def/core#hasViolationValue -->
 
-###  http://delta.linkeddata.es/def/core#PowerDownFlexibility
-delta:PowerDownFlexibility rdf:type owl:NamedIndividual ,
-                                    saref:Power ;
-                           rdfs:label "Power down flexibility" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#hasViolationValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label>Value of the violation</rdfs:label>
+        <rdfs:label>has violation value</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#PowerGeneration
-delta:PowerGeneration rdf:type owl:NamedIndividual ,
-                               saref:Power ;
-                      rdfs:label "Power generation" .
+    <!-- http://delta.linkeddata.es/def/core#implementsDRType -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#implementsDRType">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>explicit</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>implicit</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>DR type that is implemented by the FEID, which can be implicit or explicit</rdfs:comment>
+        <rdfs:label>implements DR type</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#PowerGenerationForecast
-delta:PowerGenerationForecast rdf:type owl:NamedIndividual ,
-                                       saref:Power ;
-                              rdfs:label "Power generation forecast" .
 
+    <!-- http://delta.linkeddata.es/def/core#isAvailable -->
 
-###  http://delta.linkeddata.es/def/core#PowerLoadForecast
-delta:PowerLoadForecast rdf:type owl:NamedIndividual ,
-                                 saref:Power ;
-                        rdfs:label "Power load forecast" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#isAvailable">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Value that indicates whether the FEID is available</rdfs:comment>
+        <rdfs:label>is available</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#PowerUpFlexibility
-delta:PowerUpFlexibility rdf:type owl:NamedIndividual ,
-                                  saref:Power ;
-                         rdfs:label "Power up flexibility" .
+    <!-- http://delta.linkeddata.es/def/core#occurs -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#occurs">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <rdfs:comment>Date when a violation occurs</rdfs:comment>
+        <rdfs:label>occurs</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#PriceAS
-delta:PriceAS rdf:type owl:NamedIndividual ,
-                       saref:Price ;
-              rdfs:label "Price AS" .
 
+    <!-- http://delta.linkeddata.es/def/core#sectorName -->
 
-###  http://delta.linkeddata.es/def/core#PriceDayAhead
-delta:PriceDayAhead rdf:type owl:NamedIndividual ,
-                             saref:Price ;
-                    rdfs:label "Price day ahead" .
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#sectorName">
+        <rdfs:comment>Name of a sector</rdfs:comment>
+        <rdfs:label>sector name</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
 
-###  http://delta.linkeddata.es/def/core#PriceIntraDay
-delta:PriceIntraDay rdf:type owl:NamedIndividual ,
-                             saref:Price ;
-                    rdfs:label "Price intra day" .
+    <!-- http://delta.linkeddata.es/def/core#status -->
 
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#status">
+        <rdfs:comment>The final status as if the DVN fullfiled the request or it failed</rdfs:comment>
+        <rdfs:label>status</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-###  http://delta.linkeddata.es/def/core#StorageCapacity
-delta:StorageCapacity rdf:type owl:NamedIndividual ,
-                               saref:Energy ;
-                      rdfs:label "Storage capacity" .
 
+    <!-- http://delta.linkeddata.es/def/core#supportsAutomatedDR -->
 
-#################################################################
-#    Annotations
-#################################################################
+    <owl:DatatypeProperty rdf:about="http://delta.linkeddata.es/def/core#supportsAutomatedDR">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A relationship that indicates whether a FEID accepts or rejects DR requests automatically.</rdfs:comment>
+        <rdfs:label>supports automated DR</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-<https://w3id.org/def/openadr#hasItemBase> rdfs:label "Item base in order to define the unit of measure" .
 
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
 
-<https://w3id.org/def/openadr#hasPayload> rdfs:label "Link to the payload of a report" .
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topDataProperty">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Description>
+    
 
 
-<https://w3id.org/def/openadr#hasRandomization> rdfs:comment "has randomization" .
+    <!-- https://saref.etsi.org/core/hasTimestamp -->
 
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasTimestamp">
+        <rdfs:comment>A relationship stating the timestamp of an entity (e.g. a measurement).</rdfs:comment>
+        <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
+        <rdfs:label>timestamp</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
-<https://w3id.org/def/openadr#hasReportId> rdfs:comment "Link to the report identifier" .
 
+    <!-- https://saref.etsi.org/core/hasValue -->
 
-###  Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
+        <rdfs:label>A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</rdfs:label>
+        <rdfs:label>has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Action -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Action">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isRequestedTo"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#VirtualNode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#requiresMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Action that is requested by a FEID</rdfs:comment>
+        <rdfs:label>DR request</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Aggregator -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Aggregator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VTN"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#consumes"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#MarketSettlement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasProfile"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasTransaction"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Legal entities that aggregate the load or generation of various demand and/or generation/production units and aim at optimizing energy supply and consumption.</rdfs:comment>
+        <rdfs:label>Aggregator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Asset -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Asset">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isOwnedBy"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Asset</rdfs:label>
+        <rdfs:label>Element contained in the FEID that detects and responds to events in an environment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Battery -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Battery">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>Battery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Boundary -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Boundary">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasLowerBoundary"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasUpperBoundary"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Limit of a value.</rdfs:comment>
+        <rdfs:label>Boundary</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Cluster -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Cluster">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasAggregatedProperty"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#clusterDescription"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#clusterName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Aggrupation of elements, such as FEIDs or Virtual Nodes</rdfs:comment>
+        <rdfs:label>Cluster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#ComfortSetting -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#ComfortSetting">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasBoundary"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isAbout"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Comfort setting</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Consumer -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Consumer">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
+        <rdfs:comment>Entity that consumes energy</rdfs:comment>
+        <rdfs:label>Consumer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Customer -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Customer">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#belongsTo"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#CustomerCluster"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasReward"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Entity that interacts in the platform</rdfs:comment>
+        <rdfs:label>Customer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#CustomerCluster -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#CustomerCluster">
+        <rdfs:comment>Groups of customers</rdfs:comment>
+        <rdfs:label>Customer cluster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Discount -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Discount">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+        <rdfs:comment>Reward associated to the customer in terms of monetary remuneration</rdfs:comment>
+        <rdfs:label>Discount</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#FEID -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#FEID">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VEN"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#detects"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRedundancy"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isLocatedAt"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Sector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/consistsOf"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasComfortSetting"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#ComfortSetting"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasSystemConstraint"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#SystemConstraint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasTransaction"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Transaction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasHref"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An intelligent device, responsible for collecting information stemming from the field devices (home appliances, distributed energy resources, storage components etc.) to the DELTA Virtual Nodes and facilitate end-to-end communication of signals from/to the Aggregator and to/from the field devices. FEIDs will be equipped with smart meters measuring energy related data (e.g. consumption, generation, emissions, power coefficient, etc.) and through an intelligent lightweight toolkit compute real-time flexibility, providing them as input to the DVN Agent using fog computing techniques, aligned to a strategy (i.e. time interval) imposed to the specific Node by the Aggregator.</rdfs:comment>
+        <rdfs:label>FEID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Feeder -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Feeder">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:comment>A feeder is physical asset which belongs to the system operator and used for transferring electricity from sub-stations to areas.</rdfs:comment>
+        <rdfs:label>Feeder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Frequency -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Frequency">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>Frequency constraint related to the grid</rdfs:comment>
+        <rdfs:label>Frequency</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#HVAC -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#HVAC">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>HVAC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Incentive -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Incentive">
+        <rdfs:comment>Incentive (usually monetary) associated to energy values</rdfs:comment>
+        <rdfs:label>Incentive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Index -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Index">
+        <rdfs:comment>Reliability and Fairness Index that refers to the distribution network configuration</rdfs:comment>
+        <rdfs:label>Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Lightbulb -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Lightbulb">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>Lightbulb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#LineLoadingViolation -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#LineLoadingViolation">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
+        <rdfs:comment>Violation of the grid related to line loading.</rdfs:comment>
+        <rdfs:label>Line loading violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#MarketSettlement -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MarketSettlement">
+        <rdfs:comment>Market settlement associated to an entity</rdfs:comment>
+        <rdfs:label>Market settlement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Measurement -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Measurement">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasPhase"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Phase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#MonetaryRemuneration -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MonetaryRemuneration">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+        <rdfs:comment>Reward associated to the customer in terms of monetary remuneration</rdfs:comment>
+        <rdfs:label>Monetary remuneration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#OvervoltageViolation -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#OvervoltageViolation">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
+        <rdfs:comment>Violation of the grid related to overvoltage.</rdfs:comment>
+        <rdfs:label>Overvoltage violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Payment -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Payment">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#status"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Monetary value associated to a contract</rdfs:comment>
+        <rdfs:label>Payment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Phase -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Phase">
+        <rdfs:comment>Phase of a measurement</rdfs:comment>
+        <rdfs:label>Phase</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Point -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Point">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+        <rdfs:comment>Reward associated to the customer in terms of  points</rdfs:comment>
+        <rdfs:label>Point</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Producer -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Producer">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
+        <rdfs:comment>Entity that produces energy</rdfs:comment>
+        <rdfs:label>Producer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Profile -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Profile">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Profile"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/openadr#hasDuration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasCreationDateTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasGranularity"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A specification associated to a Virtual Node or a device to collect information about properties</rdfs:comment>
+        <rdfs:label>Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Prosumer -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Prosumer">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Customer"/>
+        <rdfs:comment>Entity that consumes or produces energy</rdfs:comment>
+        <rdfs:label>Prosumer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Relay -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Relay">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Asset"/>
+        <rdfs:label>Relay</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Reward -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Reward">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRewardValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Reward associated to the customers that is given after using the engagement tools</rdfs:comment>
+        <rdfs:comment>Reward associated to the customers that is given after using the engagement tools (e.g., discounts)</rdfs:comment>
+        <rdfs:label>Reward</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Sector -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Sector">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#sectorName"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A section or zone</rdfs:comment>
+        <rdfs:label>Sector</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#SmartContract -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#SmartContract">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#agreesOn"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isValidDuringPeriod"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasPayment"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Payment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Computer program or a transaction protocol which is intended to automatically execute, control or document legally relevant events and actions according to the terms of a contract or an agreement</rdfs:comment>
+        <rdfs:label>Smart contract</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#SystemConstraint -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#SystemConstraint">
+        <rdfs:comment>Constraints of the grid that limits a system</rdfs:comment>
+        <rdfs:label>System constraint</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Transaction -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Transaction">
+        <rdfs:comment>Transaction between entities that will be store in the smart contract</rdfs:comment>
+        <rdfs:label>Transaction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Violation -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Violation">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasDurationDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2006/time#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#requests"/>
+                <owl:someValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasViolationCondition"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#ViolationCondition"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Violation of the grid</rdfs:comment>
+        <rdfs:label>Violation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#ViolationCondition -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#ViolationCondition">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRequiredMeasurement"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Condition associated to a violation. It indicates that the estimated measurement of a property does not coincide with the required one.</rdfs:comment>
+        <rdfs:label>Violation condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#VirtualNode -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#VirtualNode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VEN"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VTN"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasIndex"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Index"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasSmartContract"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isAllocatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Aggregator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasProfile"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasHref"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasReliability"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An aggregated, virtual cluster of prosumers which will be perceived and acted upon as a single, large prosumer entity by the Aggregator. Prosumers entailed into each Virtual Node will have common characteristics, defined by their corresponding Aggregator.</rdfs:comment>
+        <rdfs:label>Virtual node</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Voltage -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Voltage">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>Voltage constraint related to the grid</rdfs:comment>
+        <rdfs:label>Voltage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#Voucher -->
+
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Voucher">
+        <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
+        <rdfs:comment>Reward associated to the customer in terms of a voucher</rdfs:comment>
+        <rdfs:label>Voucher</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+        <rdfs:comment>This class represents the top-level feature type. This class is equivalent to GFI_Feature defined in ISO 19156:2011, and it is superclass of all feature types.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:label>Feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Geometry -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#Geometry">
+        <rdfs:comment rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:comment>The class represents the top-level geometry type. This class is equivalent to the UML class GM_Object defined in ISO 19107, and it is superclass of all geometry types.</rdfs:comment>
+        <rdfs:label>Geometry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
+
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+        <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+        <rdfs:label>SpatialThing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Duration -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration">
+        <rdfs:comment>Duration of a temporal extent expressed as a number scaled by a temporal unit</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/2006/time"/>
+        <rdfs:label>Time duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment>A temporal entity with zero extent or duration</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time#</rdfs:isDefinedBy>
+        <rdfs:label>Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:comment>A temporal entity with an extent or duration</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time#</rdfs:isDefinedBy>
+        <rdfs:label>Time interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:comment>A temporal interval or instant.</rdfs:comment>
+        <rdfs:isDefinedBy>http://www.w3.org/2006/time#</rdfs:isDefinedBy>
+        <rdfs:label>Temporal entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Device -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Device">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/measuresProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+        <rdfs:comment>A tangible object designed to accomplish a particular task in households, common public buildings or offices. In order to accomplish this task, the device performs one or more functions. For example, a washing machine is designed to wash (task) and to accomplish this task it performs a start and stop function. Devices can be structured in categories (subclasses) that reflect the different domain in which a device is used, e.g., smart appliances domain (subclass FunctionRelated) vs. building domain (subclass BuildingRelated) vs. smart grid domain (subclass EnergyRelated). New categories can be defined,if needed, to reflect other differences, for example different points of view, such as the point of view of the device&apos;s user vs. the point of view of the device&apos;s manufacturer. We propose a list of devices that are relevant for the purpose of SAREF, but this list can be extended.</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Energy -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Energy">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasIncentive"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Incentive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A property related to measurements that are characterized  by a value measured in energy units</rdfs:comment>
+        <rdfs:label>Energy</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/FeatureOfInterest -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/FeatureOfInterest">
+        <rdfs:comment>A feature of interest represents any real world entity from which a property is measured.</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label>Feature Of Interest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Measurement -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasurementOf"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasTimestamp"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasValue"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label>Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Power -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Power">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A property related to measurements that are characterized  by a value measured in power units</rdfs:comment>
+        <rdfs:label>Power</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Price -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Price">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:comment>A saref:Property crelated to some measurements that are characterized by a certain value that is measured using saref:Currency</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/core/"/>
+        <rdfs:label>Price</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Profile -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Profile">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isAbout"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A specification associated to a device to collect information about a certain Property (e.g., Energy) or Commodity (e.g.Water) for optimizing its usage in the home, office or building in which the device is located. This specification is about a certain Property or Commodity (saref:isAbout), can be calculated over a time span (saref:hasTime ) and can be associated to some costs (saref:hasPrice). An example is the Power Profile defined in the SAREF4ENER extension that can be associated to a device for optimizing the Energy efficiency in the home, office or building in which the device is located.</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label>Profile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/Property -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToMeasurement"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core/</rdfs:isDefinedBy>
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/UnitOfMeasure -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/UnitOfMeasure">
+        <rdfs:comment>The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \&quot;watt\&quot;. Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM).</rdfs:comment>
+        <rdfs:isDefinedBy>https://saref.etsi.org/core</rdfs:isDefinedBy>
+        <rdfs:label>Unit of measure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement">
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city"/>
+        <rdfs:label>Key performance indicator assessment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/saref4city/KeyPerformanceIndicator -->
+
+    <owl:Class rdf:about="https://saref.etsi.org/saref4city/KeyPerformanceIndicator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/saref4city/isDerivedFrom"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:isDefinedBy rdf:resource="https://saref.etsi.org/saref4city"/>
+        <rdfs:label>Key Performance Indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/openadr#VEN -->
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#VEN">
+        <rdfs:comment>This is the OpenADR Virtual End Node that is used to interact with the VTN</rdfs:comment>
+        <rdfs:label rdf:resource="https://w3id.org/def/openadr#"/>
+        <rdfs:label>Virtual End Node (VEN)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/openadr#VTN -->
+
+    <owl:Class rdf:about="https://w3id.org/def/openadr#VTN">
+        <rdfs:comment>This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/openadr#"/>
+        <rdfs:label>Virtual Top Node (VTN)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#ConsumptionCapacity -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#ConsumptionCapacity">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Consumption capacity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#ContractedPower -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#ContractedPower">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Contracted power</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyConsumption -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyConsumption">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy consumption</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyDownFlexibility -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyDownFlexibility">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy down flexibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyGeneration -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyGeneration">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy generation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyGenerationForecast -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyGenerationForecast">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy generation forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyLoadForecast -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyLoadForecast">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy load forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyStorage -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyStorage">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy storage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#EnergyUpFlexibility -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#EnergyUpFlexibility">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Energy up flexibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#GenerationCapacity -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#GenerationCapacity">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Generation capacity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerConsumption -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerConsumption">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power consumption</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerDownFlexibility -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerDownFlexibility">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power down flexibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerGeneration -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerGeneration">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power generation</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerGenerationForecast -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerGenerationForecast">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power generation forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerLoadForecast -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerLoadForecast">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power load forecast</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PowerUpFlexibility -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PowerUpFlexibility">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Power"/>
+        <rdfs:label>Power up flexibility</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PriceAS -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PriceAS">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Price"/>
+        <rdfs:label>Price AS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PriceDayAhead -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PriceDayAhead">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Price"/>
+        <rdfs:label>Price day ahead</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#PriceIntraDay -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#PriceIntraDay">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Price"/>
+        <rdfs:label>Price intra day</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://delta.linkeddata.es/def/core#StorageCapacity -->
+
+    <owl:NamedIndividual rdf:about="http://delta.linkeddata.es/def/core#StorageCapacity">
+        <rdf:type rdf:resource="https://saref.etsi.org/core/Energy"/>
+        <rdfs:label>Storage capacity</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/def/openadr#hasItemBase">
+        <rdfs:label>Item base in order to define the unit of measure</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/def/openadr#hasPayload">
+        <rdfs:label>Link to the payload of a report</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/def/openadr#hasRandomization">
+        <rdfs:comment>has randomization</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/def/openadr#hasReportId">
+        <rdfs:comment>Link to the report identifier</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+
