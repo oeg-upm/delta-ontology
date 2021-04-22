@@ -6,14 +6,20 @@
     "isRelatedToRequirement" : {
       "@id" : "http://w3id.org/def/vtc#isRelatedToRequirement"
     },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
     "source" : {
       "@id" : "http://purl.org/dc/terms/source"
     },
-    "TestCaseDesign" : {
-      "@id" : "http://w3id.org/def/vtc#TestCaseDesign"
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "TestSuite" : {
       "@id" : "http://w3id.org/def/vtc#TestSuite"
+    },
+    "TestCaseDesign" : {
+      "@id" : "http://w3id.org/def/vtc#TestCaseDesign"
     }
   }
 }

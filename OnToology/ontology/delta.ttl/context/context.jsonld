@@ -33,9 +33,6 @@
     "Battery" : {
       "@id" : "http://delta.linkeddata.es/def/core#Battery"
     },
-    "EnergyMarket" : {
-      "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket"
-    },
     "Index" : {
       "@id" : "http://delta.linkeddata.es/def/core#Index"
     },
@@ -454,9 +451,6 @@
     },
     "hasTimestamp" : {
       "@id" : "https://saref.etsi.org/core/hasTimestamp"
-    },
-    "Unit_of_measure" : {
-      "@id" : "http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"
     },
     "Power" : {
       "@id" : "https://saref.etsi.org/core/Power"
