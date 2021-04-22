@@ -6,130 +6,108 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestSuite" ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "DELTA ontology"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Device subclassOf measuresProperty some Energy"
   } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-39"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Device subclassOf measuresProperty some Energy"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Set of tests generated from the functional requirements collected in http://delta.iot.linkeddata.es/. These tests are associated to the DELTA ontology https://delta.linkeddata.es/def/core."
   } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-37"
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.0"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign12",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Device subclassOf measuresProperty some EnergyGeneration"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-36"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Device subclassOf measuresProperty only Property"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-35"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "VirtualNode subclassOf manages some FEID"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-34"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Frequency subclassOf Property"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-28"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Voltage subclassOf Property"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-28"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "EnergyLoadForecast subclassOf Property"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-28"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "PriceAS subclassOf Price"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-26"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "PriceIntraDay subclassOf Price"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-26"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "PriceDayAhead subclassOf Price"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-26"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Device subclassOf measuresProperty some EnergyDownFlexibility"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-25"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Prosumer subclassOf hasReward some Reward"
+    "@value" : "Consumer subclassOf Customer"
   }, {
     "@value" : "Prosumer type Class"
   } ],
   "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-2"
   }, {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-46"
+    "@value" : "Producer subclassOf Customer"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign25",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "FEID subclassOf measuresProperty some UpFlexibility or DownFlexibility"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-25"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Frequency subclassOf Property"
+  }, {
+    "@value" : "Load subclassOf Property"
+  }, {
+    "@value" : "Voltage subclassOf Property"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-28"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Asset subclassOf measuresProperty some EnergyUpFlexibility"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report-delta.html#delta-33"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf measuresProperty some EnergyUpFlexibility"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-35"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Asset subclassOf measuresProperty some EnergyGeneration"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-36"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Device subclassOf measuresProperty some EnergyConsumption"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-37"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Asset isOwnedBy Prosumer"
+  }, {
+    "@value" : "Asset subclassOf measuresProperty some EnergyConsumption"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-43"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
+  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+    "@value" : "Asset isOwnedBy Prosumer"
+  }, {
+    "@value" : "Asset subclassOf measuresProperty some EnergyGeneration"
+  } ],
+  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-44"
+  } ]
+}, {
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-47",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "VirtualNode subclassOf belongsToCluster some Cluster"
@@ -138,16 +116,7 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-47"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Asset subclassOf isOwnedBy Customer"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-48"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign28",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-50",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "Profile type Class"
@@ -156,34 +125,7 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-50"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "VirtualNode subclassOf hasProfile only Profile"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-51"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Prosumer subclassOf hasReward some Reward"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-46"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign30",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Device subclassOf hasProfile only Profile"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-52"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign31",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-53",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "Asset subclassOf isOwnedBy some Customer"
@@ -192,7 +134,7 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-53"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign32",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-54",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "Customer subclassOf hasRewards only Reward"
@@ -201,7 +143,7 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-54"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign33",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-55",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "Consumer subclassOf owns some Asset"
@@ -212,25 +154,18 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-55"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign34",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-56",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "Frequency subclassOf Property"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-56"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign35",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
+  }, {
     "@value" : "Voltage subclassOf Property"
   } ],
   "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-56"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign36",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-57",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "Profile subclassOf isRelatedToProperty only Property"
@@ -239,7 +174,7 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-57"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign38",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-59",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "Profile subclassOf hasGranularity only string"
@@ -248,7 +183,7 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-59"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign39",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-60",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "VirtualNode subclassOf sends some Event"
@@ -257,43 +192,7 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-60"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Prosumer subclassOf Customer"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-45"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign40",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "VirtualNode subclassOf sends some Event"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-61"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign41",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "FEID subclassOf measuresProperty only Property"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-63"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "LoadDispatchSignal subclassOf Signal"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-64"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign43",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-65",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
     "@value" : "DemandChargeSignal subclassOf Signal"
@@ -302,49 +201,13 @@
     "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-65"
   } ]
 }, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign5",
+  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign-66",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
   "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Asset subclassOf measuresProperty some EnergyGeneration"
+    "@value" : "BidEnergySignal subclassOf Signal"
   } ],
   "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-44"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Asset subclassOf measuresProperty some Energy"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-43"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Asset subclassOf Device"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-42"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Asset subclassOf SpatialThing"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-41"
-  } ]
-}, {
-  "@id" : "http://delta.iot.linkeddata.es/tests/testsuite-delta#testDesign9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://w3id.org/def/vtc#TestCaseDesign" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Customer subclassOf hasReward only Reward"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report.html#delta-40"
+    "@id" : "http://delta.iot.linkeddata.es/requirements/report-delta.html#delta-66"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/source",
@@ -361,22 +224,4 @@
 }, {
   "@id" : "http://w3id.org/def/vtc#isRelatedToRequirement",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#testDesign44",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "Asset subclassOf measuresProperty some Flexibility"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report-delta.html#delta-33"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#testDesign45",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://w3id.org/def/vtc#desiredBehaviour" : [ {
-    "@value" : "DemandChargeSignal subclassOf Signal"
-  } ],
-  "http://w3id.org/def/vtc#isRelatedToRequirement" : [ {
-    "@id" : "http://delta.iot.linkeddata.es/requirements/report-delta.html#delta-66"
-  } ]
 } ]

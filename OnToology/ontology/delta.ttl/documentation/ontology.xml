@@ -48,6 +48,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -64,6 +71,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#agreesOn">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+        <rdfs:range rdf:resource="https://saref.etsi.org/core/Property"/>
         <rdfs:isDefinedBy>Relationship between a smart contract and the property it agrees on.</rdfs:isDefinedBy>
         <rdfs:label>agrees on</rdfs:label>
     </owl:ObjectProperty>
@@ -85,6 +94,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#belongsToCluster">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#VirtualNode"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Cluster"/>
         <rdfs:comment>Relationship between a virtual node and the cluster it belongs to.</rdfs:comment>
         <rdfs:label>belongs to cluster</rdfs:label>
     </owl:ObjectProperty>
@@ -95,6 +106,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#consumes">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Aggregator"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#MarketSettlement"/>
         <rdfs:comment>Relation between an aggregator and the market settlement it consumes</rdfs:comment>
         <rdfs:label>consumes</rdfs:label>
     </owl:ObjectProperty>
@@ -105,6 +118,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#detects">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
         <rdfs:comment>Relationship between the FEID and the violation it detects.</rdfs:comment>
         <rdfs:label>detects</rdfs:label>
     </owl:ObjectProperty>
@@ -125,6 +140,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasBoundary">
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Boundary"/>
         <rdfs:comment>A relationship defining the boundary values (min and max values) of an entity</rdfs:comment>
         <rdfs:label>has boundary</rdfs:label>
     </owl:ObjectProperty>
@@ -135,6 +151,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasComfortSetting">
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#ComfortSetting"/>
         <rdfs:comment>Relation to define the comfort settings of a system.</rdfs:comment>
         <rdfs:label>has comfort settings</rdfs:label>
     </owl:ObjectProperty>
@@ -155,6 +172,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasDeliveryTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:comment>Link to the delivery time.</rdfs:comment>
         <rdfs:label>has delivery time</rdfs:label>
     </owl:ObjectProperty>
@@ -176,6 +194,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#ViolationCondition"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
         <rdfs:comment>Relationship between a violation condition and the current associated measurement that is estimated.</rdfs:comment>
         <rdfs:label>has estimated measurement</rdfs:label>
     </owl:ObjectProperty>
@@ -196,6 +216,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasIndex">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#VirtualNode"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Index"/>
         <rdfs:comment>Link between a Virtual Node and its index.</rdfs:comment>
         <rdfs:label>has index</rdfs:label>
     </owl:ObjectProperty>
@@ -218,6 +240,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasPayment">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#SmartContract"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Payment"/>
         <rdfs:comment>Relation between a smart contract and the payment associated</rdfs:comment>
         <rdfs:label>has payment</rdfs:label>
     </owl:ObjectProperty>
@@ -228,6 +252,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#hasPhase">
+        <rdfs:domain rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+        <rdfs:range rdf:resource="http://delta.linkeddata.es/def/core#Phase"/>
         <rdfs:comment>Link between a phase and a measurement</rdfs:comment>
         <rdfs:label>has phase</rdfs:label>
     </owl:ObjectProperty>
@@ -353,7 +379,6 @@
 
 
     <owl:ObjectProperty rdf:about="http://delta.linkeddata.es/def/core#isDefinedIn">
-        <rdfs:range rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
         <rdfs:comment>A relationship defining the currency associated to a value</rdfs:comment>
         <rdfs:label>is defined in</rdfs:label>
     </owl:ObjectProperty>
@@ -598,6 +623,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/def/openadr#hasDuration">
+        <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:comment>Relationship between an event and its duration</rdfs:comment>
         <rdfs:label>has duration</rdfs:label>
     </owl:ObjectProperty>
@@ -1095,23 +1121,8 @@
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Discount">
         <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isDefinedIn"/>
-                <owl:someValuesFrom rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>Reward associated to the customer in terms of monetary remuneration</rdfs:comment>
         <rdfs:label>Discount</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://delta.linkeddata.es/def/core#EnergyMarket -->
-
-
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#EnergyMarket">
-        <rdfs:label>Energy Market</rdfs:label>
     </owl:Class>
     
 
@@ -1252,7 +1263,10 @@
     <!-- http://delta.linkeddata.es/def/core#MarketSettlement -->
 
 
-    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MarketSettlement"/>
+    <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MarketSettlement">
+        <rdfs:comment>Market settlement associated to an entity</rdfs:comment>
+        <rdfs:label>Market settlement</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1277,12 +1291,6 @@
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#MonetaryRemuneration">
         <rdfs:subClassOf rdf:resource="http://delta.linkeddata.es/def/core#Reward"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isDefinedIn"/>
-                <owl:someValuesFrom rdf:resource="http://www.wurvoc.org/vocabularies/om-1.8/Unit_of_measure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>Reward associated to the customer in terms of monetary remuneration</rdfs:comment>
         <rdfs:label>Monetary remuneration</rdfs:label>
     </owl:Class>
@@ -1625,14 +1633,23 @@
     <!-- http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
+        <rdfs:comment>Anything with spatial extent, i.e. size, shape, or position.
+ e.g. people, places, bowling balls, as well as abstract areas like cubes.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
+        <rdfs:label>SpatialThing</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- http://www.w3.org/2006/time#Duration -->
 
 
-    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration"/>
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Duration">
+        <rdfs:comment>Duration of a temporal extent expressed as a number scaled by a temporal unit</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://www.w3.org/2006/time"/>
+        <rdfs:label>Time duration</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1642,8 +1659,8 @@
     <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:comment>A temporal entity with zero extent or duration</rdfs:comment>
-        <rdfs:isDefinedBy>Instant</rdfs:isDefinedBy>
         <rdfs:isDefinedBy>http://www.w3.org/2006/time#</rdfs:isDefinedBy>
+        <rdfs:label>Instant</rdfs:label>
     </owl:Class>
     
 
@@ -1847,14 +1864,22 @@
     <!-- https://w3id.org/def/openadr#VEN -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/openadr#VEN"/>
+    <owl:Class rdf:about="https://w3id.org/def/openadr#VEN">
+        <rdfs:comment>This is the OpenADR Virtual End Node that is used to interact with the VTN</rdfs:comment>
+        <rdfs:label rdf:resource="https://w3id.org/def/openadr#"/>
+        <rdfs:label>Virtual End Node (VEN)</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://w3id.org/def/openadr#VTN -->
 
 
-    <owl:Class rdf:about="https://w3id.org/def/openadr#VTN"/>
+    <owl:Class rdf:about="https://w3id.org/def/openadr#VTN">
+        <rdfs:comment>This is the OpenADR Virtual Top Node that is used to interact with the Resources enrolled in the DR Programs.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/def/openadr#"/>
+        <rdfs:label>Virtual Top Node (VTN)</rdfs:label>
+    </owl:Class>
     
 
 
