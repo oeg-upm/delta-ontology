@@ -8,6 +8,14 @@
       "@id" : "https://saref.etsi.org/saref4city/isDerivedFrom",
       "@type" : "@id"
     },
+    "hasBoundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasBoundary",
+      "@type" : "@id"
+    },
+    "isDefinedIn" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isDefinedIn",
+      "@type" : "@id"
+    },
     "UnitOfMeasure" : {
       "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
     },
@@ -15,17 +23,25 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasIndex",
       "@type" : "@id"
     },
+    "hasEstimatedMeasurement" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasEstimatedMeasurement",
+      "@type" : "@id"
+    },
     "Reward" : {
       "@id" : "http://delta.linkeddata.es/def/core#Reward"
     },
-    "EnergyMarket" : {
-      "@id" : "http://delta.linkeddata.es/def/core#EnergyMarket"
+    "Battery" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Battery"
     },
     "Index" : {
       "@id" : "http://delta.linkeddata.es/def/core#Index"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "hasRequiredMeasurement" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasRequiredMeasurement",
+      "@type" : "@id"
     },
     "quantifiesKPI" : {
       "@id" : "https://saref.etsi.org/saref4city/quantifiesKPI",
@@ -38,6 +54,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasPayment",
       "@type" : "@id"
     },
+    "Discount" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Discount"
+    },
     "manages" : {
       "@id" : "http://delta.linkeddata.es/def/core#manages",
       "@type" : "@id"
@@ -48,6 +67,10 @@
     },
     "consumes" : {
       "@id" : "http://delta.linkeddata.es/def/core#consumes",
+      "@type" : "@id"
+    },
+    "hasDurationDescription" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasDurationDescription",
       "@type" : "@id"
     },
     "hasComfortSetting" : {
@@ -63,8 +86,18 @@
     "Prosumer" : {
       "@id" : "http://delta.linkeddata.es/def/core#Prosumer"
     },
+    "Relay" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Relay"
+    },
     "topDataProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "MonetaryRemuneration" : {
+      "@id" : "http://delta.linkeddata.es/def/core#MonetaryRemuneration"
+    },
+    "Feeder" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Feeder"
     },
     "Sector" : {
       "@id" : "http://delta.linkeddata.es/def/core#Sector"
@@ -87,7 +120,8 @@
       "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
     },
     "hasValue" : {
-      "@id" : "https://saref.etsi.org/core/hasValue"
+      "@id" : "https://saref.etsi.org/core/hasValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "FEID" : {
       "@id" : "http://delta.linkeddata.es/def/core#FEID"
@@ -152,9 +186,12 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasSmartContract",
       "@type" : "@id"
     },
-    "hasDurationCode" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasDurationCode",
+    "isRelatedTo" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isRelatedTo",
       "@type" : "@id"
+    },
+    "Boundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Boundary"
     },
     "VirtualNode" : {
       "@id" : "http://delta.linkeddata.es/def/core#VirtualNode"
@@ -179,6 +216,9 @@
       "@id" : "http://delta.linkeddata.es/def/core#isLocatedAt",
       "@type" : "@id"
     },
+    "HVAC" : {
+      "@id" : "http://delta.linkeddata.es/def/core#HVAC"
+    },
     "hasViolationType" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasViolationType"
     },
@@ -186,11 +226,14 @@
       "@id" : "http://purl.org/dc/terms/creator"
     },
     "Energy" : {
-      "@id" : "https://saref.etsi.org/saref4ener/Energy"
+      "@id" : "https://saref.etsi.org/core/Energy"
     },
-    "hasPoint" : {
-      "@id" : "http://delta.linkeddata.es/def/core#hasPoint",
-      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    "Producer" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Producer"
+    },
+    "hasUpperBoundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasUpperBoundary",
+      "@type" : "@id"
     },
     "isRequestedTo" : {
       "@id" : "http://delta.linkeddata.es/def/core#isRequestedTo",
@@ -198,6 +241,10 @@
     },
     "Cluster" : {
       "@id" : "http://delta.linkeddata.es/def/core#Cluster"
+    },
+    "hasViolationCondition" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasViolationCondition",
+      "@type" : "@id"
     },
     "detects" : {
       "@id" : "http://delta.linkeddata.es/def/core#detects",
@@ -248,6 +295,9 @@
     "isDefinedBy" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
     },
+    "Point" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Point"
+    },
     "KeyPerformanceIndicator" : {
       "@id" : "https://saref.etsi.org/saref4city/KeyPerformanceIndicator"
     },
@@ -261,6 +311,14 @@
     },
     "KeyPerfomanceIndicatorAssessement" : {
       "@id" : "https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement"
+    },
+    "hasLowerBoundary" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasLowerBoundary",
+      "@type" : "@id"
+    },
+    "isProfileOf" : {
+      "@id" : "http://delta.linkeddata.es/def/core#isProfileOf",
+      "@type" : "@id"
     },
     "hasGeometry" : {
       "@id" : "http://www.opengis.net/ont/geosparql#hasGeometry",
@@ -279,9 +337,15 @@
       "@id" : "http://delta.linkeddata.es/def/core#hasIncentive",
       "@type" : "@id"
     },
+    "OvervoltageViolation" : {
+      "@id" : "http://delta.linkeddata.es/def/core#OvervoltageViolation"
+    },
     "hasDeliveryTime" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasDeliveryTime",
       "@type" : "@id"
+    },
+    "Voucher" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Voucher"
     },
     "sectorName" : {
       "@id" : "http://delta.linkeddata.es/def/core#sectorName"
@@ -298,6 +362,9 @@
     },
     "SmartContract" : {
       "@id" : "http://delta.linkeddata.es/def/core#SmartContract"
+    },
+    "hasRewardValue" : {
+      "@id" : "http://delta.linkeddata.es/def/core#hasRewardValue"
     },
     "hasPhase" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasPhase",
@@ -322,6 +389,9 @@
     "isAvailable" : {
       "@id" : "http://delta.linkeddata.es/def/core#isAvailable",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "LineLoadingViolation" : {
+      "@id" : "http://delta.linkeddata.es/def/core#LineLoadingViolation"
     },
     "hasProfile" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasProfile",
@@ -363,13 +433,16 @@
       "@type" : "@id"
     },
     "Device" : {
-      "@id" : "https://saref.etsi.org/saref4ener/Device"
+      "@id" : "https://saref.etsi.org/core/Device"
     },
     "Violation" : {
       "@id" : "http://delta.linkeddata.es/def/core#Violation"
     },
     "SystemConstraint" : {
       "@id" : "http://delta.linkeddata.es/def/core#SystemConstraint"
+    },
+    "ViolationCondition" : {
+      "@id" : "http://delta.linkeddata.es/def/core#ViolationCondition"
     },
     "Action" : {
       "@id" : "http://delta.linkeddata.es/def/core#Action"
@@ -381,11 +454,22 @@
       "@id" : "https://saref.etsi.org/core/hasTimestamp"
     },
     "Power" : {
-      "@id" : "https://saref.etsi.org/saref4ener/Power"
+      "@id" : "https://saref.etsi.org/core/Power"
+    },
+    "Lightbulb" : {
+      "@id" : "http://delta.linkeddata.es/def/core#Lightbulb"
+    },
+    "belongsToCluster" : {
+      "@id" : "http://delta.linkeddata.es/def/core#belongsToCluster",
+      "@type" : "@id"
     },
     "requests" : {
       "@id" : "http://delta.linkeddata.es/def/core#requests",
       "@type" : "@id"
+    },
+    "supportsAutomatedDR" : {
+      "@id" : "http://delta.linkeddata.es/def/core#supportsAutomatedDR",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "hasReliability" : {
       "@id" : "http://delta.linkeddata.es/def/core#hasReliability",

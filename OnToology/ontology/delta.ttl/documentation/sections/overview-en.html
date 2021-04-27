@@ -2,12 +2,21 @@
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul class="hlist">
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://w3id.org/def/openadr#VEN" title="https://w3id.org/def/openadr#VEN"/>
+   </li>
    <li>
       <a href="#Aggregator" title="http://delta.linkeddata.es/def/core#Aggregator">Aggregator</a>
    </li>
    <li>
       <a href="#Asset" title="http://delta.linkeddata.es/def/core#Asset">Asset</a>
+   </li>
+   <li>
+      <a href="#Battery" title="http://delta.linkeddata.es/def/core#Battery">Battery</a>
+   </li>
+   <li>
+      <a href="#Boundary" title="http://delta.linkeddata.es/def/core#Boundary">Boundary</a>
    </li>
    <li>
       <a href="#Cluster" title="http://delta.linkeddata.es/def/core#Cluster">Cluster</a>
@@ -27,23 +36,25 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#CustomerCluster">Customer cluster</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/saref4ener/Device" title="https://saref.etsi.org/saref4ener/Device">Device</a>
+      <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
+   </li>
+   <li>
+      <a href="#Discount" title="http://delta.linkeddata.es/def/core#Discount">Discount</a>
    </li>
    <li>
       <a href="#Action" title="http://delta.linkeddata.es/def/core#Action">DR request</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/saref4ener/Energy" title="https://saref.etsi.org/saref4ener/Energy">Energy</a>
-   </li>
-   <li>
-      <a href="#EnergyMarket"
-         title="http://delta.linkeddata.es/def/core#EnergyMarket">Energy Market</a>
+      <a href="#https://saref.etsi.org/core/Energy" title="https://saref.etsi.org/core/Energy">Energy</a>
    </li>
    <li>
       <a href="#http://www.opengis.net/ont/geosparql#Feature" title="http://www.opengis.net/ont/geosparql#Feature">Feature</a>
    </li>
    <li>
       <a href="#https://saref.etsi.org/core/FeatureOfInterest" title="https://saref.etsi.org/core/FeatureOfInterest">Feature Of Interest</a>
+   </li>
+   <li>
+      <a href="#Feeder" title="http://delta.linkeddata.es/def/core#Feeder">Feeder</a>
    </li>
    <li>
       <a href="#FEID" title="http://delta.linkeddata.es/def/core#FEID">FEID</a>
@@ -55,15 +66,16 @@ This ontology has the following classes and properties.</span>
       <a href="#http://www.opengis.net/ont/geosparql#Geometry" title="http://www.opengis.net/ont/geosparql#Geometry">Geometry</a>
    </li>
    <li>
+      <a href="#HVAC" title="http://delta.linkeddata.es/def/core#HVAC">HVAC</a>
+   </li>
+   <li>
       <a href="#Incentive" title="http://delta.linkeddata.es/def/core#Incentive">Incentive</a>
    </li>
    <li>
       <a href="#Index" title="http://delta.linkeddata.es/def/core#Index">Index</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">
-         <span>instant</span>
-      </a>
+      <a href="#http://www.w3.org/2006/time#Instant" title="http://www.w3.org/2006/time#Instant">Instant</a>
    </li>
    <li>
       <a href="#https://saref.etsi.org/saref4city/KeyPerformanceIndicator"
@@ -74,12 +86,29 @@ This ontology has the following classes and properties.</span>
          title="https://saref.etsi.org/saref4city/KeyPerfomanceIndicatorAssessement">Key performance indicator assessment</a>
    </li>
    <li>
-      <a href="#Measurement" title="http://delta.linkeddata.es/def/core#Measurement">
-         <span>measurement</span>
-      </a>
+      <a href="#Lightbulb" title="http://delta.linkeddata.es/def/core#Lightbulb">Lightbulb</a>
+   </li>
+   <li>
+      <a href="#LineLoadingViolation"
+         title="http://delta.linkeddata.es/def/core#LineLoadingViolation">Line loading violation</a>
+   </li>
+   <li>
+      <a href="#MarketSettlement"
+         title="http://delta.linkeddata.es/def/core#MarketSettlement">Market settlement</a>
+   </li>
+   <li>
+      <a href="#Measurement" title="http://delta.linkeddata.es/def/core#Measurement">Measurement</a>
    </li>
    <li>
       <a href="#https://saref.etsi.org/core/Measurement" title="https://saref.etsi.org/core/Measurement">Measurement</a>
+   </li>
+   <li>
+      <a href="#MonetaryRemuneration"
+         title="http://delta.linkeddata.es/def/core#MonetaryRemuneration">Monetary remuneration</a>
+   </li>
+   <li>
+      <a href="#OvervoltageViolation"
+         title="http://delta.linkeddata.es/def/core#OvervoltageViolation">Overvoltage violation</a>
    </li>
    <li>
       <a href="#Payment" title="http://delta.linkeddata.es/def/core#Payment">Payment</a>
@@ -88,10 +117,16 @@ This ontology has the following classes and properties.</span>
       <a href="#Phase" title="http://delta.linkeddata.es/def/core#Phase">Phase</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/saref4ener/Power" title="https://saref.etsi.org/saref4ener/Power">Power</a>
+      <a href="#Point" title="http://delta.linkeddata.es/def/core#Point">Point</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/Power" title="https://saref.etsi.org/core/Power">Power</a>
    </li>
    <li>
       <a href="#https://saref.etsi.org/core/Price" title="https://saref.etsi.org/core/Price">Price</a>
+   </li>
+   <li>
+      <a href="#Producer" title="http://delta.linkeddata.es/def/core#Producer">Producer</a>
    </li>
    <li>
       <a href="#Profile" title="http://delta.linkeddata.es/def/core#Profile">Profile</a>
@@ -106,6 +141,9 @@ This ontology has the following classes and properties.</span>
       <a href="#Prosumer" title="http://delta.linkeddata.es/def/core#Prosumer">Prosumer</a>
    </li>
    <li>
+      <a href="#Relay" title="http://delta.linkeddata.es/def/core#Relay">Relay</a>
+   </li>
+   <li>
       <a href="#Reward" title="http://delta.linkeddata.es/def/core#Reward">Reward</a>
    </li>
    <li>
@@ -116,11 +154,18 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#SmartContract">Smart contract</a>
    </li>
    <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+         title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">SpatialThing</a>
+   </li>
+   <li>
       <a href="#SystemConstraint"
          title="http://delta.linkeddata.es/def/core#SystemConstraint">System constraint</a>
    </li>
    <li>
       <a href="#http://www.w3.org/2006/time#TemporalEntity" title="http://www.w3.org/2006/time#TemporalEntity">Temporal entity</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2006/time#Duration" title="http://www.w3.org/2006/time#Duration">Time duration</a>
    </li>
    <li>
       <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Time interval</a>
@@ -135,12 +180,22 @@ This ontology has the following classes and properties.</span>
       <a href="#Violation" title="http://delta.linkeddata.es/def/core#Violation">Violation</a>
    </li>
    <li>
+      <a href="#ViolationCondition"
+         title="http://delta.linkeddata.es/def/core#ViolationCondition">Violation condition</a>
+   </li>
+   <li>
       <a href="#VirtualNode" title="http://delta.linkeddata.es/def/core#VirtualNode">Virtual node</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/def/openadr#VTN" title="https://w3id.org/def/openadr#VTN">Virtual Top Node (VTN)</a>
    </li>
    <li>
       <a href="#Voltage" title="http://delta.linkeddata.es/def/core#Voltage">Voltage</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#Voucher" title="http://delta.linkeddata.es/def/core#Voucher">Voucher</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#agreesOn" title="http://delta.linkeddata.es/def/core#agreesOn">agrees on</a>
    </li>
@@ -149,6 +204,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://w3id.org/def/openadr#belongsTo" title="https://w3id.org/def/openadr#belongsTo">belongs to</a>
+   </li>
+   <li>
+      <a href="#belongsToCluster"
+         title="http://delta.linkeddata.es/def/core#belongsToCluster">belongs to cluster</a>
    </li>
    <li>
       <a href="#https://saref.etsi.org/core/consistsOf" title="https://saref.etsi.org/core/consistsOf">consists of</a>
@@ -162,6 +221,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasAggregatedProperty"
          title="http://delta.linkeddata.es/def/core#hasAggregatedProperty">has aggregated property</a>
+   </li>
+   <li>
+      <a href="#hasBoundary" title="http://delta.linkeddata.es/def/core#hasBoundary">has boundary</a>
    </li>
    <li>
       <a href="#hasComfortSetting"
@@ -182,10 +244,18 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#hasDurationDescription">has duration description</a>
    </li>
    <li>
+      <a href="#hasEstimatedMeasurement"
+         title="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement">has estimated measurement</a>
+   </li>
+   <li>
       <a href="#hasIncentive" title="http://delta.linkeddata.es/def/core#hasIncentive">has incentive</a>
    </li>
    <li>
       <a href="#hasIndex" title="http://delta.linkeddata.es/def/core#hasIndex">has index</a>
+   </li>
+   <li>
+      <a href="#hasLowerBoundary"
+         title="http://delta.linkeddata.es/def/core#hasLowerBoundary">has lower boundary</a>
    </li>
    <li>
       <a href="#hasPayment" title="http://delta.linkeddata.es/def/core#hasPayment">has payment</a>
@@ -199,6 +269,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasRedundancy"
          title="http://delta.linkeddata.es/def/core#hasRedundancy">has redundancy</a>
+   </li>
+   <li>
+      <a href="#hasRequiredMeasurement"
+         title="http://delta.linkeddata.es/def/core#hasRequiredMeasurement">has required measurement</a>
    </li>
    <li>
       <a href="#hasReward" title="http://delta.linkeddata.es/def/core#hasReward">has reward</a>
@@ -216,6 +290,14 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#hasTransaction">has transaction</a>
    </li>
    <li>
+      <a href="#hasUpperBoundary"
+         title="http://delta.linkeddata.es/def/core#hasUpperBoundary">has upper boundary</a>
+   </li>
+   <li>
+      <a href="#hasViolationCondition"
+         title="http://delta.linkeddata.es/def/core#hasViolationCondition">has violation condition</a>
+   </li>
+   <li>
       <a href="#http://www.opengis.net/ont/geosparql#hasGeometry" title="http://www.opengis.net/ont/geosparql#hasGeometry">hasGeometry</a>
    </li>
    <li>
@@ -225,6 +307,9 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#isAllocatedIn"
          title="http://delta.linkeddata.es/def/core#isAllocatedIn">is allocated in</a>
+   </li>
+   <li>
+      <a href="#isDefinedIn" title="http://delta.linkeddata.es/def/core#isDefinedIn">is defined in</a>
    </li>
    <li>
       <a href="#https://saref.etsi.org/saref4city/isDerivedFrom" title="https://saref.etsi.org/saref4city/isDerivedFrom">is derived from</a>
@@ -239,6 +324,9 @@ This ontology has the following classes and properties.</span>
       <a href="#isOwnedBy" title="http://delta.linkeddata.es/def/core#isOwnedBy">is owned by</a>
    </li>
    <li>
+      <a href="#isProfileOf" title="http://delta.linkeddata.es/def/core#isProfileOf">is profile of</a>
+   </li>
+   <li>
       <a href="#isRequestedTo"
          title="http://delta.linkeddata.es/def/core#isRequestedTo">is requested to</a>
    </li>
@@ -251,6 +339,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#https://saref.etsi.org/core/isMeasurementOf" title="https://saref.etsi.org/core/isMeasurementOf">isMeasurementOf</a>
+   </li>
+   <li>
+      <a href="#isRelatedTo" title="http://delta.linkeddata.es/def/core#isRelatedTo">isRelatedTo</a>
    </li>
    <li>
       <a href="#https://saref.etsi.org/core/makesMeasurement" title="https://saref.etsi.org/core/makesMeasurement">makes measurement</a>
@@ -283,7 +374,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#https://w3id.org/def/openadr#sendsEvent" title="https://w3id.org/def/openadr#sendsEvent">sends event</a>
    </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#https://saref.etsi.org/core/hasValue" title="https://saref.etsi.org/core/hasValue">A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</a>
+   </li>
    <li>
       <a href="#clusterDescription"
          title="http://delta.linkeddata.es/def/core#clusterDescription">cluster description</a>
@@ -310,9 +404,6 @@ This ontology has the following classes and properties.</span>
       <a href="#hasIp" title="http://delta.linkeddata.es/def/core#hasIp">has ip</a>
    </li>
    <li>
-      <a href="#hasPoint" title="http://delta.linkeddata.es/def/core#hasPoint">has point</a>
-   </li>
-   <li>
       <a href="#hasPort" title="http://delta.linkeddata.es/def/core#hasPort">has port</a>
    </li>
    <li>
@@ -320,7 +411,8 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#hasReliability">has reliability</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/core/hasValue" title="https://saref.etsi.org/core/hasValue">has value</a>
+      <a href="#hasRewardValue"
+         title="http://delta.linkeddata.es/def/core#hasRewardValue">has reward value</a>
    </li>
    <li>
       <a href="#hasViolationType"
@@ -343,13 +435,17 @@ This ontology has the following classes and properties.</span>
       <a href="#status" title="http://delta.linkeddata.es/def/core#status">status</a>
    </li>
    <li>
+      <a href="#supportsAutomatedDR"
+         title="http://delta.linkeddata.es/def/core#supportsAutomatedDR">supports automated DR</a>
+   </li>
+   <li>
       <a href="#https://saref.etsi.org/core/hasTimestamp" title="https://saref.etsi.org/core/hasTimestamp">timestamp</a>
    </li>
    <li>
       <a href="#hasViolationValue"
          title="http://delta.linkeddata.es/def/core#hasViolationValue">Value of the violation</a>
    </li>
-</ul><h4>Named Individuals</h4><ul class="hlist">
+</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#ConsumptionCapacity"
          title="http://delta.linkeddata.es/def/core#ConsumptionCapacity">Consumption capacity</a>
@@ -379,6 +475,10 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#EnergyLoadForecast">Energy load forecast</a>
    </li>
    <li>
+      <a href="#EnergyStorage"
+         title="http://delta.linkeddata.es/def/core#EnergyStorage">Energy storage</a>
+   </li>
+   <li>
       <a href="#EnergyUpFlexibility"
          title="http://delta.linkeddata.es/def/core#EnergyUpFlexibility">Energy up flexibility</a>
    </li>
@@ -391,6 +491,10 @@ This ontology has the following classes and properties.</span>
          title="http://delta.linkeddata.es/def/core#PowerConsumption">Power consumption</a>
    </li>
    <li>
+      <a href="#PowerDownFlexibility"
+         title="http://delta.linkeddata.es/def/core#PowerDownFlexibility">Power down flexibility</a>
+   </li>
+   <li>
       <a href="#PowerGeneration"
          title="http://delta.linkeddata.es/def/core#PowerGeneration">Power generation</a>
    </li>
@@ -401,6 +505,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#PowerLoadForecast"
          title="http://delta.linkeddata.es/def/core#PowerLoadForecast">Power load forecast</a>
+   </li>
+   <li>
+      <a href="#PowerUpFlexibility"
+         title="http://delta.linkeddata.es/def/core#PowerUpFlexibility">Power up flexibility</a>
    </li>
    <li>
       <a href="#PriceAS" title="http://delta.linkeddata.es/def/core#PriceAS">Price AS</a>
