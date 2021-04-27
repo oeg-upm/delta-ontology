@@ -14,7 +14,7 @@
                                                                           <https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/> ;
                                        <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                        rdfs:comment "This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible." ;
-                                       owl:versionInfo "0.2.6" .
+                                       owl:versionInfo "0.2.7" .
 
 #################################################################
 #    Annotation properties
@@ -551,7 +551,7 @@ owl:topDataProperty rdfs:range xsd:float .
 
 ###  https://saref.etsi.org/core/hasValue
 <https://saref.etsi.org/core/hasValue> rdf:type owl:DatatypeProperty ;
-                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                       rdfs:range xsd:float ;
                                        rdfs:isDefinedBy "https://w3id.org/def/saref" ;
                                        rdfs:label "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes." ,
                                                   "has value" .
@@ -694,10 +694,6 @@ owl:topDataProperty rdfs:range xsd:float .
 :FEID rdf:type owl:Class ;
       rdfs:subClassOf <https://saref.etsi.org/core/Device> ,
                       <https://w3id.org/def/openadr#VEN> ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :detects ;
-                        owl:someValuesFrom :Violation
-                      ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasRedundancy ;
                         owl:someValuesFrom <http://www.w3.org/2006/time#Duration>
@@ -869,10 +865,6 @@ owl:topDataProperty rdfs:range xsd:float .
 
 ###  http://delta.linkeddata.es/def/core#Reward
 :Reward rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasRewardValue ;
-                          owl:someValuesFrom xsd:float
-                        ] ;
         rdfs:comment "Reward associated to the customers that is given after using the engagement tools" ,
                      "Reward associated to the customers that is given after using the engagement tools (e.g., discounts)" ;
         rdfs:label "Reward" .
@@ -941,11 +933,11 @@ owl:topDataProperty rdfs:range xsd:float .
 :ViolationCondition rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasEstimatedMeasurement ;
-                                      owl:someValuesFrom :Measurement
+                                      owl:allValuesFrom :Measurement
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasRequiredMeasurement ;
-                                      owl:someValuesFrom :Measurement
+                                      owl:allValuesFrom :Measurement
                                     ] ;
                     rdfs:comment "Condition associated to a violation. It indicates that the estimated measurement of a property does not coincide with the required one." ;
                     rdfs:label "Violation condition" .
@@ -964,12 +956,16 @@ owl:topDataProperty rdfs:range xsd:float .
                                owl:someValuesFrom :SmartContract
                              ] ,
                              [ rdf:type owl:Restriction ;
-                               owl:onProperty :isAllocatedIn ;
-                               owl:someValuesFrom :Aggregator
+                               owl:onProperty :manages ;
+                               owl:someValuesFrom :FEID
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasProfile ;
                                owl:allValuesFrom :Profile
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :isAllocatedIn ;
+                               owl:allValuesFrom :Aggregator
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasHref ;

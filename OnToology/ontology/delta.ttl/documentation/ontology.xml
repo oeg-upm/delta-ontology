@@ -17,7 +17,7 @@
         <terms:creator rdf:resource="https://www.linkedin.com/in/andrea-cimmino-arriaga-64b6b9112/"/>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <rdfs:comment>This ontology represents the  terms to allow interoperability in DELTA project. It models concepts related to enery market, smart grids and demand-response platforms, and it will reuse standard ontologies whenever possible.</rdfs:comment>
-        <owl:versionInfo>0.2.6</owl:versionInfo>
+        <owl:versionInfo>0.2.7</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -904,7 +904,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:isDefinedBy>https://w3id.org/def/saref</rdfs:isDefinedBy>
         <rdfs:label>A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes.</rdfs:label>
         <rdfs:label>has value</rdfs:label>
@@ -1133,12 +1133,6 @@
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#FEID">
         <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Device"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/openadr#VEN"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#detects"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Violation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRedundancy"/>
@@ -1410,12 +1404,6 @@
 
 
     <owl:Class rdf:about="http://delta.linkeddata.es/def/core#Reward">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRewardValue"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools</rdfs:comment>
         <rdfs:comment>Reward associated to the customers that is given after using the engagement tools (e.g., discounts)</rdfs:comment>
         <rdfs:label>Reward</rdfs:label>
@@ -1523,13 +1511,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasEstimatedMeasurement"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasRequiredMeasurement"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Condition associated to a violation. It indicates that the estimated measurement of a property does not coincide with the required one.</rdfs:comment>
@@ -1558,14 +1546,20 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isAllocatedIn"/>
-                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Aggregator"/>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#manages"/>
+                <owl:someValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#FEID"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#hasProfile"/>
                 <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Profile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delta.linkeddata.es/def/core#isAllocatedIn"/>
+                <owl:allValuesFrom rdf:resource="http://delta.linkeddata.es/def/core#Aggregator"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
