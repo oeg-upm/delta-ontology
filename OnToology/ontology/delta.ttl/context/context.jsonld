@@ -120,7 +120,8 @@
       "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
     },
     "hasValue" : {
-      "@id" : "https://saref.etsi.org/core/hasValue"
+      "@id" : "https://saref.etsi.org/core/hasValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
     },
     "FEID" : {
       "@id" : "http://delta.linkeddata.es/def/core#FEID"
