@@ -233,7 +233,7 @@
     "@id" : "http://delta.linkeddata.es/def/core#hasGranularity"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#rational"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "_:genid35",
@@ -642,6 +642,8 @@
     "@value" : "Customer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  }, {
     "@id" : "_:genid21"
   }, {
     "@id" : "_:genid22"
